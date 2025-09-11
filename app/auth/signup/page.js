@@ -11,6 +11,9 @@ import {
   CheckCircleIcon
 } from '@heroicons/react/24/outline';
 import { useToast } from '@/contexts/ToastContext';
+import { getFirebaseAuth, RecaptchaVerifier, signInWithPhoneNumber } from '@/lib/firebaseClient';
+import { PhoneAuthProvider, signInWithCredential } from 'firebase/auth';
+import { formatPhoneNumber, validatePhoneNumber } from '@/lib/smsService';
 
 /**
  * Main sign-up page component for One Stop Educational Advisor
@@ -41,8 +44,13 @@ function SignUpPageContent() {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [phone, setPhone] = useState('');
   const [showEmailForm, setShowEmailForm] = useState(false);
+  const [showPhoneForm, setShowPhoneForm] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isPhoneVerification, setIsPhoneVerification] = useState(false);
+  const [otp, setOtp] = useState('');
+  const [verificationId, setVerificationId] = useState('');
   const toast = useToast();
   const callbackUrl = searchParams.get('callbackUrl') || '/home';
 
@@ -134,6 +142,115 @@ function SignUpPageContent() {
     }
   };
 
+  const setupRecaptcha = () => {
+    try {
+      // If a verifier already exists, clear it before creating again
+      if (window.recaptchaVerifier) {
+        try { window.recaptchaVerifier.clear(); } catch (_) {}
+        window.recaptchaVerifier = undefined;
+      }
+      const auth = getFirebaseAuth();
+      window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container-signup', { size: 'invisible' });
+      return window.recaptchaVerifier;
+    } catch (e) {
+      // As a fallback, if it is already rendered, reuse existing instance
+      return window.recaptchaVerifier;
+    }
+  };
+
+  const handlePhoneSignUp = async (e) => {
+    e.preventDefault();
+    
+    // Validation
+    if (!phone || !password || !name) {
+      setError('Please fill in all fields.');
+      return;
+    }
+
+    if (password.length < 6) {
+      setError('Password must be at least 6 characters long.');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError('Passwords do not match.');
+      return;
+    }
+
+    const formatted = formatPhoneNumber(phone);
+    if (!validatePhoneNumber(formatted)) {
+      setError('Please enter a valid phone number.');
+      return;
+    }
+
+    try {
+      setIsLoading(true);
+      setError('');
+
+      const auth = getFirebaseAuth();
+      const verifier = setupRecaptcha();
+      const confirmation = await signInWithPhoneNumber(auth, formatted, verifier);
+      setVerificationId(confirmation.verificationId);
+
+      setIsPhoneVerification(true);
+      toast({text: "Code sent! Please enter the OTP."});
+    } catch (error) {
+      console.error('Phone registration send OTP error:', error);
+      setError(error?.message || 'Failed to send verification code');
+      toast({text: error?.message || 'Failed to send verification code'});
+      try { window.recaptchaVerifier?.clear(); } catch(_) {}
+      window.recaptchaVerifier = undefined;
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handlePhoneVerification = async (e) => {
+    e.preventDefault();
+    
+    if (!otp || otp.length !== 6) {
+      setError('Please enter a valid 6-digit code.');
+      return;
+    }
+
+    try {
+      setIsLoading(true);
+      setError('');
+
+      const credential = PhoneAuthProvider.credential(verificationId, otp);
+      const auth = getFirebaseAuth();
+      const result = await signInWithCredential(auth, credential);
+      const idToken = await result.user.getIdToken();
+
+      // Complete registration server-side
+      const response = await fetch('/api/auth/phone-register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ phone: formatPhoneNumber(phone), password, name, idToken }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.error || 'Registration failed');
+        toast({text: data.error || 'Registration failed'});
+        return;
+      }
+
+      setIsSuccess(true);
+      toast({text: 'Phone verified and account created! Please sign in.'});
+      setTimeout(() => router.push('/auth/signin'), 2000);
+    } catch (error) {
+      console.error('Phone verification error:', error);
+      setError(error?.message || 'Verification failed');
+      toast({text: error?.message || 'Verification failed'});
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   if (status === 'loading') {
     return (
       <div className="min-h-screen flex items-center justify-center p-4">
@@ -174,6 +291,78 @@ function SignUpPageContent() {
             </p>
             
             <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-500 mx-auto"></div>
+          </motion.div>
+        </div>
+      </div>
+    );
+  }
+
+  if (isPhoneVerification) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center py-2 px-2 sm:py-4 sm:px-4 lg:py-8 lg:px-8">
+        <div className="max-w-md w-full">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white rounded-2xl shadow- xl p-6 sm:p-8 text-center"
+          >
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
+              className="mx-auto h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg className="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </motion.div>
+            
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              Verify Your Phone Number
+            </h2>
+            
+            <p className="text-gray-600 mb-6">
+              We've sent a 6-digit verification code to <strong>{formatPhoneNumber(phone)}</strong>. 
+              Please enter the code below to complete your registration.
+            </p>
+            
+            <form onSubmit={handlePhoneVerification} className="space-y-4">
+              <div>
+                <label htmlFor="otp" className="block text-sm font-medium text-gray-700 mb-2">
+                  Verification Code
+                </label>
+                <input
+                  id="otp"
+                  type="text"
+                  value={otp}
+                  onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                  placeholder="Enter 6-digit code"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-center text-lg tracking-widest"
+                  maxLength={6}
+                  required
+                />
+              </div>
+
+              {error && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start space-x-3"
+                >
+                  <ExclamationTriangleIcon className="h-5 w-5 text-red-400 mt-0.5 flex-shrink-0" />
+                  <p className="text-sm text-red-700">{error}</p>
+                </motion.div>
+              )}
+
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isLoading ? 'Verifying...' : 'Verify Phone Number'}
+              </button>
+            </form>
           </motion.div>
         </div>
       </div>
@@ -247,8 +436,8 @@ function SignUpPageContent() {
                   />
                 </div>
                 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <div className="w-full">
+                  <label htmlFor="email" className="block text_sm font-medium text-gray-700 mb-2 ">
                     Email Address *
                   </label>
                   <input
@@ -317,20 +506,102 @@ function SignUpPageContent() {
                     Cancel
                   </button>
                 </div>
-{/* 
-                <div className="text-center">
+              </form>
+            ) : showPhoneForm ? (
+              <form onSubmit={handlePhoneSignUp} className="space-y-3 sm:space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Enter your full name"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number *
+                  </label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder="Enter your phone number"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                    Password *
+                  </label>
+                  <input
+                    id="password"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Create a password (min. 6 characters)"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400"
+                    required
+                    minLength={6}
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-2">
+                    Confirm Password *
+                  </label>
+                  <input
+                    id="confirmPassword"
+                    type="password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    placeholder="Confirm your password"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400"
+                    required
+                    minLength={6}
+                  />
+                </div>
+
+                <div id="recaptcha-container-signup" />
+
+                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
+                  >
+                    {isLoading ? 'Creating Account...' : 'Create Account'}
+                  </button>
                   <button
                     type="button"
-                    onClick={() => router.push('/auth/signin')}
-                    className="text-blue-600 hover:text-blue-500 text-sm underline"
+                    onClick={() => {
+                      setShowPhoneForm(false);
+                      setPhone('');
+                      setPassword('');
+                      setConfirmPassword('');
+                      setName('');
+                      setError('');
+                      try { window.recaptchaVerifier?.clear(); } catch (_) {}
+                      window.recaptchaVerifier = undefined;
+                    }}
+                    className="px-4 py-2 text-gray-600 hover:text-gray-800 text-sm sm:text-base"
                   >
-                    Already have an account? Sign in
+                    Cancel
                   </button>
-                </div> */}
+                </div>
               </form>
             ) : (
               <div className="space-y-3 sm:space-y-4">
-                <div className="text-center">
+                <div className="text-center space-y-3">
                   <button
                     onClick={() => setShowEmailForm(true)}
                     className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white text-gray-700 font-semibold hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
@@ -339,6 +610,17 @@ function SignUpPageContent() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                     Sign up with Email
+                  </button>
+
+                  <button
+                    // onClick={() => setShowPhoneForm(true)}
+                    disabled
+                    className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white text-gray-700 font-semibold hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                  >
+                    <svg className="h-5 w-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Sign up with Phone(disabled)
                   </button>
                 </div>
 

@@ -38,7 +38,10 @@ function SignInPageContent() {
   const [error, setError] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [phone, setPhone] = useState('');
   const [showEmailForm, setShowEmailForm] = useState(false);
+  const [showPhoneForm, setShowPhoneForm] = useState(false);
+  const [authMethod, setAuthMethod] = useState(''); // 'email' or 'phone'
   const toast = useToast();
   const callbackUrl = searchParams.get('callbackUrl') || '/home';
 
@@ -84,8 +87,8 @@ function SignInPageContent() {
       setIsLoading(true);
       setError('');
 
-      // Handle sign in
-      const result = await signIn('credentials', {
+      // Handle sign in with email credentials
+      const result = await signIn('EmailCredentials', {
         email,
         password,
         callbackUrl,
@@ -95,6 +98,41 @@ function SignInPageContent() {
       if (result?.error) {
         setError('Invalid email or password');
         toast({text: "Invalid email or password"});
+      } else if (result?.ok) {
+        toast({text: "Signed in successfully!"});
+        router.push(callbackUrl);
+      }
+    } catch (error) {
+      console.error('Sign in error:', error);
+      setError('An unexpected error occurred. Please try again.');
+      toast({text: "An unexpected error occurred. Please try again."});
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handlePhonePasswordSignIn = async (e) => {
+    e.preventDefault();
+    if (!phone || !password) {
+      setError('Please fill in all fields.');
+      return;
+    }
+
+    try {
+      setIsLoading(true);
+      setError('');
+
+      // Handle sign in with phone credentials
+      const result = await signIn('PhoneCredentials', {
+        phone,
+        password,
+        callbackUrl,
+        redirect: false,
+      });
+
+      if (result?.error) {
+        setError('Invalid phone number or password');
+        toast({text: "Invalid phone number or password"});
       } else if (result?.ok) {
         toast({text: "Signed in successfully!"});
         router.push(callbackUrl);
@@ -233,36 +271,96 @@ function SignInPageContent() {
                   >
                     Forgot your password?
                   </button>
-                  {/* <button
+                </div>
+              </form>
+            ) : showPhoneForm ? (
+              <form onSubmit={handlePhonePasswordSignIn} className="space-y-3 sm:space-y-4">
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder="Enter your phone number"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                    Password
+                  </label>
+                  <input
+                    id="password"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Enter your password"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400"
+                    required
+                    minLength={6}
+                  />
+                </div>
+
+                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
+                  >
+                    {isLoading ? 'Signing in...' : 'Sign In'}
+                  </button>
+                  <button
                     type="button"
-                    onClick={() => router.push('/auth/signup')}
+                    onClick={() => {
+                      setShowPhoneForm(false);
+                      setPhone('');
+                      setPassword('');
+                      setError('');
+                    }}
+                    className="px-4 py-2 text-gray-600 hover:text-gray-800 text-sm sm:text-base"
+                  >
+                    Cancel
+                  </button>
+                </div>
+
+                <div className="text-center space-y-2">
+                  <button
+                    type="button"
+                    onClick={() => router.push('/auth/phone-forgot-password')}
                     className="text-blue-600 hover:text-blue-500 text-sm underline block w-full"
                   >
-                    Don't have an account? Sign up
-                  </button> */}
+                    Forgot your password?
+                  </button>
                 </div>
               </form>
             ) : (
               <div className="space-y-3 sm:space-y-4">
-                <div className="text-center">
-                <button
-                  onClick={() => setShowEmailForm(true)}
-                  className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white text-gray-700 font-semibold hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
-                >
-                  <svg className="h-5 w-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  Sign in with Email
-                </button>
-                
-                {/* <div className="text-center">
+                <div className="text-center space-y-3">
                   <button
-                    onClick={() => router.push('/auth/forgot-password')}
-                    className="text-blue-600 hover:text-blue-500 text-sm underline"
+                    onClick={() => setShowEmailForm(true)}
+                    className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white text-gray-700 font-semibold hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
                   >
-                    Forgot your password?
+                    <svg className="h-5 w-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Sign in with Email
                   </button>
-                </div> */}
+
+                  <button
+                    // onClick={() => setShowPhoneForm(true)}
+                    disabled
+                    className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white text-gray-700 font-semibold hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                  >
+                    <svg className="h-5 w-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Sign in with Phone(disabled)
+                  </button>
                 </div>
 
                 <div className="relative">

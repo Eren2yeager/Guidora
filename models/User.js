@@ -4,9 +4,23 @@ const UserSchema = new mongoose.Schema(
   {
     email: {
       type: String,
-      required: true,
+      required: function() {
+        // Email is required if no phone number is provided
+        return !this.phone;
+      },
       unique: true,
+      sparse: true, // Allows multiple null values
       lowercase: true,
+      trim: true,
+    },
+    phone: {
+      type: String,
+      required: function() {
+        // Phone is required if no email is provided
+        return !this.email;
+      },
+      unique: true,
+      sparse: true, // Allows multiple null values
       trim: true,
     },
     name: {
@@ -26,6 +40,7 @@ const UserSchema = new mongoose.Schema(
       },
       minlength: 6,
     },
+    // Email-based password reset
     resetPasswordOTP: {
       type: String,
       default: null,
@@ -33,6 +48,28 @@ const UserSchema = new mongoose.Schema(
     resetPasswordExpiry: {
       type: Date,
       default: null,
+    },
+    // Phone-based password reset
+    phoneResetOTP: {
+      type: String,
+      default: null,
+    },
+    phoneResetExpiry: {
+      type: Date,
+      default: null,
+    },
+    // Phone verification for new registrations
+    phoneVerificationOTP: {
+      type: String,
+      default: null,
+    },
+    phoneVerificationExpiry: {
+      type: Date,
+      default: null,
+    },
+    isPhoneVerified: {
+      type: Boolean,
+      default: false,
     },
     // Add more fields as needed for your app
   },
