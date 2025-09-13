@@ -4,6 +4,8 @@ const DegreeProgramSchema = new mongoose.Schema(
   {
     collegeId: { type: mongoose.Schema.Types.ObjectId, ref: 'College', required: true },
     courseId: { type: mongoose.Schema.Types.ObjectId, ref: 'Course', required: true },
+    code: { type: String, trim: true }, // optional program code
+
     durationYears: { type: Number, default: 3 },
     medium: { type: [String], default: [] },
     intakeMonths: { type: [Number], default: [] },

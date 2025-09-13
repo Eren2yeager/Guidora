@@ -41,22 +41,34 @@ export async function GET(req) {
       });
     }
 
+    let useNear = false;
     if (near) {
       const [latStr, lngStr] = near.split(',');
       const lat = parseFloat(latStr);
       const lng = parseFloat(lngStr);
       if (!Number.isNaN(lat) && !Number.isNaN(lng)) {
+        // NOTE: Using $near implies geospatial distance ordering.
+        // MongoDB does not allow an additional sort stage with $near.
+        // We therefore avoid applying a custom sort when $near is active.
         filter.location = {
           $near: {
             $geometry: { type: 'Point', coordinates: [lng, lat] },
             $maxDistance: Math.round(radiusKm * 1000),
           },
         };
+        useNear = true;
       }
     }
 
+    // Build the cursor with conditional sort based on whether $near is used.
+    let cursor = College.find(filter).skip(skip).limit(limit).lean();
+    if (!useNear) {
+      // Only apply alphabetical sort when not using geospatial ordering
+      cursor = cursor.sort({ name: 1 });
+    }
+
     const [items, total] = await Promise.all([
-      College.find(filter).sort({ name: 1 }).skip(skip).limit(limit).lean(),
+      cursor,
       College.countDocuments(filter),
     ]);
 

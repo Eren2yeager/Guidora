@@ -52,7 +52,7 @@ function SignUpPageContent() {
   const [otp, setOtp] = useState('');
   const [verificationId, setVerificationId] = useState('');
   const toast = useToast();
-  const callbackUrl = searchParams.get('callbackUrl') || '/home';
+  const callbackUrl = searchParams.get('callbackUrl') || '/';
 
   useEffect(() => {
     if (status === 'loading') return;
@@ -287,7 +287,7 @@ function SignUpPageContent() {
             </h2>
             
             <p className="text-gray-600 mb-6">
-              Welcome to EduAdvisor! Your account has been created. You'll be redirected to sign in shortly.
+              Welcome to Guidora! Your account has been created. You'll be redirected to sign in shortly.
             </p>
             
             <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-500 mx-auto"></div>
@@ -388,7 +388,7 @@ function SignUpPageContent() {
           </motion.div>
           
           <h2 className="text-3xl font-extrabold text-gray-900 mb-2 tracking-tight">
-            Join EduAdvisor
+            Join Guidora
           </h2>
           <p className="text-gray-700 mb-8 text-base">
             Create your account to get personalized educational guidance, resources, and support on your learning journey.

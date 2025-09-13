@@ -1,5 +1,11 @@
 import mongoose from 'mongoose';
 
+const AcademicSchema = new mongoose.Schema({
+  score: Number,
+  board: String, 
+  year: Number
+}, { _id: false });
+
 const UserSchema = new mongoose.Schema(
   {
     email: {
@@ -71,14 +77,41 @@ const UserSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    // Add more fields as needed for your app
+    // Student Profile Fields
+ 
+    gender: { type: String, enum: ['Male','Female','Other'] },
+    dob: Date,
+    classLevel: { type: String, enum: ['10','12','UG','Other'], default: '12' },
+    location: {
+      district: String,
+      state: String,
+      pincode: String,
+      geo: {
+        type: { type: String, enum: ['Point'], default: 'Point' },
+        coordinates: { type: [Number] } // [lng, lat]
+      }
+    },
+    academics: {
+      tenth: AcademicSchema,
+      twelfth: AcademicSchema,
+      subjects: [{ type: String }]
+    },
+    interests: [{ type: String }],
+    goals: [{ type: String }], // e.g., 'govt_exam','private_job','entrepreneurship','higher_study'
+    preferredLanguages: [{ type: String }]
   },
   {
     timestamps: true,
   }
 );
 
+// Useful geospatial index if geo present
+UserSchema.index({ 'location.geo': '2dsphere' });
+
 // Prevent model overwrite upon hot-reload in development
 const User = mongoose.models.User || mongoose.model('User', UserSchema);
 
 export default User;
+
+
+ 

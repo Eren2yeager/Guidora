@@ -11,41 +11,41 @@ function AppHeader({ user }) {
   const router = useRouter();
 
   return (
-    <header className="w-full bg-gradient-to-r from-blue-700 to-indigo-800 shadow-lg py-4 px-6 flex items-center justify-between">
-      <div className="flex items-center gap-3">
-        <span className="text-2xl font-extrabold text-white tracking-tight flex items-center gap-2">
-          <UserCircleIcon className="h-8 w-8 text-white/80 drop-shadow" />
-          EduAdvisor
-        </span>
-        <span className="ml-2 px-2 py-1 bg-white/20 rounded text-sm text-white font-medium">
-          One Stop Educational Advisor
+    <header className="w-full bg-gradient-to-r from-blue-700 to-indigo-800 shadow-lg py-2 sm:py-4 px-3 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0">
+      <div className="flex items-center gap-2 sm:gap-3">
+        <span className="text-xl sm:text-2xl font-extrabold text-white tracking-tight flex items-center gap-2">
+          <UserCircleIcon className="h-6 w-6 sm:h-8 sm:w-8 text-white/80 drop-shadow" />
+          Advisor
         </span>
       </div>
       {user && (
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4 flex-wrap justify-center sm:justify-start">
           {user.image ? (
             <img
               src={user.image}
               alt={user.name || "User"}
-              className="w-9 h-9 rounded-full border-2 border-white shadow"
+              className="w-7 h-7 sm:w-9 sm:h-9 rounded-full border-2 border-white shadow"
             />
           ) : (
-            <UserCircleIcon className="w-9 h-9 text-white/70" />
+            <UserCircleIcon className="w-7 h-7 sm:w-9 sm:h-9 text-white/70" />
           )}
-          <span className="text-white font-medium max-w-[160px] truncate">{user.name || user.email}</span>
+          <span className="text-white font-medium text-sm sm:text-base max-w-[120px] sm:max-w-[160px] truncate">
+            {user.name || user.email}
+          </span>
           <button
             onClick={() => signOut({ callbackUrl: "/auth/signin" })}
-            className="flex items-center gap-1 bg-white/20 hover:bg-white/30 text-white px-3 py-2 rounded-lg font-semibold text-sm shadow transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+            className="flex items-center gap-1 bg-white/20 hover:bg-white/30 text-white px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg font-semibold text-xs sm:text-sm shadow transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
             title="Sign out"
           >
-            <ArrowRightOnRectangleIcon className="h-5 w-5 mr-1" />
-            <span className="hidden sm:inline">Sign Out</span>
+            <ArrowRightOnRectangleIcon className="h-4 w-4 sm:h-5 sm:w-5 mr-1" />
           </button>
         </div>
       )}
     </header>
   );
 }
+
+
 
 function LoadingScreen() {
   return (
@@ -56,7 +56,7 @@ function LoadingScreen() {
     >
       <div className="flex flex-col items-center">
         <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-700 mb-6"></div>
-        <h2 className="text-2xl font-bold text-blue-800 mb-2">EduAdvisor</h2>
+        <h2 className="text-2xl font-bold text-blue-800 mb-2">Guidora</h2>
         <p className="text-gray-700 text-lg">Preparing your educational dashboard...</p>
       </div>
     </motion.div>
@@ -78,7 +78,7 @@ function UnauthenticatedScreen({ onSignIn }) {
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
             className="mx-auto h-20 w-20 bg-gradient-to-br from-blue-700 to-indigo-800 rounded-full flex items-center justify-center mb-6 shadow-lg"
-          >
+          > 
             <AcademicCapIcon className="h-10 w-10 text-white" />
           </motion.div>
           <h2 className="text-3xl font-extrabold text-gray-900 mb-2 tracking-tight">
@@ -151,13 +151,10 @@ export default function SecureLayout({ children }) {
       animate={{ opacity: 1 }}
       className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col"
     >
-      <AppHeader user={session.user} />
-      <main className="flex-1 w-full max-w-5xl mx-auto py-8 px-4">
+      {/* <AppHeader user={session.user} /> */}
+
         {children}
-      </main>
-      <footer className="w-full py-4 text-center text-gray-500 text-sm bg-white/60 mt-auto">
-        &copy; {new Date().getFullYear()} EduAdvisor. All rights reserved.
-      </footer>
+
     </motion.div>
   );
 }

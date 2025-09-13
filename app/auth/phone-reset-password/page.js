@@ -154,7 +154,7 @@ function PhoneResetPasswordPageContent() {
   useEffect(() => {
     if (status === "loading") return;
     if (session) {
-      router.push("/home");
+      router.push("/");
     }
 
     // Get phone and verificationId from URL params

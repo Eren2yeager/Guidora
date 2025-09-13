@@ -168,7 +168,7 @@ function ResetPasswordPageContent() {
   useEffect(() => {
     if (status === "loading") return;
     if (session) {
-      router.push("/home");
+      router.push("/");
     }
 
     // Get email from URL params

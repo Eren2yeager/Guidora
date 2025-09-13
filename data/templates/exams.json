@@ -1,0 +1,58 @@
+[
+  {
+    "name": "JEE Main",
+    "authority": "National Testing Agency",
+    "level": "National",
+    "scheduleWindow": "January and April",
+    "eligibility": "12th pass with PCM, maximum of 3 attempts",
+    "link": "https://jeemain.nta.nic.in/",
+    "region": "India",
+    "tags": ["engineering", "undergraduate", "entrance", "technical"],
+    "isActive": true,
+    "source": "NTA Official Website",
+    "sourceUrl": "https://nta.ac.in/",
+    "lastUpdated": "2023-08-10T00:00:00.000Z"
+  },
+  {
+    "name": "NEET",
+    "authority": "National Testing Agency",
+    "level": "National",
+    "scheduleWindow": "May",
+    "eligibility": "12th pass with PCB, no age limit",
+    "link": "https://neet.nta.nic.in/",
+    "region": "India",
+    "tags": ["medical", "undergraduate", "entrance", "biology"],
+    "isActive": true,
+    "source": "NTA Official Website",
+    "sourceUrl": "https://nta.ac.in/",
+    "lastUpdated": "2023-08-10T00:00:00.000Z"
+  },
+  {
+    "name": "GATE",
+    "authority": "IITs and IISc",
+    "level": "National",
+    "scheduleWindow": "February",
+    "eligibility": "Bachelor's degree in Engineering/Technology/Architecture/Science/Commerce/Arts",
+    "link": "https://gate.iitb.ac.in/",
+    "region": "India",
+    "tags": ["engineering", "postgraduate", "entrance", "technical"],
+    "isActive": true,
+    "source": "GATE Official Website",
+    "sourceUrl": "https://gate.iitb.ac.in/",
+    "lastUpdated": "2023-07-15T00:00:00.000Z"
+  },
+  {
+    "name": "MH-CET",
+    "authority": "State Common Entrance Test Cell, Maharashtra",
+    "level": "State",
+    "scheduleWindow": "May",
+    "eligibility": "12th pass with PCM/PCB from Maharashtra",
+    "link": "https://cetcell.mahacet.org/",
+    "region": "Maharashtra",
+    "tags": ["engineering", "medical", "undergraduate", "entrance", "state-level"],
+    "isActive": true,
+    "source": "Maharashtra CET Cell",
+    "sourceUrl": "https://cetcell.mahacet.org/",
+    "lastUpdated": "2023-06-20T00:00:00.000Z"
+  }
+]

@@ -44,7 +44,7 @@ function PhoneForgotPasswordPageContent() {
   useEffect(() => {
     if (status === 'loading') return;
     if (session) {
-      router.push('/home');
+      router.push('/');
     }
   }, [session, status, router]);
 

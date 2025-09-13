@@ -43,7 +43,7 @@ function SignInPageContent() {
   const [showPhoneForm, setShowPhoneForm] = useState(false);
   const [authMethod, setAuthMethod] = useState(''); // 'email' or 'phone'
   const toast = useToast();
-  const callbackUrl = searchParams.get('callbackUrl') || '/home';
+  const callbackUrl = searchParams.get('callbackUrl') || '/';
 
   useEffect(() => {
     if (status === 'loading') return;
@@ -177,7 +177,7 @@ function SignInPageContent() {
           </motion.div>
           
           <h2 className="text-3xl font-extrabold text-gray-900 mb-2 tracking-tight">
-            Welcome to EduAdvisor
+            Welcome to Guidora
           </h2>
           <p className="text-gray-700 mb-8 text-base">
             Your one stop educational advisor for personalized guidance, resources, and support on your learning journey.
@@ -429,7 +429,7 @@ function SignInPageContent() {
           className="text-center px-4"
         >
           <p className="text-sm text-gray-500 leading-relaxed">
-            New to EduAdvisor?{' '}
+            New to Guidora?{' '}
             <button 
               onClick={() => router.push('/auth/signup')}
               className="text-blue-700 font-medium hover:text-blue-600 underline"

@@ -1,0 +1,316 @@
+[
+  {
+    "collegeId": "GDC-SRG",
+    "courseId": "BSC-PHY",
+    "code": "GDC-SRG-BSCPHY",
+    "durationYears": 3,
+    "medium": ["EN", "HI"],
+    "intakeMonths": [6, 8],
+    "seats": 60,
+    "cutoff": {
+      "lastYear": 75,
+      "categoryWise": [
+        {"category": "General", "cutoff": 75},
+        {"category": "OBC", "cutoff": 70},
+        {"category": "SC", "cutoff": 65},
+        {"category": "ST", "cutoff": 60}
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 8000,
+      "hostelPerYear": 6000,
+      "misc": 2000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 65,
+      "requiredSubjects": ["Physics", "Mathematics", "Chemistry"]
+    },
+    "isActive": true,
+    "source": "admin-import",
+    "sourceUrl": "",
+    "lastUpdated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "collegeId": "GDC-SRG",
+    "courseId": "BSC-CHEM",
+    "code": "GDC-SRG-BSCCHEM",
+    "durationYears": 3,
+    "medium": ["EN", "HI"],
+    "intakeMonths": [6, 8],
+    "seats": 50,
+    "cutoff": {
+      "lastYear": 72,
+      "categoryWise": [
+        {"category": "General", "cutoff": 72},
+        {"category": "OBC", "cutoff": 68},
+        {"category": "SC", "cutoff": 63},
+        {"category": "ST", "cutoff": 58}
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 8000,
+      "hostelPerYear": 6000,
+      "misc": 2500,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 65,
+      "requiredSubjects": ["Chemistry", "Physics", "Mathematics"]
+    },
+    "isActive": true,
+    "source": "admin-import",
+    "sourceUrl": "",
+    "lastUpdated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "collegeId": "GDC-JMU",
+    "courseId": "BCOM",
+    "code": "GDC-JMU-BCOM",
+    "durationYears": 3,
+    "medium": ["EN", "HI"],
+    "intakeMonths": [6, 8],
+    "seats": 80,
+    "cutoff": {
+      "lastYear": 70,
+      "categoryWise": [
+        {"category": "General", "cutoff": 70},
+        {"category": "OBC", "cutoff": 65},
+        {"category": "SC", "cutoff": 60},
+        {"category": "ST", "cutoff": 55}
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 7500,
+      "hostelPerYear": 5500,
+      "misc": 1800,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 60,
+      "requiredSubjects": ["Accountancy"]
+    },
+    "isActive": true,
+    "source": "admin-import",
+    "sourceUrl": "",
+    "lastUpdated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "collegeId": "DU-001",
+    "courseId": "BA-ENG",
+    "code": "DU-001-BAENG",
+    "durationYears": 3,
+    "medium": ["EN"],
+    "intakeMonths": [7],
+    "seats": 100,
+    "cutoff": {
+      "lastYear": 92,
+      "categoryWise": [
+        {"category": "General", "cutoff": 92},
+        {"category": "OBC", "cutoff": 87},
+        {"category": "SC", "cutoff": 82},
+        {"category": "ST", "cutoff": 77},
+        {"category": "EWS", "cutoff": 90}
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 12000,
+      "hostelPerYear": 18000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 75,
+      "requiredSubjects": ["English"]
+    },
+    "isActive": true,
+    "source": "admin-import",
+    "sourceUrl": "",
+    "lastUpdated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "collegeId": "DU-001",
+    "courseId": "BA-PSY",
+    "code": "DU-001-BAPSY",
+    "durationYears": 3,
+    "medium": ["EN"],
+    "intakeMonths": [7],
+    "seats": 80,
+    "cutoff": {
+      "lastYear": 95,
+      "categoryWise": [
+        {"category": "General", "cutoff": 95},
+        {"category": "OBC", "cutoff": 90},
+        {"category": "SC", "cutoff": 85},
+        {"category": "ST", "cutoff": 80},
+        {"category": "EWS", "cutoff": 93}
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 12000,
+      "hostelPerYear": 18000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 80,
+      "requiredSubjects": []
+    },
+    "isActive": true,
+    "source": "admin-import",
+    "sourceUrl": "",
+    "lastUpdated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "collegeId": "IITB-001",
+    "courseId": "BSC-PHY",
+    "code": "IITB-001-BSCPHY",
+    "durationYears": 4,
+    "medium": ["EN"],
+    "intakeMonths": [7],
+    "seats": 40,
+    "cutoff": {
+      "lastYear": 98,
+      "categoryWise": [
+        {"category": "General", "cutoff": 98},
+        {"category": "OBC", "cutoff": 95},
+        {"category": "SC", "cutoff": 90},
+        {"category": "ST", "cutoff": 85},
+        {"category": "EWS", "cutoff": 96}
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 100000,
+      "hostelPerYear": 30000,
+      "misc": 10000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 90,
+      "requiredSubjects": ["Physics", "Mathematics", "Chemistry"]
+    },
+    "isActive": true,
+    "source": "admin-import",
+    "sourceUrl": "",
+    "lastUpdated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "collegeId": "BU-001",
+    "courseId": "BCOM",
+    "code": "BU-001-BCOM",
+    "durationYears": 3,
+    "medium": ["EN", "KN"],
+    "intakeMonths": [6, 7],
+    "seats": 120,
+    "cutoff": {
+      "lastYear": 75,
+      "categoryWise": [
+        {"category": "General", "cutoff": 75},
+        {"category": "OBC", "cutoff": 70},
+        {"category": "SC", "cutoff": 65},
+        {"category": "ST", "cutoff": 60}
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 15000,
+      "hostelPerYear": 25000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 65,
+      "requiredSubjects": ["Accountancy", "Business Studies"]
+    },
+    "isActive": true,
+    "source": "admin-import",
+    "sourceUrl": "",
+    "lastUpdated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "collegeId": "AMITY-001",
+    "courseId": "BBA",
+    "code": "AMITY-001-BBA",
+    "durationYears": 3,
+    "medium": ["EN"],
+    "intakeMonths": [7, 8],
+    "seats": 180,
+    "cutoff": {
+      "lastYear": 70,
+      "categoryWise": [
+        {"category": "General", "cutoff": 70}
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 150000,
+      "hostelPerYear": 80000,
+      "misc": 25000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 60,
+      "requiredSubjects": []
+    },
+    "isActive": true,
+    "source": "admin-import",
+    "sourceUrl": "",
+    "lastUpdated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "collegeId": "MAHE-001",
+    "courseId": "DIPLOMA-CS",
+    "code": "MAHE-001-DIPCS",
+    "durationYears": 2,
+    "medium": ["EN"],
+    "intakeMonths": [6, 12],
+    "seats": 60,
+    "cutoff": {
+      "lastYear": 65,
+      "categoryWise": [
+        {"category": "General", "cutoff": 65}
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 80000,
+      "hostelPerYear": 60000,
+      "misc": 15000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 55,
+      "requiredSubjects": ["Mathematics"]
+    },
+    "isActive": true,
+    "source": "admin-import",
+    "sourceUrl": "",
+    "lastUpdated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "collegeId": "MAHE-001",
+    "courseId": "DIPLOMA-FASHION",
+    "code": "MAHE-001-DIPFASH",
+    "durationYears": 2,
+    "medium": ["EN"],
+    "intakeMonths": [6, 12],
+    "seats": 40,
+    "cutoff": {
+      "lastYear": 60,
+      "categoryWise": [
+        {"category": "General", "cutoff": 60}
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 90000,
+      "hostelPerYear": 60000,
+      "misc": 25000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 50,
+      "requiredSubjects": []
+    },
+    "isActive": true,
+    "source": "admin-import",
+    "sourceUrl": "",
+    "lastUpdated": "2023-09-15T00:00:00.000Z"
+  }
+]

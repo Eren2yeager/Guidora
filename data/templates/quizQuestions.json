@@ -1,0 +1,170 @@
+[
+  {
+    "category": "interest",
+    "text": {
+      "en": "I enjoy solving complex mathematical problems",
+      "hi": "मुझे जटिल गणितीय समस्याओं को हल करने में आनंद आता है"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूरी तरह सहमत"
+        },
+        "weight": 5,
+        "tags": ["math", "analytical", "problem-solving"]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": ["math", "analytical"]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": []
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": []
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूरी तरह असहमत"
+        },
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "isActive": true,
+    "order": 1
+  },
+  {
+    "category": "aptitude",
+    "text": {
+      "en": "I can quickly identify patterns in complex data",
+      "hi": "मैं जटिल डेटा में पैटर्न को जल्दी पहचान सकता हूं"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूरी तरह सहमत"
+        },
+        "weight": 5,
+        "tags": ["analytical", "data", "pattern-recognition"]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": ["analytical", "data"]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": []
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": []
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूरी तरह असहमत"
+        },
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "isActive": true,
+    "order": 2
+  },
+  {
+    "category": "personality",
+    "text": {
+      "en": "I prefer working in teams rather than independently",
+      "hi": "मैं स्वतंत्र रूप से काम करने के बजाय टीमों में काम करना पसंद करता हूं"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूरी तरह सहमत"
+        },
+        "weight": 5,
+        "tags": ["collaborative", "team-player", "extrovert"]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": ["collaborative", "team-player"]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": ["adaptable"]
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": ["independent", "self-starter"]
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूरी तरह असहमत"
+        },
+        "weight": 1,
+        "tags": ["independent", "self-starter", "introvert"]
+      }
+    ],
+    "isActive": true,
+    "order": 3
+  }
+]

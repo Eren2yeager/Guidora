@@ -1,4 +1,0 @@
-name,code,type,affiliation,address,district,state,pincode,lng,lat,hostel,lab,library,internet,medium,phone,email,website,source,sourceUrl
-Government Degree College Srinagar,GDC-SRG,Government,University of Kashmir,Lal Chowk,Srinagar,Jammu and Kashmir,190001,74.7973,34.0837,true,true,true,true,EN|HI,0194-000000,info@gdcsrinagar.example,http://gdcsrinagar.example,seed,
-Government Degree College Jammu,GDC-JMU,Government,University of Jammu,Canal Road,Jammu,Jammu and Kashmir,180001,74.8570,32.7266,true,true,true,true,EN|HI,0191-000000,info@gdcjammu.example,http://gdcjammu.example,seed,
-Government Degree College Baramulla,GDC-BAR,Government,University of Kashmir,Main Market,Baramulla,Jammu and Kashmir,193101,74.3400,34.2021,true,true,true,false,EN|HI,0195-000000,info@gdcbaramulla.example,http://gdcbaramulla.example,seed,

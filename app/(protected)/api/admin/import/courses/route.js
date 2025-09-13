@@ -6,87 +6,119 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth.js';
 import { isAdminSession } from '@/lib/rbac.js';
 
-function parseCsv(text) {
-  const lines = text.split(/\r?\n/).filter(Boolean);
-  const [headerLine, ...rows] = lines;
-  const headers = headerLine.split(',').map((h) => h.trim());
-  return rows.map((line) => {
-    const cols = line.split(',').map((c) => c.trim());
-    const obj = {};
-    headers.forEach((h, i) => (obj[h] = cols[i] || ''));
-    return obj;
-  });
-}
-
 export async function POST(req) {
   try {
+    // Secure admin authentication check
     const session = await getServerSession(authOptions);
     if (!isAdminSession(session)) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
+      return NextResponse.json({ error: 'Unauthorized access' }, { status: 403 });
     }
 
+    // Connect to database
     await connectDB();
 
     const contentType = req.headers.get('content-type') || '';
-    const dryRun = (new URL(req.url)).searchParams.get('dryRun') === 'true';
+    
+    // Handle JSON data
+    if (contentType.includes('application/json')) {
+      const data = await req.json();
+      
+      // Validate data is an array
+      if (!Array.isArray(data)) {
+        return NextResponse.json({ error: 'Data must be an array of courses' }, { status: 400 });
+      }
 
-    if (contentType.includes('text/csv')) {
-      const text = await req.text();
-      const records = parseCsv(text);
+      // Get all streams for reference
+      const streams = await Stream.find({});
+      const streamMap = {};
+      streams.forEach(stream => {
+        streamMap[stream.slug] = stream._id;
+      });
 
-      // ensure streams exist
-      const streamNameToId = new Map();
+      // Process each course entry
+      const results = [];
+      for (const course of data) {
+        try {
+          // Validate required fields
+          if (!course.code || !course.name || !course.streamId) {
+            results.push({
+              code: course.code || 'unknown',
+              status: 'error',
+              message: 'Missing required fields (code, name, streamId)'
+            });
+            continue;
+          }
 
-      const ops = [];
-      for (const r of records) {
-        const streamName = r.stream;
-        if (!streamNameToId.has(streamName)) {
-          const s = await Stream.findOneAndUpdate(
-            { name: streamName },
-            { $setOnInsert: { name: streamName, description: '' } },
-            { upsert: true, new: true }
-          );
-          streamNameToId.set(streamName, s._id);
+          // Format the course data according to the model
+          const courseData = {
+            code: course.code,
+            name: course.name,
+            streamId: course.streamId,
+            level: course.level || 'UG',
+            description: course.description || '',
+            eligibility: {
+              minMarks: course.eligibility?.minMarks || 0,
+              requiredSubjects: course.eligibility?.requiredSubjects || []
+            },
+            outcomes: {
+              careers: course.outcomes?.careers || [],
+              govtExams: course.outcomes?.govtExams || [],
+              privateJobs: course.outcomes?.privateJobs || [],
+              higherStudies: course.outcomes?.higherStudies || [],
+              entrepreneurship: course.outcomes?.entrepreneurship || []
+            },
+            tags: course.tags || [],
+            media: {
+              iconUrl: course.media?.iconUrl || '',
+              bannerUrl: course.media?.bannerUrl || ''
+            },
+            isActive: course.isActive !== undefined ? course.isActive : true,
+            source: course.source || 'admin-import',
+            sourceUrl: course.sourceUrl || '',
+            lastUpdated: new Date()
+          };
+
+          // Check if course already exists
+          const existingCourse = await Course.findOne({ code: course.code });
+          
+          if (existingCourse) {
+            // Update existing course
+            await Course.updateOne({ _id: existingCourse._id }, { $set: courseData });
+            results.push({
+              code: course.code,
+              status: 'updated',
+              message: 'Course updated successfully'
+            });
+          } else {
+            // Create new course
+            const newCourse = new Course(courseData);
+            await newCourse.save();
+            results.push({
+              code: course.code,
+              status: 'created',
+              message: 'Course created successfully'
+            });
+          }
+        } catch (error) {
+          results.push({
+            code: course.code || 'unknown',
+            status: 'error',
+            message: error.message
+          });
         }
-
-        const doc = {
-          code: r.code,
-          name: r.name,
-          streamId: streamNameToId.get(streamName),
-          level: r.level || 'UG',
-          description: r.description || '',
-          eligibility: {
-            minMarks: parseFloat(r.minMarks || '0') || 0,
-            requiredSubjects: (r.requiredSubjects || '').split('|').filter(Boolean),
-          },
-          outcomes: {
-            careers: (r.careers || '').split('|').filter(Boolean),
-            govtExams: (r.govtExams || '').split('|').filter(Boolean),
-            privateJobs: (r.privateJobs || '').split('|').filter(Boolean),
-            higherStudies: (r.higherStudies || '').split('|').filter(Boolean),
-            entrepreneurship: (r.entrepreneurship || '').split('|').filter(Boolean),
-          },
-          tags: (r.tags || '').split('|').filter(Boolean),
-          media: { iconUrl: r.iconUrl || '', bannerUrl: r.bannerUrl || '' },
-          source: r.source || 'csv-import',
-          sourceUrl: r.sourceUrl || '',
-          lastUpdated: new Date(),
-        };
-
-        ops.push({ updateOne: { filter: { code: doc.code }, update: { $set: doc }, upsert: true } });
       }
 
-      if (dryRun) {
-        return NextResponse.json({ dryRun: true, count: ops.length });
-      }
-
-      const res = await Course.bulkWrite(ops, { ordered: false });
-      return NextResponse.json({ ok: true, result: res });
+      return NextResponse.json({
+        success: true,
+        message: `Processed ${data.length} courses`,
+        results
+      });
     }
-
-    return NextResponse.json({ error: 'Unsupported content-type' }, { status: 400 });
-  } catch (err) {
-    console.error('POST /api/admin/import/courses error', err);
-    return NextResponse.json({ error: 'Failed to import courses' }, { status: 500 });
+    
+    // If not JSON format
+    return NextResponse.json({ error: 'Unsupported content type. Please send JSON data.' }, { status: 415 });
+  } catch (error) {
+    console.error('Error importing courses:', error);
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

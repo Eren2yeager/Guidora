@@ -1,6 +1,6 @@
 # Phone Authentication Setup Guide (Firebase)
 
-This guide explains how to set up phone-based authentication with Firebase Phone Auth (reCAPTCHA) and forgot password functionality for your EduAdvisor application.
+This guide explains how to set up phone-based authentication with Firebase Phone Auth (reCAPTCHA) and forgot password functionality for your Guidora application.
 
 ## Overview
 

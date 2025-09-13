@@ -7,87 +7,129 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth.js';
 import { isAdminSession } from '@/lib/rbac.js';
 
-function parseCsv(text) {
-  const lines = text.split(/\r?\n/).filter(Boolean);
-  const [headerLine, ...rows] = lines;
-  const headers = headerLine.split(',').map((h) => h.trim());
-  return rows.map((line) => {
-    const cols = line.split(',').map((c) => c.trim());
-    const obj = {};
-    headers.forEach((h, i) => (obj[h] = cols[i] || ''));
-    return obj;
-  });
-}
-
 export async function POST(req) {
   try {
+    // Secure admin authentication check
     const session = await getServerSession(authOptions);
     if (!isAdminSession(session)) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
+      return NextResponse.json({ error: 'Unauthorized access' }, { status: 403 });
     }
 
+    // Connect to database
     await connectDB();
 
     const contentType = req.headers.get('content-type') || '';
-    const dryRun = (new URL(req.url)).searchParams.get('dryRun') === 'true';
-
-    if (contentType.includes('text/csv')) {
-      const text = await req.text();
-      const records = parseCsv(text);
-
-      // cache codes->ids
-      const collegeCodeToId = new Map();
-      const courseCodeToId = new Map();
-
-      const ops = [];
-      for (const r of records) {
-        const collegeCode = r.collegeCode;
-        const courseCode = r.courseCode;
-
-        if (!collegeCodeToId.has(collegeCode)) {
-          const college = await College.findOne({ code: collegeCode }, { _id: 1 });
-          if (!college) throw new Error(`College not found for code: ${collegeCode}`);
-          collegeCodeToId.set(collegeCode, college._id);
-        }
-        if (!courseCodeToId.has(courseCode)) {
-          const course = await Course.findOne({ code: courseCode }, { _id: 1 });
-          if (!course) throw new Error(`Course not found for code: ${courseCode}`);
-          courseCodeToId.set(courseCode, course._id);
-        }
-
-        const doc = {
-          collegeId: collegeCodeToId.get(collegeCode),
-          courseId: courseCodeToId.get(courseCode),
-          durationYears: parseInt(r.durationYears || '3', 10),
-          medium: (r.medium || '').split('|').filter(Boolean),
-          intakeMonths: (r.intakeMonths || '').split('|').map((m) => parseInt(m, 10)).filter((n) => !Number.isNaN(n)),
-          seats: parseInt(r.seats || '0', 10),
-          cutoff: { lastYear: parseFloat(r.cutoffLastYear || '0') || 0 },
-          fees: {
-            tuitionPerYear: parseFloat(r.tuitionPerYear || '0') || 0,
-            hostelPerYear: parseFloat(r.hostelPerYear || '0') || 0,
-            misc: parseFloat(r.misc || '0') || 0,
-            currency: r.currency || 'INR',
-          },
-          source: r.source || 'csv-import',
-          sourceUrl: r.sourceUrl || '',
-          lastUpdated: new Date(),
-        };
-
-        ops.push({ insertOne: { document: doc } });
+    
+    // Handle JSON data
+    if (contentType.includes('application/json')) {
+      const data = await req.json();
+      
+      // Validate data is an array
+      if (!Array.isArray(data)) {
+        return NextResponse.json({ error: 'Data must be an array of programs' }, { status: 400 });
       }
 
-      if (dryRun) {
-        return NextResponse.json({ dryRun: true, count: ops.length });
+      // Get all colleges and courses for reference
+      const colleges = await College.find({}, { code: 1 });
+      const courses = await Course.find({}, { code: 1 });
+      
+      const collegeMap = {};
+      colleges.forEach(college => {
+        collegeMap[college.code] = college._id;
+      });
+      
+      const courseMap = {};
+      courses.forEach(course => {
+        courseMap[course.code] = course._id;
+      });
+
+      // Process each program entry
+      const results = [];
+      for (const program of data) {
+        try {
+          // Validate required fields and references
+          if (!program.collegeId || !program.courseId) {
+            results.push({
+              code: program.code || 'unknown',
+              status: 'error',
+              message: 'Missing required fields (collegeId, courseId)'
+            });
+            continue;
+          }
+
+          // Format the program data according to the model
+          const programData = {
+            collegeId: program.collegeId,
+            courseId: program.courseId,
+            code: program.code || `${program.collegeId}-${program.courseId}`,
+            durationYears: program.durationYears || 3,
+            medium: program.medium || [],
+            intakeMonths: program.intakeMonths || [],
+            seats: program.seats || 0,
+            cutoff: {
+              lastYear: program.cutoff?.lastYear || 0,
+              categoryWise: program.cutoff?.categoryWise || []
+            },
+            fees: {
+              tuitionPerYear: program.fees?.tuitionPerYear || 0,
+              hostelPerYear: program.fees?.hostelPerYear || 0,
+              misc: program.fees?.misc || 0,
+              currency: program.fees?.currency || 'INR'
+            },
+            eligibilityOverrides: {
+              minMarks: program.eligibilityOverrides?.minMarks || null,
+              requiredSubjects: program.eligibilityOverrides?.requiredSubjects || []
+            },
+            isActive: program.isActive !== undefined ? program.isActive : true,
+            source: program.source || 'admin-import',
+            sourceUrl: program.sourceUrl || '',
+            lastUpdated: new Date()
+          };
+
+          // Check if program already exists
+          const existingProgram = await DegreeProgram.findOne({
+            collegeId: program.collegeId,
+            courseId: program.courseId
+          });
+          
+          if (existingProgram) {
+            // Update existing program
+            await DegreeProgram.updateOne({ _id: existingProgram._id }, { $set: programData });
+            results.push({
+              code: program.code || `${program.collegeId}-${program.courseId}`,
+              status: 'updated',
+              message: 'Program updated successfully'
+            });
+          } else {
+            // Create new program
+            const newProgram = new DegreeProgram(programData);
+            await newProgram.save();
+            results.push({
+              code: program.code || `${program.collegeId}-${program.courseId}`,
+              status: 'created',
+              message: 'Program created successfully'
+            });
+          }
+        } catch (error) {
+          results.push({
+            code: program.code || 'unknown',
+            status: 'error',
+            message: error.message
+          });
+        }
       }
 
-      const res = await DegreeProgram.bulkWrite(ops, { ordered: false });
-      return NextResponse.json({ ok: true, result: res });
+      return NextResponse.json({
+        success: true,
+        message: `Processed ${data.length} programs`,
+        results
+      });
     }
-
-    return NextResponse.json({ error: 'Unsupported content-type' }, { status: 400 });
-  } catch (err) {
-    console.error('POST /api/admin/import/programs error', err);
-    return NextResponse.json({ error: 'Failed to import programs' }, { status: 500 });
+    
+    // If not JSON format
+    return NextResponse.json({ error: 'Unsupported content type. Please send JSON data.' }, { status: 415 });
+  } catch (error) {
+    console.error('Error importing programs:', error);
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

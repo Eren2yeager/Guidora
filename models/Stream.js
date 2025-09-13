@@ -1,20 +1,20 @@
 import mongoose from 'mongoose';
 
-const StreamSchema = new mongoose.Schema(
-  {
-    name: { type: String, required: true, unique: true, trim: true },
-    description: { type: String, default: '' },
-    typicalSubjects: { type: [String], default: [] },
-    careers: { type: [String], default: [] },
-    isActive: { type: Boolean, default: true },
-    source: { type: String, default: '' },
-    sourceUrl: { type: String, default: '' },
-    lastUpdated: { type: Date },
+const StreamSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    enum: ['Science','Commerce','Arts','Vocational','Other'],
+    trim: true,
   },
-  { timestamps: true }
-);
+  slug: { type: String, required: true, lowercase: true, trim: true, unique: true },
+  description: { type: String, default: '' },
+  typicalSubjects: [{ type: String }],
+  careers: [{ type: String }],
+  isActive: { type: Boolean, default: true },
+  source: { type: String, default: '' },
+  sourceUrl: { type: String, default: '' },
+  lastUpdated: { type: Date },
+}, { timestamps: true });
 
-StreamSchema.index({ name: 1 }, { unique: true });
-
-const Stream = mongoose.models.Stream || mongoose.model('Stream', StreamSchema);
-export default Stream;
+export default mongoose.models.Stream || mongoose.model('Stream', StreamSchema);

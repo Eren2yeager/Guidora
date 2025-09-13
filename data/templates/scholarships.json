@@ -1,0 +1,86 @@
+[
+  {
+    "name": "National Merit Scholarship",
+    "provider": "Gov",
+    "description": "A merit-based scholarship for high-performing students across all disciplines.",
+    "eligibility": {
+      "minMarks": 85,
+      "incomeCap": 800000,
+      "state": "",
+      "stream": "",
+      "reservation": ["General", "OBC", "SC", "ST"]
+    },
+    "benefits": {
+      "amount": 100000,
+      "coverage": ["tuition", "books"]
+    },
+    "deadlines": [
+      {
+        "startDate": "2023-06-01T00:00:00.000Z",
+        "endDate": "2023-07-31T00:00:00.000Z",
+        "link": "https://example.com/scholarships/national-merit"
+      }
+    ],
+    "tags": ["merit", "national", "undergraduate", "postgraduate"],
+    "isActive": true,
+    "source": "Ministry of Education",
+    "sourceUrl": "https://example.com/ministry-of-education",
+    "lastUpdated": "2023-05-15T00:00:00.000Z"
+  },
+  {
+    "name": "Engineering Excellence Scholarship",
+    "provider": "Private",
+    "description": "Scholarship for outstanding engineering students sponsored by leading tech companies.",
+    "eligibility": {
+      "minMarks": 80,
+      "incomeCap": 0,
+      "state": "",
+      "stream": "Engineering",
+      "reservation": ["General"]
+    },
+    "benefits": {
+      "amount": 150000,
+      "coverage": ["tuition", "hostel", "internship"]
+    },
+    "deadlines": [
+      {
+        "startDate": "2023-07-01T00:00:00.000Z",
+        "endDate": "2023-08-15T00:00:00.000Z",
+        "link": "https://example.com/scholarships/engineering-excellence"
+      }
+    ],
+    "tags": ["engineering", "tech", "undergraduate", "merit"],
+    "isActive": true,
+    "source": "Tech Industry Consortium",
+    "sourceUrl": "https://example.com/tech-consortium",
+    "lastUpdated": "2023-06-10T00:00:00.000Z"
+  },
+  {
+    "name": "Maharashtra State Scholarship",
+    "provider": "Gov",
+    "description": "State-level scholarship for students from Maharashtra pursuing higher education.",
+    "eligibility": {
+      "minMarks": 70,
+      "incomeCap": 500000,
+      "state": "Maharashtra",
+      "stream": "",
+      "reservation": ["General", "OBC", "SC", "ST"]
+    },
+    "benefits": {
+      "amount": 50000,
+      "coverage": ["tuition"]
+    },
+    "deadlines": [
+      {
+        "startDate": "2023-08-01T00:00:00.000Z",
+        "endDate": "2023-09-30T00:00:00.000Z",
+        "link": "https://example.com/scholarships/maharashtra-state"
+      }
+    ],
+    "tags": ["state", "maharashtra", "undergraduate", "need-based"],
+    "isActive": true,
+    "source": "Maharashtra Education Department",
+    "sourceUrl": "https://example.com/maharashtra-education",
+    "lastUpdated": "2023-07-05T00:00:00.000Z"
+  }
+]

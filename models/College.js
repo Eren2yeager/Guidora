@@ -28,6 +28,10 @@ const CollegeSchema = new mongoose.Schema(
       email: { type: String, default: '' },
       website: { type: String, default: '' },
     },
+    meta: {
+      rank: Number,
+      establishedYear: Number
+    } ,
     isActive: { type: Boolean, default: true },
     source: { type: String, default: '' },
     sourceUrl: { type: String, default: '' },

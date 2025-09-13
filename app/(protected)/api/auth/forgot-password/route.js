@@ -45,11 +45,11 @@ async function sendOTPEmail(email, otp) {
   const mailOptions = {
     from: process.env.EMAIL_FROM,
     to: email,
-    subject: 'EduAdvisor - Password Reset Code',
+    subject: 'Guidora - Password Reset Code',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
         <div style="text-align: center; margin-bottom: 30px;">
-          <h1 style="color: #1e40af; margin: 0;">EduAdvisor</h1>
+          <h1 style="color: #1e40af; margin: 0;">Guidora</h1>
           <p style="color: #6b7280; margin: 5px 0 0 0;">Your Educational Companion</p>
         </div>
         
@@ -57,7 +57,7 @@ async function sendOTPEmail(email, otp) {
           <h2 style="color: #1f2937; margin: 0 0 20px 0; text-align: center;">Password Reset Request</h2>
           
           <p style="color: #4b5563; margin: 0 0 20px 0; line-height: 1.6;">
-            You requested to reset your password for your EduAdvisor account. Use the code below to reset your password:
+            You requested to reset your password for your Guidora account. Use the code below to reset your password:
           </p>
           
           <div style="text-align: center; margin: 30px 0;">
@@ -75,7 +75,7 @@ async function sendOTPEmail(email, otp) {
         </div>
         
         <div style="text-align: center; color: #6b7280; font-size: 12px;">
-          <p>This email was sent from EduAdvisor. If you have any questions, please contact our support team.</p>
+          <p>This email was sent from Guidora. If you have any questions, please contact our support team.</p>
         </div>
       </div>
     `,
