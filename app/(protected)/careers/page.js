@@ -65,14 +65,14 @@ export default function CareersPage() {
         transition={{ duration: 0.5, delay: 0.1 }}
         className="bg-white rounded-xl shadow border border-gray-200 p-4 md:p-5 mb-6"
       >
-        <h2 className="text-lg font-semibold mb-4">Filter Careers</h2>
+        <h2 className="text-lg text-black font-semibold mb-4">Filter Careers</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <label htmlFor="search" className="block text-sm font-medium text-gray-700 mb-1">Search</label>
             <div className="relative">
               <input
                 id="search"
-                className="w-full border border-gray-300 rounded-lg p-2.5 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border text-black border-gray-300 rounded-lg p-2.5 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Search careers"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
@@ -89,7 +89,7 @@ export default function CareersPage() {
             <label htmlFor="sector" className="block text-sm font-medium text-gray-700 mb-1">Sector</label>
             <input
               id="sector"
-              className="w-full border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border text-black border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter sector"
               value={sector}
               onChange={(e) => setSector(e.target.value)}
@@ -100,7 +100,7 @@ export default function CareersPage() {
             <label htmlFor="tag" className="block text-sm font-medium text-gray-700 mb-1">Tag</label>
             <input
               id="tag"
-              className="w-full border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border text-black border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter tag"
               value={tag}
               onChange={(e) => setTag(e.target.value)}

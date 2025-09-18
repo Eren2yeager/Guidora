@@ -1,7 +1,6 @@
-import mongoose from 'mongoose';
-
 const TimelineEventSchema = new mongoose.Schema(
   {
+    _id: { type: mongoose.Schema.Types.ObjectId },
     type: { type: String, enum: ['admission', 'scholarship', 'exam', 'counselling', 'other'], required: true },
     title: { type: String, required: true, trim: true },
     description: { type: String, default: '' },
@@ -10,14 +9,14 @@ const TimelineEventSchema = new mongoose.Schema(
       courseId: { type: mongoose.Schema.Types.ObjectId, ref: 'Course' },
       programId: { type: mongoose.Schema.Types.ObjectId, ref: 'DegreeProgram' },
       state: { type: String, default: '' },
-      examCode: { type: String, default: '' }
+      examId: { type: mongoose.Schema.Types.ObjectId, ref: 'Exam' } // use ObjectId instead of string
     },
     startDate: { type: Date, required: true },
     endDate: { type: Date },
     link: { type: String, default: '' },
-    tags: { type: [String], default: [] },
+
+    interestTags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Interest' }],
     isActive: { type: Boolean, default: true },
-    lastUpdated: { type: Date },
   },
   { timestamps: true }
 );

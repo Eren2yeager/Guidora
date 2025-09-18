@@ -86,7 +86,7 @@ export default function ScholarshipsPage() {
             <div className="relative">
               <input
                 id="search"
-                className="w-full border border-gray-300 rounded-lg p-2.5 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border text-black border-gray-300 rounded-lg p-2.5 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Search scholarships"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
@@ -103,7 +103,7 @@ export default function ScholarshipsPage() {
             <label htmlFor="provider" className="block text-sm font-medium text-gray-700 mb-1">Provider</label>
             <select
               id="provider"
-              className="w-full border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border text-black border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={provider}
               onChange={(e) => setProvider(e.target.value)}
             >
@@ -117,7 +117,7 @@ export default function ScholarshipsPage() {
             <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-1">State</label>
             <input
               id="state"
-              className="w-full border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border text-black border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter state"
               value={state}
               onChange={(e) => setState(e.target.value)}
@@ -128,7 +128,7 @@ export default function ScholarshipsPage() {
             <label htmlFor="stream" className="block text-sm font-medium text-gray-700 mb-1">Stream</label>
             <input
               id="stream"
-              className="w-full border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border text-black border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter stream"
               value={stream}
               onChange={(e) => setStream(e.target.value)}
@@ -140,7 +140,7 @@ export default function ScholarshipsPage() {
             <input
               id="minAmount"
               type="number"
-              className="w-full border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border text-black border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Min scholarship amount"
               value={minAmount}
               onChange={(e) => setMinAmount(e.target.value)}

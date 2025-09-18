@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { ToastProvider } from "@/contexts/ToastContext";
 import AuthProvider from "@/providers/authProvider";
+import QuizRedirect from "@/components/onboarding/QuizRedirect";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "One Stop Educational Advisor",
-  description: "One Stop Educational Advisor",
+  title: "Guidora - One Stop Educational Advisor",
+  description: "Guidora - One Stop Educational Advisor",
 };
 
 export default function RootLayout({ children }) {
@@ -26,7 +27,9 @@ export default function RootLayout({ children }) {
       >
         <ToastProvider>
           <AuthProvider>
-            {children}
+            <QuizRedirect>
+              {children}
+            </QuizRedirect>
           </AuthProvider>
         </ToastProvider>
       </body>

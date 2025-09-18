@@ -3,15 +3,68 @@ import connectDB from '@/lib/mongodb.js';
 import Course from '@/models/Course.js';
 import Stream from '@/models/Stream.js';
 import { getServerSession } from 'next-auth';
-import { authOptions } from '@/lib/auth.js';
-import { isAdminSession } from '@/lib/rbac.js';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { isAdminSession } from '@/lib/auth';
+import { ObjectId } from 'mongodb';
+
+/**
+ * Helper function to convert string IDs to ObjectId
+ * @param {string} id - The ID to convert
+ * @returns {ObjectId} - MongoDB ObjectId
+ */
+const toObjectId = (id) => {
+  try {
+    return typeof id === 'string' ? new ObjectId(id) : id;
+  } catch (error) {
+    return id;
+  }
+};
+
+/**
+ * Process course data to convert all relevant fields to ObjectId
+ * @param {Object} data - The course data to process
+ * @returns {Object} - Processed course data with ObjectId conversions
+ */
+const processCourseData = (data) => {
+  const processedData = { ...data };
+  
+  // Convert streamId to ObjectId
+  if (processedData.streamId) {
+    processedData.streamId = toObjectId(processedData.streamId);
+  }
+  
+  // Convert interestTags array to ObjectIds
+  if (processedData.interestTags && Array.isArray(processedData.interestTags)) {
+    processedData.interestTags = processedData.interestTags.map(tag => toObjectId(tag));
+  }
+  
+  // Convert outcomes references to ObjectIds
+  if (processedData.outcomes) {
+    if (processedData.outcomes.careers && Array.isArray(processedData.outcomes.careers)) {
+      processedData.outcomes.careers = processedData.outcomes.careers.map(career => toObjectId(career));
+    }
+    
+    if (processedData.outcomes.Exams && Array.isArray(processedData.outcomes.Exams)) {
+      processedData.outcomes.Exams = processedData.outcomes.Exams.map(exam => toObjectId(exam));
+    }
+    
+    if (processedData.outcomes.higherStudies && Array.isArray(processedData.outcomes.higherStudies)) {
+      processedData.outcomes.higherStudies = processedData.outcomes.higherStudies.map(course => toObjectId(course));
+    }
+  }
+  
+  return processedData;
+};
 
 export async function POST(req) {
   try {
     // Secure admin authentication check
     const session = await getServerSession(authOptions);
-    if (!isAdminSession(session)) {
-      return NextResponse.json({ error: 'Unauthorized access' }, { status: 403 });
+    if (!session || !isAdminSession(session)) {
+      return NextResponse.json({ 
+        success: false, 
+        message: "Unauthorized" 
+      }, { status: 401 });
     }
 
     // Connect to database
@@ -25,7 +78,10 @@ export async function POST(req) {
       
       // Validate data is an array
       if (!Array.isArray(data)) {
-        return NextResponse.json({ error: 'Data must be an array of courses' }, { status: 400 });
+        return NextResponse.json({ 
+          success: false, 
+          message: 'Data must be an array of courses' 
+        }, { status: 400 });
       }
 
       // Get all streams for reference
@@ -62,28 +118,28 @@ export async function POST(req) {
             },
             outcomes: {
               careers: course.outcomes?.careers || [],
-              govtExams: course.outcomes?.govtExams || [],
-              privateJobs: course.outcomes?.privateJobs || [],
-              higherStudies: course.outcomes?.higherStudies || [],
-              entrepreneurship: course.outcomes?.entrepreneurship || []
+              Exams: course.outcomes?.Exams || [],
+              higherStudies: course.outcomes?.higherStudies || []
             },
-            tags: course.tags || [],
+            interestTags: course.interestTags || [],
             media: {
               iconUrl: course.media?.iconUrl || '',
               bannerUrl: course.media?.bannerUrl || ''
             },
             isActive: course.isActive !== undefined ? course.isActive : true,
             source: course.source || 'admin-import',
-            sourceUrl: course.sourceUrl || '',
-            lastUpdated: new Date()
+            sourceUrl: course.sourceUrl || ''
           };
+
+          // Process all ObjectId references
+          const processedCourseData = processCourseData(courseData);
 
           // Check if course already exists
           const existingCourse = await Course.findOne({ code: course.code });
           
           if (existingCourse) {
             // Update existing course
-            await Course.updateOne({ _id: existingCourse._id }, { $set: courseData });
+            await Course.updateOne({ _id: existingCourse._id }, { $set: processedCourseData });
             results.push({
               code: course.code,
               status: 'updated',
@@ -91,7 +147,7 @@ export async function POST(req) {
             });
           } else {
             // Create new course
-            const newCourse = new Course(courseData);
+            const newCourse = new Course(processedCourseData);
             await newCourse.save();
             results.push({
               code: course.code,
@@ -111,14 +167,20 @@ export async function POST(req) {
       return NextResponse.json({
         success: true,
         message: `Processed ${data.length} courses`,
-        results
+        data: { results }
       });
     }
     
     // If not JSON format
-    return NextResponse.json({ error: 'Unsupported content type. Please send JSON data.' }, { status: 415 });
+    return NextResponse.json({ 
+      success: false, 
+      message: 'Unsupported content type. Please send JSON data.' 
+    }, { status: 415 });
   } catch (error) {
     console.error('Error importing courses:', error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ 
+      success: false, 
+      message: error.message 
+    }, { status: 500 });
   }
 }

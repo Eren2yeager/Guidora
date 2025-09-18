@@ -70,13 +70,13 @@ export default function CoursesPage() {
       {/* Filters */}
       <div className="bg-white rounded-xl shadow border border-gray-200 p-4 md:p-5 mb-6 grid grid-cols-1 md:grid-cols-3 gap-3">
         <input
-          className="border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="border text-black border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
           placeholder="Search courses"
           value={q}
           onChange={(e) => setQ(e.target.value)}
         />
         <select
-          className="border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="border text-black border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
           value={stream}
           onChange={(e) => setStream(e.target.value)}
         >
@@ -86,7 +86,7 @@ export default function CoursesPage() {
           ))}
         </select>
         <input
-          className="border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="border text-black border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
           placeholder="Tags (comma-separated)"
           value={tags}
           onChange={(e) => setTags(e.target.value)}

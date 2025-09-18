@@ -1,0 +1,33 @@
+   [
+    {
+      "_id": "19957033d575ec73559adda5",
+      "userId": "d9a7524a8a06dfa3624066e3",
+      "generatedAt": "2025-09-18T08:33:36.363380",
+      "streams": [
+        {
+          "streamId": "1616a730bd23b6fc1ff1a43d",
+          "score": 4.5
+        }
+      ],
+      "courses": [
+        {
+          "courseId": "a33553e571de9bf985fbe20b",
+          "score": 4.7
+        }
+      ],
+      "programs": [
+        {
+          "programId": "41d3697b87f79469f2e1ad12",
+          "score": 4.5
+        }
+      ],
+      "scholarships": [
+        {
+          "scholarshipId": "fb1487899bd6506073dbb4a9",
+          "score": 4.2
+        }
+      ],
+      "rationale": "Based on strong healthcare interest and analytical skills, medical field recommended.",
+      "quizResultId": "cd4391119a3a1e6368221795"
+    }
+  ]

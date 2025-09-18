@@ -1,0 +1,65 @@
+[
+    {
+      "_id": "d9a7524a8a06dfa3624066e3",
+      "email": "gautamdaksh29@gmail.com",
+      "phone": "7351068751",
+      "password": "hashed_password_here",
+      "name": "Samar Gautam",
+      "media": {
+        "iconUrl": "",
+        "bannerUrl": ""
+      },
+      "role": "Student",
+      "gender": "Male",
+      "dob": "2006-05-15T00:00:00",
+      "classLevel": "12",
+      "location": {
+        "district": "Srinagar",
+        "state": "Jammu and Kashmir",
+        "pincode": "190001",
+        "geo": {
+          "type": "Point",
+          "coordinates": [
+            74.7973,
+            34.0837
+          ]
+        }
+      },
+      "academics": {
+        "tenth": {
+          "score": 85.5,
+          "board": "JKBOSE",
+          "year": 2022
+        },
+        "twelfth": {
+          "score": 78.2,
+          "board": "JKBOSE",
+          "year": 2024
+        }
+      },
+      "interests": [
+        "99f2fe3b697e9c6cb4b411b3",
+        "158cf8747dea7f361db523fc"
+      ],
+      "goals": {
+        "careers": [
+          "7ec26eab8d81c8cb42552fd7"
+        ],
+        "exams": [
+          "89929e30c463faa3ccae542d"
+        ],
+        "courses": [
+          "8881c6bb04db38957436b735"
+        ],
+        "colleges": [
+          "dc641d781615ebd834501169"
+        ]
+      },
+      "preferredLanguages": [
+        "English",
+        "Hindi"
+      ],
+      "createdAt": "2025-09-18T08:33:36.362917",
+      "updatedAt": "2025-09-18T08:33:36.362923"
+    }
+  ]

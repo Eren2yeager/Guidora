@@ -2,37 +2,50 @@ import mongoose from 'mongoose';
 
 const CourseSchema = new mongoose.Schema(
   {
+_id: { type: mongoose.Schema.Types.ObjectId },
+
     code: { type: String, required: true, unique: true, trim: true },
     name: { type: String, required: true, trim: true },
-    streamId: { type: mongoose.Schema.Types.ObjectId, ref: 'Stream', required: true },
-    level: { type: String, enum: ['PreU', 'UG', 'Diploma'], default: 'UG' },
-    description: { type: String, default: '' },
-    eligibility: {
-      minMarks: { type: Number, default: 0 },
-      requiredSubjects: { type: [String], default: [] },
-    },
-    outcomes: {
-      careers: { type: [String], default: [] },
-      govtExams: { type: [String], default: [] },
-      privateJobs: { type: [String], default: [] },
-      higherStudies: { type: [String], default: [] },
-      entrepreneurship: { type: [String], default: [] },
-    },
-    tags: { type: [String], default: [] },
     media: {
       iconUrl: { type: String, default: '' },
       bannerUrl: { type: String, default: '' },
     },
+
+    // Academic details
+    streamId: { type: mongoose.Schema.Types.ObjectId, ref: 'Stream', required: true },
+    level: { type: String, enum: ['PreU', 'UG', 'PG', 'Diploma', 'Certificate'], default: 'UG' },
+    description: { type: String, default: '' },
+
+    // Eligibility
+    eligibility: {
+      minMarks: { type: Number, default: 0 },
+      requiredSubjects: { type: [String], default: [] },
+    },
+
+    // Outcomes
+    outcomes: {
+      careers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Career' }],
+      Exams: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Exam' }],
+      higherStudies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }], // link to other courses
+    },
+
+    // Tagging system
+    interestTags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Interest' }],
+
+
+
+
+    // Meta
     isActive: { type: Boolean, default: true },
     source: { type: String, default: '' },
     sourceUrl: { type: String, default: '' },
-    lastUpdated: { type: Date },
   },
   { timestamps: true }
 );
 
+// Indexes
 CourseSchema.index({ streamId: 1 });
-CourseSchema.index({ tags: 1 });
+CourseSchema.index({ interestTags: 1 });
 CourseSchema.index({ code: 1 }, { unique: true });
 
 const Course = mongoose.models.Course || mongoose.model('Course', CourseSchema);

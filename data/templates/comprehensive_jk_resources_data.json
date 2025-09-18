@@ -1,0 +1,688 @@
+[
+  {
+    "_id": "5e04933127a4aab19876709b",
+    "title": "NEET Biology Preparation Guide",
+    "type": "ebook",
+    "subject": "Biology",
+    "link": "https://neet.nta.nic.in/biology-guide.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Biology"
+    ],
+    "author": "NTA",
+    "addedBy": null,
+    "source": "NTA",
+    "sourceUrl": "https://neet.nta.nic.in/biology-guide.pdf",
+    "views": 1874,
+    "downloads": 218,
+    "ratings": [
+      {
+        "userId": "f4e7d2b3baeb1b927cab7117",
+        "rating": 3.544206604921402,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720003",
+    "createdAt": "2025-09-18T08:32:33.720012",
+    "updatedAt": "2025-09-18T08:32:33.720014"
+  },
+  {
+    "_id": "1c3c2cba7315ef1c981cba0d",
+    "title": "JEE Main Mathematics Formula Sheet",
+    "type": "ebook",
+    "subject": "Mathematics",
+    "link": "https://jeemain.nta.nic.in/math-formulas.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Mathematics"
+    ],
+    "author": "NTA",
+    "addedBy": null,
+    "source": "NTA",
+    "sourceUrl": "https://jeemain.nta.nic.in/math-formulas.pdf",
+    "views": 4974,
+    "downloads": 1988,
+    "ratings": [
+      {
+        "userId": "a3081ce64592851385c5819e",
+        "rating": 3.7667778437886157,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720041",
+    "createdAt": "2025-09-18T08:32:33.720043",
+    "updatedAt": "2025-09-18T08:32:33.720045"
+  },
+  {
+    "_id": "e4d1a844bfdea2522583ca46",
+    "title": "UPSC Prelims General Studies Paper 1",
+    "type": "ebook",
+    "subject": "General Studies",
+    "link": "https://upsc.gov.in/gs-paper1.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "General",
+      "Studies"
+    ],
+    "author": "UPSC",
+    "addedBy": null,
+    "source": "UPSC",
+    "sourceUrl": "https://upsc.gov.in/gs-paper1.pdf",
+    "views": 603,
+    "downloads": 1641,
+    "ratings": [
+      {
+        "userId": "681a619c390c2f47290aa4c8",
+        "rating": 4.882875573149236,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720068",
+    "createdAt": "2025-09-18T08:32:33.720070",
+    "updatedAt": "2025-09-18T08:32:33.720072"
+  },
+  {
+    "_id": "58b11d310fac1dc4ae24955a",
+    "title": "12th Class Physics Video Lectures",
+    "type": "video",
+    "subject": "Physics",
+    "link": "https://education.jk.gov.in/physics-lectures",
+    "fileUrl": "",
+    "fileType": "mp4",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "hi",
+    "tags": [
+      "Physics"
+    ],
+    "author": "J&K Education",
+    "addedBy": null,
+    "source": "J&K Education",
+    "sourceUrl": "https://education.jk.gov.in/physics-lectures",
+    "views": 3967,
+    "downloads": 90,
+    "ratings": [
+      {
+        "userId": "9a2eb4a60d4217c49b93ca98",
+        "rating": 3.8432781153576316,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720184",
+    "createdAt": "2025-09-18T08:32:33.720186",
+    "updatedAt": "2025-09-18T08:32:33.720188"
+  },
+  {
+    "_id": "2cfa8c9db73c71b20fce498d",
+    "title": "English Grammar and Composition",
+    "type": "ebook",
+    "subject": "English",
+    "link": "https://jkbose.nic.in/english-grammar.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "English"
+    ],
+    "author": "JKBOSE",
+    "addedBy": null,
+    "source": "JKBOSE",
+    "sourceUrl": "https://jkbose.nic.in/english-grammar.pdf",
+    "views": 1676,
+    "downloads": 1143,
+    "ratings": [
+      {
+        "userId": "622bb5e78f307d84c25a8d5c",
+        "rating": 4.051305147640643,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720200",
+    "createdAt": "2025-09-18T08:32:33.720202",
+    "updatedAt": "2025-09-18T08:32:33.720204"
+  },
+  {
+    "_id": "4d34a10b7197552422e94582",
+    "title": "Computer Science Programming Tutorial",
+    "type": "course",
+    "subject": "Computer Science",
+    "link": "https://programming.jk.edu.in",
+    "fileUrl": "",
+    "fileType": "web",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Computer",
+      "Science"
+    ],
+    "author": "J&K IT Department",
+    "addedBy": null,
+    "source": "J&K IT Department",
+    "sourceUrl": "https://programming.jk.edu.in",
+    "views": 245,
+    "downloads": 848,
+    "ratings": [
+      {
+        "userId": "823ff63195f7e165cb56ffaa",
+        "rating": 3.9752442932130614,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720216",
+    "createdAt": "2025-09-18T08:32:33.720218",
+    "updatedAt": "2025-09-18T08:32:33.720220"
+  },
+  {
+    "_id": "9ca4599dcc9f3614da80adc5",
+    "title": "Chemistry Lab Manual Class 12",
+    "type": "ebook",
+    "subject": "Chemistry",
+    "link": "https://chemistry.jkbose.ac.in/lab-manual.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Chemistry"
+    ],
+    "author": "JKBOSE",
+    "addedBy": null,
+    "source": "JKBOSE",
+    "sourceUrl": "https://chemistry.jkbose.ac.in/lab-manual.pdf",
+    "views": 2727,
+    "downloads": 156,
+    "ratings": [
+      {
+        "userId": "4425bde414642be2fae808df",
+        "rating": 4.213083362460164,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720231",
+    "createdAt": "2025-09-18T08:32:33.720233",
+    "updatedAt": "2025-09-18T08:32:33.720235"
+  },
+  {
+    "_id": "eb92f5eb07a099b47a1a86da",
+    "title": "Business Studies Case Studies",
+    "type": "ebook",
+    "subject": "Business Studies",
+    "link": "https://commerce.jk.edu.in/case-studies.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Business",
+      "Studies"
+    ],
+    "author": "J&K Commerce Board",
+    "addedBy": null,
+    "source": "J&K Commerce Board",
+    "sourceUrl": "https://commerce.jk.edu.in/case-studies.pdf",
+    "views": 535,
+    "downloads": 700,
+    "ratings": [
+      {
+        "userId": "7e0db7f0914f6841b7f8257b",
+        "rating": 3.847242816542098,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720245",
+    "createdAt": "2025-09-18T08:32:33.720247",
+    "updatedAt": "2025-09-18T08:32:33.720249"
+  },
+  {
+    "_id": "55f36556807772936dc5de4a",
+    "title": "History of Jammu and Kashmir",
+    "type": "ebook",
+    "subject": "History",
+    "link": "https://jkhistory.gov.in/complete-history.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "History"
+    ],
+    "author": "J&K Archives",
+    "addedBy": null,
+    "source": "J&K Archives",
+    "sourceUrl": "https://jkhistory.gov.in/complete-history.pdf",
+    "views": 4525,
+    "downloads": 1285,
+    "ratings": [
+      {
+        "userId": "5d2ad27d829af2106ff63409",
+        "rating": 4.9418349878990355,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720261",
+    "createdAt": "2025-09-18T08:32:33.720262",
+    "updatedAt": "2025-09-18T08:32:33.720264"
+  },
+  {
+    "_id": "4f0cfd90889e6364ed25570d",
+    "title": "Agriculture Techniques in Himalayan Region",
+    "type": "ebook",
+    "subject": "Agriculture",
+    "link": "https://agriculture.jk.gov.in/techniques.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "hi",
+    "tags": [
+      "Agriculture"
+    ],
+    "author": "J&K Agriculture Dept",
+    "addedBy": null,
+    "source": "J&K Agriculture Dept",
+    "sourceUrl": "https://agriculture.jk.gov.in/techniques.pdf",
+    "views": 323,
+    "downloads": 910,
+    "ratings": [
+      {
+        "userId": "fe510c7a98bbe7ce45a7d8f9",
+        "rating": 4.825722690148043,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720275",
+    "createdAt": "2025-09-18T08:32:33.720276",
+    "updatedAt": "2025-09-18T08:32:33.720278"
+  },
+  {
+    "_id": "61e17dce890a700cd2a62a24",
+    "title": "Career Guidance Video Series",
+    "type": "video",
+    "subject": "Career Guidance",
+    "link": "https://careers.jk.edu.in/video-series",
+    "fileUrl": "",
+    "fileType": "mp4",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "hi",
+    "tags": [
+      "Career",
+      "Guidance"
+    ],
+    "author": "J&K Career Cell",
+    "addedBy": null,
+    "source": "J&K Career Cell",
+    "sourceUrl": "https://careers.jk.edu.in/video-series",
+    "views": 876,
+    "downloads": 488,
+    "ratings": [
+      {
+        "userId": "f43a9ee1fe0057806c1f782b",
+        "rating": 4.389743365886668,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720293",
+    "createdAt": "2025-09-18T08:32:33.720295",
+    "updatedAt": "2025-09-18T08:32:33.720297"
+  },
+  {
+    "_id": "937ad957a0ff113cf52b696d",
+    "title": "Entrepreneurship Development Program",
+    "type": "course",
+    "subject": "Entrepreneurship",
+    "link": "https://startup.jk.gov.in/development-program",
+    "fileUrl": "",
+    "fileType": "web",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Entrepreneurship"
+    ],
+    "author": "J&K Startup Mission",
+    "addedBy": null,
+    "source": "J&K Startup Mission",
+    "sourceUrl": "https://startup.jk.gov.in/development-program",
+    "views": 2042,
+    "downloads": 615,
+    "ratings": [
+      {
+        "userId": "c83e174ff43abb4d940b588c",
+        "rating": 4.929271643137527,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720307",
+    "createdAt": "2025-09-18T08:32:33.720309",
+    "updatedAt": "2025-09-18T08:32:33.720311"
+  },
+  {
+    "_id": "2ab039ca6b4e5198965aad6f",
+    "title": "Environmental Science Field Guide",
+    "type": "ebook",
+    "subject": "Environmental Science",
+    "link": "https://environment.jk.gov.in/field-guide.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Environmental",
+      "Science"
+    ],
+    "author": "J&K Pollution Board",
+    "addedBy": null,
+    "source": "J&K Pollution Board",
+    "sourceUrl": "https://environment.jk.gov.in/field-guide.pdf",
+    "views": 2249,
+    "downloads": 1806,
+    "ratings": [
+      {
+        "userId": "715c5b6062675e648739d5a2",
+        "rating": 4.847800323094064,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720331",
+    "createdAt": "2025-09-18T08:32:33.720333",
+    "updatedAt": "2025-09-18T08:32:33.720335"
+  },
+  {
+    "_id": "951194bb3d7cd9534ef7e5cc",
+    "title": "Digital Marketing Fundamentals",
+    "type": "course",
+    "subject": "Marketing",
+    "link": "https://digitalmarketing.jk.edu.in",
+    "fileUrl": "",
+    "fileType": "web",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Marketing"
+    ],
+    "author": "J&K Skill Development",
+    "addedBy": null,
+    "source": "J&K Skill Development",
+    "sourceUrl": "https://digitalmarketing.jk.edu.in",
+    "views": 690,
+    "downloads": 466,
+    "ratings": [
+      {
+        "userId": "d8d2f0f778542d495c11e2a1",
+        "rating": 4.501580764427852,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720345",
+    "createdAt": "2025-09-18T08:32:33.720347",
+    "updatedAt": "2025-09-18T08:32:33.720349"
+  },
+  {
+    "_id": "c812f24c9d4012ea2012476b",
+    "title": "Mental Health and Counseling Guide",
+    "type": "ebook",
+    "subject": "Psychology",
+    "link": "https://mentalhealth.jk.gov.in/counseling-guide.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "hi",
+    "tags": [
+      "Psychology"
+    ],
+    "author": "J&K Health Dept",
+    "addedBy": null,
+    "source": "J&K Health Dept",
+    "sourceUrl": "https://mentalhealth.jk.gov.in/counseling-guide.pdf",
+    "views": 2717,
+    "downloads": 1915,
+    "ratings": [
+      {
+        "userId": "be1434f41eedb0a7c39f6abc",
+        "rating": 3.6039380566711356,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720359",
+    "createdAt": "2025-09-18T08:32:33.720361",
+    "updatedAt": "2025-09-18T08:32:33.720362"
+  },
+  {
+    "_id": "74369cc17767a997df5b173a",
+    "title": "Vocational Training Opportunities in J&K",
+    "type": "ebook",
+    "subject": "Vocational Training",
+    "link": "https://vocational.jk.gov.in/opportunities.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Vocational",
+      "Training"
+    ],
+    "author": "J&K Skill Mission",
+    "addedBy": null,
+    "source": "J&K Skill Mission",
+    "sourceUrl": "https://vocational.jk.gov.in/opportunities.pdf",
+    "views": 3570,
+    "downloads": 354,
+    "ratings": [
+      {
+        "userId": "b0b00ceb87dae1d508ab03ac",
+        "rating": 4.8519331958277085,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720373",
+    "createdAt": "2025-09-18T08:32:33.720375",
+    "updatedAt": "2025-09-18T08:32:33.720381"
+  },
+  {
+    "_id": "b27115fdfb609dccd9b39c1c",
+    "title": "Financial Literacy for Students",
+    "type": "course",
+    "subject": "Finance",
+    "link": "https://financial.jk.edu.in/literacy",
+    "fileUrl": "",
+    "fileType": "web",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "hi",
+    "tags": [
+      "Finance"
+    ],
+    "author": "RBI Financial Education",
+    "addedBy": null,
+    "source": "RBI Financial Education",
+    "sourceUrl": "https://financial.jk.edu.in/literacy",
+    "views": 2909,
+    "downloads": 1437,
+    "ratings": [
+      {
+        "userId": "10e1aa69307099a8eaf2b0ce",
+        "rating": 4.8020700107232965,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720392",
+    "createdAt": "2025-09-18T08:32:33.720394",
+    "updatedAt": "2025-09-18T08:32:33.720396"
+  },
+  {
+    "_id": "1b58376e9a6ae639f761ee40",
+    "title": "Research Methodology and Statistics",
+    "type": "ebook",
+    "subject": "Research",
+    "link": "https://research.jk.edu.in/methodology.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Research"
+    ],
+    "author": "University Consortium",
+    "addedBy": null,
+    "source": "University Consortium",
+    "sourceUrl": "https://research.jk.edu.in/methodology.pdf",
+    "views": 1385,
+    "downloads": 1731,
+    "ratings": [
+      {
+        "userId": "88c78a2b5328a09947c7e913",
+        "rating": 4.309265425382076,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720407",
+    "createdAt": "2025-09-18T08:32:33.720408",
+    "updatedAt": "2025-09-18T08:32:33.720410"
+  },
+  {
+    "_id": "f6fd4a4604d114cbede53d6c",
+    "title": "Communication Skills Development",
+    "type": "course",
+    "subject": "Communication",
+    "link": "https://communication.jk.edu.in",
+    "fileUrl": "",
+    "fileType": "web",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Communication"
+    ],
+    "author": "J&K Language Institute",
+    "addedBy": null,
+    "source": "J&K Language Institute",
+    "sourceUrl": "https://communication.jk.edu.in",
+    "views": 3427,
+    "downloads": 574,
+    "ratings": [
+      {
+        "userId": "d6824e1e0ce4948f89822523",
+        "rating": 4.103702306030933,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720425",
+    "createdAt": "2025-09-18T08:32:33.720427",
+    "updatedAt": "2025-09-18T08:32:33.720429"
+  },
+  {
+    "_id": "8695035f0609a4123526a435",
+    "title": "Healthcare Career Pathways",
+    "type": "ebook",
+    "subject": "Healthcare",
+    "link": "https://healthcare.jk.gov.in/career-pathways.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Healthcare"
+    ],
+    "author": "Medical Council J&K",
+    "addedBy": null,
+    "source": "Medical Council J&K",
+    "sourceUrl": "https://healthcare.jk.gov.in/career-pathways.pdf",
+    "views": 881,
+    "downloads": 1087,
+    "ratings": [
+      {
+        "userId": "e100e12580a6882da425f9a1",
+        "rating": 4.037936821112009,
+        "comment": "Helpful resource"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-18T08:32:33.720439",
+    "createdAt": "2025-09-18T08:32:33.720441",
+    "updatedAt": "2025-09-18T08:32:33.720442"
+  }
+]

@@ -108,7 +108,7 @@ export default function ProgramsPage() {
             <div className="relative">
               <input
                 id="course"
-                className="w-full border border-gray-300 rounded-lg p-3 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full border text-black border-gray-300 rounded-lg p-3 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Search for a course"
                 value={courseSearchQuery}
                 onChange={(e) => {
@@ -176,7 +176,7 @@ export default function ProgramsPage() {
             <label htmlFor="medium" className="block text-sm font-medium text-gray-700">Medium</label>
             <select
               id="medium"
-              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full border text-black border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               value={medium}
               onChange={(e) => setMedium(e.target.value)}
             >
@@ -196,7 +196,7 @@ export default function ProgramsPage() {
             <input
               id="maxFees"
               type="number"
-              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full border text-black border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="e.g., 100000"
               value={maxFees}
               onChange={(e) => setMaxFees(e.target.value)}

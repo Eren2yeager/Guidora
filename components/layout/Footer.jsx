@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { AcademicCapIcon } from "@heroicons/react/24/outline";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,8 +35,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-5 xl:gap-8">
           <div className="xl:col-span-1">
-            <Link href="/" className="text-xl font-bold text-blue-600">
-              Guidora
+             <Link href="/" className="flex-shrink-0 flex items-center gap-2">
+              <span className="h-10 w-10 bg-gradient-to-br from-blue-700 to-indigo-800 rounded-full flex items-center justify-center shadow-md">
+                <AcademicCapIcon className="h-5 w-5 text-white" />
+              </span>
+              <span className="text-xl font-bold text-blue-600">Guidora</span>
             </Link>
             <p className="mt-2 text-sm text-gray-500">
               Making smart education decisions simple and accessible for everyone.

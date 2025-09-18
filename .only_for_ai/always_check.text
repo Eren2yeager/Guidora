@@ -1,0 +1,144 @@
+📌 /only_for_ai/always_check.txt
+
+ALWAYS CHECK THESE RULES BEFORE WRITING ANY CODE
+(Frontend + Backend)
+
+🔹 1. UI / FRONTEND RULES
+
+Input Fields
+
+Never create blended UI (text blending into background).
+
+Always use:
+
+bg-white text-black placeholder-gray-500 border border-gray-300 rounded-md
+
+
+Always add proper labels:
+
+text-gray-700 font-medium
+
+
+Components
+
+Never repeat similar code.
+
+Always create reusable components in /components/.
+
+Use universal names (FormInput, Button, Modal) for shared components.
+
+Page-specific components → /components/{pageName}/.
+
+Animations
+
+UI must always look smooth + neat.
+
+Use Tailwind transitions (transition ease-in-out duration-200) or Framer Motion.
+
+Reference Pages
+
+Check /reference_page_images.
+
+File name → route path (replace _ with /).
+
+Example: dashboard_home.png → /dashboard/home.
+
+🔹 2. BACKEND / API RULES
+
+Models & Database
+
+Always check /models before writing queries.
+
+check if _id or ref _id is in string or not if it is in string then convert that in mongodb objectId for saving in database so , that connectivity with other models works
+
+Never invent new fields unless discussed.
+
+If new data is needed → add JSON in /data/tempelates.
+
+Validation
+
+Always validate user input before saving to DB.
+
+Use schema validation (Mongoose required, enum, min, max) + runtime checks.
+
+Never trust frontend input blindly.
+
+Error Handling
+
+Always use try/catch for async code.
+
+Return meaningful error messages, not raw errors.
+
+Security
+
+Never expose secrets (API keys, JWT secrets, DB URIs).
+
+Always hash passwords (bcrypt) before saving.
+
+Always use JWT/session authentication for protected routes.
+
+Never allow direct query injection (req.body must be validated).
+
+API Design
+
+Follow RESTful structure (or GraphQL if project uses it).
+
+Always check permissions (isAdmin, isCounselor, etc.) before allowing access.
+
+Responses must be structured consistently:
+
+{
+  "success": true/false,
+  "message": "...",
+  "data": {}
+}
+
+
+Indexes & Performance
+
+Use Schema.index() for frequently queried fields (userId, status, etc.).
+
+Avoid N+1 queries (use populate smartly).
+
+🔹 3. GENERAL RULES
+
+Naming
+
+Models: PascalCase → User, CounselorSession.
+
+Variables & functions: camelCase → fetchUserData.
+
+Files & folders: kebab-case → user-profile-form.js.
+
+Database Consistency
+
+If a feature needs static data (tags, interest fields, exam lists, etc.),
+→ put JSON in /data/tempelates and ask user to insert into DB.
+
+Clean Code
+
+No unused imports or variables.
+
+Split big functions into smaller ones.
+
+Comments where logic is complex.
+
+Testing Mindset
+
+Always think: What happens if this input is invalid, missing, or malicious?
+
+Ensure both happy path and failure path work.
+
+🚨 FINAL REMINDER
+
+Before giving code:
+
+✅ Check /models (DB structure)
+
+✅ Check /data/tempelates (what’s already in DB)
+
+✅ Follow frontend clarity rules
+
+✅ Follow backend validation & security rules
+
+✅ Extract UI into /components/

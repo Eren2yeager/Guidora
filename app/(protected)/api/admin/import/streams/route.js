@@ -4,6 +4,7 @@ import Stream from '@/models/Stream.js';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth.js';
 import { isAdminSession } from '@/lib/rbac.js';
+import { ObjectId } from 'mongodb';
 
 export async function POST(req) {
   try {
@@ -41,13 +42,25 @@ export async function POST(req) {
             continue;
           }
 
+          // Helper function to convert string IDs to ObjectId
+          const toObjectId = (id) => {
+            try {
+              return new ObjectId(id);
+            } catch (error) {
+              return id; // Return original if conversion fails
+            }
+          };
+          
           // Format the stream data according to the model
           const streamData = {
             name: stream.name,
             slug: stream.slug,
             description: stream.description || '',
             typicalSubjects: stream.typicalSubjects || [],
-            careers: stream.careers || [],
+            // Convert career IDs to ObjectId if they are strings
+            careers: Array.isArray(stream.careers) 
+              ? stream.careers.map(id => typeof id === 'string' ? toObjectId(id) : id)
+              : [],
             isActive: stream.isActive !== undefined ? stream.isActive : true,
             source: stream.source || 'admin-import',
             sourceUrl: stream.sourceUrl || '',

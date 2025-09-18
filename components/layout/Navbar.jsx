@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useSession } from 'next-auth/react';
-
+import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
+import { AcademicCapIcon } from "@heroicons/react/24/outline";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -15,12 +15,13 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Courses', href: '/courses' },
-    { name: 'Colleges', href: '/colleges' },
-    { name: 'Programs', href: '/programs' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Scholarships', href: '/scholarships' },
+    { name: "Home", href: "/" },
+    { name: "Courses", href: "/courses" },
+    { name: "Colleges", href: "/colleges" },
+    { name: "Programs", href: "/programs" },
+    { name: "Careers", href: "/careers" },
+    { name: "Scholarships", href: "/scholarships" },
+    { name: "Quizzes", href: "/quizzes" },
   ];
 
   return (
@@ -28,20 +29,25 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0 flex items-center">
+            <Link href="/" className="flex-shrink-0 flex items-center gap-2">
+              <span className="h-10 w-10 bg-gradient-to-br from-blue-700 to-indigo-800 rounded-full flex items-center justify-center shadow-md">
+                <AcademicCapIcon className="h-5 w-5 text-white" />
+              </span>
               <span className="text-xl font-bold text-blue-600">Guidora</span>
             </Link>
           </div>
-          
+
           {/* Desktop navigation */}
           <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === link.href
-                  ? 'text-blue-600 font-semibold'
-                  : 'text-gray-700 hover:text-blue-500'}`}
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  pathname === link.href
+                    ? "text-blue-600 font-semibold"
+                    : "text-gray-700 hover:text-blue-500"
+                }`}
               >
                 {link.name}
               </Link>
@@ -49,13 +55,18 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex md:items-center md:ml-6">
-            {status === 'authenticated' ? (
+            {status === "authenticated" ? (
               <>
                 <Link
                   href="/profile"
-                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-500"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-500"
                 >
-                  Profile
+                  <img
+                    src={session?.user?.image || "/default-avatar.png"}
+                    alt="Profile"
+                    className="h-8 w-8 rounded-full object-cover"
+                  />
+                  <span className="sr-only">Profile</span>
                 </Link>
                 <Link
                   href="/dashboard"
@@ -135,9 +146,11 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === link.href
-                  ? 'text-blue-600 font-semibold'
-                  : 'text-gray-700 hover:text-blue-500'}`}
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  pathname === link.href
+                    ? "text-blue-600 font-semibold"
+                    : "text-gray-700 hover:text-blue-500"
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
@@ -146,7 +159,7 @@ export default function Navbar() {
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="px-2 space-y-1">
-              {status === 'authenticated' ? (
+              {status === "authenticated" ? (
                 <>
                   <Link
                     href="/profile"

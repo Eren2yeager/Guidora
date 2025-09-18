@@ -110,7 +110,7 @@ export default function CollegesPage() {
             <div className="relative">
               <input
                 id="search"
-                className="w-full border border-gray-300 rounded-lg p-3 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full border text-black border-gray-300 rounded-lg p-3 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Search by name or location"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
@@ -128,7 +128,7 @@ export default function CollegesPage() {
             <label htmlFor="state" className="block text-sm font-medium text-gray-700">State</label>
             <input
               id="state"
-              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full border text-black border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="State"
               value={state}
               onChange={(e) => setState(e.target.value)}
@@ -140,7 +140,7 @@ export default function CollegesPage() {
             <label htmlFor="district" className="block text-sm font-medium text-gray-700">District</label>
             <input
               id="district"
-              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full border text-black border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="District"
               value={district}
               onChange={(e) => setDistrict(e.target.value)}
@@ -183,7 +183,7 @@ export default function CollegesPage() {
               <div className="flex items-center gap-2">
                 <div className="w-32">
                   <input
-                    className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full border text-black border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Radius km"
                     value={radiusKm}
                     onChange={(e) => setRadiusKm(e.target.value)}

@@ -1,15 +1,42 @@
 import { NextResponse } from 'next/server';
-import  connectDB from '@/lib/mongodb';
+import connectDB from '@/lib/mongodb';
 import Stream from '@/models/Stream';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { isAdminSession } from '@/lib/rbac';
+import { ObjectId } from 'mongodb';
 
 // GET /api/admin/streams - List all streams with optional search
+// Helper function to convert string IDs to ObjectId
+const toObjectId = (id) => {
+  try {
+    return new ObjectId(id);
+  } catch (error) {
+    return id; // Return original if conversion fails
+  }
+};
+
+// Helper function to process stream data
+const processStreamData = (data) => {
+  return {
+    name: data.name,
+    slug: data.slug,
+    description: data.description || '',
+    typicalSubjects: data.typicalSubjects || [],
+    // Convert career IDs to ObjectId if they are strings
+    careers: Array.isArray(data.careers) 
+      ? data.careers.map(id => typeof id === 'string' ? toObjectId(id) : id)
+      : [],
+    isActive: data.isActive !== undefined ? data.isActive : true,
+    lastUpdated: new Date()
+  };
+};
+
 export async function GET(request) {
   try {
     const session = await getServerSession(authOptions);
-    if (!session?.user?.role === 'admin') {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    if (!isAdminSession(session)) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
     }
 
     const searchParams = request.nextUrl.searchParams;
@@ -57,12 +84,12 @@ export async function GET(request) {
 export async function POST(request) {
   try {
     const session = await getServerSession(authOptions);
-    if (!session?.user?.role === 'admin') {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    if (!isAdminSession(session)) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
     }
 
     const body = await request.json();
-    const { name, slug, description, typicalSubjects, careers } = body;
+    const { name, slug } = body;
 
     if (!name || !slug) {
       return NextResponse.json(
@@ -82,19 +109,22 @@ export async function POST(request) {
       );
     }
 
-    const stream = new Stream({
-      name,
-      slug,
-      description,
-      typicalSubjects,
-      careers,
-      isActive: true,
-      lastUpdated: new Date(),
-    });
+    // Process stream data with helper function
+    const streamData = processStreamData(body);
+    const stream = new Stream(streamData);
 
     await stream.save();
 
-    return NextResponse.json(stream, { status: 201 });
+    // Populate careers for the response
+    const populatedStream = await Stream.findById(stream._id)
+      .populate('careers')
+      .lean();
+
+    return NextResponse.json({
+      success: true,
+      message: 'Stream created successfully',
+      data: populatedStream
+    }, { status: 201 });
   } catch (error) {
     console.error('Error in POST /api/admin/streams:', error);
     return NextResponse.json(

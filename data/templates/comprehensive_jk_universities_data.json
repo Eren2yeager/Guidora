@@ -1,0 +1,434 @@
+[
+  {
+    "_id": "7c2399bd86412cd669d6c299",
+    "name": "University of Kashmir",
+    "code": "UOK-001",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/uok-001.png",
+      "bannerUrl": "https://university-banners.com/uok-001-banner.jpg"
+    },
+    "description": "Premier educational institution established in 1948, offering diverse academic programs across multiple disciplines.",
+    "address": {
+      "line1": "Hazratbal",
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "pincode": "190006"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.837,
+        34.126
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [],
+    "universityAdvisors": [],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0194-2414049",
+      "email": "info@kashmiruniversity.ac.in",
+      "website": "https://kashmiruniversity.net"
+    },
+    "meta": {
+      "rank": 1,
+      "establishedYear": 1948
+    },
+    "isActive": true,
+    "source": "University of Kashmir Official",
+    "sourceUrl": "https://kashmiruniversity.net",
+    "lastUpdated": "2025-09-18T08:25:49.085439",
+    "createdAt": "2025-09-18T08:25:49.085456",
+    "updatedAt": "2025-09-18T08:25:49.085458"
+  },
+  {
+    "_id": "0d9e72c7cdd3bbc3f7af7196",
+    "name": "University of Jammu",
+    "code": "UOJ-001",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/uoj-001.png",
+      "bannerUrl": "https://university-banners.com/uoj-001-banner.jpg"
+    },
+    "description": "Premier educational institution established in 1969, offering diverse academic programs across multiple disciplines.",
+    "address": {
+      "line1": "Baba Saheb Ambedkar Road",
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "pincode": "180006"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.857,
+        32.7266
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [],
+    "universityAdvisors": [],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2456531",
+      "email": "info@jammuuniversity.ac.in",
+      "website": "https://jammuuniversity.ac.in"
+    },
+    "meta": {
+      "rank": 2,
+      "establishedYear": 1969
+    },
+    "isActive": true,
+    "source": "University of Jammu Official",
+    "sourceUrl": "https://jammuuniversity.ac.in",
+    "lastUpdated": "2025-09-18T08:25:49.085469",
+    "createdAt": "2025-09-18T08:25:49.085472",
+    "updatedAt": "2025-09-18T08:25:49.085473"
+  },
+  {
+    "_id": "f15dcab39cd703048ccfe134",
+    "name": "Central University of Jammu",
+    "code": "CUJ-001",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/cuj-001.png",
+      "bannerUrl": "https://university-banners.com/cuj-001-banner.jpg"
+    },
+    "description": "Premier educational institution established in 2011, offering diverse academic programs across multiple disciplines.",
+    "address": {
+      "line1": "Bagla",
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "pincode": "181143"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.957,
+        32.6266
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [],
+    "universityAdvisors": [],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2690000",
+      "email": "info@cujammu.ac.in",
+      "website": "https://www.cujammu.ac.in"
+    },
+    "meta": {
+      "rank": 3,
+      "establishedYear": 2011
+    },
+    "isActive": true,
+    "source": "Central University of Jammu Official",
+    "sourceUrl": "https://www.cujammu.ac.in",
+    "lastUpdated": "2025-09-18T08:25:49.085482",
+    "createdAt": "2025-09-18T08:25:49.085484",
+    "updatedAt": "2025-09-18T08:25:49.085486"
+  },
+  {
+    "_id": "4faf306bb2cf1e3f08467481",
+    "name": "Islamic University of Science and Technology",
+    "code": "IUST-001",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/iust-001.png",
+      "bannerUrl": "https://university-banners.com/iust-001-banner.jpg"
+    },
+    "description": "Premier educational institution established in 2005, offering diverse academic programs across multiple disciplines.",
+    "address": {
+      "line1": "Awantipora",
+      "district": "Pulwama",
+      "state": "Jammu and Kashmir",
+      "pincode": "192122"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.942,
+        33.918
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [],
+    "universityAdvisors": [],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0194-2421327",
+      "email": "info@islamicuniversity.edu.in",
+      "website": "https://www.islamicuniversity.edu.in"
+    },
+    "meta": {
+      "rank": 4,
+      "establishedYear": 2005
+    },
+    "isActive": true,
+    "source": "Islamic University of Science and Technology Official",
+    "sourceUrl": "https://www.islamicuniversity.edu.in",
+    "lastUpdated": "2025-09-18T08:25:49.085494",
+    "createdAt": "2025-09-18T08:25:49.085496",
+    "updatedAt": "2025-09-18T08:25:49.085498"
+  },
+  {
+    "_id": "35f3c19ce987bf91d7585260",
+    "name": "Sher-e-Kashmir University of Agricultural Sciences and Technology",
+    "code": "SKUAST-001",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/skuast-001.png",
+      "bannerUrl": "https://university-banners.com/skuast-001-banner.jpg"
+    },
+    "description": "Premier educational institution established in 1982, offering diverse academic programs across multiple disciplines.",
+    "address": {
+      "line1": "Main Campus Shalimar",
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "pincode": "190025"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.892,
+        34.142
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [],
+    "universityAdvisors": [],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0194-2462100",
+      "email": "info@skuastkashmir.ac.in",
+      "website": "https://www.skuastkashmir.ac.in"
+    },
+    "meta": {
+      "rank": 5,
+      "establishedYear": 1982
+    },
+    "isActive": true,
+    "source": "Sher-e-Kashmir University of Agricultural Sciences and Technology Official",
+    "sourceUrl": "https://www.skuastkashmir.ac.in",
+    "lastUpdated": "2025-09-18T08:25:49.085504",
+    "createdAt": "2025-09-18T08:25:49.085506",
+    "updatedAt": "2025-09-18T08:25:49.085508"
+  },
+  {
+    "_id": "60a4ba66689d45864833d325",
+    "name": "SKUAST Jammu",
+    "code": "SKUAST-J-001",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/skuast-j-001.png",
+      "bannerUrl": "https://university-banners.com/skuast-j-001-banner.jpg"
+    },
+    "description": "Premier educational institution established in 1999, offering diverse academic programs across multiple disciplines.",
+    "address": {
+      "line1": "Chatha",
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "pincode": "180009"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.897,
+        32.7566
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [],
+    "universityAdvisors": [],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2230100",
+      "email": "info@skuastjammu.ac.in",
+      "website": "https://www.skuastjammu.ac.in"
+    },
+    "meta": {
+      "rank": 6,
+      "establishedYear": 1999
+    },
+    "isActive": true,
+    "source": "SKUAST Jammu Official",
+    "sourceUrl": "https://www.skuastjammu.ac.in",
+    "lastUpdated": "2025-09-18T08:25:49.085515",
+    "createdAt": "2025-09-18T08:25:49.085517",
+    "updatedAt": "2025-09-18T08:25:49.085519"
+  },
+  {
+    "_id": "05ae54c1d06662cd47b38d1c",
+    "name": "Cluster University Srinagar",
+    "code": "CUS-001",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/cus-001.png",
+      "bannerUrl": "https://university-banners.com/cus-001-banner.jpg"
+    },
+    "description": "Premier educational institution established in 2017, offering diverse academic programs across multiple disciplines.",
+    "address": {
+      "line1": "Lal Mandi",
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "pincode": "190008"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.7973,
+        34.0837
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [],
+    "universityAdvisors": [],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0194-2476800",
+      "email": "info@cusrinagar.ac.in",
+      "website": "https://www.cusrinagar.ac.in"
+    },
+    "meta": {
+      "rank": 7,
+      "establishedYear": 2017
+    },
+    "isActive": true,
+    "source": "Cluster University Srinagar Official",
+    "sourceUrl": "https://www.cusrinagar.ac.in",
+    "lastUpdated": "2025-09-18T08:25:49.085565",
+    "createdAt": "2025-09-18T08:25:49.085568",
+    "updatedAt": "2025-09-18T08:25:49.085570"
+  },
+  {
+    "_id": "bb3e974c8debe56b6e00862f",
+    "name": "Cluster University Jammu",
+    "code": "CUJ-002",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/cuj-002.png",
+      "bannerUrl": "https://university-banners.com/cuj-002-banner.jpg"
+    },
+    "description": "Premier educational institution established in 2017, offering diverse academic programs across multiple disciplines.",
+    "address": {
+      "line1": "Canal Road",
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "pincode": "180001"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.857,
+        32.73
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [],
+    "universityAdvisors": [],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2578000",
+      "email": "info@cujammu.ac.in",
+      "website": "https://www.cujammu.ac.in"
+    },
+    "meta": {
+      "rank": 8,
+      "establishedYear": 2017
+    },
+    "isActive": true,
+    "source": "Cluster University Jammu Official",
+    "sourceUrl": "https://www.cujammu.ac.in",
+    "lastUpdated": "2025-09-18T08:25:49.085579",
+    "createdAt": "2025-09-18T08:25:49.085581",
+    "updatedAt": "2025-09-18T08:25:49.085583"
+  }
+]

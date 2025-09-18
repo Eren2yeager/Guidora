@@ -1,0 +1,53 @@
+  [
+    {
+      "_id": "cd4391119a3a1e6368221795",
+      "resultId": "QR-36c311e7",
+      "userId": "d9a7524a8a06dfa3624066e3",
+      "quizType": "comprehensive",
+      "answers": [
+        {
+          "questionId": "7e540359d8644b5a5ee4b21f",
+          "response": {
+            "optionKeys": [
+              "A"
+            ],
+            "value": 5
+          },
+          "isCorrect": true
+        },
+        {
+          "questionId": "4d8d279e36c303c796ba566a",
+          "response": {
+            "optionKeys": [
+              "B"
+            ],
+            "value": 4
+          },
+          "isCorrect": true
+        }
+      ],
+      "results": {
+        "healthcareScore": 4.5,
+        "technologyScore": 3.8,
+        "overallMatch": "Science Stream"
+      },
+      "computedTraits": {
+        "interests": [
+          "Healthcare",
+          "Technology"
+        ],
+        "strengths": [
+          "Analytical",
+          "Empathy"
+        ]
+      },
+      "recommendedStreams": [
+        {
+          "stream": "Science",
+          "streamId": "a7d9552c9eefa7aa55fc3d88",
+          "score": 4.5
+        }
+      ],
+      "createdAt": "2025-09-18T08:33:36.363209"
+    }
+  ]

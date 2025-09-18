@@ -1,0 +1,543 @@
+[
+  {
+    "_id": "affc5a5b5389c432cec662ce",
+    "name": "Science",
+    "slug": "science",
+    "description": "Science stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/science.png",
+      "bannerUrl": "https://education-banners.com/science-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Physics",
+      "Chemistry",
+      "Mathematics",
+      "Biology",
+      "Computer Science"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.962917",
+    "createdAt": "2025-09-18T08:24:54.962933",
+    "updatedAt": "2025-09-18T08:24:54.962935"
+  },
+  {
+    "_id": "9c406000ae71c648dd7e4718",
+    "name": "Commerce",
+    "slug": "commerce",
+    "description": "Commerce stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/commerce.png",
+      "bannerUrl": "https://education-banners.com/commerce-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Business Studies",
+      "Accountancy",
+      "Economics",
+      "Mathematics",
+      "English"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.962943",
+    "createdAt": "2025-09-18T08:24:54.962946",
+    "updatedAt": "2025-09-18T08:24:54.962948"
+  },
+  {
+    "_id": "e776ec052bbdbe66727efa15",
+    "name": "Humanities",
+    "slug": "humanities",
+    "description": "Humanities stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/humanities.png",
+      "bannerUrl": "https://education-banners.com/humanities-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "History",
+      "Political Science",
+      "English",
+      "Geography",
+      "Philosophy"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.962954",
+    "createdAt": "2025-09-18T08:24:54.962956",
+    "updatedAt": "2025-09-18T08:24:54.962958"
+  },
+  {
+    "_id": "044ec923b7665b2bf479c0aa",
+    "name": "Arts",
+    "slug": "arts",
+    "description": "Arts stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/arts.png",
+      "bannerUrl": "https://education-banners.com/arts-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Fine Arts",
+      "Painting",
+      "Music",
+      "Dance",
+      "Drama",
+      "Creative Writing"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.962964",
+    "createdAt": "2025-09-18T08:24:54.962966",
+    "updatedAt": "2025-09-18T08:24:54.962968"
+  },
+  {
+    "_id": "21a1157c60da9d251bada373",
+    "name": "Medical Sciences",
+    "slug": "medical-sciences",
+    "description": "Medical Sciences stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/medical-sciences.png",
+      "bannerUrl": "https://education-banners.com/medical-sciences-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Biology",
+      "Chemistry",
+      "Physics",
+      "Medical Foundation",
+      "Health Sciences"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.962973",
+    "createdAt": "2025-09-18T08:24:54.962976",
+    "updatedAt": "2025-09-18T08:24:54.962978"
+  },
+  {
+    "_id": "b4d1326fef3dc2c045ac0f05",
+    "name": "Engineering & Technology",
+    "slug": "engineering-technology",
+    "description": "Engineering & Technology stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/engineering-technology.png",
+      "bannerUrl": "https://education-banners.com/engineering-technology-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Mathematics",
+      "Physics",
+      "Chemistry",
+      "Computer Science",
+      "Engineering Drawing"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.962983",
+    "createdAt": "2025-09-18T08:24:54.962985",
+    "updatedAt": "2025-09-18T08:24:54.962987"
+  },
+  {
+    "_id": "5a7bdd9077a3f74803e060ce",
+    "name": "Agricultural Sciences",
+    "slug": "agricultural-sciences",
+    "description": "Agricultural Sciences stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/agricultural-sciences.png",
+      "bannerUrl": "https://education-banners.com/agricultural-sciences-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Biology",
+      "Chemistry",
+      "Agriculture",
+      "Botany",
+      "Environmental Science"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.962992",
+    "createdAt": "2025-09-18T08:24:54.962994",
+    "updatedAt": "2025-09-18T08:24:54.962996"
+  },
+  {
+    "_id": "dc69e33a93ffed09f78480b0",
+    "name": "Veterinary Sciences",
+    "slug": "veterinary-sciences",
+    "description": "Veterinary Sciences stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/veterinary-sciences.png",
+      "bannerUrl": "https://education-banners.com/veterinary-sciences-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Biology",
+      "Chemistry",
+      "Zoology",
+      "Animal Science",
+      "Veterinary Basics"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.963001",
+    "createdAt": "2025-09-18T08:24:54.963003",
+    "updatedAt": "2025-09-18T08:24:54.963005"
+  },
+  {
+    "_id": "ac12ba4a8e3a0decb5f47f76",
+    "name": "Information Technology",
+    "slug": "information-technology",
+    "description": "Information Technology stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/information-technology.png",
+      "bannerUrl": "https://education-banners.com/information-technology-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Computer Science",
+      "Programming",
+      "Database Management",
+      "Web Development",
+      "Software Engineering"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.963010",
+    "createdAt": "2025-09-18T08:24:54.963012",
+    "updatedAt": "2025-09-18T08:24:54.963014"
+  },
+  {
+    "_id": "731542c0f6218298de3898ec",
+    "name": "Hotel Management",
+    "slug": "hotel-management",
+    "description": "Hotel Management stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/hotel-management.png",
+      "bannerUrl": "https://education-banners.com/hotel-management-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Tourism",
+      "Food Service",
+      "Hospitality",
+      "Business Studies",
+      "English"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.963089",
+    "createdAt": "2025-09-18T08:24:54.963093",
+    "updatedAt": "2025-09-18T08:24:54.963095"
+  },
+  {
+    "_id": "2db13affd84cc2153e9b9058",
+    "name": "Fashion Design",
+    "slug": "fashion-design",
+    "description": "Fashion Design stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/fashion-design.png",
+      "bannerUrl": "https://education-banners.com/fashion-design-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Design",
+      "Textiles",
+      "Art",
+      "Business Studies",
+      "Fashion Technology"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.963101",
+    "createdAt": "2025-09-18T08:24:54.963103",
+    "updatedAt": "2025-09-18T08:24:54.963105"
+  },
+  {
+    "_id": "e032fa0366a9418d361d71bd",
+    "name": "Mass Communication",
+    "slug": "mass-communication",
+    "description": "Mass Communication stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/mass-communication.png",
+      "bannerUrl": "https://education-banners.com/mass-communication-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "English",
+      "Media Studies",
+      "Journalism",
+      "Communication",
+      "Digital Media"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.963111",
+    "createdAt": "2025-09-18T08:24:54.963113",
+    "updatedAt": "2025-09-18T08:24:54.963115"
+  },
+  {
+    "_id": "2c293429e40d023b74c27339",
+    "name": "Physical Education",
+    "slug": "physical-education",
+    "description": "Physical Education stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/physical-education.png",
+      "bannerUrl": "https://education-banners.com/physical-education-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Sports",
+      "Physiology",
+      "Anatomy",
+      "Psychology",
+      "Health Education"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.963120",
+    "createdAt": "2025-09-18T08:24:54.963122",
+    "updatedAt": "2025-09-18T08:24:54.963123"
+  },
+  {
+    "_id": "6fcec14dc4d8e1cbc5a8bcee",
+    "name": "Music & Performing Arts",
+    "slug": "music-performing-arts",
+    "description": "Music & Performing Arts stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/music-performing-arts.png",
+      "bannerUrl": "https://education-banners.com/music-performing-arts-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Music Theory",
+      "Indian Classical Music",
+      "Dance",
+      "Theatre",
+      "Audio Production"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.963128",
+    "createdAt": "2025-09-18T08:24:54.963130",
+    "updatedAt": "2025-09-18T08:24:54.963132"
+  },
+  {
+    "_id": "7cc018a37afffc23e2b36ae6",
+    "name": "Environmental Sciences",
+    "slug": "environmental-sciences",
+    "description": "Environmental Sciences stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/environmental-sciences.png",
+      "bannerUrl": "https://education-banners.com/environmental-sciences-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Environmental Studies",
+      "Chemistry",
+      "Biology",
+      "Geography",
+      "Ecology"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.963136",
+    "createdAt": "2025-09-18T08:24:54.963138",
+    "updatedAt": "2025-09-18T08:24:54.963140"
+  },
+  {
+    "_id": "7e4f32375768d5ffd0a1eb09",
+    "name": "Social Work",
+    "slug": "social-work",
+    "description": "Social Work stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/social-work.png",
+      "bannerUrl": "https://education-banners.com/social-work-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Sociology",
+      "Psychology",
+      "Political Science",
+      "Social Welfare",
+      "Community Development"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.963145",
+    "createdAt": "2025-09-18T08:24:54.963147",
+    "updatedAt": "2025-09-18T08:24:54.963149"
+  },
+  {
+    "_id": "048ee196e7cc86df0faec258",
+    "name": "Paramedical",
+    "slug": "paramedical",
+    "description": "Paramedical stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/paramedical.png",
+      "bannerUrl": "https://education-banners.com/paramedical-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "Biology",
+      "Chemistry",
+      "Health Sciences",
+      "Medical Technology",
+      "Patient Care"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.963153",
+    "createdAt": "2025-09-18T08:24:54.963155",
+    "updatedAt": "2025-09-18T08:24:54.963157"
+  },
+  {
+    "_id": "2837695a3572067594c0aeff",
+    "name": "Law & Legal Studies",
+    "slug": "law-legal-studies",
+    "description": "Law & Legal Studies stream offering comprehensive education in related subjects and preparing students for specialized career paths.",
+    "media": {
+      "iconUrl": "https://education-icons.com/law-legal-studies.png",
+      "bannerUrl": "https://education-banners.com/law-legal-studies-banner.jpg"
+    },
+    "interestTags": [],
+    "typicalSubjects": [
+      "History",
+      "Political Science",
+      "Economics",
+      "English",
+      "Legal Studies"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-18T08:24:54.963162",
+    "createdAt": "2025-09-18T08:24:54.963164",
+    "updatedAt": "2025-09-18T08:24:54.963166"
+  }
+]

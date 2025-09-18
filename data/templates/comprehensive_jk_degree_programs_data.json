@@ -1,0 +1,1769 @@
+[
+  {
+    "_id": "78ab9d278dc7e1f65deb8175",
+    "collegeId": "b3c4f5e72d49e799d81306d5",
+    "courseId": "e17a4d7996e26945fd9e47fd",
+    "code": "MBBS_001-GMC_SGR_001",
+    "name": "MBBS at Government Medical College Srinagar",
+    "media": {
+      "iconUrl": "https://program-icons.com/mbbs_001.png",
+      "bannerUrl": "https://program-banners.com/mbbs_001-banner.jpg"
+    },
+    "durationYears": 5.5,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      8
+    ],
+    "seats": 180,
+    "cutoff": {
+      "lastYear": 85.2,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 85.2
+        },
+        {
+          "category": "OBC",
+          "cutoff": 82.2
+        },
+        {
+          "category": "SC",
+          "cutoff": 77.2
+        },
+        {
+          "category": "ST",
+          "cutoff": 73.2
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 50000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958238",
+    "createdAt": "2025-09-18T08:31:32.958270",
+    "updatedAt": "2025-09-18T08:31:32.958273"
+  },
+  {
+    "_id": "c832fa1765c4d94c21185cc5",
+    "collegeId": "325c37dfabe24b9d8dcc4e0c",
+    "courseId": "5c1f6ced85b4fc8a7f1171fe",
+    "code": "MBBS_001-GMC_JAM_001",
+    "name": "MBBS at Government Medical College Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/mbbs_001.png",
+      "bannerUrl": "https://program-banners.com/mbbs_001-banner.jpg"
+    },
+    "durationYears": 5.5,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      8
+    ],
+    "seats": 180,
+    "cutoff": {
+      "lastYear": 83.8,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 83.8
+        },
+        {
+          "category": "OBC",
+          "cutoff": 80.8
+        },
+        {
+          "category": "SC",
+          "cutoff": 75.8
+        },
+        {
+          "category": "ST",
+          "cutoff": 71.8
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 50000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958434",
+    "createdAt": "2025-09-18T08:31:32.958439",
+    "updatedAt": "2025-09-18T08:31:32.958441"
+  },
+  {
+    "_id": "2244191b9d85dc30422cf268",
+    "collegeId": "5d43aebd870d15e5125724ad",
+    "courseId": "c5786cf91f218e9fe5744aff",
+    "code": "MBBS_001-GMC_BAR_001",
+    "name": "MBBS at Government Medical College Baramulla",
+    "media": {
+      "iconUrl": "https://program-icons.com/mbbs_001.png",
+      "bannerUrl": "https://program-banners.com/mbbs_001-banner.jpg"
+    },
+    "durationYears": 5.5,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      8
+    ],
+    "seats": 100,
+    "cutoff": {
+      "lastYear": 82.1,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 82.1
+        },
+        {
+          "category": "OBC",
+          "cutoff": 79.1
+        },
+        {
+          "category": "SC",
+          "cutoff": 74.1
+        },
+        {
+          "category": "ST",
+          "cutoff": 70.1
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 45000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958460",
+    "createdAt": "2025-09-18T08:31:32.958462",
+    "updatedAt": "2025-09-18T08:31:32.958464"
+  },
+  {
+    "_id": "9b01a761f763b88afcf08233",
+    "collegeId": "5e5eab80d86c5a9f808125b2",
+    "courseId": "6cf15eeb3b7bd81a6056a325",
+    "code": "MBBS_001-GMC_DOD_001",
+    "name": "MBBS at Government Medical College Doda",
+    "media": {
+      "iconUrl": "https://program-icons.com/mbbs_001.png",
+      "bannerUrl": "https://program-banners.com/mbbs_001-banner.jpg"
+    },
+    "durationYears": 5.5,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      8
+    ],
+    "seats": 100,
+    "cutoff": {
+      "lastYear": 80.5,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 80.5
+        },
+        {
+          "category": "OBC",
+          "cutoff": 77.5
+        },
+        {
+          "category": "SC",
+          "cutoff": 72.5
+        },
+        {
+          "category": "ST",
+          "cutoff": 68.5
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 45000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958482",
+    "createdAt": "2025-09-18T08:31:32.958484",
+    "updatedAt": "2025-09-18T08:31:32.958486"
+  },
+  {
+    "_id": "242712e1b266670c3dbad5bd",
+    "collegeId": "6bb185014a27e6b48c451c5e",
+    "courseId": "4f2cff979c2974f9ede8393a",
+    "code": "BTECH_CSE_009-NIT_SGR_001",
+    "name": "B.Tech CSE at NIT Srinagar",
+    "media": {
+      "iconUrl": "https://program-icons.com/btech_cse_009.png",
+      "bannerUrl": "https://program-banners.com/btech_cse_009-banner.jpg"
+    },
+    "durationYears": 4,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 120,
+    "cutoff": {
+      "lastYear": 92.5,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 92.5
+        },
+        {
+          "category": "OBC",
+          "cutoff": 89.5
+        },
+        {
+          "category": "SC",
+          "cutoff": 84.5
+        },
+        {
+          "category": "ST",
+          "cutoff": 80.5
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 85000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958504",
+    "createdAt": "2025-09-18T08:31:32.958507",
+    "updatedAt": "2025-09-18T08:31:32.958509"
+  },
+  {
+    "_id": "39b85cdf09e680bfb7bff427",
+    "collegeId": "36692dfb176d1e5f7502ccbe",
+    "courseId": "a68c34112d68f5c45f68948f",
+    "code": "BTECH_ME_010-NIT_SGR_001",
+    "name": "B.Tech Mechanical at NIT Srinagar",
+    "media": {
+      "iconUrl": "https://program-icons.com/btech_me_010.png",
+      "bannerUrl": "https://program-banners.com/btech_me_010-banner.jpg"
+    },
+    "durationYears": 4,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 85,
+    "cutoff": {
+      "lastYear": 89.2,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 89.2
+        },
+        {
+          "category": "OBC",
+          "cutoff": 86.2
+        },
+        {
+          "category": "SC",
+          "cutoff": 81.2
+        },
+        {
+          "category": "ST",
+          "cutoff": 77.2
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 85000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958525",
+    "createdAt": "2025-09-18T08:31:32.958527",
+    "updatedAt": "2025-09-18T08:31:32.958529"
+  },
+  {
+    "_id": "5f92508fb51827e97d20ca39",
+    "collegeId": "0cf11ca6777b554d400a9665",
+    "courseId": "d84970269efddc49fb9f4eca",
+    "code": "BTECH_CE_011-NIT_SGR_001",
+    "name": "B.Tech Civil at NIT Srinagar",
+    "media": {
+      "iconUrl": "https://program-icons.com/btech_ce_011.png",
+      "bannerUrl": "https://program-banners.com/btech_ce_011-banner.jpg"
+    },
+    "durationYears": 4,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 75,
+    "cutoff": {
+      "lastYear": 87.8,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 87.8
+        },
+        {
+          "category": "OBC",
+          "cutoff": 84.8
+        },
+        {
+          "category": "SC",
+          "cutoff": 79.8
+        },
+        {
+          "category": "ST",
+          "cutoff": 75.8
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 85000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958543",
+    "createdAt": "2025-09-18T08:31:32.958545",
+    "updatedAt": "2025-09-18T08:31:32.958547"
+  },
+  {
+    "_id": "2762418ae6b4391d9237de5f",
+    "collegeId": "4b2bc644c14b6cde39963dee",
+    "courseId": "0e6ad5343614531d2c45ee1e",
+    "code": "BTECH_CSE_009-GCET_JAM_001",
+    "name": "B.Tech CSE at GCET Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/btech_cse_009.png",
+      "bannerUrl": "https://program-banners.com/btech_cse_009-banner.jpg"
+    },
+    "durationYears": 4,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 60,
+    "cutoff": {
+      "lastYear": 78.5,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 78.5
+        },
+        {
+          "category": "OBC",
+          "cutoff": 75.5
+        },
+        {
+          "category": "SC",
+          "cutoff": 70.5
+        },
+        {
+          "category": "ST",
+          "cutoff": 66.5
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 30000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958635",
+    "createdAt": "2025-09-18T08:31:32.958637",
+    "updatedAt": "2025-09-18T08:31:32.958640"
+  },
+  {
+    "_id": "f03b9c8476198718653012a4",
+    "collegeId": "a422fefa076f0bf2eb5fbbd6",
+    "courseId": "9a15db2c83f0d61598d108bf",
+    "code": "BTECH_ME_010-GCET_JAM_001",
+    "name": "B.Tech Mechanical at GCET Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/btech_me_010.png",
+      "bannerUrl": "https://program-banners.com/btech_me_010-banner.jpg"
+    },
+    "durationYears": 4,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 60,
+    "cutoff": {
+      "lastYear": 75.2,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 75.2
+        },
+        {
+          "category": "OBC",
+          "cutoff": 72.2
+        },
+        {
+          "category": "SC",
+          "cutoff": 67.2
+        },
+        {
+          "category": "ST",
+          "cutoff": 63.2
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 30000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958657",
+    "createdAt": "2025-09-18T08:31:32.958659",
+    "updatedAt": "2025-09-18T08:31:32.958661"
+  },
+  {
+    "_id": "f32d948ccacfca5cb860683a",
+    "collegeId": "020e203eb5020c5315c902a0",
+    "courseId": "4b9b93ef3444075799ee6881",
+    "code": "BA_ENG_028-SPC_SGR_001",
+    "name": "BA English at Sri Pratap College",
+    "media": {
+      "iconUrl": "https://program-icons.com/ba_eng_028.png",
+      "bannerUrl": "https://program-banners.com/ba_eng_028-banner.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 120,
+    "cutoff": {
+      "lastYear": 72.5,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 72.5
+        },
+        {
+          "category": "OBC",
+          "cutoff": 69.5
+        },
+        {
+          "category": "SC",
+          "cutoff": 64.5
+        },
+        {
+          "category": "ST",
+          "cutoff": 60.5
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 12000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958677",
+    "createdAt": "2025-09-18T08:31:32.958679",
+    "updatedAt": "2025-09-18T08:31:32.958681"
+  },
+  {
+    "_id": "4d217e7b64e557e698fb82d4",
+    "collegeId": "85e26efe258c6991fd4192ff",
+    "courseId": "8c59df768bc7de1e290f6e41",
+    "code": "BSC_PHYS_036-SPC_SGR_001",
+    "name": "B.Sc Physics at Sri Pratap College",
+    "media": {
+      "iconUrl": "https://program-icons.com/bsc_phys_036.png",
+      "bannerUrl": "https://program-banners.com/bsc_phys_036-banner.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 80,
+    "cutoff": {
+      "lastYear": 68.3,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 68.3
+        },
+        {
+          "category": "OBC",
+          "cutoff": 65.3
+        },
+        {
+          "category": "SC",
+          "cutoff": 60.3
+        },
+        {
+          "category": "ST",
+          "cutoff": 56.3
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 15000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958696",
+    "createdAt": "2025-09-18T08:31:32.958698",
+    "updatedAt": "2025-09-18T08:31:32.958700"
+  },
+  {
+    "_id": "35e7f5ad8afa7e726a0805f8",
+    "collegeId": "45c2549a10431f2f8764ddea",
+    "courseId": "3511902b4b1e4c6541ffb103",
+    "code": "BCOM_022-SPC_SGR_001",
+    "name": "B.Com at Sri Pratap College",
+    "media": {
+      "iconUrl": "https://program-icons.com/bcom_022.png",
+      "bannerUrl": "https://program-banners.com/bcom_022-banner.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 100,
+    "cutoff": {
+      "lastYear": 70.1,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 70.1
+        },
+        {
+          "category": "OBC",
+          "cutoff": 67.1
+        },
+        {
+          "category": "SC",
+          "cutoff": 62.099999999999994
+        },
+        {
+          "category": "ST",
+          "cutoff": 58.099999999999994
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 14000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958715",
+    "createdAt": "2025-09-18T08:31:32.958718",
+    "updatedAt": "2025-09-18T08:31:32.958720"
+  },
+  {
+    "_id": "6ee354d9bcf0bfa800796293",
+    "collegeId": "251fe92cfa994b8244f41a8a",
+    "courseId": "52b7a97c89bc7024f978e82e",
+    "code": "BA_ENG_028-MAM_JAM_001",
+    "name": "BA English at MAM College Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/ba_eng_028.png",
+      "bannerUrl": "https://program-banners.com/ba_eng_028-banner.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 150,
+    "cutoff": {
+      "lastYear": 69.8,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 69.8
+        },
+        {
+          "category": "OBC",
+          "cutoff": 66.8
+        },
+        {
+          "category": "SC",
+          "cutoff": 61.8
+        },
+        {
+          "category": "ST",
+          "cutoff": 57.8
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 12000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958733",
+    "createdAt": "2025-09-18T08:31:32.958736",
+    "updatedAt": "2025-09-18T08:31:32.958738"
+  },
+  {
+    "_id": "0851ab53f9b065f5fc66eeba",
+    "collegeId": "aa43294f08498b66e865ead3",
+    "courseId": "778fb2c0ad3e95f4a69ea05d",
+    "code": "BCOM_022-MAM_JAM_001",
+    "name": "B.Com at MAM College Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/bcom_022.png",
+      "bannerUrl": "https://program-banners.com/bcom_022-banner.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 180,
+    "cutoff": {
+      "lastYear": 67.2,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 67.2
+        },
+        {
+          "category": "OBC",
+          "cutoff": 64.2
+        },
+        {
+          "category": "SC",
+          "cutoff": 59.2
+        },
+        {
+          "category": "ST",
+          "cutoff": 55.2
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 14000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958762",
+    "createdAt": "2025-09-18T08:31:32.958764",
+    "updatedAt": "2025-09-18T08:31:32.958766"
+  },
+  {
+    "_id": "f602aba691f7afb2b442aecb",
+    "collegeId": "c56accfcd0c8c3b55e7c79a6",
+    "courseId": "ecbd37afa93147fbb76b5906",
+    "code": "BBA_023-MAM_JAM_001",
+    "name": "BBA at MAM College Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/bba_023.png",
+      "bannerUrl": "https://program-banners.com/bba_023-banner.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 80,
+    "cutoff": {
+      "lastYear": 72.5,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 72.5
+        },
+        {
+          "category": "OBC",
+          "cutoff": 69.5
+        },
+        {
+          "category": "SC",
+          "cutoff": 64.5
+        },
+        {
+          "category": "ST",
+          "cutoff": 60.5
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 18000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958781",
+    "createdAt": "2025-09-18T08:31:32.958783",
+    "updatedAt": "2025-09-18T08:31:32.958785"
+  },
+  {
+    "_id": "87ccec201c6083bc1bf95002",
+    "collegeId": "d1804dfa57279f2e23f05b97",
+    "courseId": "94b958ca7836ca56bef36f74",
+    "code": "BSC_PHYS_036-GGM_JAM_001",
+    "name": "B.Sc Physics at GGM Science College",
+    "media": {
+      "iconUrl": "https://program-icons.com/bsc_phys_036.png",
+      "bannerUrl": "https://program-banners.com/bsc_phys_036-banner.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 60,
+    "cutoff": {
+      "lastYear": 74.2,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 74.2
+        },
+        {
+          "category": "OBC",
+          "cutoff": 71.2
+        },
+        {
+          "category": "SC",
+          "cutoff": 66.2
+        },
+        {
+          "category": "ST",
+          "cutoff": 62.2
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 16000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958797",
+    "createdAt": "2025-09-18T08:31:32.958799",
+    "updatedAt": "2025-09-18T08:31:32.958801"
+  },
+  {
+    "_id": "1e9200d18581bbf6bd2d6995",
+    "collegeId": "13a5809465f9fa5b205fde24",
+    "courseId": "75e1f84af899b521333a6bb3",
+    "code": "BSC_CHEM_037-GGM_JAM_001",
+    "name": "B.Sc Chemistry at GGM Science College",
+    "media": {
+      "iconUrl": "https://program-icons.com/bsc_chem_037.png",
+      "bannerUrl": "https://program-banners.com/bsc_chem_037-banner.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 60,
+    "cutoff": {
+      "lastYear": 73.8,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 73.8
+        },
+        {
+          "category": "OBC",
+          "cutoff": 70.8
+        },
+        {
+          "category": "SC",
+          "cutoff": 65.8
+        },
+        {
+          "category": "ST",
+          "cutoff": 61.8
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 16000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958815",
+    "createdAt": "2025-09-18T08:31:32.958817",
+    "updatedAt": "2025-09-18T08:31:32.958819"
+  },
+  {
+    "_id": "8816cc438118604186567215",
+    "collegeId": "2139c38a97b5737189bf4c50",
+    "courseId": "e1d4d66a321099bcf59ca6ac",
+    "code": "BSC_MATH_038-GGM_JAM_001",
+    "name": "B.Sc Mathematics at GGM Science College",
+    "media": {
+      "iconUrl": "https://program-icons.com/bsc_math_038.png",
+      "bannerUrl": "https://program-banners.com/bsc_math_038-banner.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 50,
+    "cutoff": {
+      "lastYear": 71.5,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 71.5
+        },
+        {
+          "category": "OBC",
+          "cutoff": 68.5
+        },
+        {
+          "category": "SC",
+          "cutoff": 63.5
+        },
+        {
+          "category": "ST",
+          "cutoff": 59.5
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 16000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958940",
+    "createdAt": "2025-09-18T08:31:32.958945",
+    "updatedAt": "2025-09-18T08:31:32.958948"
+  },
+  {
+    "_id": "a1abce2f1c089402ffa1ba4c",
+    "collegeId": "612938974a469a48346be7c1",
+    "courseId": "d6a0caa0766cc6354d4aa993",
+    "code": "BTECH_CSE_009-ISLAMIC_UNIVERSITY",
+    "name": "B.Tech CSE at IUST",
+    "media": {
+      "iconUrl": "https://program-icons.com/btech_cse_009.png",
+      "bannerUrl": "https://program-banners.com/btech_cse_009-banner.jpg"
+    },
+    "durationYears": 4,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 120,
+    "cutoff": {
+      "lastYear": 84.2,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 84.2
+        },
+        {
+          "category": "OBC",
+          "cutoff": 81.2
+        },
+        {
+          "category": "SC",
+          "cutoff": 76.2
+        },
+        {
+          "category": "ST",
+          "cutoff": 72.2
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 45000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958962",
+    "createdAt": "2025-09-18T08:31:32.958965",
+    "updatedAt": "2025-09-18T08:31:32.958967"
+  },
+  {
+    "_id": "46b4ea2b7e2b45cf53696a8f",
+    "collegeId": "5cad2fc5a66bc487e969595f",
+    "courseId": "9703ff245cb85d2e691e1eee",
+    "code": "MBA_025-ISLAMIC_UNIVERSITY",
+    "name": "MBA at IUST",
+    "media": {
+      "iconUrl": "https://program-icons.com/mba_025.png",
+      "bannerUrl": "https://program-banners.com/mba_025-banner.jpg"
+    },
+    "durationYears": 2,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 60,
+    "cutoff": {
+      "lastYear": 78.5,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 78.5
+        },
+        {
+          "category": "OBC",
+          "cutoff": 75.5
+        },
+        {
+          "category": "SC",
+          "cutoff": 70.5
+        },
+        {
+          "category": "ST",
+          "cutoff": 66.5
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 55000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958980",
+    "createdAt": "2025-09-18T08:31:32.958982",
+    "updatedAt": "2025-09-18T08:31:32.958984"
+  },
+  {
+    "_id": "1dfa2d7680e7206bb8d00779",
+    "collegeId": "da5741dcec31e94694919ec9",
+    "courseId": "c5e43582870a7dbad5fb949f",
+    "code": "MCA_020-CENTRAL_UNIVERSITY_JAMMU",
+    "name": "MCA at Central University Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/mca_020.png",
+      "bannerUrl": "https://program-banners.com/mca_020-banner.jpg"
+    },
+    "durationYears": 2,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 40,
+    "cutoff": {
+      "lastYear": 82.1,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 82.1
+        },
+        {
+          "category": "OBC",
+          "cutoff": 79.1
+        },
+        {
+          "category": "SC",
+          "cutoff": 74.1
+        },
+        {
+          "category": "ST",
+          "cutoff": 70.1
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 35000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.958997",
+    "createdAt": "2025-09-18T08:31:32.958999",
+    "updatedAt": "2025-09-18T08:31:32.959001"
+  },
+  {
+    "_id": "c23c8827c685e7c390e43ff1",
+    "collegeId": "64a588b60347595c4f7b1bf7",
+    "courseId": "1c4af67dee768382021f5594",
+    "code": "BSAG_043-SKUAST_001",
+    "name": "B.Sc Agriculture at SKUAST Kashmir",
+    "media": {
+      "iconUrl": "https://program-icons.com/bsag_043.png",
+      "bannerUrl": "https://program-banners.com/bsag_043-banner.jpg"
+    },
+    "durationYears": 4,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 200,
+    "cutoff": {
+      "lastYear": 68.5,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 68.5
+        },
+        {
+          "category": "OBC",
+          "cutoff": 65.5
+        },
+        {
+          "category": "SC",
+          "cutoff": 60.5
+        },
+        {
+          "category": "ST",
+          "cutoff": 56.5
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 25000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.959014",
+    "createdAt": "2025-09-18T08:31:32.959016",
+    "updatedAt": "2025-09-18T08:31:32.959018"
+  },
+  {
+    "_id": "127b300fff93539e31f08157",
+    "collegeId": "682a93b3c7267ba41420d76a",
+    "courseId": "fc20749604852e3cd1857bd1",
+    "code": "BSAG_043-SKUAST_J_001",
+    "name": "B.Sc Agriculture at SKUAST Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/bsag_043.png",
+      "bannerUrl": "https://program-banners.com/bsag_043-banner.jpg"
+    },
+    "durationYears": 4,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7,
+      8
+    ],
+    "seats": 180,
+    "cutoff": {
+      "lastYear": 66.8,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 66.8
+        },
+        {
+          "category": "OBC",
+          "cutoff": 63.8
+        },
+        {
+          "category": "SC",
+          "cutoff": 58.8
+        },
+        {
+          "category": "ST",
+          "cutoff": 54.8
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 25000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "College Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-18T08:31:32.959031",
+    "createdAt": "2025-09-18T08:31:32.959033",
+    "updatedAt": "2025-09-18T08:31:32.959035"
+  }
+]

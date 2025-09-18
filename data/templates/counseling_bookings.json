@@ -1,0 +1,13 @@
+[
+    {
+      "_id": "83a9f4c16adb202ffa216d7d",
+      "userId": "d9a7524a8a06dfa3624066e3",
+      "counselorId": "4afa644b0035f0e9d87be812",
+      "scheduledAt": "2025-09-21T08:33:36.363641",
+      "mode": "video",
+      "status": "pending",
+      "notes": "NEET preparation guidance needed",
+      "createdAt": "2025-09-18T08:33:36.363651",
+      "updatedAt": "2025-09-18T08:33:36.363653"
+    }
+  ]

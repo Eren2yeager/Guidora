@@ -57,7 +57,7 @@ function LoadingScreen() {
       <div className="flex flex-col items-center">
         <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-700 mb-6"></div>
         <h2 className="text-2xl font-bold text-blue-800 mb-2">Guidora</h2>
-        <p className="text-gray-700 text-lg">Preparing your educational dashboard...</p>
+        {/* <p className="text-gray-700 text-lg">Preparing your educational dashboard...</p> */}
       </div>
     </motion.div>
   );
