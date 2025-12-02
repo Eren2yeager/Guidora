@@ -1,0 +1,882 @@
+[
+  {
+    "_id": "28536a934b61b6e26cbec5f5",
+    "name": "Dr. Rashid Ahmad",
+    "email": "rashid.ahmad@jkcounseling.org",
+    "phone": "9419012345",
+    "image": "https://counselor-photos.com/dr-rashid-ahmad.jpg",
+    "role": "Counselor",
+    "interestTags": [],
+    "expertise": [
+      "Medical Career Guidance",
+      "NEET Preparation"
+    ],
+    "assignedStudents": [],
+    "availableSlots": [
+      {
+        "date": "2025-09-20T03:50:14.920355",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-20T03:50:14.920375",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.920380",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.920428",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.920436",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.920440",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.920443",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.920447",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.920450",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.920453",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      }
+    ],
+    "ratings": [
+      {
+        "userId": "58b9341871dd494776a66eaf",
+        "rating": 4.805256417181964
+      },
+      {
+        "userId": "5cdacd121d37abc93de523e1",
+        "rating": 4.625485956204441
+      }
+    ],
+    "isActive": true,
+    "media": {
+      "iconUrl": "https://counselor-icons.com/counselor-1.png",
+      "bannerUrl": ""
+    },
+    "district": "Srinagar",
+    "experience": 12,
+    "qualifications": [
+      "M.A./M.Sc.",
+      "B.Ed.",
+      "Career Counseling Certification"
+    ],
+    "createdAt": "2025-09-19T03:50:14.920543",
+    "updatedAt": "2025-09-19T03:50:14.920547"
+  },
+  {
+    "_id": "9a0cf6dfec57f4fa08cbb138",
+    "name": "Prof. Sunita Sharma",
+    "email": "sunita.sharma@jkcounseling.org",
+    "phone": "9419023456",
+    "image": "https://counselor-photos.com/prof-sunita-sharma.jpg",
+    "role": "Counselor",
+    "interestTags": [],
+    "expertise": [
+      "Engineering Counseling",
+      "JEE Guidance"
+    ],
+    "assignedStudents": [],
+    "availableSlots": [
+      {
+        "date": "2025-09-20T03:50:14.920559",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-20T03:50:14.920564",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.920567",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.920571",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.920574",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.920577",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.920580",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.920584",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.920587",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.920591",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      }
+    ],
+    "ratings": [
+      {
+        "userId": "24371d0b2da6bb3b348e3c2a",
+        "rating": 4.486031906805524
+      },
+      {
+        "userId": "4d5aaad152158d7ef2628517",
+        "rating": 4.504881243544891
+      }
+    ],
+    "isActive": true,
+    "media": {
+      "iconUrl": "https://counselor-icons.com/counselor-2.png",
+      "bannerUrl": ""
+    },
+    "district": "Jammu",
+    "experience": 14,
+    "qualifications": [
+      "M.A./M.Sc.",
+      "B.Ed.",
+      "Career Counseling Certification"
+    ],
+    "createdAt": "2025-09-19T03:50:14.920672",
+    "updatedAt": "2025-09-19T03:50:14.920676"
+  },
+  {
+    "_id": "c5b4d173efb8e7cbff7dabc4",
+    "name": "Dr. Mohammad Yousuf",
+    "email": "m.yousuf@careerguidance.jk",
+    "phone": "9419034567",
+    "image": "https://counselor-photos.com/dr-mohammad-yousuf.jpg",
+    "role": "Counselor",
+    "interestTags": [],
+    "expertise": [
+      "Commerce & Management",
+      "CA/CS Guidance"
+    ],
+    "assignedStudents": [],
+    "availableSlots": [
+      {
+        "date": "2025-09-20T03:50:14.920686",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-20T03:50:14.920691",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.920694",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.920697",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.920701",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.920704",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.920707",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.920710",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.920714",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.920717",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      }
+    ],
+    "ratings": [
+      {
+        "userId": "abfbad2f4c88345a1ad6e6ce",
+        "rating": 4.47838670337948
+      },
+      {
+        "userId": "7389a4beb3468b4d295dedbd",
+        "rating": 4.514679406588427
+      }
+    ],
+    "isActive": true,
+    "media": {
+      "iconUrl": "https://counselor-icons.com/counselor-3.png",
+      "bannerUrl": ""
+    },
+    "district": "Srinagar",
+    "experience": 12,
+    "qualifications": [
+      "M.A./M.Sc.",
+      "B.Ed.",
+      "Career Counseling Certification"
+    ],
+    "createdAt": "2025-09-19T03:50:14.920782",
+    "updatedAt": "2025-09-19T03:50:14.920786"
+  },
+  {
+    "_id": "f788be61c0a0fc76114e7dc4",
+    "name": "Ms. Priya Devi",
+    "email": "priya.devi@educounsel.org",
+    "phone": "9419045678",
+    "image": "https://counselor-photos.com/ms-priya-devi.jpg",
+    "role": "Counselor",
+    "interestTags": [],
+    "expertise": [
+      "Arts & Humanities",
+      "Civil Services"
+    ],
+    "assignedStudents": [],
+    "availableSlots": [
+      {
+        "date": "2025-09-20T03:50:14.920795",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-20T03:50:14.920800",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.920803",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.920806",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.920828",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.920831",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.920834",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.920838",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.920841",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.920844",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      }
+    ],
+    "ratings": [
+      {
+        "userId": "84a00735b8404675a0e8631f",
+        "rating": 4.996203508280693
+      },
+      {
+        "userId": "50de5266f1016f1e755ad3b7",
+        "rating": 4.567974874462601
+      }
+    ],
+    "isActive": true,
+    "media": {
+      "iconUrl": "https://counselor-icons.com/counselor-4.png",
+      "bannerUrl": ""
+    },
+    "district": "Jammu",
+    "experience": 13,
+    "qualifications": [
+      "M.A./M.Sc.",
+      "B.Ed.",
+      "Career Counseling Certification"
+    ],
+    "createdAt": "2025-09-19T03:50:14.920898",
+    "updatedAt": "2025-09-19T03:50:14.920902"
+  },
+  {
+    "_id": "91155fdfb008a4f8a1090c15",
+    "name": "Dr. Tariq Hussain",
+    "email": "tariq.hussain@jkcounsel.ac.in",
+    "phone": "9419056789",
+    "image": "https://counselor-photos.com/dr-tariq-hussain.jpg",
+    "role": "Counselor",
+    "interestTags": [],
+    "expertise": [
+      "Science Stream",
+      "Research Guidance"
+    ],
+    "assignedStudents": [],
+    "availableSlots": [
+      {
+        "date": "2025-09-20T03:50:14.920911",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-20T03:50:14.920916",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.920920",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.920923",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.920926",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.920929",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.920932",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.920935",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.920939",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.920942",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      }
+    ],
+    "ratings": [
+      {
+        "userId": "69d36056159c24b67529cf30",
+        "rating": 4.036231981867285
+      },
+      {
+        "userId": "376c406900db39d9fc3a6af2",
+        "rating": 4.343931272328489
+      }
+    ],
+    "isActive": true,
+    "media": {
+      "iconUrl": "https://counselor-icons.com/counselor-5.png",
+      "bannerUrl": ""
+    },
+    "district": "Baramulla",
+    "experience": 14,
+    "qualifications": [
+      "M.A./M.Sc.",
+      "B.Ed.",
+      "Career Counseling Certification"
+    ],
+    "createdAt": "2025-09-19T03:50:14.920995",
+    "updatedAt": "2025-09-19T03:50:14.920999"
+  },
+  {
+    "_id": "6ddc505ab2dae3ad0d0c7e18",
+    "name": "Prof. Kavita Gupta",
+    "email": "kavita.gupta@guidancejk.org",
+    "phone": "9419067890",
+    "image": "https://counselor-photos.com/prof-kavita-gupta.jpg",
+    "role": "Counselor",
+    "interestTags": [],
+    "expertise": [
+      "Professional Courses",
+      "Career Planning"
+    ],
+    "assignedStudents": [],
+    "availableSlots": [
+      {
+        "date": "2025-09-20T03:50:14.921008",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-20T03:50:14.921013",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.921017",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.921020",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.921023",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.921026",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.921030",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.921033",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.921037",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.921040",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      }
+    ],
+    "ratings": [
+      {
+        "userId": "e153a942e898e4ab37710073",
+        "rating": 4.523238267501491
+      },
+      {
+        "userId": "946ff282076b0c5da5824fed",
+        "rating": 4.888281423701506
+      }
+    ],
+    "isActive": true,
+    "media": {
+      "iconUrl": "https://counselor-icons.com/counselor-6.png",
+      "bannerUrl": ""
+    },
+    "district": "Udhampur",
+    "experience": 20,
+    "qualifications": [
+      "M.A./M.Sc.",
+      "B.Ed.",
+      "Career Counseling Certification"
+    ],
+    "createdAt": "2025-09-19T03:50:14.921094",
+    "updatedAt": "2025-09-19T03:50:14.921098"
+  },
+  {
+    "_id": "c358a8407fc468620c2539ef",
+    "name": "Dr. Abdul Majid",
+    "email": "a.majid@counseljk.edu",
+    "phone": "9419078901",
+    "image": "https://counselor-photos.com/dr-abdul-majid.jpg",
+    "role": "Counselor",
+    "interestTags": [],
+    "expertise": [
+      "Agricultural Sciences",
+      "Rural Development"
+    ],
+    "assignedStudents": [],
+    "availableSlots": [
+      {
+        "date": "2025-09-20T03:50:14.921108",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-20T03:50:14.921113",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.921116",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.921119",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.921122",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.921126",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.921129",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.921133",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.921136",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.921140",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      }
+    ],
+    "ratings": [
+      {
+        "userId": "1a3027ec1cdf63fc500ee7ab",
+        "rating": 4.4993920906188265
+      },
+      {
+        "userId": "81259877197b756bb7a08aca",
+        "rating": 4.216841162861952
+      }
+    ],
+    "isActive": true,
+    "media": {
+      "iconUrl": "https://counselor-icons.com/counselor-7.png",
+      "bannerUrl": ""
+    },
+    "district": "Anantnag",
+    "experience": 10,
+    "qualifications": [
+      "M.A./M.Sc.",
+      "B.Ed.",
+      "Career Counseling Certification"
+    ],
+    "createdAt": "2025-09-19T03:50:14.921167",
+    "updatedAt": "2025-09-19T03:50:14.921169"
+  },
+  {
+    "_id": "4b7d65d8fa5dff858f8a8395",
+    "name": "Ms. Ritu Sharma",
+    "email": "ritu.sharma@jkcareer.in",
+    "phone": "9419089012",
+    "image": "https://counselor-photos.com/ms-ritu-sharma.jpg",
+    "role": "Counselor",
+    "interestTags": [],
+    "expertise": [
+      "Creative Fields",
+      "Skill Development"
+    ],
+    "assignedStudents": [],
+    "availableSlots": [
+      {
+        "date": "2025-09-20T03:50:14.921177",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-20T03:50:14.921180",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.921183",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-21T03:50:14.921187",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.921190",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-22T03:50:14.921193",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.921196",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-23T03:50:14.921199",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.921203",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "isBooked": false,
+        "bookedBy": null
+      },
+      {
+        "date": "2025-09-24T03:50:14.921206",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "isBooked": false,
+        "bookedBy": null
+      }
+    ],
+    "ratings": [
+      {
+        "userId": "05656b86ee6d52f4e07ec77f",
+        "rating": 4.775746189647846
+      },
+      {
+        "userId": "5d9a3d0fcf69f4384f6aad30",
+        "rating": 4.839622686770209
+      }
+    ],
+    "isActive": true,
+    "media": {
+      "iconUrl": "https://counselor-icons.com/counselor-8.png",
+      "bannerUrl": ""
+    },
+    "district": "Kathua",
+    "experience": 13,
+    "qualifications": [
+      "M.A./M.Sc.",
+      "B.Ed.",
+      "Career Counseling Certification"
+    ],
+    "createdAt": "2025-09-19T03:50:14.921231",
+    "updatedAt": "2025-09-19T03:50:14.921234"
+  }
+]

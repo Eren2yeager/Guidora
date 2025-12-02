@@ -1,3 +1,5 @@
+import mongoose from 'mongoose';
+
 const NotificationSchema = new mongoose.Schema({
   _id: { type: mongoose.Schema.Types.ObjectId },
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', index: true },

@@ -1,0 +1,459 @@
+[
+  {
+    "_id": "b36cbfc86c28ae15c461f14e",
+    "name": "NEET (National Eligibility cum Entrance Test)",
+    "media": {
+      "iconUrl": "https://exam-icons.com/neet.png",
+      "bannerUrl": "https://exam-banners.com/neet-banner.jpg"
+    },
+    "authority": "NTA",
+    "level": "National",
+    "examType": "Entrance",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914157",
+    "applicationEnd": "2025-12-18T03:48:25.914173",
+    "examDate": "2026-01-17T03:48:25.914176",
+    "resultDate": "2026-03-18T03:48:25.914179",
+    "eligibility": "10+2 with relevant subjects",
+    "mode": "Offline",
+    "pattern": "Multiple Choice Questions (MCQs)",
+    "link": "https://neet.nic.in",
+    "officialWebsite": "https://neet.nic.in",
+    "region": "All India",
+    "courses": [
+      "a08fc2b3c5d5c5e624949459",
+      "e5e6538b336431b1ce9c73a0"
+    ],
+    "careers": [
+      "12db2f8985e2b9cc94edebd8",
+      "68be8899dc7634c7ceb287d1"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "NEET",
+    "sourceUrl": "https://neet.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914188",
+    "createdAt": "2025-09-19T03:48:25.914190",
+    "updatedAt": "2025-09-19T03:48:25.914192"
+  },
+  {
+    "_id": "475e6649ed77f7a019f7f384",
+    "name": "JEE Main",
+    "media": {
+      "iconUrl": "https://exam-icons.com/jee-main.png",
+      "bannerUrl": "https://exam-banners.com/jee-main-banner.jpg"
+    },
+    "authority": "NTA",
+    "level": "National",
+    "examType": "Entrance",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914214",
+    "applicationEnd": "2025-12-18T03:48:25.914218",
+    "examDate": "2026-01-17T03:48:25.914221",
+    "resultDate": "2026-03-18T03:48:25.914224",
+    "eligibility": "10+2 with relevant subjects",
+    "mode": "Online",
+    "pattern": "Multiple Choice Questions (MCQs)",
+    "link": "https://jeemain.nic.in",
+    "officialWebsite": "https://jeemain.nic.in",
+    "region": "All India",
+    "courses": [
+      "08e92fed29eb30c673385e48",
+      "d78ecfb22447c04fc7e236a0",
+      "24819f4aea4fb49a2147541e"
+    ],
+    "careers": [
+      "8291123c46834cbbfed601aa",
+      "dbd96ccd3484bbd31b612a5a",
+      "1b617ae5f3406e40e30f88fd"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "JEE",
+    "sourceUrl": "https://jeemain.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914231",
+    "createdAt": "2025-09-19T03:48:25.914233",
+    "updatedAt": "2025-09-19T03:48:25.914235"
+  },
+  {
+    "_id": "8d872f779e31d629790cb31a",
+    "name": "JEE Advanced",
+    "media": {
+      "iconUrl": "https://exam-icons.com/jee-advanced.png",
+      "bannerUrl": "https://exam-banners.com/jee-advanced-banner.jpg"
+    },
+    "authority": "NTA",
+    "level": "National",
+    "examType": "Entrance",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914248",
+    "applicationEnd": "2025-12-18T03:48:25.914251",
+    "examDate": "2026-01-17T03:48:25.914254",
+    "resultDate": "2026-03-18T03:48:25.914257",
+    "eligibility": "10+2 with relevant subjects",
+    "mode": "Offline",
+    "pattern": "Multiple Choice Questions (MCQs)",
+    "link": "https://jeeadvanced.nic.in",
+    "officialWebsite": "https://jeeadvanced.nic.in",
+    "region": "All India",
+    "courses": [
+      "08e92fed29eb30c673385e48",
+      "d78ecfb22447c04fc7e236a0"
+    ],
+    "careers": [
+      "8291123c46834cbbfed601aa",
+      "1b617ae5f3406e40e30f88fd"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "JEE",
+    "sourceUrl": "https://jeeadvanced.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914262",
+    "createdAt": "2025-09-19T03:48:25.914264",
+    "updatedAt": "2025-09-19T03:48:25.914266"
+  },
+  {
+    "_id": "e34c9544ed275d80c38fc7d5",
+    "name": "CLAT (Common Law Admission Test)",
+    "media": {
+      "iconUrl": "https://exam-icons.com/clat.png",
+      "bannerUrl": "https://exam-banners.com/clat-banner.jpg"
+    },
+    "authority": "NTA",
+    "level": "National",
+    "examType": "Entrance",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914279",
+    "applicationEnd": "2025-12-18T03:48:25.914281",
+    "examDate": "2026-01-17T03:48:25.914284",
+    "resultDate": "2026-03-18T03:48:25.914287",
+    "eligibility": "10+2 with relevant subjects",
+    "mode": "Offline",
+    "pattern": "Multiple Choice Questions (MCQs)",
+    "link": "https://clat.nic.in",
+    "officialWebsite": "https://clat.nic.in",
+    "region": "All India",
+    "courses": [
+      "2660bd84adb5398953cc0996"
+    ],
+    "careers": [
+      "35cfc94ae43d66577432d261"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "CLAT",
+    "sourceUrl": "https://clat.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914292",
+    "createdAt": "2025-09-19T03:48:25.914294",
+    "updatedAt": "2025-09-19T03:48:25.914296"
+  },
+  {
+    "_id": "777571617fda83c8666b5f21",
+    "name": "CAT (Common Admission Test)",
+    "media": {
+      "iconUrl": "https://exam-icons.com/cat.png",
+      "bannerUrl": "https://exam-banners.com/cat-banner.jpg"
+    },
+    "authority": "NTA",
+    "level": "National",
+    "examType": "Entrance",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914307",
+    "applicationEnd": "2025-12-18T03:48:25.914310",
+    "examDate": "2026-01-17T03:48:25.914313",
+    "resultDate": "2026-03-18T03:48:25.914316",
+    "eligibility": "10+2 with relevant subjects",
+    "mode": "Online",
+    "pattern": "Multiple Choice Questions (MCQs)",
+    "link": "https://cat.nic.in",
+    "officialWebsite": "https://cat.nic.in",
+    "region": "All India",
+    "courses": [
+      "8151a4b3ecba813567a8824a"
+    ],
+    "careers": [
+      "3c058c9213130b37c0cd00c5"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "CAT",
+    "sourceUrl": "https://cat.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914321",
+    "createdAt": "2025-09-19T03:48:25.914323",
+    "updatedAt": "2025-09-19T03:48:25.914325"
+  },
+  {
+    "_id": "606d66bd554a9b241b60c6bf",
+    "name": "CUET (Common University Entrance Test)",
+    "media": {
+      "iconUrl": "https://exam-icons.com/cuet.png",
+      "bannerUrl": "https://exam-banners.com/cuet-banner.jpg"
+    },
+    "authority": "NTA",
+    "level": "National",
+    "examType": "Entrance",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914336",
+    "applicationEnd": "2025-12-18T03:48:25.914339",
+    "examDate": "2026-01-17T03:48:25.914342",
+    "resultDate": "2026-03-18T03:48:25.914345",
+    "eligibility": "10+2 with relevant subjects",
+    "mode": "Online",
+    "pattern": "Multiple Choice Questions (MCQs)",
+    "link": "https://cuet.nic.in",
+    "officialWebsite": "https://cuet.nic.in",
+    "region": "All India",
+    "courses": [
+      "53e15b7f6bd07938855c484f",
+      "c929ef9b6a59cf98be8defb7",
+      "7008ba3afc748a080c84b2c7"
+    ],
+    "careers": [
+      "6b02240a31894997b953d0b9"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "CUET",
+    "sourceUrl": "https://cuet.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914350",
+    "createdAt": "2025-09-19T03:48:25.914352",
+    "updatedAt": "2025-09-19T03:48:25.914354"
+  },
+  {
+    "_id": "30c90f3ebae6d76b73e932c7",
+    "name": "UPSC Civil Services Examination",
+    "media": {
+      "iconUrl": "https://exam-icons.com/upsc-cse.png",
+      "bannerUrl": "https://exam-banners.com/upsc-cse-banner.jpg"
+    },
+    "authority": "UPSC",
+    "level": "National",
+    "examType": "Recruitment",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914364",
+    "applicationEnd": "2025-12-18T03:48:25.914367",
+    "examDate": "2026-01-17T03:48:25.914370",
+    "resultDate": "2026-03-18T03:48:25.914372",
+    "eligibility": "Graduate degree",
+    "mode": "Offline",
+    "pattern": "Descriptive + MCQs",
+    "link": "https://upsccse.nic.in",
+    "officialWebsite": "https://upsccse.nic.in",
+    "region": "All India",
+    "courses": [],
+    "careers": [
+      "769f5cbe4d6a4875d499805c"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "UPSC",
+    "sourceUrl": "https://upsccse.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914378",
+    "createdAt": "2025-09-19T03:48:25.914380",
+    "updatedAt": "2025-09-19T03:48:25.914382"
+  },
+  {
+    "_id": "8f826a9907166dd545716d5c",
+    "name": "JKPSC (J&K Public Service Commission)",
+    "media": {
+      "iconUrl": "https://exam-icons.com/jkpsc.png",
+      "bannerUrl": "https://exam-banners.com/jkpsc-banner.jpg"
+    },
+    "authority": "J&K Government",
+    "level": "State",
+    "examType": "Recruitment",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914429",
+    "applicationEnd": "2025-12-18T03:48:25.914435",
+    "examDate": "2026-01-17T03:48:25.914438",
+    "resultDate": "2026-03-18T03:48:25.914441",
+    "eligibility": "Graduate degree",
+    "mode": "Offline",
+    "pattern": "Descriptive + MCQs",
+    "link": "https://jkpsc.nic.in",
+    "officialWebsite": "https://jkpsc.nic.in",
+    "region": "Jammu and Kashmir",
+    "courses": [],
+    "careers": [
+      "769f5cbe4d6a4875d499805c"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "JKPSC",
+    "sourceUrl": "https://jkpsc.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914447",
+    "createdAt": "2025-09-19T03:48:25.914449",
+    "updatedAt": "2025-09-19T03:48:25.914450"
+  },
+  {
+    "_id": "7bb1dcc779f7c36562093ea8",
+    "name": "J&K TET",
+    "media": {
+      "iconUrl": "https://exam-icons.com/jk-tet.png",
+      "bannerUrl": "https://exam-banners.com/jk-tet-banner.jpg"
+    },
+    "authority": "J&K Government",
+    "level": "State",
+    "examType": "Certification",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914461",
+    "applicationEnd": "2025-12-18T03:48:25.914464",
+    "examDate": "2026-01-17T03:48:25.914467",
+    "resultDate": "2026-03-18T03:48:25.914470",
+    "eligibility": "Graduate degree",
+    "mode": "Offline",
+    "pattern": "Descriptive + MCQs",
+    "link": "https://jktet.nic.in",
+    "officialWebsite": "https://jktet.nic.in",
+    "region": "Jammu and Kashmir",
+    "courses": [
+      "6ab38c56698cc091a89ea37e"
+    ],
+    "careers": [
+      "6b02240a31894997b953d0b9"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K",
+    "sourceUrl": "https://jktet.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914475",
+    "createdAt": "2025-09-19T03:48:25.914477",
+    "updatedAt": "2025-09-19T03:48:25.914479"
+  },
+  {
+    "_id": "15f590060ea6dc9c0c8be88d",
+    "name": "IBPS PO",
+    "media": {
+      "iconUrl": "https://exam-icons.com/ibps-po.png",
+      "bannerUrl": "https://exam-banners.com/ibps-po-banner.jpg"
+    },
+    "authority": "J&K Government",
+    "level": "National",
+    "examType": "Recruitment",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914489",
+    "applicationEnd": "2025-12-18T03:48:25.914492",
+    "examDate": "2026-01-17T03:48:25.914495",
+    "resultDate": "2026-03-18T03:48:25.914498",
+    "eligibility": "Graduate degree",
+    "mode": "Offline",
+    "pattern": "Descriptive + MCQs",
+    "link": "https://ibpspo.nic.in",
+    "officialWebsite": "https://ibpspo.nic.in",
+    "region": "All India",
+    "courses": [],
+    "careers": [
+      "587d0393192f13013d0ff83c"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "IBPS",
+    "sourceUrl": "https://ibpspo.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914503",
+    "createdAt": "2025-09-19T03:48:25.914505",
+    "updatedAt": "2025-09-19T03:48:25.914507"
+  },
+  {
+    "_id": "27d42659c0fa9f8630a119ae",
+    "name": "CA Foundation",
+    "media": {
+      "iconUrl": "https://exam-icons.com/ca-foundation.png",
+      "bannerUrl": "https://exam-banners.com/ca-foundation-banner.jpg"
+    },
+    "authority": "J&K Government",
+    "level": "National",
+    "examType": "Certification",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914516",
+    "applicationEnd": "2025-12-18T03:48:25.914520",
+    "examDate": "2026-01-17T03:48:25.914522",
+    "resultDate": "2026-03-18T03:48:25.914525",
+    "eligibility": "Graduate degree",
+    "mode": "Offline",
+    "pattern": "Descriptive + MCQs",
+    "link": "https://cafoundation.nic.in",
+    "officialWebsite": "https://cafoundation.nic.in",
+    "region": "All India",
+    "courses": [
+      "7008ba3afc748a080c84b2c7"
+    ],
+    "careers": [
+      "6e2be13defff571327b6c590"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "CA",
+    "sourceUrl": "https://cafoundation.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914530",
+    "createdAt": "2025-09-19T03:48:25.914532",
+    "updatedAt": "2025-09-19T03:48:25.914534"
+  },
+  {
+    "_id": "ac86d4524e11f2ed88c75f13",
+    "name": "UGC NET",
+    "media": {
+      "iconUrl": "https://exam-icons.com/ugc-net.png",
+      "bannerUrl": "https://exam-banners.com/ugc-net-banner.jpg"
+    },
+    "authority": "J&K Government",
+    "level": "National",
+    "examType": "Certification",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914543",
+    "applicationEnd": "2025-12-18T03:48:25.914547",
+    "examDate": "2026-01-17T03:48:25.914550",
+    "resultDate": "2026-03-18T03:48:25.914552",
+    "eligibility": "Graduate degree",
+    "mode": "Offline",
+    "pattern": "Descriptive + MCQs",
+    "link": "https://ugcnet.nic.in",
+    "officialWebsite": "https://ugcnet.nic.in",
+    "region": "All India",
+    "courses": [],
+    "careers": [
+      "090de0c138e5267534cbad6d"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "UGC",
+    "sourceUrl": "https://ugcnet.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914557",
+    "createdAt": "2025-09-19T03:48:25.914560",
+    "updatedAt": "2025-09-19T03:48:25.914562"
+  },
+  {
+    "_id": "0a404e4be444a31dd89a2175",
+    "name": "ICAR AIEEA",
+    "media": {
+      "iconUrl": "https://exam-icons.com/icar-aieea.png",
+      "bannerUrl": "https://exam-banners.com/icar-aieea-banner.jpg"
+    },
+    "authority": "NTA",
+    "level": "National",
+    "examType": "Entrance",
+    "scheduleWindow": "Annual",
+    "applicationStart": "2025-10-19T03:48:25.914572",
+    "applicationEnd": "2025-12-18T03:48:25.914575",
+    "examDate": "2026-01-17T03:48:25.914578",
+    "resultDate": "2026-03-18T03:48:25.914581",
+    "eligibility": "10+2 with relevant subjects",
+    "mode": "Offline",
+    "pattern": "Multiple Choice Questions (MCQs)",
+    "link": "https://icaraieea.nic.in",
+    "officialWebsite": "https://icaraieea.nic.in",
+    "region": "All India",
+    "courses": [
+      "cb04fa68bca6c36d1262d307"
+    ],
+    "careers": [
+      "142fab7fdb252fa00be61d22"
+    ],
+    "interestTags": [],
+    "isActive": true,
+    "source": "ICAR",
+    "sourceUrl": "https://icaraieea.nic.in",
+    "lastUpdated": "2025-09-19T03:48:25.914587",
+    "createdAt": "2025-09-19T03:48:25.914589",
+    "updatedAt": "2025-09-19T03:48:25.914591"
+  }
+]

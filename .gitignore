@@ -40,5 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+/.kiro/
+
+/.vscode/
+/.trae/
 
 # /.only_for_ai/

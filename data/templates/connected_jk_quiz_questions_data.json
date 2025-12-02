@@ -1,0 +1,692 @@
+[
+  {
+    "_id": "4cb549c541d9b60553c38210",
+    "category": "interest",
+    "text": {
+      "en": "I enjoy helping people solve their health problems",
+      "hi": "मुझे लोगों की स्वास्थ्य समस्याओं को हल करने में मदद करना अच्छा लगता है"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूर्णतः सहमत"
+        },
+        "weight": 5,
+        "tags": [
+          "healthcare"
+        ]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": [
+          "healthcare"
+        ]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": []
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": []
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूर्णतः असहमत"
+        },
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "relatedCourses": [
+      "a08fc2b3c5d5c5e624949459"
+    ],
+    "relatedCareers": [
+      "12db2f8985e2b9cc94edebd8"
+    ],
+    "relatedStreams": [],
+    "interestTags": [
+      "b87ce2ea7f1ec72cfed835fb"
+    ],
+    "isActive": true,
+    "order": 1,
+    "section": "Interest Assessment",
+    "createdAt": "2025-09-19T03:51:14.640585",
+    "updatedAt": "2025-09-19T09:09:31.830505"
+  },
+  {
+    "_id": "bdb44509526519f124469d79",
+    "category": "interest",
+    "text": {
+      "en": "I am fascinated by how machines and technology work",
+      "hi": "मैं इस बात से आकर्षित हूं कि मशीनें और तकनीक कैसे काम करती हैं"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूर्णतः सहमत"
+        },
+        "weight": 5,
+        "tags": [
+          "technology"
+        ]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": [
+          "technology"
+        ]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": []
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": []
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूर्णतः असहमत"
+        },
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "relatedCourses": [
+      "08e92fed29eb30c673385e48"
+    ],
+    "relatedCareers": [
+      "8291123c46834cbbfed601aa"
+    ],
+    "relatedStreams": [],
+    "interestTags": [
+      "53986886618c67826cb9aaa4"
+    ],
+    "isActive": true,
+    "order": 2,
+    "section": "Interest Assessment",
+    "createdAt": "2025-09-19T03:51:14.640610",
+    "updatedAt": "2025-09-19T09:09:31.830547"
+  },
+  {
+    "_id": "0473ce9b17316085cff60819",
+    "category": "interest",
+    "text": {
+      "en": "I enjoy reading literature and writing creative content",
+      "hi": "मुझे साहित्य पढ़ना और रचनात्मक सामग्री लिखना पसंद है"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूर्णतः सहमत"
+        },
+        "weight": 5,
+        "tags": [
+          "literature"
+        ]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": [
+          "literature"
+        ]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": []
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": []
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूर्णतः असहमत"
+        },
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "relatedCourses": [
+      "53e15b7f6bd07938855c484f"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9"
+    ],
+    "relatedStreams": [],
+    "interestTags": [
+      "14517b7533add3767b4cf5ab"
+    ],
+    "isActive": true,
+    "order": 3,
+    "section": "Interest Assessment",
+    "createdAt": "2025-09-19T03:51:14.640624",
+    "updatedAt": "2025-09-19T09:09:31.830571"
+  },
+  {
+    "_id": "57138913e781eb3dafdd6dc1",
+    "category": "interest",
+    "text": {
+      "en": "I find business and finance concepts interesting",
+      "hi": "मुझे व्यापार और वित्त की अवधारणाएं दिलचस्प लगती हैं"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूर्णतः सहमत"
+        },
+        "weight": 5,
+        "tags": [
+          "business"
+        ]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": [
+          "business"
+        ]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": []
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": []
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूर्णतः असहमत"
+        },
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "relatedCourses": [
+      "7008ba3afc748a080c84b2c7"
+    ],
+    "relatedCareers": [
+      "3c058c9213130b37c0cd00c5"
+    ],
+    "relatedStreams": [],
+    "interestTags": [
+      "dc312413e34f859c81b3f895"
+    ],
+    "isActive": true,
+    "order": 4,
+    "section": "Interest Assessment",
+    "createdAt": "2025-09-19T03:51:14.640638",
+    "updatedAt": "2025-09-19T09:09:31.830596"
+  },
+  {
+    "_id": "ceab8a304774c941891ebc1e",
+    "category": "aptitude",
+    "text": {
+      "en": "I can easily understand mathematical concepts",
+      "hi": "मैं गणितीय अवधारणाओं को आसानी से समझ सकता हूं"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूर्णतः सहमत"
+        },
+        "weight": 5,
+        "tags": [
+          "mathematics"
+        ]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": [
+          "mathematics"
+        ]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": []
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": []
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूर्णतः असहमत"
+        },
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "relatedCourses": [
+      "932f0bd394f1c82b420bd216"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9"
+    ],
+    "relatedStreams": [],
+    "interestTags": [
+      "83f209240df9974945c0dffa"
+    ],
+    "isActive": true,
+    "order": 5,
+    "section": "Aptitude Assessment",
+    "createdAt": "2025-09-19T03:51:14.640651",
+    "updatedAt": "2025-09-19T09:09:31.830629"
+  },
+  {
+    "_id": "692e32e6fb4410fad35a99bb",
+    "category": "personality",
+    "text": {
+      "en": "I enjoy working in teams and collaborating with others",
+      "hi": "मुझे टीमों में काम करना और दूसरों के साथ सहयोग करना पसंद है"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूर्णतः सहमत"
+        },
+        "weight": 5,
+        "tags": ["teamwork", "social"]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": ["teamwork"]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": []
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": []
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूर्णतः असहमत"
+        },
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedStreams": [],
+    "interestTags": [],
+    "isActive": true,
+    "order": 1,
+    "section": "Personality Assessment",
+    "createdAt": "2025-12-02T10:00:00.000000",
+    "updatedAt": "2025-12-02T10:00:00.000000"
+  },
+  {
+    "_id": "692e32e6fb4410fad35a99bc",
+    "category": "personality",
+    "text": {
+      "en": "I prefer to work independently rather than in groups",
+      "hi": "मैं समूहों में काम करने के बजाय स्वतंत्र रूप से काम करना पसंद करता हूं"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूर्णतः सहमत"
+        },
+        "weight": 5,
+        "tags": ["independent"]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": ["independent"]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": []
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": []
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूर्णतः असहमत"
+        },
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedStreams": [],
+    "interestTags": [],
+    "isActive": true,
+    "order": 2,
+    "section": "Personality Assessment",
+    "createdAt": "2025-12-02T10:00:00.000000",
+    "updatedAt": "2025-12-02T10:00:00.000000"
+  },
+  {
+    "_id": "692e32e6fb4410fad35a99bd",
+    "category": "personality",
+    "text": {
+      "en": "I am comfortable taking on leadership roles",
+      "hi": "मुझे नेतृत्व की भूमिकाएं निभाने में सहज महसूस होता है"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूर्णतः सहमत"
+        },
+        "weight": 5,
+        "tags": ["leadership"]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": ["leadership"]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": []
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": []
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूर्णतः असहमत"
+        },
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedStreams": [],
+    "interestTags": [],
+    "isActive": true,
+    "order": 3,
+    "section": "Personality Assessment",
+    "createdAt": "2025-12-02T10:00:00.000000",
+    "updatedAt": "2025-12-02T10:00:00.000000"
+  },
+  {
+    "_id": "692e32e6fb4410fad35a99be",
+    "category": "personality",
+    "text": {
+      "en": "I adapt easily to new situations and changes",
+      "hi": "मैं नई परिस्थितियों और परिवर्तनों के अनुकूल आसानी से ढल जाता हूं"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूर्णतः सहमत"
+        },
+        "weight": 5,
+        "tags": ["adaptability"]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": ["adaptability"]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": []
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": []
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूर्णतः असहमत"
+        },
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedStreams": [],
+    "interestTags": [],
+    "isActive": true,
+    "order": 4,
+    "section": "Personality Assessment",
+    "createdAt": "2025-12-02T10:00:00.000000",
+    "updatedAt": "2025-12-02T10:00:00.000000"
+  },
+  {
+    "_id": "692e32e6fb4410fad35a99bf",
+    "category": "personality",
+    "text": {
+      "en": "I enjoy analyzing problems and finding logical solutions",
+      "hi": "मुझे समस्याओं का विश्लेषण करना और तार्किक समाधान खोजना पसंद है"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": {
+          "en": "Strongly Agree",
+          "hi": "पूर्णतः सहमत"
+        },
+        "weight": 5,
+        "tags": ["analytical"]
+      },
+      {
+        "key": "B",
+        "text": {
+          "en": "Agree",
+          "hi": "सहमत"
+        },
+        "weight": 4,
+        "tags": ["analytical"]
+      },
+      {
+        "key": "C",
+        "text": {
+          "en": "Neutral",
+          "hi": "तटस्थ"
+        },
+        "weight": 3,
+        "tags": []
+      },
+      {
+        "key": "D",
+        "text": {
+          "en": "Disagree",
+          "hi": "असहमत"
+        },
+        "weight": 2,
+        "tags": []
+      },
+      {
+        "key": "E",
+        "text": {
+          "en": "Strongly Disagree",
+          "hi": "पूर्णतः असहमत"
+        },
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "relatedCourses": [],
+    "relatedCareers": [],
+    "relatedStreams": [],
+    "interestTags": [],
+    "isActive": true,
+    "order": 5,
+    "section": "Personality Assessment",
+    "createdAt": "2025-12-02T10:00:00.000000",
+    "updatedAt": "2025-12-02T10:00:00.000000"
+  }
+]

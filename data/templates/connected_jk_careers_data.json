@@ -1,0 +1,763 @@
+[
+  {
+    "_id": "12db2f8985e2b9cc94edebd8",
+    "slug": "medical-doctor",
+    "name": "Medical Doctor",
+    "media": {
+      "iconUrl": "https://career-icons.com/medical-doctor.png",
+      "bannerUrl": "https://career-banners.com/medical-doctor-banner.jpg"
+    },
+    "description": "Professional career in healthcare, offering opportunities for growth and specialization in healthcare, medical research.",
+    "sectors": [
+      "Healthcare",
+      "Medical Research"
+    ],
+    "entryRoles": [
+      "Junior Medical Doctor",
+      "Associate Medical Doctor",
+      "Trainee Medical Doctor"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 600000,
+      "max": 2500000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "a08fc2b3c5d5c5e624949459"
+    ],
+    "exams": [
+      "b36cbfc86c28ae15c461f14e"
+    ],
+    "relatedScholarships": [
+      "7602f228a70f1733cdbec098"
+    ],
+    "growthTrend": "High Demand",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.909955",
+    "createdAt": "2025-09-19T03:48:25.909965",
+    "updatedAt": "2025-09-19T03:48:25.909967"
+  },
+  {
+    "_id": "68be8899dc7634c7ceb287d1",
+    "slug": "dentist",
+    "name": "Dentist",
+    "media": {
+      "iconUrl": "https://career-icons.com/dentist.png",
+      "bannerUrl": "https://career-banners.com/dentist-banner.jpg"
+    },
+    "description": "Professional career in healthcare, offering opportunities for growth and specialization in healthcare, dental care.",
+    "sectors": [
+      "Healthcare",
+      "Dental Care"
+    ],
+    "entryRoles": [
+      "Junior Dentist",
+      "Associate Dentist",
+      "Trainee Dentist"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 400000,
+      "max": 1500000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "e5e6538b336431b1ce9c73a0"
+    ],
+    "exams": [
+      "b36cbfc86c28ae15c461f14e"
+    ],
+    "relatedScholarships": [
+      "b3fac6aae781327a898e2ac4"
+    ],
+    "growthTrend": "High Demand",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.909987",
+    "createdAt": "2025-09-19T03:48:25.909989",
+    "updatedAt": "2025-09-19T03:48:25.909991"
+  },
+  {
+    "_id": "c339fa14514222f75d01e286",
+    "slug": "pharmacist",
+    "name": "Pharmacist",
+    "media": {
+      "iconUrl": "https://career-icons.com/pharmacist.png",
+      "bannerUrl": "https://career-banners.com/pharmacist-banner.jpg"
+    },
+    "description": "Professional career in healthcare, offering opportunities for growth and specialization in healthcare, pharmaceuticals.",
+    "sectors": [
+      "Healthcare",
+      "Pharmaceuticals"
+    ],
+    "entryRoles": [
+      "Junior Pharmacist",
+      "Associate Pharmacist",
+      "Trainee Pharmacist"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 300000,
+      "max": 800000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "a90b8dc0c1187ad792071521"
+    ],
+    "exams": [],
+    "relatedScholarships": [
+      "d0a5dbee396842f3a0bc4230"
+    ],
+    "growthTrend": "High Demand",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910005",
+    "createdAt": "2025-09-19T03:48:25.910007",
+    "updatedAt": "2025-09-19T03:48:25.910009"
+  },
+  {
+    "_id": "8291123c46834cbbfed601aa",
+    "slug": "software-engineer",
+    "name": "Software Engineer",
+    "media": {
+      "iconUrl": "https://career-icons.com/software-engineer.png",
+      "bannerUrl": "https://career-banners.com/software-engineer-banner.jpg"
+    },
+    "description": "Professional career in technology, offering opportunities for growth and specialization in technology, software development.",
+    "sectors": [
+      "Technology",
+      "Software Development"
+    ],
+    "entryRoles": [
+      "Junior Software Engineer",
+      "Associate Software Engineer",
+      "Trainee Software Engineer"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 400000,
+      "max": 1500000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "08e92fed29eb30c673385e48",
+      "da738166793bea393adba344",
+      "f2bac6deecafc9db495aa6d9"
+    ],
+    "exams": [
+      "475e6649ed77f7a019f7f384"
+    ],
+    "relatedScholarships": [
+      "b3fac6aae781327a898e2ac4"
+    ],
+    "growthTrend": "High Demand",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910025",
+    "createdAt": "2025-09-19T03:48:25.910027",
+    "updatedAt": "2025-09-19T03:48:25.910029"
+  },
+  {
+    "_id": "dbd96ccd3484bbd31b612a5a",
+    "slug": "civil-engineer",
+    "name": "Civil Engineer",
+    "media": {
+      "iconUrl": "https://career-icons.com/civil-engineer.png",
+      "bannerUrl": "https://career-banners.com/civil-engineer-banner.jpg"
+    },
+    "description": "Professional career in construction, offering opportunities for growth and specialization in construction, infrastructure.",
+    "sectors": [
+      "Construction",
+      "Infrastructure"
+    ],
+    "entryRoles": [
+      "Junior Civil Engineer",
+      "Associate Civil Engineer",
+      "Trainee Civil Engineer"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 350000,
+      "max": 1000000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "24819f4aea4fb49a2147541e"
+    ],
+    "exams": [
+      "475e6649ed77f7a019f7f384"
+    ],
+    "relatedScholarships": [
+      "b3fac6aae781327a898e2ac4"
+    ],
+    "growthTrend": "Stable",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910042",
+    "createdAt": "2025-09-19T03:48:25.910045",
+    "updatedAt": "2025-09-19T03:48:25.910047"
+  },
+  {
+    "_id": "1b617ae5f3406e40e30f88fd",
+    "slug": "mechanical-engineer",
+    "name": "Mechanical Engineer",
+    "media": {
+      "iconUrl": "https://career-icons.com/mechanical-engineer.png",
+      "bannerUrl": "https://career-banners.com/mechanical-engineer-banner.jpg"
+    },
+    "description": "Professional career in manufacturing, offering opportunities for growth and specialization in manufacturing, automotive.",
+    "sectors": [
+      "Manufacturing",
+      "Automotive"
+    ],
+    "entryRoles": [
+      "Junior Mechanical Engineer",
+      "Associate Mechanical Engineer",
+      "Trainee Mechanical Engineer"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 350000,
+      "max": 900000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "d78ecfb22447c04fc7e236a0"
+    ],
+    "exams": [
+      "475e6649ed77f7a019f7f384"
+    ],
+    "relatedScholarships": [
+      "09f38e46b44204934b1c8f72"
+    ],
+    "growthTrend": "Stable",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910059",
+    "createdAt": "2025-09-19T03:48:25.910061",
+    "updatedAt": "2025-09-19T03:48:25.910063"
+  },
+  {
+    "_id": "6b02240a31894997b953d0b9",
+    "slug": "school-teacher",
+    "name": "School Teacher",
+    "media": {
+      "iconUrl": "https://career-icons.com/school-teacher.png",
+      "bannerUrl": "https://career-banners.com/school-teacher-banner.jpg"
+    },
+    "description": "Professional career in education, offering opportunities for growth and specialization in education, public service.",
+    "sectors": [
+      "Education",
+      "Public Service"
+    ],
+    "entryRoles": [
+      "Junior School Teacher",
+      "Associate School Teacher",
+      "Trainee School Teacher"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 300000,
+      "max": 700000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "6ab38c56698cc091a89ea37e",
+      "53e15b7f6bd07938855c484f",
+      "f050e1c615deafdca2b24fbb"
+    ],
+    "exams": [
+      "7bb1dcc779f7c36562093ea8",
+      "eed00c3aa8058575e7f15ac3"
+    ],
+    "relatedScholarships": [
+      "daebcb2e1a4a1aca33aa26aa"
+    ],
+    "growthTrend": "Stable",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910076",
+    "createdAt": "2025-09-19T03:48:25.910078",
+    "updatedAt": "2025-09-19T03:48:25.910080"
+  },
+  {
+    "_id": "090de0c138e5267534cbad6d",
+    "slug": "college-professor",
+    "name": "College Professor",
+    "media": {
+      "iconUrl": "https://career-icons.com/college-professor.png",
+      "bannerUrl": "https://career-banners.com/college-professor-banner.jpg"
+    },
+    "description": "Professional career in higher education, offering opportunities for growth and specialization in higher education, research.",
+    "sectors": [
+      "Higher Education",
+      "Research"
+    ],
+    "entryRoles": [
+      "Junior College Professor",
+      "Associate College Professor",
+      "Trainee College Professor"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 500000,
+      "max": 1200000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "a7645cab5303a0099796c150",
+      "3efb043b4fa2419d9e429b44"
+    ],
+    "exams": [
+      "ac86d4524e11f2ed88c75f13"
+    ],
+    "relatedScholarships": [
+      "daebcb2e1a4a1aca33aa26aa"
+    ],
+    "growthTrend": "Stable",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910092",
+    "createdAt": "2025-09-19T03:48:25.910094",
+    "updatedAt": "2025-09-19T03:48:25.910096"
+  },
+  {
+    "_id": "769f5cbe4d6a4875d499805c",
+    "slug": "ias-officer",
+    "name": "Civil Services Officer (IAS)",
+    "media": {
+      "iconUrl": "https://career-icons.com/ias-officer.png",
+      "bannerUrl": "https://career-banners.com/ias-officer-banner.jpg"
+    },
+    "description": "Professional career in government, offering opportunities for growth and specialization in government, public administration.",
+    "sectors": [
+      "Government",
+      "Public Administration"
+    ],
+    "entryRoles": [
+      "Junior Civil Services Officer (IAS)",
+      "Associate Civil Services Officer (IAS)",
+      "Trainee Civil Services Officer (IAS)"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 700000,
+      "max": 1500000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "53e15b7f6bd07938855c484f",
+      "c929ef9b6a59cf98be8defb7",
+      "ef128c87c346ce12ebc5a8c4"
+    ],
+    "exams": [
+      "30c90f3ebae6d76b73e932c7"
+    ],
+    "relatedScholarships": [
+      "09f38e46b44204934b1c8f72"
+    ],
+    "growthTrend": "Stable",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910109",
+    "createdAt": "2025-09-19T03:48:25.910111",
+    "updatedAt": "2025-09-19T03:48:25.910113"
+  },
+  {
+    "_id": "587d0393192f13013d0ff83c",
+    "slug": "bank-officer",
+    "name": "Bank Officer",
+    "media": {
+      "iconUrl": "https://career-icons.com/bank-officer.png",
+      "bannerUrl": "https://career-banners.com/bank-officer-banner.jpg"
+    },
+    "description": "Professional career in banking, offering opportunities for growth and specialization in banking, financial services.",
+    "sectors": [
+      "Banking",
+      "Financial Services"
+    ],
+    "entryRoles": [
+      "Junior Bank Officer",
+      "Associate Bank Officer",
+      "Trainee Bank Officer"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 400000,
+      "max": 1000000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "7008ba3afc748a080c84b2c7",
+      "6fc630e9b801c2e8cfe009c2",
+      "8151a4b3ecba813567a8824a"
+    ],
+    "exams": [
+      "15f590060ea6dc9c0c8be88d",
+      "fd07d2ae47417908ed53d5c5"
+    ],
+    "relatedScholarships": [
+      "b3fac6aae781327a898e2ac4"
+    ],
+    "growthTrend": "Stable",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910126",
+    "createdAt": "2025-09-19T03:48:25.910128",
+    "updatedAt": "2025-09-19T03:48:25.910130"
+  },
+  {
+    "_id": "6e2be13defff571327b6c590",
+    "slug": "chartered-accountant",
+    "name": "Chartered Accountant",
+    "media": {
+      "iconUrl": "https://career-icons.com/chartered-accountant.png",
+      "bannerUrl": "https://career-banners.com/chartered-accountant-banner.jpg"
+    },
+    "description": "Professional career in finance, offering opportunities for growth and specialization in finance, accounting.",
+    "sectors": [
+      "Finance",
+      "Accounting"
+    ],
+    "entryRoles": [
+      "Junior Chartered Accountant",
+      "Associate Chartered Accountant",
+      "Trainee Chartered Accountant"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 600000,
+      "max": 2000000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "7008ba3afc748a080c84b2c7"
+    ],
+    "exams": [
+      "27d42659c0fa9f8630a119ae",
+      "563af579997e9ad2ef7423a0"
+    ],
+    "relatedScholarships": [
+      "daebcb2e1a4a1aca33aa26aa"
+    ],
+    "growthTrend": "Stable",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910143",
+    "createdAt": "2025-09-19T03:48:25.910145",
+    "updatedAt": "2025-09-19T03:48:25.910146"
+  },
+  {
+    "_id": "3c058c9213130b37c0cd00c5",
+    "slug": "business-manager",
+    "name": "Business Manager",
+    "media": {
+      "iconUrl": "https://career-icons.com/business-manager.png",
+      "bannerUrl": "https://career-banners.com/business-manager-banner.jpg"
+    },
+    "description": "Professional career in management, offering opportunities for growth and specialization in management, business operations.",
+    "sectors": [
+      "Management",
+      "Business Operations"
+    ],
+    "entryRoles": [
+      "Junior Business Manager",
+      "Associate Business Manager",
+      "Trainee Business Manager"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 500000,
+      "max": 1500000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "6fc630e9b801c2e8cfe009c2",
+      "8151a4b3ecba813567a8824a"
+    ],
+    "exams": [
+      "777571617fda83c8666b5f21",
+      "867c6aa8c77e00694e920b69"
+    ],
+    "relatedScholarships": [
+      "daebcb2e1a4a1aca33aa26aa"
+    ],
+    "growthTrend": "Stable",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910159",
+    "createdAt": "2025-09-19T03:48:25.910161",
+    "updatedAt": "2025-09-19T03:48:25.910163"
+  },
+  {
+    "_id": "35cfc94ae43d66577432d261",
+    "slug": "lawyer",
+    "name": "Lawyer",
+    "media": {
+      "iconUrl": "https://career-icons.com/lawyer.png",
+      "bannerUrl": "https://career-banners.com/lawyer-banner.jpg"
+    },
+    "description": "Professional career in legal, offering opportunities for growth and specialization in legal, judiciary.",
+    "sectors": [
+      "Legal",
+      "Judiciary"
+    ],
+    "entryRoles": [
+      "Junior Lawyer",
+      "Associate Lawyer",
+      "Trainee Lawyer"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 300000,
+      "max": 1200000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "2660bd84adb5398953cc0996"
+    ],
+    "exams": [
+      "e34c9544ed275d80c38fc7d5"
+    ],
+    "relatedScholarships": [
+      "7602f228a70f1733cdbec098"
+    ],
+    "growthTrend": "Stable",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910175",
+    "createdAt": "2025-09-19T03:48:25.910177",
+    "updatedAt": "2025-09-19T03:48:25.910178"
+  },
+  {
+    "_id": "142fab7fdb252fa00be61d22",
+    "slug": "agricultural-scientist",
+    "name": "Agricultural Scientist",
+    "media": {
+      "iconUrl": "https://career-icons.com/agricultural-scientist.png",
+      "bannerUrl": "https://career-banners.com/agricultural-scientist-banner.jpg"
+    },
+    "description": "Professional career in agriculture, offering opportunities for growth and specialization in agriculture, research.",
+    "sectors": [
+      "Agriculture",
+      "Research"
+    ],
+    "entryRoles": [
+      "Junior Agricultural Scientist",
+      "Associate Agricultural Scientist",
+      "Trainee Agricultural Scientist"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 400000,
+      "max": 1000000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "cb04fa68bca6c36d1262d307"
+    ],
+    "exams": [
+      "0a404e4be444a31dd89a2175"
+    ],
+    "relatedScholarships": [
+      "7602f228a70f1733cdbec098"
+    ],
+    "growthTrend": "Stable",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910191",
+    "createdAt": "2025-09-19T03:48:25.910193",
+    "updatedAt": "2025-09-19T03:48:25.910194"
+  },
+  {
+    "_id": "4cd70f9d4457b8410a1c78ec",
+    "slug": "computer-systems-analyst",
+    "name": "Computer Systems Analyst",
+    "media": {
+      "iconUrl": "https://career-icons.com/computer-systems-analyst.png",
+      "bannerUrl": "https://career-banners.com/computer-systems-analyst-banner.jpg"
+    },
+    "description": "Professional career in technology, offering opportunities for growth and specialization in technology, it services.",
+    "sectors": [
+      "Technology",
+      "IT Services"
+    ],
+    "entryRoles": [
+      "Junior Computer Systems Analyst",
+      "Associate Computer Systems Analyst",
+      "Trainee Computer Systems Analyst"
+    ],
+    "medianPayBand": {
+      "currency": "INR",
+      "min": 400000,
+      "max": 1200000
+    },
+    "skillsRequired": [
+      "Communication",
+      "Problem Solving",
+      "Technical Knowledge",
+      "Teamwork",
+      "Leadership"
+    ],
+    "typicalDegrees": [],
+    "typicalCourses": [
+      "08e92fed29eb30c673385e48",
+      "f2bac6deecafc9db495aa6d9"
+    ],
+    "exams": [],
+    "relatedScholarships": [
+      "09f38e46b44204934b1c8f72"
+    ],
+    "growthTrend": "High Demand",
+    "relatedCareers": [],
+    "interestTags": [],
+    "isActive": true,
+    "source": "J&K Career Guidance & Industry Analysis",
+    "sourceUrl": "https://careerguidance.jk.gov.in",
+    "lastUpdated": "2025-09-19T03:48:25.910207",
+    "createdAt": "2025-09-19T03:48:25.910208",
+    "updatedAt": "2025-09-19T03:48:25.910210"
+  }
+]

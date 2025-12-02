@@ -12,8 +12,13 @@ export default function CallToAction() {
   ];
 
   return (
-    <div className="bg-blue-700">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
+    <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+      </div>
+      <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <motion.h2 
@@ -46,10 +51,18 @@ export default function CallToAction() {
               <div className="mt-5 sm:mt-8 sm:flex">
                 <div className="rounded-md shadow">
                   <Link
-                    href="/courses"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10"
+                    href="/quizzes"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-blue-700 bg-white hover:bg-blue-50 shadow-lg hover:shadow-xl transition-all duration-300 md:py-4 md:text-lg md:px-10"
                   >
-                    Explore courses
+                    Take Career Quiz
+                  </Link>
+                </div>
+                <div className="mt-3 sm:mt-0 sm:ml-3">
+                  <Link
+                    href="/colleges"
+                    className="w-full flex items-center justify-center px-8 py-3 border-2 border-white/30 text-base font-medium rounded-lg text-white hover:bg-white/10 transition-all duration-300 md:py-4 md:text-lg md:px-10"
+                  >
+                    Explore Colleges
                   </Link>
                 </div>
               </div>

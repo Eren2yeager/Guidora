@@ -1,0 +1,555 @@
+[
+  {
+    "_id": "daebcb2e1a4a1aca33aa26aa",
+    "name": "J&K Merit cum Means Scholarship",
+    "media": {
+      "iconUrl": "https://scholarship-icons.com/scholarship-1.png",
+      "bannerUrl": "https://scholarship-banners.com/scholarship-1-banner.jpg"
+    },
+    "providerType": "University",
+    "providerId": "9ad991e8291b48b6571ba7a2",
+    "description": "Financial assistance program providing ₹50,000 annually to deserving students from families with income below ₹800,000.",
+    "eligibility": {
+      "minMarks": 60,
+      "incomeCap": 800000,
+      "state": "Jammu and Kashmir",
+      "stream": "",
+      "reservation": [
+        "General"
+      ],
+      "ageLimit": 25,
+      "gender": "Any"
+    },
+    "relatedDegreePrograms": [],
+    "relatedColleges": [
+      "00818fcd1856701c895346b8",
+      "bcc109aad65f6f16e5a04137"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9",
+      "769f5cbe4d6a4875d499805c"
+    ],
+    "benefits": {
+      "amount": 50000,
+      "currency": "INR",
+      "coverage": [
+        "tuition",
+        "hostel",
+        "books"
+      ],
+      "notes": "Annual scholarship renewable based on academic performance"
+    },
+    "deadlines": [
+      {
+        "startDate": "2025-10-19T03:50:14.914673",
+        "endDate": "2025-12-18T03:50:14.914689",
+        "link": "https://scholarships.gov.in"
+      }
+    ],
+    "interestTags": [],
+    "isOpen": true,
+    "isActive": true,
+    "source": "Ministry of Education / J&K Government",
+    "sourceUrl": "https://scholarships.gov.in",
+    "lastUpdated": "2025-09-19T03:50:14.914693",
+    "createdAt": "2025-09-19T03:50:14.914695",
+    "updatedAt": "2025-09-19T03:50:14.914696"
+  },
+  {
+    "_id": "d0a5dbee396842f3a0bc4230",
+    "name": "PM Scholarship for Medical Students",
+    "media": {
+      "iconUrl": "https://scholarship-icons.com/scholarship-2.png",
+      "bannerUrl": "https://scholarship-banners.com/scholarship-2-banner.jpg"
+    },
+    "providerType": "College",
+    "providerId": "4b59a7406f2341fc0348c711",
+    "description": "Financial assistance program providing ₹100,000 annually to deserving students from families with income below ₹500,000.",
+    "eligibility": {
+      "minMarks": 65,
+      "incomeCap": 500000,
+      "state": "All India",
+      "stream": "Science",
+      "reservation": [
+        "General"
+      ],
+      "ageLimit": 25,
+      "gender": "Any"
+    },
+    "relatedDegreePrograms": [],
+    "relatedColleges": [
+      "ccf5abdc23ad390472ce00d1",
+      "4b59a7406f2341fc0348c711"
+    ],
+    "relatedCareers": [
+      "12db2f8985e2b9cc94edebd8"
+    ],
+    "benefits": {
+      "amount": 100000,
+      "currency": "INR",
+      "coverage": [
+        "tuition",
+        "hostel",
+        "books"
+      ],
+      "notes": "Annual scholarship renewable based on academic performance"
+    },
+    "deadlines": [
+      {
+        "startDate": "2025-10-19T03:50:14.914716",
+        "endDate": "2025-12-18T03:50:14.914720",
+        "link": "https://scholarships.gov.in"
+      }
+    ],
+    "interestTags": [],
+    "isOpen": true,
+    "isActive": true,
+    "source": "Ministry of Education / J&K Government",
+    "sourceUrl": "https://scholarships.gov.in",
+    "lastUpdated": "2025-09-19T03:50:14.914723",
+    "createdAt": "2025-09-19T03:50:14.914725",
+    "updatedAt": "2025-09-19T03:50:14.914727"
+  },
+  {
+    "_id": "09f38e46b44204934b1c8f72",
+    "name": "Central Sector Scholarship",
+    "media": {
+      "iconUrl": "https://scholarship-icons.com/scholarship-3.png",
+      "bannerUrl": "https://scholarship-banners.com/scholarship-3-banner.jpg"
+    },
+    "providerType": "University",
+    "providerId": "b77ca873bf9a8bf39808ddd4",
+    "description": "Financial assistance program providing ₹20,000 annually to deserving students from families with income below ₹600,000.",
+    "eligibility": {
+      "minMarks": 80,
+      "incomeCap": 600000,
+      "state": "All India",
+      "stream": "",
+      "reservation": [
+        "General"
+      ],
+      "ageLimit": 25,
+      "gender": "Any"
+    },
+    "relatedDegreePrograms": [],
+    "relatedColleges": [
+      "00818fcd1856701c895346b8",
+      "bcc109aad65f6f16e5a04137"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9",
+      "769f5cbe4d6a4875d499805c"
+    ],
+    "benefits": {
+      "amount": 20000,
+      "currency": "INR",
+      "coverage": [
+        "tuition",
+        "books"
+      ],
+      "notes": "Annual scholarship renewable based on academic performance"
+    },
+    "deadlines": [
+      {
+        "startDate": "2025-10-19T03:50:14.914743",
+        "endDate": "2025-12-18T03:50:14.914746",
+        "link": "https://scholarships.gov.in"
+      }
+    ],
+    "interestTags": [],
+    "isOpen": true,
+    "isActive": true,
+    "source": "Ministry of Education / J&K Government",
+    "sourceUrl": "https://scholarships.gov.in",
+    "lastUpdated": "2025-09-19T03:50:14.914749",
+    "createdAt": "2025-09-19T03:50:14.914751",
+    "updatedAt": "2025-09-19T03:50:14.914753"
+  },
+  {
+    "_id": "b3fac6aae781327a898e2ac4",
+    "name": "Post Matric Scholarship for SC Students",
+    "media": {
+      "iconUrl": "https://scholarship-icons.com/scholarship-4.png",
+      "bannerUrl": "https://scholarship-banners.com/scholarship-4-banner.jpg"
+    },
+    "providerType": "University",
+    "providerId": "ce28c5cd40a7aca875949443",
+    "description": "Financial assistance program providing ₹30,000 annually to deserving students from families with income below ₹250,000.",
+    "eligibility": {
+      "minMarks": 50,
+      "incomeCap": 250000,
+      "state": "All India",
+      "stream": "",
+      "reservation": [
+        "SC"
+      ],
+      "ageLimit": 25,
+      "gender": "Any"
+    },
+    "relatedDegreePrograms": [],
+    "relatedColleges": [
+      "00818fcd1856701c895346b8",
+      "bcc109aad65f6f16e5a04137"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9",
+      "769f5cbe4d6a4875d499805c"
+    ],
+    "benefits": {
+      "amount": 30000,
+      "currency": "INR",
+      "coverage": [
+        "tuition",
+        "books"
+      ],
+      "notes": "Annual scholarship renewable based on academic performance"
+    },
+    "deadlines": [
+      {
+        "startDate": "2025-10-19T03:50:14.914781",
+        "endDate": "2025-12-18T03:50:14.914784",
+        "link": "https://scholarships.gov.in"
+      }
+    ],
+    "interestTags": [],
+    "isOpen": true,
+    "isActive": true,
+    "source": "Ministry of Education / J&K Government",
+    "sourceUrl": "https://scholarships.gov.in",
+    "lastUpdated": "2025-09-19T03:50:14.914788",
+    "createdAt": "2025-09-19T03:50:14.914789",
+    "updatedAt": "2025-09-19T03:50:14.914791"
+  },
+  {
+    "_id": "7602f228a70f1733cdbec098",
+    "name": "Post Matric Scholarship for ST Students",
+    "media": {
+      "iconUrl": "https://scholarship-icons.com/scholarship-5.png",
+      "bannerUrl": "https://scholarship-banners.com/scholarship-5-banner.jpg"
+    },
+    "providerType": "University",
+    "providerId": "21674588b7e4aedc2ac14960",
+    "description": "Financial assistance program providing ₹35,000 annually to deserving students from families with income below ₹250,000.",
+    "eligibility": {
+      "minMarks": 50,
+      "incomeCap": 250000,
+      "state": "All India",
+      "stream": "",
+      "reservation": [
+        "ST"
+      ],
+      "ageLimit": 25,
+      "gender": "Any"
+    },
+    "relatedDegreePrograms": [],
+    "relatedColleges": [
+      "00818fcd1856701c895346b8",
+      "bcc109aad65f6f16e5a04137"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9",
+      "769f5cbe4d6a4875d499805c"
+    ],
+    "benefits": {
+      "amount": 35000,
+      "currency": "INR",
+      "coverage": [
+        "tuition",
+        "books"
+      ],
+      "notes": "Annual scholarship renewable based on academic performance"
+    },
+    "deadlines": [
+      {
+        "startDate": "2025-10-19T03:50:14.914804",
+        "endDate": "2025-12-18T03:50:14.914808",
+        "link": "https://scholarships.gov.in"
+      }
+    ],
+    "interestTags": [],
+    "isOpen": true,
+    "isActive": true,
+    "source": "Ministry of Education / J&K Government",
+    "sourceUrl": "https://scholarships.gov.in",
+    "lastUpdated": "2025-09-19T03:50:14.914811",
+    "createdAt": "2025-09-19T03:50:14.914813",
+    "updatedAt": "2025-09-19T03:50:14.914815"
+  },
+  {
+    "_id": "c7f30c410d507e8a1b874efd",
+    "name": "National Scholarship for OBC Students",
+    "media": {
+      "iconUrl": "https://scholarship-icons.com/scholarship-6.png",
+      "bannerUrl": "https://scholarship-banners.com/scholarship-6-banner.jpg"
+    },
+    "providerType": "University",
+    "providerId": "02bee10530c357b79892db44",
+    "description": "Financial assistance program providing ₹25,000 annually to deserving students from families with income below ₹100,000.",
+    "eligibility": {
+      "minMarks": 55,
+      "incomeCap": 100000,
+      "state": "All India",
+      "stream": "",
+      "reservation": [
+        "OBC"
+      ],
+      "ageLimit": 25,
+      "gender": "Any"
+    },
+    "relatedDegreePrograms": [],
+    "relatedColleges": [
+      "00818fcd1856701c895346b8",
+      "bcc109aad65f6f16e5a04137"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9",
+      "769f5cbe4d6a4875d499805c"
+    ],
+    "benefits": {
+      "amount": 25000,
+      "currency": "INR",
+      "coverage": [
+        "tuition",
+        "books"
+      ],
+      "notes": "Annual scholarship renewable based on academic performance"
+    },
+    "deadlines": [
+      {
+        "startDate": "2025-10-19T03:50:14.914827",
+        "endDate": "2025-12-18T03:50:14.914830",
+        "link": "https://scholarships.gov.in"
+      }
+    ],
+    "interestTags": [],
+    "isOpen": true,
+    "isActive": true,
+    "source": "Ministry of Education / J&K Government",
+    "sourceUrl": "https://scholarships.gov.in",
+    "lastUpdated": "2025-09-19T03:50:14.914833",
+    "createdAt": "2025-09-19T03:50:14.914835",
+    "updatedAt": "2025-09-19T03:50:14.914836"
+  },
+  {
+    "_id": "58181e6da64bbc06799ac353",
+    "name": "Minority Affairs Scholarship",
+    "media": {
+      "iconUrl": "https://scholarship-icons.com/scholarship-7.png",
+      "bannerUrl": "https://scholarship-banners.com/scholarship-7-banner.jpg"
+    },
+    "providerType": "University",
+    "providerId": "a474afe1f17c7900847c271d",
+    "description": "Financial assistance program providing ₹40,000 annually to deserving students from families with income below ₹200,000.",
+    "eligibility": {
+      "minMarks": 50,
+      "incomeCap": 200000,
+      "state": "All India",
+      "stream": "",
+      "reservation": [
+        "General"
+      ],
+      "ageLimit": 25,
+      "gender": "Any"
+    },
+    "relatedDegreePrograms": [],
+    "relatedColleges": [
+      "00818fcd1856701c895346b8",
+      "bcc109aad65f6f16e5a04137"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9",
+      "769f5cbe4d6a4875d499805c"
+    ],
+    "benefits": {
+      "amount": 40000,
+      "currency": "INR",
+      "coverage": [
+        "tuition",
+        "books"
+      ],
+      "notes": "Annual scholarship renewable based on academic performance"
+    },
+    "deadlines": [
+      {
+        "startDate": "2025-10-19T03:50:14.914849",
+        "endDate": "2025-12-18T03:50:14.914851",
+        "link": "https://scholarships.gov.in"
+      }
+    ],
+    "interestTags": [],
+    "isOpen": true,
+    "isActive": true,
+    "source": "Ministry of Education / J&K Government",
+    "sourceUrl": "https://scholarships.gov.in",
+    "lastUpdated": "2025-09-19T03:50:14.914855",
+    "createdAt": "2025-09-19T03:50:14.914856",
+    "updatedAt": "2025-09-19T03:50:14.914858"
+  },
+  {
+    "_id": "f2e1b99a8bbf887a1c04ab26",
+    "name": "Girls Education Scholarship J&K",
+    "media": {
+      "iconUrl": "https://scholarship-icons.com/scholarship-8.png",
+      "bannerUrl": "https://scholarship-banners.com/scholarship-8-banner.jpg"
+    },
+    "providerType": "University",
+    "providerId": "50b03e6c44eb735aa728fc6e",
+    "description": "Financial assistance program providing ₹25,000 annually to deserving students from families with income below ₹200,000.",
+    "eligibility": {
+      "minMarks": 60,
+      "incomeCap": 200000,
+      "state": "Jammu and Kashmir",
+      "stream": "",
+      "reservation": [
+        "General"
+      ],
+      "ageLimit": 25,
+      "gender": "Female"
+    },
+    "relatedDegreePrograms": [],
+    "relatedColleges": [
+      "00818fcd1856701c895346b8",
+      "bcc109aad65f6f16e5a04137"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9",
+      "3c058c9213130b37c0cd00c5"
+    ],
+    "benefits": {
+      "amount": 25000,
+      "currency": "INR",
+      "coverage": [
+        "tuition",
+        "books"
+      ],
+      "notes": "Annual scholarship renewable based on academic performance"
+    },
+    "deadlines": [
+      {
+        "startDate": "2025-10-19T03:50:14.914870",
+        "endDate": "2025-12-18T03:50:14.914873",
+        "link": "https://scholarships.gov.in"
+      }
+    ],
+    "interestTags": [],
+    "isOpen": true,
+    "isActive": true,
+    "source": "Ministry of Education / J&K Government",
+    "sourceUrl": "https://scholarships.gov.in",
+    "lastUpdated": "2025-09-19T03:50:14.914876",
+    "createdAt": "2025-09-19T03:50:14.914878",
+    "updatedAt": "2025-09-19T03:50:14.914880"
+  },
+  {
+    "_id": "f5e811caadb426f553b29b67",
+    "name": "Pragati Scholarship for Girls in Technical Education",
+    "media": {
+      "iconUrl": "https://scholarship-icons.com/scholarship-9.png",
+      "bannerUrl": "https://scholarship-banners.com/scholarship-9-banner.jpg"
+    },
+    "providerType": "College",
+    "providerId": "00818fcd1856701c895346b8",
+    "description": "Financial assistance program providing ₹50,000 annually to deserving students from families with income below ₹800,000.",
+    "eligibility": {
+      "minMarks": 65,
+      "incomeCap": 800000,
+      "state": "All India",
+      "stream": "Science",
+      "reservation": [
+        "General"
+      ],
+      "ageLimit": 25,
+      "gender": "Female"
+    },
+    "relatedDegreePrograms": [],
+    "relatedColleges": [
+      "2835c2b6801dc8a07ba29c9f",
+      "356ca8ae808960b499accf43"
+    ],
+    "relatedCareers": [
+      "8291123c46834cbbfed601aa",
+      "dbd96ccd3484bbd31b612a5a"
+    ],
+    "benefits": {
+      "amount": 50000,
+      "currency": "INR",
+      "coverage": [
+        "tuition",
+        "hostel",
+        "books"
+      ],
+      "notes": "Annual scholarship renewable based on academic performance"
+    },
+    "deadlines": [
+      {
+        "startDate": "2025-10-19T03:50:14.914892",
+        "endDate": "2025-12-18T03:50:14.914895",
+        "link": "https://scholarships.gov.in"
+      }
+    ],
+    "interestTags": [],
+    "isOpen": true,
+    "isActive": true,
+    "source": "Ministry of Education / J&K Government",
+    "sourceUrl": "https://scholarships.gov.in",
+    "lastUpdated": "2025-09-19T03:50:14.914898",
+    "createdAt": "2025-09-19T03:50:14.914900",
+    "updatedAt": "2025-09-19T03:50:14.914902"
+  },
+  {
+    "_id": "e864e9fe7b01c360d3f856ee",
+    "name": "INSPIRE Scholarship for Higher Education",
+    "media": {
+      "iconUrl": "https://scholarship-icons.com/scholarship-10.png",
+      "bannerUrl": "https://scholarship-banners.com/scholarship-10-banner.jpg"
+    },
+    "providerType": "University",
+    "providerId": "0871cfc9938f3b6eba0d1c52",
+    "description": "Financial assistance program providing ₹80,000 annually to deserving students from families with income below ₹600,000.",
+    "eligibility": {
+      "minMarks": 75,
+      "incomeCap": 600000,
+      "state": "All India",
+      "stream": "",
+      "reservation": [
+        "General"
+      ],
+      "ageLimit": 25,
+      "gender": "Any"
+    },
+    "relatedDegreePrograms": [],
+    "relatedColleges": [
+      "00818fcd1856701c895346b8",
+      "bcc109aad65f6f16e5a04137"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9",
+      "769f5cbe4d6a4875d499805c"
+    ],
+    "benefits": {
+      "amount": 80000,
+      "currency": "INR",
+      "coverage": [
+        "tuition",
+        "hostel",
+        "books"
+      ],
+      "notes": "Annual scholarship renewable based on academic performance"
+    },
+    "deadlines": [
+      {
+        "startDate": "2025-10-19T03:50:14.914912",
+        "endDate": "2025-12-18T03:50:14.914915",
+        "link": "https://scholarships.gov.in"
+      }
+    ],
+    "interestTags": [],
+    "isOpen": true,
+    "isActive": true,
+    "source": "Ministry of Education / J&K Government",
+    "sourceUrl": "https://scholarships.gov.in",
+    "lastUpdated": "2025-09-19T03:50:14.914918",
+    "createdAt": "2025-09-19T03:50:14.914920",
+    "updatedAt": "2025-09-19T03:50:14.914922"
+  }
+]

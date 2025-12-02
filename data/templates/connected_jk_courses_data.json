@@ -1,0 +1,702 @@
+[
+  {
+    "_id": "a08fc2b3c5d5c5e624949459",
+    "code": "MBBS",
+    "name": "Bachelor of Medicine and Bachelor of Surgery (MBBS)",
+    "media": {
+      "iconUrl": "https://course-icons.com/mbbs.png",
+      "bannerUrl": "https://course-banners.com/mbbs-banner.jpg"
+    },
+    "streamId": "4c345df9d541791c887a9a8c",
+    "level": "UG",
+    "description": "A comprehensive 5.5-year UG program in Bachelor of Medicine and Bachelor of Surgery, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 50,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "12db2f8985e2b9cc94edebd8"
+      ],
+      "Exams": [
+        "b36cbfc86c28ae15c461f14e"
+      ],
+      "higherStudies": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.601851",
+    "updatedAt": "2025-09-19T04:37:22.339606"
+  },
+  {
+    "_id": "e5e6538b336431b1ce9c73a0",
+    "code": "BDS",
+    "name": "Bachelor of Dental Surgery (BDS)",
+    "media": {
+      "iconUrl": "https://course-icons.com/bds.png",
+      "bannerUrl": "https://course-banners.com/bds-banner.jpg"
+    },
+    "streamId": "4c345df9d541791c887a9a8c",
+    "level": "UG",
+    "description": "A comprehensive 5-year UG program in Bachelor of Dental Surgery, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 50,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "68be8899dc7634c7ceb287d1"
+      ],
+      "Exams": [
+        "b36cbfc86c28ae15c461f14e"
+      ],
+      "higherStudies": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.601877",
+    "updatedAt": "2025-09-19T04:37:22.339643"
+  },
+  {
+    "_id": "a90b8dc0c1187ad792071521",
+    "code": "B_PHARM",
+    "name": "Bachelor of Pharmacy (B.Pharm)",
+    "media": {
+      "iconUrl": "https://course-icons.com/b-pharm.png",
+      "bannerUrl": "https://course-banners.com/b-pharm-banner.jpg"
+    },
+    "streamId": "4c345df9d541791c887a9a8c",
+    "level": "UG",
+    "description": "A comprehensive 4-year UG program in Bachelor of Pharmacy, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "c339fa14514222f75d01e286"
+      ],
+      "Exams": [],
+      "higherStudies": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.601890",
+    "updatedAt": "2025-09-19T04:37:22.339664"
+  },
+  {
+    "_id": "08e92fed29eb30c673385e48",
+    "code": "BTECH_CSE",
+    "name": "Bachelor of Technology in Computer Science",
+    "media": {
+      "iconUrl": "https://course-icons.com/btech-cse.png",
+      "bannerUrl": "https://course-banners.com/btech-cse-banner.jpg"
+    },
+    "streamId": "8bc45e74d69b44e7b5d29f83",
+    "level": "UG",
+    "description": "A comprehensive 4-year UG program in Bachelor of Technology in Computer Science, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "8291123c46834cbbfed601aa",
+        "4cd70f9d4457b8410a1c78ec"
+      ],
+      "Exams": [
+        "475e6649ed77f7a019f7f384",
+        "8d872f779e31d629790cb31a"
+      ],
+      "higherStudies": [
+        "be0f3b282db70a0ed14cce34"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.601904",
+    "updatedAt": "2025-09-19T04:37:22.339684"
+  },
+  {
+    "_id": "d78ecfb22447c04fc7e236a0",
+    "code": "BTECH_ME",
+    "name": "Bachelor of Technology in Mechanical Engineering",
+    "media": {
+      "iconUrl": "https://course-icons.com/btech-me.png",
+      "bannerUrl": "https://course-banners.com/btech-me-banner.jpg"
+    },
+    "streamId": "8bc45e74d69b44e7b5d29f83",
+    "level": "UG",
+    "description": "A comprehensive 4-year UG program in Bachelor of Technology in Mechanical Engineering, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "1b617ae5f3406e40e30f88fd"
+      ],
+      "Exams": [
+        "475e6649ed77f7a019f7f384",
+        "8d872f779e31d629790cb31a"
+      ],
+      "higherStudies": [
+        "be0f3b282db70a0ed14cce34"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.601915",
+    "updatedAt": "2025-09-19T04:37:22.339703"
+  },
+  {
+    "_id": "24819f4aea4fb49a2147541e",
+    "code": "BTECH_CE",
+    "name": "Bachelor of Technology in Civil Engineering",
+    "media": {
+      "iconUrl": "https://course-icons.com/btech-ce.png",
+      "bannerUrl": "https://course-banners.com/btech-ce-banner.jpg"
+    },
+    "streamId": "8bc45e74d69b44e7b5d29f83",
+    "level": "UG",
+    "description": "A comprehensive 4-year UG program in Bachelor of Technology in Civil Engineering, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "dbd96ccd3484bbd31b612a5a"
+      ],
+      "Exams": [
+        "475e6649ed77f7a019f7f384",
+        "8d872f779e31d629790cb31a"
+      ],
+      "higherStudies": [
+        "be0f3b282db70a0ed14cce34"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.601927",
+    "updatedAt": "2025-09-19T04:37:22.339721"
+  },
+  {
+    "_id": "da738166793bea393adba344",
+    "code": "BCA",
+    "name": "Bachelor of Computer Applications",
+    "media": {
+      "iconUrl": "https://course-icons.com/bca.png",
+      "bannerUrl": "https://course-banners.com/bca-banner.jpg"
+    },
+    "streamId": "9ea2df57021a76873a5a7c1b",
+    "level": "UG",
+    "description": "A comprehensive 3-year UG program in Bachelor of Computer Applications, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "8291123c46834cbbfed601aa"
+      ],
+      "Exams": [
+        "606d66bd554a9b241b60c6bf"
+      ],
+      "higherStudies": [
+        "f2bac6deecafc9db495aa6d9"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.601937",
+    "updatedAt": "2025-09-19T04:37:22.339740"
+  },
+  {
+    "_id": "7008ba3afc748a080c84b2c7",
+    "code": "B_COM",
+    "name": "Bachelor of Commerce",
+    "media": {
+      "iconUrl": "https://course-icons.com/b-com.png",
+      "bannerUrl": "https://course-banners.com/b-com-banner.jpg"
+    },
+    "streamId": "842045c1b78e283a9946453c",
+    "level": "UG",
+    "description": "A comprehensive 3-year UG program in Bachelor of Commerce, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "3c058c9213130b37c0cd00c5",
+        "e6673c08e17255fad6672efc",
+        "6e2be13defff571327b6c590"
+      ],
+      "Exams": [
+        "606d66bd554a9b241b60c6bf"
+      ],
+      "higherStudies": [
+        "8151a4b3ecba813567a8824a",
+        "90afd3912b520951ea54a0d6"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.601948",
+    "updatedAt": "2025-09-19T04:37:22.339759"
+  },
+  {
+    "_id": "6fc630e9b801c2e8cfe009c2",
+    "code": "BBA",
+    "name": "Bachelor of Business Administration",
+    "media": {
+      "iconUrl": "https://course-icons.com/bba.png",
+      "bannerUrl": "https://course-banners.com/bba-banner.jpg"
+    },
+    "streamId": "842045c1b78e283a9946453c",
+    "level": "UG",
+    "description": "A comprehensive 3-year UG program in Bachelor of Business Administration, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "3c058c9213130b37c0cd00c5",
+        "e6673c08e17255fad6672efc",
+        "6e2be13defff571327b6c590"
+      ],
+      "Exams": [],
+      "higherStudies": [
+        "8151a4b3ecba813567a8824a",
+        "90afd3912b520951ea54a0d6"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.601958",
+    "updatedAt": "2025-09-19T04:37:22.339777"
+  },
+  {
+    "_id": "53e15b7f6bd07938855c484f",
+    "code": "BA_ENGLISH",
+    "name": "Bachelor of Arts in English",
+    "media": {
+      "iconUrl": "https://course-icons.com/ba-english.png",
+      "bannerUrl": "https://course-banners.com/ba-english-banner.jpg"
+    },
+    "streamId": "3f35c519e89c41c25eb851ae",
+    "level": "UG",
+    "description": "A comprehensive 3-year UG program in Bachelor of Arts in English, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "6b02240a31894997b953d0b9",
+        "769f5cbe4d6a4875d499805c"
+      ],
+      "Exams": [
+        "606d66bd554a9b241b60c6bf"
+      ],
+      "higherStudies": [
+        "a7645cab5303a0099796c150",
+        "1a9fba754cbe3e171d542dd7"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.601971",
+    "updatedAt": "2025-09-19T04:37:22.339795"
+  },
+  {
+    "_id": "c929ef9b6a59cf98be8defb7",
+    "code": "BA_HISTORY",
+    "name": "Bachelor of Arts in History",
+    "media": {
+      "iconUrl": "https://course-icons.com/ba-history.png",
+      "bannerUrl": "https://course-banners.com/ba-history-banner.jpg"
+    },
+    "streamId": "3f35c519e89c41c25eb851ae",
+    "level": "UG",
+    "description": "A comprehensive 3-year UG program in Bachelor of Arts in History, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "6b02240a31894997b953d0b9",
+        "769f5cbe4d6a4875d499805c"
+      ],
+      "Exams": [
+        "606d66bd554a9b241b60c6bf"
+      ],
+      "higherStudies": [
+        "a7645cab5303a0099796c150",
+        "1a9fba754cbe3e171d542dd7"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.601982",
+    "updatedAt": "2025-09-19T04:37:22.339848"
+  },
+  {
+    "_id": "ef128c87c346ce12ebc5a8c4",
+    "code": "BA_POLITICAL_SCIENCE",
+    "name": "Bachelor of Arts in Political Science",
+    "media": {
+      "iconUrl": "https://course-icons.com/ba-political-science.png",
+      "bannerUrl": "https://course-banners.com/ba-political-science-banner.jpg"
+    },
+    "streamId": "3f35c519e89c41c25eb851ae",
+    "level": "UG",
+    "description": "A comprehensive 3-year UG program in Bachelor of Arts in Political Science, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "6b02240a31894997b953d0b9",
+        "769f5cbe4d6a4875d499805c"
+      ],
+      "Exams": [],
+      "higherStudies": [
+        "a7645cab5303a0099796c150",
+        "1a9fba754cbe3e171d542dd7"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.601992",
+    "updatedAt": "2025-09-19T04:37:22.339872"
+  },
+  {
+    "_id": "f050e1c615deafdca2b24fbb",
+    "code": "BSC_PHYSICS",
+    "name": "Bachelor of Science in Physics",
+    "media": {
+      "iconUrl": "https://course-icons.com/bsc-physics.png",
+      "bannerUrl": "https://course-banners.com/bsc-physics-banner.jpg"
+    },
+    "streamId": "97876c6727cf14e99ce1b324",
+    "level": "UG",
+    "description": "A comprehensive 3-year UG program in Bachelor of Science in Physics, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "6b02240a31894997b953d0b9",
+        "090de0c138e5267534cbad6d"
+      ],
+      "Exams": [],
+      "higherStudies": [
+        "3efb043b4fa2419d9e429b44",
+        "77b6250da0cbc2267aa9af21"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.602011",
+    "updatedAt": "2025-09-19T04:37:22.339892"
+  },
+  {
+    "_id": "2ec46385429c0d4fba106645",
+    "code": "BSC_CHEMISTRY",
+    "name": "Bachelor of Science in Chemistry",
+    "media": {
+      "iconUrl": "https://course-icons.com/bsc-chemistry.png",
+      "bannerUrl": "https://course-banners.com/bsc-chemistry-banner.jpg"
+    },
+    "streamId": "97876c6727cf14e99ce1b324",
+    "level": "UG",
+    "description": "A comprehensive 3-year UG program in Bachelor of Science in Chemistry, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "6b02240a31894997b953d0b9",
+        "090de0c138e5267534cbad6d"
+      ],
+      "Exams": [],
+      "higherStudies": [
+        "3efb043b4fa2419d9e429b44",
+        "77b6250da0cbc2267aa9af21"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.602021",
+    "updatedAt": "2025-09-19T04:37:22.339911"
+  },
+  {
+    "_id": "932f0bd394f1c82b420bd216",
+    "code": "BSC_MATHEMATICS",
+    "name": "Bachelor of Science in Mathematics",
+    "media": {
+      "iconUrl": "https://course-icons.com/bsc-mathematics.png",
+      "bannerUrl": "https://course-banners.com/bsc-mathematics-banner.jpg"
+    },
+    "streamId": "97876c6727cf14e99ce1b324",
+    "level": "UG",
+    "description": "A comprehensive 3-year UG program in Bachelor of Science in Mathematics, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "6b02240a31894997b953d0b9",
+        "090de0c138e5267534cbad6d"
+      ],
+      "Exams": [],
+      "higherStudies": [
+        "3efb043b4fa2419d9e429b44",
+        "77b6250da0cbc2267aa9af21"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.602031",
+    "updatedAt": "2025-09-19T04:37:22.339928"
+  },
+  {
+    "_id": "cb04fa68bca6c36d1262d307",
+    "code": "BSC_AGRICULTURE",
+    "name": "Bachelor of Science in Agriculture",
+    "media": {
+      "iconUrl": "https://course-icons.com/bsc-agriculture.png",
+      "bannerUrl": "https://course-banners.com/bsc-agriculture-banner.jpg"
+    },
+    "streamId": "bcee0cb2dc509719b9cc7b0a",
+    "level": "UG",
+    "description": "A comprehensive 4-year UG program in Bachelor of Science in Agriculture, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "6b02240a31894997b953d0b9",
+        "090de0c138e5267534cbad6d"
+      ],
+      "Exams": [
+        "0a404e4be444a31dd89a2175"
+      ],
+      "higherStudies": [
+        "3efb043b4fa2419d9e429b44",
+        "77b6250da0cbc2267aa9af21"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.602042",
+    "updatedAt": "2025-09-19T04:37:22.339946"
+  },
+  {
+    "_id": "2660bd84adb5398953cc0996",
+    "code": "LLB",
+    "name": "Bachelor of Laws (LL.B)",
+    "media": {
+      "iconUrl": "https://course-icons.com/llb.png",
+      "bannerUrl": "https://course-banners.com/llb-banner.jpg"
+    },
+    "streamId": "e4f94ea7d6740ce2f608c85f",
+    "level": "UG",
+    "description": "A comprehensive 3-year UG program in Bachelor of Laws, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "35cfc94ae43d66577432d261",
+        "9bd9646465479ff6310dcfa8"
+      ],
+      "Exams": [
+        "e34c9544ed275d80c38fc7d5"
+      ],
+      "higherStudies": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.602052",
+    "updatedAt": "2025-09-19T04:37:22.339965"
+  },
+  {
+    "_id": "6ab38c56698cc091a89ea37e",
+    "code": "B_ED",
+    "name": "Bachelor of Education",
+    "media": {
+      "iconUrl": "https://course-icons.com/b-ed.png",
+      "bannerUrl": "https://course-banners.com/b-ed-banner.jpg"
+    },
+    "streamId": "3f35c519e89c41c25eb851ae",
+    "level": "UG",
+    "description": "A comprehensive 2-year UG program in Bachelor of Education, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 50,
+      "requiredSubjects": [
+        "10+2 with relevant subjects"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "6b02240a31894997b953d0b9"
+      ],
+      "Exams": [],
+      "higherStudies": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.602063",
+    "updatedAt": "2025-09-19T04:37:22.339983"
+  },
+  {
+    "_id": "8151a4b3ecba813567a8824a",
+    "code": "MBA",
+    "name": "Master of Business Administration",
+    "media": {
+      "iconUrl": "https://course-icons.com/mba.png",
+      "bannerUrl": "https://course-banners.com/mba-banner.jpg"
+    },
+    "streamId": "842045c1b78e283a9946453c",
+    "level": "PG",
+    "description": "A comprehensive 2-year PG program in Master of Business Administration, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 50,
+      "requiredSubjects": [
+        "Graduation in relevant field"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "3c058c9213130b37c0cd00c5",
+        "e6673c08e17255fad6672efc",
+        "6e2be13defff571327b6c590"
+      ],
+      "Exams": [
+        "777571617fda83c8666b5f21",
+        "867c6aa8c77e00694e920b69"
+      ],
+      "higherStudies": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.602072",
+    "updatedAt": "2025-09-19T04:37:22.340000"
+  },
+  {
+    "_id": "f2bac6deecafc9db495aa6d9",
+    "code": "MCA",
+    "name": "Master of Computer Applications",
+    "media": {
+      "iconUrl": "https://course-icons.com/mca.png",
+      "bannerUrl": "https://course-banners.com/mca-banner.jpg"
+    },
+    "streamId": "9ea2df57021a76873a5a7c1b",
+    "level": "PG",
+    "description": "A comprehensive 2-year PG program in Master of Computer Applications, designed to provide in-depth knowledge and practical skills for professional career development.",
+    "eligibility": {
+      "minMarks": 50,
+      "requiredSubjects": [
+        "Graduation in relevant field"
+      ]
+    },
+    "outcomes": {
+      "careers": [
+        "8291123c46834cbbfed601aa"
+      ],
+      "Exams": [
+        "606d66bd554a9b241b60c6bf"
+      ],
+      "higherStudies": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Universities and Colleges in Jammu & Kashmir",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "createdAt": "2025-09-19T03:47:31.602081",
+    "updatedAt": "2025-09-19T04:37:22.340018"
+  }
+]

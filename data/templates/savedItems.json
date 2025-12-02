@@ -1,10 +1,10 @@
- [
-    {
-      "_id": "364b04ea57121269fe1728d9",
-      "userId": "d9a7524a8a06dfa3624066e3",
-      "itemType": "College",
-      "itemId": "2efb34abd0bbc54de1db6961",
-      "createdAt": "2025-09-18T08:33:36.363502",
-      "updatedAt": "2025-09-18T08:33:36.363507"
-    }
-  ]
+[
+  {
+    "_id": "7afd2e615301ab78392c4ec4",
+    "userId": "840cbc3c5eb1f2b5d914a0a8",
+    "itemType": "College",
+    "itemId": "ccf5abdc23ad390472ce00d1",
+    "createdAt": "2025-09-19T03:52:21.109129",
+    "updatedAt": "2025-09-19T03:52:21.109142"
+  }
+]

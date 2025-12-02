@@ -37,7 +37,6 @@ const GoalSchema = new mongoose.Schema(
 
 const UserSchema = new mongoose.Schema(
   {
-    _id: { type: mongoose.Schema.Types.ObjectId },
     // ----------------- AUTH -----------------
     email: {
       type: String,
@@ -87,7 +86,13 @@ const UserSchema = new mongoose.Schema(
     isPhoneVerified: { type: Boolean, default: false },
 
     // ----------------- STUDENT PROFILE -----------------
-    gender: { type: String, enum: ["Male", "Female", "Other"] },
+    gender: { 
+      type: String, 
+      enum: {
+        values: ["Male", "Female", "Other", ""],
+        message: '{VALUE} is not a valid gender'
+      }
+    },
     dob: Date,
     classLevel: {
       type: String,
@@ -100,7 +105,7 @@ const UserSchema = new mongoose.Schema(
       state: String,
       pincode: String,
       geo: {
-        type: { type: String, enum: ["Point"], default: "Point" },
+        type: { type: String, enum: ["Point"] },
         coordinates: { type: [Number] }, // [lng, lat]
       },
     },

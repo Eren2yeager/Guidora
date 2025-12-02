@@ -5,6 +5,9 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { toast } from 'react-hot-toast';
 import { useSession } from 'next-auth/react';
+import { motion } from 'framer-motion';
+import { Card, Button, Badge } from '@/components/ui';
+import { fadeInUp, staggerContainer } from '@/lib/animations';
 
 export default function QuizResultsPage() {
   const searchParams = useSearchParams();
@@ -34,7 +37,26 @@ export default function QuizResultsPage() {
         }
         
         const data = await response.json();
-        setResults(data);
+        // Normalize results: ensure results.topCategories and results.categoryScores[] exist
+        const normalized = { ...data };
+        const raw = data?.results || {};
+        let topCategories = raw?.topCategories;
+        let categoryScores = raw?.categoryScores;
+
+        // If missing, compute from object map like { STEM: 4.2, Arts: 3.1 }
+        if (!Array.isArray(categoryScores) && raw && typeof raw === 'object' && !Array.isArray(raw)) {
+          categoryScores = Object.entries(raw).map(([category, score]) => ({ category, average: Number(score) || 0 }));
+        }
+        if (!Array.isArray(topCategories) && Array.isArray(categoryScores)) {
+          const sorted = [...categoryScores].sort((a, b) => (b.average || 0) - (a.average || 0));
+          topCategories = sorted.slice(0, 3).map((x) => x.category);
+        }
+        normalized.results = {
+          ...raw,
+          topCategories: topCategories || [],
+          categoryScores: categoryScores || [],
+        };
+        setResults(normalized);
         
         // Fetch recommendations based on results
         const recResponse = await fetch('/api/recommendations', {
@@ -45,6 +67,7 @@ export default function QuizResultsPage() {
           body: JSON.stringify({
             quizType: data.quizType,
             topCategories: data.results.topCategories,
+            resultId, // allow API to resolve and persist Recommendation linked to this result
           }),
         });
         
@@ -65,8 +88,12 @@ export default function QuizResultsPage() {
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify({
-                interests: data.results.topCategories,
-                quizResultId: resultId
+                // Use Interest IDs from recommendations if available; otherwise, pass slugs as strings
+                interests: Array.isArray(recData?.interests) && recData.interests.length > 0
+                  ? recData.interests.map((i) => i.id)
+                  : normalized.results.topCategories,
+                // Pass Mongo ObjectId of QuizResult, not the UUID resultId
+                quizResultId: normalized._id
               }),
             });
             
@@ -171,83 +198,156 @@ export default function QuizResultsPage() {
   const colors = getColorScheme();
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
+      <motion.div 
+        className="max-w-4xl mx-auto"
+        variants={staggerContainer}
+        initial="initial"
+        animate="animate"
+      >
+        {/* Success Banner */}
+        <motion.div variants={fadeInUp} className="text-center mb-8">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 shadow-lg mb-4">
+            <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            Assessment Complete!
+          </h1>
+          <p className="text-lg text-gray-600">
+            Your {results.quizType.charAt(0).toUpperCase() + results.quizType.slice(1)} Assessment Results
+          </p>
+        </motion.div>
+
         {/* Results Summary */}
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden mb-8">
-          <div className={`bg-gradient-to-r ${colors.gradient} h-2`}></div>
-          <div className="px-6 py-8">
-            <h1 className="text-3xl font-bold text-gray-900 text-center mb-2">
-              Your {results.quizType.charAt(0).toUpperCase() + results.quizType.slice(1)} Assessment Results
-            </h1>
-            <p className="text-gray-600 text-center mb-8">
-              Based on your responses, we've identified your top areas of interest and prepared personalized recommendations.
-            </p>
+        <motion.div variants={fadeInUp}>
+          <Card variant="elevated" padding="lg" className="mb-8 bg-white">
+            <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${colors.gradient} rounded-t-xl`}></div>
             
+            <div className="text-center mb-8 pt-4">
+              <p className="text-gray-600">
+                Based on your responses, we've identified your top areas and prepared personalized recommendations.
+              </p>
+            </div>
+            
+            {/* Top Categories with Medals */}
             <div className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">Your Top Categories</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Your Top Categories</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {results.results.topCategories.map((category, index) => (
-                  <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                    <div className={`text-lg font-medium ${colors.highlight} mb-1`}>{category}</div>
-                    <p className="text-sm text-gray-600">
-                      {getCategoryDescription(category)}
-                    </p>
-                  </div>
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <Card 
+                      variant="default" 
+                      padding="md" 
+                      className="relative overflow-hidden hover:shadow-lg transition-shadow"
+                      animated
+                    >
+                      {/* Medal Badge */}
+                      <div className="absolute top-3 right-3">
+                        {index === 0 && (
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow-md">
+                            <span className="text-white text-sm font-bold">1</span>
+                          </div>
+                        )}
+                        {index === 1 && (
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-300 to-gray-500 flex items-center justify-center shadow-md">
+                            <span className="text-white text-sm font-bold">2</span>
+                          </div>
+                        )}
+                        {index === 2 && (
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                            <span className="text-white text-sm font-bold">3</span>
+                          </div>
+                        )}
+                      </div>
+                      
+                      <div className={`text-xl font-bold ${colors.highlight} mb-2`}>{category}</div>
+                      <p className="text-sm text-gray-600">
+                        {getCategoryDescription(category)}
+                      </p>
+                    </Card>
+                  </motion.div>
                 ))}
               </div>
             </div>
             
-            {/* Category Scores */}
-            <div className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">Your Category Scores</h2>
+            {/* Category Scores with Animation */}
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Detailed Score Breakdown</h2>
               <div className="space-y-4">
                 {results.results.categoryScores.map((item, index) => (
-                  <div key={index} className="flex items-center">
-                    <div className="w-32 font-medium text-gray-700">{item.category}</div>
-                    <div className="flex-1">
-                      <div className="w-full bg-gray-200 rounded-full h-2.5">
-                        <div 
-                          className={`h-2.5 rounded-full bg-gradient-to-r ${colors.gradient}`}
-                          style={{ width: `${(item.average / 5) * 100}%` }}
-                        ></div>
-                      </div>
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                    className="bg-gray-50 rounded-xl p-4"
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-semibold text-gray-800">{item.category}</span>
+                      <Badge variant="primary">{item.average.toFixed(1)}/5</Badge>
                     </div>
-                    <div className="w-12 text-right text-sm text-gray-600">
-                      {item.average.toFixed(1)}/5
+                    <div className="relative w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                      <motion.div 
+                        className={`h-full bg-gradient-to-r ${colors.gradient} rounded-full`}
+                        initial={{ width: 0 }}
+                        animate={{ width: `${(item.average / 5) * 100}%` }}
+                        transition={{ duration: 1, delay: index * 0.05, ease: 'easeOut' }}
+                      />
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
-          </div>
-        </div>
+          </Card>
+        </motion.div>
         
         {/* Recommendations */}
         {recommendations && (
-          <div className="bg-white shadow-xl rounded-lg overflow-hidden mb-8">
-            <div className={`bg-gradient-to-r ${colors.gradient} h-2`}></div>
-            <div className="px-6 py-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Recommended Paths</h2>
+          <motion.div variants={fadeInUp}>
+            <Card variant="elevated" padding="lg" className="mb-8 bg-white">
+              <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${colors.gradient} rounded-t-xl`}></div>
+              
+              <h2 className="text-3xl font-bold text-gray-900 mb-2 pt-4 text-center">Your Personalized Recommendations</h2>
+              <p className="text-gray-600 text-center mb-8">Based on your assessment results, here are paths tailored for you</p>
               
               {/* Courses */}
               {recommendations.courses && recommendations.courses.length > 0 && (
                 <div className="mb-8">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Recommended Courses</h3>
+                  <div className="flex items-center gap-2 mb-4">
+                    <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                    <h3 className="text-xl font-bold text-gray-800">Recommended Courses</h3>
+                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {recommendations.courses.map((course, index) => (
-                      <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
-                        <h4 className="font-medium text-gray-900">{course.title}</h4>
-                        <p className="text-sm text-gray-600 mt-1">{course.description}</p>
-                        <div className="mt-3">
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <Card variant="default" padding="md" animated className="h-full">
+                          <h4 className="font-semibold text-gray-900 mb-2">{course.title}</h4>
+                          <p className="text-sm text-gray-600 mb-4">{course.description}</p>
                           <Link 
                             href={`/courses/${course.id}`}
-                            className="text-sm font-medium text-blue-600 hover:text-blue-800"
+                            className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800"
                           >
-                            Learn more →
+                            Learn more
+                            <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
                           </Link>
-                        </div>
-                      </div>
+                        </Card>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
@@ -256,21 +356,34 @@ export default function QuizResultsPage() {
               {/* Careers */}
               {recommendations.careers && recommendations.careers.length > 0 && (
                 <div className="mb-8">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Recommended Careers</h3>
+                  <div className="flex items-center gap-2 mb-4">
+                    <svg className="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <h3 className="text-xl font-bold text-gray-800">Recommended Careers</h3>
+                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {recommendations.careers.map((career, index) => (
-                      <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
-                        <h4 className="font-medium text-gray-900">{career.title}</h4>
-                        <p className="text-sm text-gray-600 mt-1">{career.description}</p>
-                        <div className="mt-3">
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <Card variant="default" padding="md" animated className="h-full">
+                          <h4 className="font-semibold text-gray-900 mb-2">{career.title}</h4>
+                          <p className="text-sm text-gray-600 mb-4">{career.description}</p>
                           <Link 
                             href={`/careers/${career.id}`}
-                            className="text-sm font-medium text-blue-600 hover:text-blue-800"
+                            className="inline-flex items-center text-sm font-medium text-purple-600 hover:text-purple-800"
                           >
-                            Learn more →
+                            Learn more
+                            <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
                           </Link>
-                        </div>
-                      </div>
+                        </Card>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
@@ -279,84 +392,118 @@ export default function QuizResultsPage() {
               {/* Programs */}
               {recommendations.programs && recommendations.programs.length > 0 && (
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Recommended Programs</h3>
+                  <div className="flex items-center gap-2 mb-4">
+                    <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                    <h3 className="text-xl font-bold text-gray-800">Recommended Programs</h3>
+                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {recommendations.programs.map((program, index) => (
-                      <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
-                        <h4 className="font-medium text-gray-900">{program.title}</h4>
-                        <p className="text-sm text-gray-600 mt-1">{program.description}</p>
-                        <div className="mt-3">
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <Card variant="default" padding="md" animated className="h-full">
+                          <h4 className="font-semibold text-gray-900 mb-2">{program.title}</h4>
+                          <p className="text-sm text-gray-600 mb-4">{program.description}</p>
                           <Link 
                             href={`/programs/${program.id}`}
-                            className="text-sm font-medium text-blue-600 hover:text-blue-800"
+                            className="inline-flex items-center text-sm font-medium text-emerald-600 hover:text-emerald-800"
                           >
-                            Learn more →
+                            Learn more
+                            <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
                           </Link>
-                        </div>
-                      </div>
+                        </Card>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
               )}
-            </div>
-          </div>
+            </Card>
+          </motion.div>
         )}
         
         {/* Next Steps */}
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden">
-          <div className={`bg-gradient-to-r ${colors.gradient} h-2`}></div>
-          <div className="px-6 py-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Next Steps</h2>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center">
-                  <span className="text-blue-600 text-sm font-medium">1</span>
+        <motion.div variants={fadeInUp}>
+          <Card variant="elevated" padding="lg" className="bg-gradient-to-br from-white to-blue-50">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">What's Next?</h2>
+            <div className="space-y-6">
+              <motion.div 
+                className="flex items-start gap-4"
+                whileHover={{ x: 4 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg">
+                  <span className="text-white text-lg font-bold">1</span>
                 </div>
-                <div className="ml-3">
-                  <h3 className="text-lg font-medium text-gray-900">Explore Your Recommended Paths</h3>
-                  <p className="mt-1 text-gray-600">Click on any of the recommendations above to learn more about courses, careers, and programs that match your profile.</p>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Explore Your Recommended Paths</h3>
+                  <p className="text-gray-600">Click on any of the recommendations above to learn more about courses, careers, and programs that match your profile.</p>
                 </div>
-              </div>
+              </motion.div>
               
-              <div className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center">
-                  <span className="text-blue-600 text-sm font-medium">2</span>
+              <motion.div 
+                className="flex items-start gap-4"
+                whileHover={{ x: 4 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shadow-lg">
+                  <span className="text-white text-lg font-bold">2</span>
                 </div>
-                <div className="ml-3">
-                  <h3 className="text-lg font-medium text-gray-900">Take Additional Assessments</h3>
-                  <p className="mt-1 text-gray-600">Complete our aptitude and personality assessments for a more comprehensive understanding of your educational fit.</p>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Take Additional Assessments</h3>
+                  <p className="text-gray-600">Complete our aptitude and personality assessments for a more comprehensive understanding of your educational fit.</p>
                 </div>
-              </div>
+              </motion.div>
               
-              <div className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center">
-                  <span className="text-blue-600 text-sm font-medium">3</span>
+              <motion.div 
+                className="flex items-start gap-4"
+                whileHover={{ x: 4 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg">
+                  <span className="text-white text-lg font-bold">3</span>
                 </div>
-                <div className="ml-3">
-                  <h3 className="text-lg font-medium text-gray-900">Save Your Results</h3>
-                  <p className="mt-1 text-gray-600">Create an account or log in to save your results and access them anytime.</p>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Connect with Counselors</h3>
+                  <p className="text-gray-600">Schedule a session with our expert counselors to discuss your results and create a personalized education plan.</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
             
-            <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-              <Link 
-                href="/quizzes"
-                className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                Take Another Quiz
-              </Link>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="primary" size="lg" gradient asChild>
+                <Link href="/quizzes">
+                  Take Another Quiz
+                </Link>
+              </Button>
               
-              <Link 
-                href="/dashboard"
-                className="inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                Go to Dashboard
-              </Link>
+              <Button variant="outline" size="lg" asChild>
+                <Link href="/dashboard">
+                  Go to Dashboard
+                </Link>
+              </Button>
             </div>
-          </div>
-        </div>
-      </div>
+            
+            {interestsSaved && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-6 p-4 bg-emerald-50 border border-emerald-200 rounded-lg text-center"
+              >
+                <p className="text-emerald-800 font-medium">
+                  ✓ Your interests have been saved to your profile!
+                </p>
+              </motion.div>
+            )}
+          </Card>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

@@ -1,0 +1,1076 @@
+[
+  {
+    "_id": "97876c6727cf14e99ce1b324",
+    "name": "Science",
+    "slug": "science",
+    "description": "Science stream offers comprehensive education in Physics, Chemistry, Mathematics and related subjects, preparing students for diverse career opportunities in science field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-science.png",
+      "bannerUrl": "https://education-banners.com/stream-science-banner.jpg"
+    },
+    "interestTags": [
+      "b87ce2ea7f1ec72cfed835fb",
+      "53986886618c67826cb9aaa4",
+      "9044bb81fef7543c2e4ee37a",
+      "83f209240df9974945c0dffa",
+      "a198f8f8c8b844d5eba7ddeb"
+    ],
+    "typicalSubjects": [
+      "Physics",
+      "Chemistry",
+      "Mathematics",
+      "Biology",
+      "Computer Science"
+    ],
+    "careers": [
+      "4dc5547b2f5904af83c8770f",
+      "fc4c401168f258fc87782f46"
+    ],
+    "courses": [
+      "77b0de4615478967d389b8aa",
+      "d44ed410b3f666bed338ca62",
+      "65587d90325353957c6b3cf1",
+      "aa7b18f78b32ef07c197b852",
+      "4f94fed26e0166f812145a70",
+      "0c26cafa30464d965f2a88f6",
+      "df520d4046701bc14a2a1e84",
+      "397da81db8bca857a81dfa26"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "e50049df82e5edb7838178ce",
+      "d8142c35d8215582df1398f8",
+      "3970c5203f3f3c59be48e5db",
+      "682f7d9189cab5fd208d26ec"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.315969",
+    "createdAt": "2025-09-19T02:56:25.315980",
+    "updatedAt": "2025-09-19T02:56:25.315982"
+  },
+  {
+    "_id": "842045c1b78e283a9946453c",
+    "name": "Commerce",
+    "slug": "commerce",
+    "description": "Commerce stream offers comprehensive education in Business Studies, Accountancy, Economics and related subjects, preparing students for diverse career opportunities in commerce field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-commerce.png",
+      "bannerUrl": "https://education-banners.com/stream-commerce-banner.jpg"
+    },
+    "interestTags": [
+      "dc312413e34f859c81b3f895",
+      "9044bb81fef7543c2e4ee37a",
+      "83f209240df9974945c0dffa",
+      "bed2290fbd99c142d6738782",
+      "2cabb17e5618f86b00597bc7"
+    ],
+    "typicalSubjects": [
+      "Business Studies",
+      "Accountancy",
+      "Economics",
+      "Mathematics",
+      "English"
+    ],
+    "careers": [
+      "4dc5547b2f5904af83c8770f",
+      "fc4c401168f258fc87782f46",
+      "5ec3f9e0a820910186550659",
+      "158cf3aec29101e436640501",
+      "2b62945bfb0ae3b524fabecc",
+      "52455f17eda24267ae627064",
+      "1a27ef038babcb93b8fdd779",
+      "9954ca89c5218fb95cccdac4"
+    ],
+    "courses": [
+      "89d6c70c3d07b2c749c68f2c",
+      "acccab3c1e450c1f5a4a5fa5",
+      "fa3f07919502867528b8c19f",
+      "3465d4ddd3383ca3642838e5",
+      "ef150a8c9eafbee79d77e193",
+      "8785fa89ccb2ffb0ece198f3"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "e10e566f0557fc331ba07d47",
+      "e0ddd5d616e28edf72a9043a",
+      "44ce8c26410df0aa8066c3ec",
+      "682f7d9189cab5fd208d26ec",
+      "46320b45a8f4ff248d201b97",
+      "e50049df82e5edb7838178ce",
+      "d8142c35d8215582df1398f8",
+      "99d2ab32e617e49fbc2768aa",
+      "3970c5203f3f3c59be48e5db",
+      "e90b81294d933c3c56312d17",
+      "2a9a451ccc3e873af66bfc71",
+      "02e8e7c946d6cc895ff55cbd",
+      "bf26a2fd098b0905821516ca",
+      "58b504dc28aea2098aad30b0",
+      "a937230eacd5074f3657e375",
+      "88864b2ea7af8253e7ebf384",
+      "2473b3e708ecfce3a2daa65d"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.316219",
+    "createdAt": "2025-09-19T02:56:25.316223",
+    "updatedAt": "2025-09-19T02:56:25.316225"
+  },
+  {
+    "_id": "3f35c519e89c41c25eb851ae",
+    "name": "Humanities",
+    "slug": "humanities",
+    "description": "Humanities stream offers comprehensive education in History, Political Science, English and related subjects, preparing students for diverse career opportunities in humanities field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-humanities.png",
+      "bannerUrl": "https://education-banners.com/stream-humanities-banner.jpg"
+    },
+    "interestTags": [
+      "dc312413e34f859c81b3f895",
+      "9044bb81fef7543c2e4ee37a",
+      "14517b7533add3767b4cf5ab",
+      "3a3c6530c20aa34450a0d55f",
+      "38f8e0afdec48b77870aaa11"
+    ],
+    "typicalSubjects": [
+      "History",
+      "Political Science",
+      "English",
+      "Geography",
+      "Philosophy"
+    ],
+    "careers": [
+      "4dc5547b2f5904af83c8770f",
+      "fc4c401168f258fc87782f46",
+      "91d8635897020527a2462e81",
+      "5ec3f9e0a820910186550659",
+      "158cf3aec29101e436640501",
+      "2b62945bfb0ae3b524fabecc",
+      "1a27ef038babcb93b8fdd779",
+      "9954ca89c5218fb95cccdac4"
+    ],
+    "courses": [
+      "08f5a2d9dd176dbb1d633f09",
+      "c464d435a55ce0b926d5a7cc",
+      "f126d93b01c29b91e822ad04",
+      "d9288dfe8b068126a718da4d",
+      "ec1b316eac839a0c24a5775b",
+      "a928bbe1e0847b62a3f41eeb",
+      "382e56d52c9d9cbd9e94d8ba",
+      "792ed424f4a9969d6c43ec57",
+      "1dacf339c133bbbfd6282ce1",
+      "7ef7750263ba3bc87e365aeb",
+      "cd5a44df9fc17cfd1c46d056",
+      "75f2af0a9fd4205f19830234",
+      "5a808f1632ca49bfe46b40ef"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "e0ddd5d616e28edf72a9043a",
+      "682f7d9189cab5fd208d26ec",
+      "46320b45a8f4ff248d201b97",
+      "e50049df82e5edb7838178ce",
+      "d8142c35d8215582df1398f8",
+      "99d2ab32e617e49fbc2768aa",
+      "3970c5203f3f3c59be48e5db",
+      "2a9a451ccc3e873af66bfc71",
+      "02e8e7c946d6cc895ff55cbd",
+      "bf26a2fd098b0905821516ca"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.316424",
+    "createdAt": "2025-09-19T02:56:25.316426",
+    "updatedAt": "2025-09-19T02:56:25.316428"
+  },
+  {
+    "_id": "98e6dec0fa15e8e48d35bc6c",
+    "name": "Arts",
+    "slug": "arts",
+    "description": "Arts stream offers comprehensive education in Fine Arts, Painting, Music and related subjects, preparing students for diverse career opportunities in arts field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-arts.png",
+      "bannerUrl": "https://education-banners.com/stream-arts-banner.jpg"
+    },
+    "interestTags": [
+      "9044bb81fef7543c2e4ee37a",
+      "14517b7533add3767b4cf5ab",
+      "57c82f182d29d6596290aaa2",
+      "7932bba1d11b2b5821082fd5",
+      "bf0ef935e3498208994a82cf"
+    ],
+    "typicalSubjects": [
+      "Fine Arts",
+      "Painting",
+      "Music",
+      "Dance",
+      "Drama"
+    ],
+    "careers": [
+      "85afba08ab04abf96ad95394",
+      "5ce25843b1c4cf39f11e9419",
+      "810930bd2f4391c2d0a20b7d"
+    ],
+    "courses": [
+      "6673d3614077abc8bc06d9bf"
+    ],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.316714",
+    "createdAt": "2025-09-19T02:56:25.316719",
+    "updatedAt": "2025-09-19T02:56:25.316720"
+  },
+  {
+    "_id": "4c345df9d541791c887a9a8c",
+    "name": "Medical Sciences",
+    "slug": "medical-sciences",
+    "description": "Medical Sciences stream offers comprehensive education in Biology, Chemistry, Physics and related subjects, preparing students for diverse career opportunities in medical sciences field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-medical-sciences.png",
+      "bannerUrl": "https://education-banners.com/stream-medical-sciences-banner.jpg"
+    },
+    "interestTags": [
+      "b87ce2ea7f1ec72cfed835fb"
+    ],
+    "typicalSubjects": [
+      "Biology",
+      "Chemistry",
+      "Physics",
+      "Medical Foundation"
+    ],
+    "careers": [
+      "f054381de047fe37ba67ec94",
+      "e4a7b47391fa6ca381035b29",
+      "4a9df52e1893cf1ac202cf2d"
+    ],
+    "courses": [
+      "3d3b0dbb8ac853da1e2aa347",
+      "4ece788bfba1473f5ce61023",
+      "f633367e8d3cca2daa5ff1a8",
+      "e17543e7fa1c74440859abc8",
+      "76829a4b8a8b5de137c1c4c7",
+      "b39e2a42c0de0097df1caa02"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "54424a84bde3ce77a4c43da0"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.316905",
+    "createdAt": "2025-09-19T02:56:25.316907",
+    "updatedAt": "2025-09-19T02:56:25.316909"
+  },
+  {
+    "_id": "8bc45e74d69b44e7b5d29f83",
+    "name": "Engineering & Technology",
+    "slug": "engineering-technology",
+    "description": "Engineering & Technology stream offers comprehensive education in Mathematics, Physics, Chemistry and related subjects, preparing students for diverse career opportunities in engineering & technology field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-engineering-technology.png",
+      "bannerUrl": "https://education-banners.com/stream-engineering-technology-banner.jpg"
+    },
+    "interestTags": [
+      "53986886618c67826cb9aaa4",
+      "83f209240df9974945c0dffa",
+      "1a474eed134ab0643397bdb8",
+      "b9429bb6c853dd44b7f0a201"
+    ],
+    "typicalSubjects": [
+      "Mathematics",
+      "Physics",
+      "Chemistry",
+      "Computer Science"
+    ],
+    "careers": [
+      "886900b153515665b098bd41",
+      "ff9ea3f6c7fc5d67892d1b4d",
+      "684d86aff89cf638cd9316db",
+      "677233f93ca96df1cabcac4a",
+      "872b05fda1a0937307b2aded"
+    ],
+    "courses": [
+      "e2f9717c11b6c269cac4d66b",
+      "0601e6ba20eabbfdddd87ff0",
+      "f935318fe01a209cfa8c8da4",
+      "e546f0e192587226ec157251",
+      "2af7568b0f3a02bc0e8cb452",
+      "1ca15ab71b5075cab2cb2525",
+      "8c3486ca05cd7713fa0fd8b9",
+      "8d2dc181dc94a99d37a81ee1"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "79af7c71d46337ca9f5c1d40",
+      "951ff2356d6ccce2b4a7d701",
+      "62b1795da781a4bae8f47c08"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.317116",
+    "createdAt": "2025-09-19T02:56:25.317120",
+    "updatedAt": "2025-09-19T02:56:25.317122"
+  },
+  {
+    "_id": "9ea2df57021a76873a5a7c1b",
+    "name": "Information Technology",
+    "slug": "information-technology",
+    "description": "Information Technology stream offers comprehensive education in Computer Science, Programming, Database Management and related subjects, preparing students for diverse career opportunities in information technology field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-information-technology.png",
+      "bannerUrl": "https://education-banners.com/stream-information-technology-banner.jpg"
+    },
+    "interestTags": [
+      "53986886618c67826cb9aaa4"
+    ],
+    "typicalSubjects": [
+      "Computer Science",
+      "Programming",
+      "Database Management",
+      "Web Development"
+    ],
+    "careers": [
+      "886900b153515665b098bd41",
+      "8018a93ddb2c149e6cf0e62f"
+    ],
+    "courses": [
+      "531e0279fdcd7a08241c83be",
+      "409007d7539fd6b7eef05a99",
+      "3dbb0f07c318739b0eb39d96",
+      "29bedbe54a3ec95709a58972",
+      "381a4c659076912811c9bebb",
+      "d9ea869da8c9852499275371"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "951ff2356d6ccce2b4a7d701",
+      "62b1795da781a4bae8f47c08"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.317296",
+    "createdAt": "2025-09-19T02:56:25.317298",
+    "updatedAt": "2025-09-19T02:56:25.317300"
+  },
+  {
+    "_id": "bcee0cb2dc509719b9cc7b0a",
+    "name": "Agricultural Sciences",
+    "slug": "agricultural-sciences",
+    "description": "Agricultural Sciences stream offers comprehensive education in Biology, Chemistry, Agriculture and related subjects, preparing students for diverse career opportunities in agricultural sciences field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-agricultural-sciences.png",
+      "bannerUrl": "https://education-banners.com/stream-agricultural-sciences-banner.jpg"
+    },
+    "interestTags": [
+      "a198f8f8c8b844d5eba7ddeb"
+    ],
+    "typicalSubjects": [
+      "Biology",
+      "Chemistry",
+      "Agriculture",
+      "Botany"
+    ],
+    "careers": [
+      "e467e9a3d8e5280fc2ac2861",
+      "c3a37cb4594f5e5813f99b30",
+      "018c2eacbe18009d55341029"
+    ],
+    "courses": [
+      "3ea665456a3fafcf972fee6e",
+      "70e8aa6cd697bfe31f79fafa",
+      "afa0a11ac9ca0d8498e095d8"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "e6ba2675f7c7277d0953e5fd",
+      "e0ddd5d616e28edf72a9043a"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.317471",
+    "createdAt": "2025-09-19T02:56:25.317473",
+    "updatedAt": "2025-09-19T02:56:25.317475"
+  },
+  {
+    "_id": "e4f94ea7d6740ce2f608c85f",
+    "name": "Law & Legal Studies",
+    "slug": "law-legal-studies",
+    "description": "Law & Legal Studies stream offers comprehensive education in History, Political Science, Economics and related subjects, preparing students for diverse career opportunities in law & legal studies field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-law-legal-studies.png",
+      "bannerUrl": "https://education-banners.com/stream-law-legal-studies-banner.jpg"
+    },
+    "interestTags": [
+      "3a3c6530c20aa34450a0d55f",
+      "b81f463c4d102c21c0831e1b"
+    ],
+    "typicalSubjects": [
+      "History",
+      "Political Science",
+      "Economics",
+      "English"
+    ],
+    "careers": [
+      "27fb2958a7f26c57c01ce308",
+      "09c48ffb61850c67215e0843",
+      "b8dfc420467f4d9bcf049c16",
+      "ddcf6029e30d606f268c23ae"
+    ],
+    "courses": [
+      "22ead27d29144dfb6ca98d42",
+      "a4ec2bcea0c746116f443911",
+      "9d38082cc1debc973e263b46"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "44ce8c26410df0aa8066c3ec",
+      "816a4462583558e8e6d8efb5",
+      "a937230eacd5074f3657e375"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.317671",
+    "createdAt": "2025-09-19T02:56:25.317674",
+    "updatedAt": "2025-09-19T02:56:25.317675"
+  },
+  {
+    "_id": "ab8f0b00b2c2f0b83ef4ba38",
+    "name": "Paramedical",
+    "slug": "paramedical",
+    "description": "Paramedical stream offers comprehensive education in Biology, Chemistry, Health Sciences and related subjects, preparing students for diverse career opportunities in paramedical field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-paramedical.png",
+      "bannerUrl": "https://education-banners.com/stream-paramedical-banner.jpg"
+    },
+    "interestTags": [
+      "b87ce2ea7f1ec72cfed835fb"
+    ],
+    "typicalSubjects": [
+      "Biology",
+      "Chemistry",
+      "Health Sciences",
+      "Medical Technology"
+    ],
+    "careers": [
+      "ef7cbdfa45b1a7a8c20571bb",
+      "7d6c32e4c5ebe47ca141e4d7"
+    ],
+    "courses": [
+      "25b936884c7392cf1703d228",
+      "030722f29c192f416762585d"
+    ],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.317859",
+    "createdAt": "2025-09-19T02:56:25.317861",
+    "updatedAt": "2025-09-19T02:56:25.317863"
+  },
+  {
+    "_id": "3b63d4cc70f8dd4b73dac371",
+    "name": "Environmental Sciences",
+    "slug": "environmental-sciences",
+    "description": "Environmental Sciences stream offers comprehensive education in Environmental Studies, Chemistry, Biology and related subjects, preparing students for diverse career opportunities in environmental sciences field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-environmental-sciences.png",
+      "bannerUrl": "https://education-banners.com/stream-environmental-sciences-banner.jpg"
+    },
+    "interestTags": [
+      "5338b20d553d379b094c9930",
+      "ae57edeb21076dc2a4ecab60"
+    ],
+    "typicalSubjects": [
+      "Environmental Studies",
+      "Chemistry",
+      "Biology",
+      "Geography"
+    ],
+    "careers": [
+      "e467e9a3d8e5280fc2ac2861",
+      "a876be5dd34b4e779fc0bf72"
+    ],
+    "courses": [
+      "ed7073ceabd1b9862f48420f"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "e0ddd5d616e28edf72a9043a"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.318068",
+    "createdAt": "2025-09-19T02:56:25.318072",
+    "updatedAt": "2025-09-19T02:56:25.318074"
+  },
+  {
+    "_id": "aeff7474a029f163b5cf9bac",
+    "name": "Mass Communication",
+    "slug": "mass-communication",
+    "description": "Mass Communication stream offers comprehensive education in English, Media Studies, Journalism and related subjects, preparing students for diverse career opportunities in mass communication field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-mass-communication.png",
+      "bannerUrl": "https://education-banners.com/stream-mass-communication-banner.jpg"
+    },
+    "interestTags": [
+      "38f8e0afdec48b77870aaa11",
+      "24846bdfcfb909a3153555e9"
+    ],
+    "typicalSubjects": [
+      "English",
+      "Media Studies",
+      "Journalism",
+      "Communication"
+    ],
+    "careers": [
+      "85f107896a43e60699fce943",
+      "6c14abdbbe36c1c70f4bcb36",
+      "5ce25843b1c4cf39f11e9419"
+    ],
+    "courses": [
+      "ca056f94766432f726556a1d"
+    ],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.318276",
+    "createdAt": "2025-09-19T02:56:25.318278",
+    "updatedAt": "2025-09-19T02:56:25.318280"
+  },
+  {
+    "_id": "3d8fcffe469ccc25723a8765",
+    "name": "Fashion Design",
+    "slug": "fashion-design",
+    "description": "Fashion Design stream offers comprehensive education in Design, Textiles, Art and related subjects, preparing students for diverse career opportunities in fashion design field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-fashion-design.png",
+      "bannerUrl": "https://education-banners.com/stream-fashion-design-banner.jpg"
+    },
+    "interestTags": [
+      "bf0ef935e3498208994a82cf"
+    ],
+    "typicalSubjects": [
+      "Design",
+      "Textiles",
+      "Art",
+      "Fashion Technology"
+    ],
+    "careers": [
+      "85afba08ab04abf96ad95394",
+      "8a0725967f919379e61fb2bd",
+      "810930bd2f4391c2d0a20b7d"
+    ],
+    "courses": [
+      "c968095aa866ba39dca0e0ff"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "7abf62d322a47605dc6e1be3"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.318457",
+    "createdAt": "2025-09-19T02:56:25.318459",
+    "updatedAt": "2025-09-19T02:56:25.318461"
+  },
+  {
+    "_id": "1d33c7d37da5a6f49476ffad",
+    "name": "Hotel Management",
+    "slug": "hotel-management",
+    "description": "Hotel Management stream offers comprehensive education in Tourism, Food Service, Hospitality and related subjects, preparing students for diverse career opportunities in hotel management field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-hotel-management.png",
+      "bannerUrl": "https://education-banners.com/stream-hotel-management-banner.jpg"
+    },
+    "interestTags": [
+      "2cabb17e5618f86b00597bc7"
+    ],
+    "typicalSubjects": [
+      "Tourism",
+      "Food Service",
+      "Hospitality",
+      "Business Studies"
+    ],
+    "careers": [
+      "451a477fb142bd1cec57f21e",
+      "e1e24a59511cfd9aa58795c3",
+      "f706a4cfef10d55fa895de3d"
+    ],
+    "courses": [
+      "3d518301afd53d831789859b",
+      "b0d17146e524b8c43c7adde6"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "9fb000f9c9dd9dfe66c164fe"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.318643",
+    "createdAt": "2025-09-19T02:56:25.318645",
+    "updatedAt": "2025-09-19T02:56:25.318647"
+  },
+  {
+    "_id": "ee221de23c65312e3ff74026",
+    "name": "Physical Education",
+    "slug": "physical-education",
+    "description": "Physical Education stream offers comprehensive education in Sports, Physiology, Anatomy and related subjects, preparing students for diverse career opportunities in physical education field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-physical-education.png",
+      "bannerUrl": "https://education-banners.com/stream-physical-education-banner.jpg"
+    },
+    "interestTags": [
+      "0998bacc5b0e36523babdb67"
+    ],
+    "typicalSubjects": [
+      "Sports",
+      "Physiology",
+      "Anatomy",
+      "Health Education"
+    ],
+    "careers": [
+      "d404cbf4208d7c3791be3bb7",
+      "289c12782135aa2bb0f9ebc8"
+    ],
+    "courses": [
+      "f6ef4d464ef02b13c2a485db"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "d8142c35d8215582df1398f8"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.318891",
+    "createdAt": "2025-09-19T02:56:25.318895",
+    "updatedAt": "2025-09-19T02:56:25.318897"
+  },
+  {
+    "_id": "50869f20ed2aa7962328197a",
+    "name": "Music & Performing Arts",
+    "slug": "music-performing-arts",
+    "description": "Music & Performing Arts stream offers comprehensive education in Music Theory, Dance, Theatre and related subjects, preparing students for diverse career opportunities in music & performing arts field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-music-performing-arts.png",
+      "bannerUrl": "https://education-banners.com/stream-music-performing-arts-banner.jpg"
+    },
+    "interestTags": [
+      "7932bba1d11b2b5821082fd5"
+    ],
+    "typicalSubjects": [
+      "Music Theory",
+      "Dance",
+      "Theatre",
+      "Audio Production"
+    ],
+    "careers": [],
+    "courses": [],
+    "degreePrograms": [],
+    "exams": [],
+    "colleges": [],
+    "universities": [],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.319087",
+    "createdAt": "2025-09-19T02:56:25.319091",
+    "updatedAt": "2025-09-19T02:56:25.319092"
+  },
+  {
+    "_id": "b6e2d2923212dfc05dc7948f",
+    "name": "Veterinary Sciences",
+    "slug": "veterinary-sciences",
+    "description": "Veterinary Sciences stream offers comprehensive education in Biology, Chemistry, Zoology and related subjects, preparing students for diverse career opportunities in veterinary sciences field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-veterinary-sciences.png",
+      "bannerUrl": "https://education-banners.com/stream-veterinary-sciences-banner.jpg"
+    },
+    "interestTags": [
+      "bb39b27d297871f1c6e85457"
+    ],
+    "typicalSubjects": [
+      "Biology",
+      "Chemistry",
+      "Zoology",
+      "Animal Science"
+    ],
+    "careers": [
+      "52713bec76eeb66f434b1745"
+    ],
+    "courses": [
+      "3762a9ecac31345820575c06"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "54424a84bde3ce77a4c43da0"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.319273",
+    "createdAt": "2025-09-19T02:56:25.319275",
+    "updatedAt": "2025-09-19T02:56:25.319277"
+  },
+  {
+    "_id": "b72eb94ec9fd3680c17f9bf8",
+    "name": "Social Work",
+    "slug": "social-work",
+    "description": "Social Work stream offers comprehensive education in Sociology, Psychology, Political Science and related subjects, preparing students for diverse career opportunities in social work field.",
+    "media": {
+      "iconUrl": "https://education-icons.com/stream-social-work.png",
+      "bannerUrl": "https://education-banners.com/stream-social-work-banner.jpg"
+    },
+    "interestTags": [
+      "94502a5bc4399a3ae9cf469c"
+    ],
+    "typicalSubjects": [
+      "Sociology",
+      "Psychology",
+      "Political Science",
+      "Community Development"
+    ],
+    "careers": [
+      "669f08bf4107a50c7d9c0ee0",
+      "f86f86a152e8412aa54a6a3a"
+    ],
+    "courses": [
+      "da3ce2e5e902307677d725df",
+      "a7a41d19f40f0ff953ddce81"
+    ],
+    "degreePrograms": [],
+    "exams": [
+      "e0ddd5d616e28edf72a9043a",
+      "46320b45a8f4ff248d201b97"
+    ],
+    "colleges": [
+      "5da3f550ada7b1eb65617cf8",
+      "f4b2c3e738e9843360cded3c",
+      "d03d5ba119050c33a37dc158",
+      "69308b83b00fb5d6217e7867",
+      "9a3204c2b4a47b4e1ee32772",
+      "8b97ca4f1907615c664875fe",
+      "18d95ade953c392777995762",
+      "93d582d6f16040fadfd626bf",
+      "6c2ca02fa83564ab45f7f0b0",
+      "371a06199da19e52ca02b03a"
+    ],
+    "universities": [
+      "2c6cdfec38c0630657982b21",
+      "0102bb74e23490470a5c941d",
+      "64e4a67c3557a66f7f152294",
+      "c183f6ef8c96ec557e75768a"
+    ],
+    "isActive": true,
+    "source": "J&K Board of School Education & Higher Education Department",
+    "sourceUrl": "https://jkbose.nic.in",
+    "lastUpdated": "2025-09-19T02:56:25.319461",
+    "createdAt": "2025-09-19T02:56:25.319463",
+    "updatedAt": "2025-09-19T02:56:25.319465"
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "_id": "6153c9f44842f468f90e7f83",
+    "name": "Pratham Education Foundation J&K",
+    "type": "NGO",
+    "description": "Non-profit organization working in Srinagar district, specializing in education and providing support services to underprivileged communities.",
+    "media": {
+      "iconUrl": "https://ngo-logos.com/pratham-education-foundation-j&k.png",
+      "bannerUrl": "https://ngo-banners.com/pratham-education-foundation-j&k-banner.jpg"
+    },
+    "programs": [
+      "e864e9fe7b01c360d3f856ee"
+    ],
+    "contacts": {
+      "email": "info@prathameducationfoundationjandk.org",
+      "phone": "0194-2545614",
+      "website": "https://www.prathameducationfoundationjandk.org"
+    },
+    "location": {
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          74.7973,
+          34.0837
+        ]
+      }
+    },
+    "interestTags": [],
+    "isActive": true,
+    "establishedYear": 1995,
+    "focus": "Education",
+    "lastUpdated": "2025-09-19T03:51:14.633462",
+    "createdAt": "2025-09-19T03:51:14.633472",
+    "updatedAt": "2025-09-19T03:51:14.633474"
+  },
+  {
+    "_id": "f9c1da553bfa6cb7f0ee9143",
+    "name": "Kashmir Youth Foundation",
+    "type": "NGO",
+    "description": "Non-profit organization working in Srinagar district, specializing in youth development and providing support services to underprivileged communities.",
+    "media": {
+      "iconUrl": "https://ngo-logos.com/kashmir-youth-foundation.png",
+      "bannerUrl": "https://ngo-banners.com/kashmir-youth-foundation-banner.jpg"
+    },
+    "programs": [
+      "f2e1b99a8bbf887a1c04ab26"
+    ],
+    "contacts": {
+      "email": "info@kashmiryouthfoundation.org",
+      "phone": "0194-2535801",
+      "website": "https://www.kashmiryouthfoundation.org"
+    },
+    "location": {
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          74.7973,
+          34.0837
+        ]
+      }
+    },
+    "interestTags": [],
+    "isActive": true,
+    "establishedYear": 1995,
+    "focus": "Youth Development",
+    "lastUpdated": "2025-09-19T03:51:14.633497",
+    "createdAt": "2025-09-19T03:51:14.633500",
+    "updatedAt": "2025-09-19T03:51:14.633502"
+  },
+  {
+    "_id": "df363bc82c4e61bf8bdecd3b",
+    "name": "Save the Children Jammu Kashmir",
+    "type": "NGO",
+    "description": "Non-profit organization working in Jammu district, specializing in child welfare and providing support services to underprivileged communities.",
+    "media": {
+      "iconUrl": "https://ngo-logos.com/save-the-children-jammu-kashmir.png",
+      "bannerUrl": "https://ngo-banners.com/save-the-children-jammu-kashmir-banner.jpg"
+    },
+    "programs": [
+      "d0a5dbee396842f3a0bc4230"
+    ],
+    "contacts": {
+      "email": "info@savethechildrenjammukashmir.org",
+      "phone": "0191-2431223",
+      "website": "https://www.savethechildrenjammukashmir.org"
+    },
+    "location": {
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          74.857,
+          32.7266
+        ]
+      }
+    },
+    "interestTags": [],
+    "isActive": true,
+    "establishedYear": 2019,
+    "focus": "Child Welfare",
+    "lastUpdated": "2025-09-19T03:51:14.633518",
+    "createdAt": "2025-09-19T03:51:14.633521",
+    "updatedAt": "2025-09-19T03:51:14.633523"
+  },
+  {
+    "_id": "8ab1dd6ddd857d1e48637034",
+    "name": "Teach for India J&K Chapter",
+    "type": "NGO",
+    "description": "Non-profit organization working in Srinagar district, specializing in education and providing support services to underprivileged communities.",
+    "media": {
+      "iconUrl": "https://ngo-logos.com/teach-for-india-j&k-chapter.png",
+      "bannerUrl": "https://ngo-banners.com/teach-for-india-j&k-chapter-banner.jpg"
+    },
+    "programs": [
+      "e864e9fe7b01c360d3f856ee"
+    ],
+    "contacts": {
+      "email": "info@teachforindiajandkchapter.org",
+      "phone": "0194-2573806",
+      "website": "https://www.teachforindiajandkchapter.org"
+    },
+    "location": {
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          74.7973,
+          34.0837
+        ]
+      }
+    },
+    "interestTags": [],
+    "isActive": true,
+    "establishedYear": 2002,
+    "focus": "Education",
+    "lastUpdated": "2025-09-19T03:51:14.633537",
+    "createdAt": "2025-09-19T03:51:14.633539",
+    "updatedAt": "2025-09-19T03:51:14.633541"
+  },
+  {
+    "_id": "81f08a633836d3b17e0e7729",
+    "name": "Help Poor Voluntary Trust",
+    "type": "NGO",
+    "description": "Non-profit organization working in Jammu district, specializing in social welfare and providing support services to underprivileged communities.",
+    "media": {
+      "iconUrl": "https://ngo-logos.com/help-poor-voluntary-trust.png",
+      "bannerUrl": "https://ngo-banners.com/help-poor-voluntary-trust-banner.jpg"
+    },
+    "programs": [
+      "f5e811caadb426f553b29b67"
+    ],
+    "contacts": {
+      "email": "info@helppoorvoluntarytrust.org",
+      "phone": "0191-2490466",
+      "website": "https://www.helppoorvoluntarytrust.org"
+    },
+    "location": {
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          74.857,
+          32.7266
+        ]
+      }
+    },
+    "interestTags": [],
+    "isActive": true,
+    "establishedYear": 2000,
+    "focus": "Social Welfare",
+    "lastUpdated": "2025-09-19T03:51:14.633554",
+    "createdAt": "2025-09-19T03:51:14.633557",
+    "updatedAt": "2025-09-19T03:51:14.633559"
+  },
+  {
+    "_id": "2ee17f59cb03c5f6b9ad7bf6",
+    "name": "Umeed Foundation Kashmir",
+    "type": "NGO",
+    "description": "Non-profit organization working in Anantnag district, specializing in healthcare and providing support services to underprivileged communities.",
+    "media": {
+      "iconUrl": "https://ngo-logos.com/umeed-foundation-kashmir.png",
+      "bannerUrl": "https://ngo-banners.com/umeed-foundation-kashmir-banner.jpg"
+    },
+    "programs": [
+      "b3fac6aae781327a898e2ac4"
+    ],
+    "contacts": {
+      "email": "info@umeedfoundationkashmir.org",
+      "phone": "0191-2454356",
+      "website": "https://www.umeedfoundationkashmir.org"
+    },
+    "location": {
+      "district": "Anantnag",
+      "state": "Jammu and Kashmir",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          75.12784215897378,
+          32.51673054288374
+        ]
+      }
+    },
+    "interestTags": [],
+    "isActive": true,
+    "establishedYear": 1991,
+    "focus": "Healthcare",
+    "lastUpdated": "2025-09-19T03:51:14.633576",
+    "createdAt": "2025-09-19T03:51:14.633578",
+    "updatedAt": "2025-09-19T03:51:14.633580"
+  },
+  {
+    "_id": "2905784ad1bbfec57ac37312",
+    "name": "Jan Jagran Sansthan",
+    "type": "NGO",
+    "description": "Non-profit organization working in Rajouri district, specializing in rural development and providing support services to underprivileged communities.",
+    "media": {
+      "iconUrl": "https://ngo-logos.com/jan-jagran-sansthan.png",
+      "bannerUrl": "https://ngo-banners.com/jan-jagran-sansthan-banner.jpg"
+    },
+    "programs": [
+      "c7f30c410d507e8a1b874efd"
+    ],
+    "contacts": {
+      "email": "info@janjagransansthan.org",
+      "phone": "0191-2428422",
+      "website": "https://www.janjagransansthan.org"
+    },
+    "location": {
+      "district": "Rajouri",
+      "state": "Jammu and Kashmir",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          74.78834818953167,
+          34.5257798189597
+        ]
+      }
+    },
+    "interestTags": [],
+    "isActive": true,
+    "establishedYear": 1999,
+    "focus": "Rural Development",
+    "lastUpdated": "2025-09-19T03:51:14.633594",
+    "createdAt": "2025-09-19T03:51:14.633596",
+    "updatedAt": "2025-09-19T03:51:14.633598"
+  },
+  {
+    "_id": "1575971e51016e4e6f151466",
+    "name": "Bright Future Education Society",
+    "type": "NGO",
+    "description": "Non-profit organization working in Baramulla district, specializing in education and providing support services to underprivileged communities.",
+    "media": {
+      "iconUrl": "https://ngo-logos.com/bright-future-education-society.png",
+      "bannerUrl": "https://ngo-banners.com/bright-future-education-society-banner.jpg"
+    },
+    "programs": [
+      "daebcb2e1a4a1aca33aa26aa"
+    ],
+    "contacts": {
+      "email": "info@brightfutureeducationsociety.org",
+      "phone": "0191-2486814",
+      "website": "https://www.brightfutureeducationsociety.org"
+    },
+    "location": {
+      "district": "Baramulla",
+      "state": "Jammu and Kashmir",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          74.47565120857745,
+          33.843286652070766
+        ]
+      }
+    },
+    "interestTags": [],
+    "isActive": true,
+    "establishedYear": 2010,
+    "focus": "Education",
+    "lastUpdated": "2025-09-19T03:51:14.633611",
+    "createdAt": "2025-09-19T03:51:14.633613",
+    "updatedAt": "2025-09-19T03:51:14.633615"
+  },
+  {
+    "_id": "a3703f34742c5bbaad571604",
+    "name": "Srinagar Educational Trust",
+    "type": "NGO",
+    "description": "Non-profit organization working in Srinagar district, specializing in education and providing support services to underprivileged communities.",
+    "media": {
+      "iconUrl": "https://ngo-logos.com/srinagar-educational-trust.png",
+      "bannerUrl": "https://ngo-banners.com/srinagar-educational-trust-banner.jpg"
+    },
+    "programs": [
+      "7602f228a70f1733cdbec098"
+    ],
+    "contacts": {
+      "email": "info@srinagareducationaltrust.org",
+      "phone": "0194-2587385",
+      "website": "https://www.srinagareducationaltrust.org"
+    },
+    "location": {
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          74.7973,
+          34.0837
+        ]
+      }
+    },
+    "interestTags": [],
+    "isActive": true,
+    "establishedYear": 2001,
+    "focus": "Education",
+    "lastUpdated": "2025-09-19T03:51:14.633627",
+    "createdAt": "2025-09-19T03:51:14.633629",
+    "updatedAt": "2025-09-19T03:51:14.633631"
+  },
+  {
+    "_id": "6fd0c96c7e7c6effb87eaa44",
+    "name": "Jammu Development Foundation",
+    "type": "NGO",
+    "description": "Non-profit organization working in Jammu district, specializing in community development and providing support services to underprivileged communities.",
+    "media": {
+      "iconUrl": "https://ngo-logos.com/jammu-development-foundation.png",
+      "bannerUrl": "https://ngo-banners.com/jammu-development-foundation-banner.jpg"
+    },
+    "programs": [
+      "09f38e46b44204934b1c8f72"
+    ],
+    "contacts": {
+      "email": "info@jammudevelopmentfoundation.org",
+      "phone": "0191-2495282",
+      "website": "https://www.jammudevelopmentfoundation.org"
+    },
+    "location": {
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          74.857,
+          32.7266
+        ]
+      }
+    },
+    "interestTags": [],
+    "isActive": true,
+    "establishedYear": 2015,
+    "focus": "Community Development",
+    "lastUpdated": "2025-09-19T03:51:14.633644",
+    "createdAt": "2025-09-19T03:51:14.633646",
+    "updatedAt": "2025-09-19T03:51:14.633649"
+  }
+]

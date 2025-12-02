@@ -1,65 +1,89 @@
 [
-    {
-      "_id": "d9a7524a8a06dfa3624066e3",
-      "email": "gautamdaksh29@gmail.com",
-      "phone": "7351068751",
-      "password": "hashed_password_here",
-      "name": "Samar Gautam",
-      "media": {
-        "iconUrl": "",
-        "bannerUrl": ""
-      },
-      "role": "Student",
-      "gender": "Male",
-      "dob": "2006-05-15T00:00:00",
-      "classLevel": "12",
-      "location": {
-        "district": "Srinagar",
-        "state": "Jammu and Kashmir",
-        "pincode": "190001",
-        "geo": {
-          "type": "Point",
-          "coordinates": [
-            74.7973,
-            34.0837
-          ]
-        }
-      },
-      "academics": {
-        "tenth": {
-          "score": 85.5,
-          "board": "JKBOSE",
-          "year": 2022
-        },
-        "twelfth": {
-          "score": 78.2,
-          "board": "JKBOSE",
-          "year": 2024
-        }
-      },
-      "interests": [
-        "99f2fe3b697e9c6cb4b411b3",
-        "158cf8747dea7f361db523fc"
-      ],
-      "goals": {
-        "careers": [
-          "7ec26eab8d81c8cb42552fd7"
-        ],
-        "exams": [
-          "89929e30c463faa3ccae542d"
-        ],
-        "courses": [
-          "8881c6bb04db38957436b735"
-        ],
-        "colleges": [
-          "dc641d781615ebd834501169"
+  {
+    "_id": "840cbc3c5eb1f2b5d914a0a8",
+    "email": "rahul.sharma@gmail.com",
+    "phone": "9419876543",
+    "password": "hashed_password_here",
+    "name": "Rahul Sharma",
+    "media": {
+      "iconUrl": "",
+      "bannerUrl": ""
+    },
+    "role": "Student",
+    "resetPasswordOTP": null,
+    "resetPasswordExpiry": null,
+    "phoneResetOTP": null,
+    "phoneResetExpiry": null,
+    "phoneVerificationOTP": null,
+    "phoneVerificationExpiry": null,
+    "isPhoneVerified": true,
+    "gender": "Male",
+    "dob": "2006-05-15T00:00:00",
+    "classLevel": "12",
+    "location": {
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "pincode": "190001",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          74.7973,
+          34.0837
         ]
+      }
+    },
+    "academics": {
+      "tenth": {
+        "score": 85.5,
+        "board": "JKBOSE",
+        "year": 2022
       },
-      "preferredLanguages": [
-        "English",
-        "Hindi"
+      "twelfth": {
+        "score": 78.2,
+        "board": "JKBOSE",
+        "year": 2024
+      },
+      "undergraduate": null,
+      "postgraduate": null,
+      "competitiveExams": []
+    },
+    "college": null,
+    "university": null,
+    "degreeProgram": null,
+    "enrolledCourses": [],
+    "interests": [
+      "",
+      ""
+    ],
+    "goals": {
+      "careers": [
+        "12db2f8985e2b9cc94edebd8"
       ],
-      "createdAt": "2025-09-18T08:33:36.362917",
-      "updatedAt": "2025-09-18T08:33:36.362923"
-    }
-  ]
+      "exams": [
+        "b36cbfc86c28ae15c461f14e"
+      ],
+      "degreePrograms": [],
+      "courses": [
+        "a08fc2b3c5d5c5e624949459"
+      ],
+      "colleges": [
+        "ccf5abdc23ad390472ce00d1"
+      ],
+      "universities": [
+        "9ad991e8291b48b6571ba7a2"
+      ],
+      "scholarships": [
+        "daebcb2e1a4a1aca33aa26aa"
+      ]
+    },
+    "preferredLanguages": [
+      "English",
+      "Hindi"
+    ],
+    "savedItems": [],
+    "quizResults": [],
+    "recommendations": [],
+    "createdAt": "2025-09-19T03:52:21.107859",
+    "updatedAt": "2025-09-19T03:52:21.107866"
+  }
+]

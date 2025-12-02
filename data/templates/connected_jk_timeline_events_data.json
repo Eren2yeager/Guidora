@@ -1,0 +1,212 @@
+[
+  {
+    "_id": "7479e9234945f607f2c13235",
+    "type": "admission",
+    "title": "NEET 2025 Application Opens",
+    "description": "Medical entrance exam applications begin",
+    "related": {
+      "collegeId": "ccf5abdc23ad390472ce00d1",
+      "courseId": "a08fc2b3c5d5c5e624949459",
+      "programId": null,
+      "state": "All India",
+      "examId": "b36cbfc86c28ae15c461f14e"
+    },
+    "startDate": "2025-10-19T03:52:21.104255",
+    "endDate": "2025-12-18T03:52:21.104276",
+    "link": "https://neet.nic.in",
+    "interestTags": [],
+    "isActive": true,
+    "priority": "high",
+    "createdAt": "2025-09-19T03:52:21.104282",
+    "updatedAt": "2025-09-19T03:52:21.104285"
+  },
+  {
+    "_id": "decdbd6c2d5dcf62f54ff52a",
+    "type": "admission",
+    "title": "JEE Main 2025 Registration",
+    "description": "Engineering entrance exam registration",
+    "related": {
+      "collegeId": "2835c2b6801dc8a07ba29c9f",
+      "courseId": "08e92fed29eb30c673385e48",
+      "programId": null,
+      "state": "All India",
+      "examId": "475e6649ed77f7a019f7f384"
+    },
+    "startDate": "2025-10-04T03:52:21.104323",
+    "endDate": "2025-12-03T03:52:21.104331",
+    "link": "https://jee-main.nic.in",
+    "interestTags": [],
+    "isActive": true,
+    "priority": "high",
+    "createdAt": "2025-09-19T03:52:21.104335",
+    "updatedAt": "2025-09-19T03:52:21.104338"
+  },
+  {
+    "_id": "96e06d266dab3192811aab53",
+    "type": "admission",
+    "title": "J&K University Admissions 2025",
+    "description": "State university admissions open",
+    "related": {
+      "collegeId": "00818fcd1856701c895346b8",
+      "courseId": "53e15b7f6bd07938855c484f",
+      "programId": null,
+      "state": "Jammu and Kashmir",
+      "examId": "606d66bd554a9b241b60c6bf"
+    },
+    "startDate": "2025-11-18T03:52:21.104384",
+    "endDate": "2026-01-17T03:52:21.104429",
+    "link": "https://cuet.nic.in",
+    "interestTags": [],
+    "isActive": true,
+    "priority": "high",
+    "createdAt": "2025-09-19T03:52:21.104440",
+    "updatedAt": "2025-09-19T03:52:21.104443"
+  },
+  {
+    "_id": "4a07393544170dea38dc3b5a",
+    "type": "scholarship",
+    "title": "J&K Merit Scholarship Applications",
+    "description": "State merit scholarship applications",
+    "related": {
+      "collegeId": "00818fcd1856701c895346b8",
+      "courseId": "53e15b7f6bd07938855c484f",
+      "programId": null,
+      "state": "Jammu and Kashmir",
+      "examId": null
+    },
+    "startDate": "2025-11-03T03:52:21.104494",
+    "endDate": "2026-01-02T03:52:21.104501",
+    "link": "https://jkeducation.gov.in",
+    "interestTags": [],
+    "isActive": true,
+    "priority": "medium",
+    "createdAt": "2025-09-19T03:52:21.104505",
+    "updatedAt": "2025-09-19T03:52:21.104507"
+  },
+  {
+    "_id": "5e4d0a45cf119083784fdf0b",
+    "type": "exam",
+    "title": "NEET 2025 Examination",
+    "description": "Medical entrance examination",
+    "related": {
+      "collegeId": "ccf5abdc23ad390472ce00d1",
+      "courseId": "a08fc2b3c5d5c5e624949459",
+      "programId": null,
+      "state": "All India",
+      "examId": "b36cbfc86c28ae15c461f14e"
+    },
+    "startDate": "2026-01-17T03:52:21.104541",
+    "endDate": null,
+    "link": "https://neet.nic.in",
+    "interestTags": [],
+    "isActive": true,
+    "priority": "high",
+    "createdAt": "2025-09-19T03:52:21.104548",
+    "updatedAt": "2025-09-19T03:52:21.104551"
+  },
+  {
+    "_id": "68f7bb0b0599470423a02dd5",
+    "type": "exam",
+    "title": "JEE Main 2025 Session 1",
+    "description": "Engineering entrance exam",
+    "related": {
+      "collegeId": "2835c2b6801dc8a07ba29c9f",
+      "courseId": "08e92fed29eb30c673385e48",
+      "programId": null,
+      "state": "All India",
+      "examId": "475e6649ed77f7a019f7f384"
+    },
+    "startDate": "2025-12-28T03:52:21.104583",
+    "endDate": "2026-01-03T03:52:21.104591",
+    "link": "https://jee-main.nic.in",
+    "interestTags": [],
+    "isActive": true,
+    "priority": "high",
+    "createdAt": "2025-09-19T03:52:21.104595",
+    "updatedAt": "2025-09-19T03:52:21.104597"
+  },
+  {
+    "_id": "4117eef087a25e983ba8e65a",
+    "type": "exam",
+    "title": "UPSC Preliminary Exam 2025",
+    "description": "Civil services preliminary exam",
+    "related": {
+      "collegeId": null,
+      "courseId": "53e15b7f6bd07938855c484f",
+      "programId": null,
+      "state": "All India",
+      "examId": "30c90f3ebae6d76b73e932c7"
+    },
+    "startDate": "2026-02-06T03:52:21.104632",
+    "endDate": null,
+    "link": "https://upsc-cse.nic.in",
+    "interestTags": [],
+    "isActive": true,
+    "priority": "high",
+    "createdAt": "2025-09-19T03:52:21.104641",
+    "updatedAt": "2025-09-19T03:52:21.104644"
+  },
+  {
+    "_id": "60bf1035776656b76f2224e7",
+    "type": "other",
+    "title": "J&K Education Fair 2025",
+    "description": "Annual education and career fair",
+    "related": {
+      "collegeId": null,
+      "courseId": null,
+      "programId": null,
+      "state": "Jammu and Kashmir",
+      "examId": null
+    },
+    "startDate": "2025-10-09T03:52:21.104678",
+    "endDate": "2025-10-11T03:52:21.104685",
+    "link": "https://jkeducation.gov.in",
+    "interestTags": [],
+    "isActive": true,
+    "priority": "medium",
+    "createdAt": "2025-09-19T03:52:21.104689",
+    "updatedAt": "2025-09-19T03:52:21.104691"
+  },
+  {
+    "_id": "11211f2c28bb792128070c9b",
+    "type": "counselling",
+    "title": "Career Guidance Week",
+    "description": "Week-long career counseling sessions",
+    "related": {
+      "collegeId": null,
+      "courseId": null,
+      "programId": null,
+      "state": "All India",
+      "examId": null
+    },
+    "startDate": "2025-09-29T03:52:21.104725",
+    "endDate": "2025-10-05T03:52:21.104736",
+    "link": "https://jkeducation.gov.in",
+    "interestTags": [],
+    "isActive": true,
+    "priority": "medium",
+    "createdAt": "2025-09-19T03:52:21.104745",
+    "updatedAt": "2025-09-19T03:52:21.104750"
+  },
+  {
+    "_id": "a42484f86f474a063033a2e7",
+    "type": "other",
+    "title": "J&K Board Results Declaration",
+    "description": "Class 10th and 12th results",
+    "related": {
+      "collegeId": null,
+      "courseId": null,
+      "programId": null,
+      "state": "Jammu and Kashmir",
+      "examId": null
+    },
+    "startDate": "2025-12-08T03:52:21.104810",
+    "endDate": null,
+    "link": "https://jkeducation.gov.in",
+    "interestTags": [],
+    "isActive": true,
+    "priority": "medium",
+    "createdAt": "2025-09-19T03:52:21.104822",
+    "updatedAt": "2025-09-19T03:52:21.104828"
+  }
+]

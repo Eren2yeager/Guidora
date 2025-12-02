@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 const TimelineEventSchema = new mongoose.Schema(
   {
     _id: { type: mongoose.Schema.Types.ObjectId },

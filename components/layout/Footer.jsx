@@ -31,7 +31,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="bg-white border-t border-gray-200 relative">
+      {/* Gradient accent line */}
+      {/* <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600" /> */}
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-5 xl:gap-8">
           <div className="xl:col-span-1">

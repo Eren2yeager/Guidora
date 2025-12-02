@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth.js";
-import { isAdminSession } from "@/lib/auth";
+import { isAdminSession } from "@/lib/rbac";
 import connectDB from "@/lib/mongodb";
 import Counselor from "@/models/CounselorSchema";
 import { ObjectId } from "mongodb";

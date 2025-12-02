@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
-
+import Interest from "./Interest.js";
+import User from "./User.js";
 const AvailableSlotSchema = new mongoose.Schema(
   {
 _id: { type: mongoose.Schema.Types.ObjectId },

@@ -3,7 +3,11 @@ import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/lib/auth.js';
 import connectMongo from '@/lib/mongodb';
 import QuizResult from '@/models/QuizResult';
+import QuizQuestion from '@/models/QuizQuestion';
+import Course from '@/models/Course';
+import Stream from '@/models/Stream';
 import { v4 as uuidv4 } from 'uuid';
+import mongoose from 'mongoose';
 
 // POST /api/quizzes/results - Save quiz results
 export async function POST(request) {
@@ -11,8 +15,11 @@ export async function POST(request) {
     const session = await getServerSession(authOptions);
     const data = await request.json();
     
+    console.log('Saving quiz results - Type:', data.quizType, 'User:', session?.user?.id);
+    
     // Validate required fields
     if (!data.quizType || !data.answers || !data.results) {
+      console.error('Missing required fields:', { quizType: !!data.quizType, answers: !!data.answers, results: !!data.results });
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -24,17 +31,33 @@ export async function POST(request) {
     // Create a unique ID for the result
     const resultId = uuidv4();
     
+    // Normalize answers to match AnswerSchema
+    // Accepts either object map { [questionId]: value } or array of {questionId, response}
+    const normalizedAnswers = Array.isArray(data.answers)
+      ? data.answers.map((a) => ({
+          questionId: a.questionId,
+          response: a.response ?? (a.optionKeys || a.value ? { optionKeys: a.optionKeys, value: a.value } : undefined),
+          isCorrect: typeof a.isCorrect === 'boolean' ? a.isCorrect : undefined,
+        }))
+      : Object.entries(data.answers || {}).map(([questionId, val]) => ({
+          questionId,
+          response: typeof val === 'number' ? { value: val } : Array.isArray(val) ? { optionKeys: val } : val,
+        }));
+
     // Create new quiz result
     const quizResult = new QuizResult({
+      _id: new mongoose.Types.ObjectId(),
       resultId,
       userId: session?.user?.id || null, // Associate with user if logged in
       quizType: data.quizType,
-      answers: data.answers,
+      answers: normalizedAnswers,
       results: data.results,
       createdAt: new Date(),
     });
     
     await quizResult.save();
+    
+    console.log('Quiz result saved successfully:', resultId);
     
     return NextResponse.json({ resultId });
   } catch (error) {

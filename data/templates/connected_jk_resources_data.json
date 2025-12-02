@@ -1,0 +1,484 @@
+[
+  {
+    "_id": "5f88eb439139ca92f3420f6b",
+    "title": "NEET Biology Preparation Guide",
+    "type": "ebook",
+    "subject": "Biology",
+    "link": "https://resources.jk.edu.in/biology/neet-biology-preparation-guide.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [
+      "UG"
+    ],
+    "relatedCourses": [
+      "a08fc2b3c5d5c5e624949459",
+      "e5e6538b336431b1ce9c73a0"
+    ],
+    "relatedCareers": [
+      "12db2f8985e2b9cc94edebd8",
+      "68be8899dc7634c7ceb287d1"
+    ],
+    "relatedDegreePrograms": [
+      "86e5dda9311341b35e29818c",
+      "9abf73b58b7c504e88d6b3a1"
+    ],
+    "language": "en",
+    "tags": [
+      "Biology",
+      "ebook"
+    ],
+    "author": "NTA",
+    "addedBy": null,
+    "source": "Educational Content Team",
+    "sourceUrl": "https://resources.jk.edu.in",
+    "views": 1023,
+    "downloads": 146,
+    "ratings": [
+      {
+        "userId": "847e827689369377ef80a5e2",
+        "rating": 4.678740461584602,
+        "comment": "Very helpful resource"
+      },
+      {
+        "userId": "9bd38a3a81df3bb8d2d25a43",
+        "rating": 4.877733750881155,
+        "comment": "Good content"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-19T03:51:14.637998",
+    "createdAt": "2025-09-19T03:51:14.638009",
+    "updatedAt": "2025-09-19T03:51:14.638011"
+  },
+  {
+    "_id": "ffb126e1caeace10efe658cc",
+    "title": "JEE Main Mathematics Formula Sheet",
+    "type": "ebook",
+    "subject": "Mathematics",
+    "link": "https://resources.jk.edu.in/mathematics/jee-main-mathematics-formula-sheet.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [
+      "UG"
+    ],
+    "relatedCourses": [
+      "08e92fed29eb30c673385e48",
+      "d78ecfb22447c04fc7e236a0"
+    ],
+    "relatedCareers": [
+      "8291123c46834cbbfed601aa",
+      "1b617ae5f3406e40e30f88fd"
+    ],
+    "relatedDegreePrograms": [
+      "5031f18c3e9b5a716c4a1421",
+      "df2831f28f197ea9162333ef"
+    ],
+    "language": "en",
+    "tags": [
+      "Mathematics",
+      "ebook"
+    ],
+    "author": "NTA",
+    "addedBy": null,
+    "source": "Educational Content Team",
+    "sourceUrl": "https://resources.jk.edu.in",
+    "views": 3865,
+    "downloads": 1418,
+    "ratings": [
+      {
+        "userId": "1696d72ee5e364e34b1ee319",
+        "rating": 4.814446008691667,
+        "comment": "Very helpful resource"
+      },
+      {
+        "userId": "23161a8f36f6f7973f2ef00f",
+        "rating": 4.095137639077143,
+        "comment": "Good content"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-19T03:51:14.638048",
+    "createdAt": "2025-09-19T03:51:14.638051",
+    "updatedAt": "2025-09-19T03:51:14.638053"
+  },
+  {
+    "_id": "95dd491e391070f70533f758",
+    "title": "UPSC Prelims General Studies Paper 1",
+    "type": "ebook",
+    "subject": "General Studies",
+    "link": "https://resources.jk.edu.in/general-studies/upsc-prelims-general-studies-paper-1.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [
+      "UG",
+      "PG"
+    ],
+    "relatedCourses": [
+      "53e15b7f6bd07938855c484f",
+      "c929ef9b6a59cf98be8defb7"
+    ],
+    "relatedCareers": [
+      "769f5cbe4d6a4875d499805c"
+    ],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "General Studies",
+      "ebook"
+    ],
+    "author": "UPSC",
+    "addedBy": null,
+    "source": "Educational Content Team",
+    "sourceUrl": "https://resources.jk.edu.in",
+    "views": 4674,
+    "downloads": 904,
+    "ratings": [
+      {
+        "userId": "8e67adbd495a80305be522cd",
+        "rating": 3.6505627023994394,
+        "comment": "Very helpful resource"
+      },
+      {
+        "userId": "70f6100c49e86932016a2bab",
+        "rating": 4.454205708003784,
+        "comment": "Good content"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-19T03:51:14.638074",
+    "createdAt": "2025-09-19T03:51:14.638077",
+    "updatedAt": "2025-09-19T03:51:14.638079"
+  },
+  {
+    "_id": "f3ca339a2c8740ec6f9d5b2b",
+    "title": "12th Class Physics Video Lectures",
+    "type": "video",
+    "subject": "Physics",
+    "link": "https://resources.jk.edu.in/physics/12th-class-physics-video-lectures.pdf",
+    "fileUrl": "",
+    "fileType": "mp4",
+    "coverageDegrees": [
+      "UG"
+    ],
+    "relatedCourses": [
+      "f050e1c615deafdca2b24fbb",
+      "d78ecfb22447c04fc7e236a0"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9",
+      "1b617ae5f3406e40e30f88fd"
+    ],
+    "relatedDegreePrograms": [
+      "5031f18c3e9b5a716c4a1421",
+      "df2831f28f197ea9162333ef"
+    ],
+    "language": "en",
+    "tags": [
+      "Physics",
+      "video"
+    ],
+    "author": "Subject Experts",
+    "addedBy": null,
+    "source": "Educational Content Team",
+    "sourceUrl": "https://resources.jk.edu.in",
+    "views": 3032,
+    "downloads": 1066,
+    "ratings": [
+      {
+        "userId": "71de8e18c36aa09c805cc2e9",
+        "rating": 4.846782484577502,
+        "comment": "Very helpful resource"
+      },
+      {
+        "userId": "fed90c723f57ae32aba85a16",
+        "rating": 4.87612276377393,
+        "comment": "Good content"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-19T03:51:14.638101",
+    "createdAt": "2025-09-19T03:51:14.638103",
+    "updatedAt": "2025-09-19T03:51:14.638105"
+  },
+  {
+    "_id": "91c071b2315318c087f08b16",
+    "title": "English Grammar and Composition",
+    "type": "ebook",
+    "subject": "English",
+    "link": "https://resources.jk.edu.in/english/english-grammar-and-composition.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [
+      "UG"
+    ],
+    "relatedCourses": [
+      "53e15b7f6bd07938855c484f"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9"
+    ],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "English",
+      "ebook"
+    ],
+    "author": "Subject Experts",
+    "addedBy": null,
+    "source": "Educational Content Team",
+    "sourceUrl": "https://resources.jk.edu.in",
+    "views": 4235,
+    "downloads": 1355,
+    "ratings": [
+      {
+        "userId": "3b42edb4e4585668d6401e60",
+        "rating": 4.403943016841819,
+        "comment": "Very helpful resource"
+      },
+      {
+        "userId": "76ed9e9c9df91992330cb251",
+        "rating": 4.522504360582684,
+        "comment": "Good content"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-19T03:51:14.638123",
+    "createdAt": "2025-09-19T03:51:14.638125",
+    "updatedAt": "2025-09-19T03:51:14.638127"
+  },
+  {
+    "_id": "a98f6b7943838e1cc1c851f3",
+    "title": "Computer Science Programming Tutorial",
+    "type": "course",
+    "subject": "Computer Science",
+    "link": "https://resources.jk.edu.in/computer-science/computer-science-programming-tutorial.pdf",
+    "fileUrl": "",
+    "fileType": "web",
+    "coverageDegrees": [
+      "UG"
+    ],
+    "relatedCourses": [
+      "da738166793bea393adba344",
+      "08e92fed29eb30c673385e48"
+    ],
+    "relatedCareers": [
+      "8291123c46834cbbfed601aa"
+    ],
+    "relatedDegreePrograms": [
+      "5031f18c3e9b5a716c4a1421",
+      "df2831f28f197ea9162333ef"
+    ],
+    "language": "en",
+    "tags": [
+      "Computer Science",
+      "course"
+    ],
+    "author": "Subject Experts",
+    "addedBy": null,
+    "source": "Educational Content Team",
+    "sourceUrl": "https://resources.jk.edu.in",
+    "views": 970,
+    "downloads": 1469,
+    "ratings": [
+      {
+        "userId": "845eacf1994f6f53209ad59b",
+        "rating": 4.946390997354744,
+        "comment": "Very helpful resource"
+      },
+      {
+        "userId": "0b5ba950c1cf5db0c07168ec",
+        "rating": 4.130447979370521,
+        "comment": "Good content"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-19T03:51:14.638146",
+    "createdAt": "2025-09-19T03:51:14.638148",
+    "updatedAt": "2025-09-19T03:51:14.638150"
+  },
+  {
+    "_id": "5c69e15f82e82368a0023eae",
+    "title": "Chemistry Lab Manual Class 12",
+    "type": "ebook",
+    "subject": "Chemistry",
+    "link": "https://resources.jk.edu.in/chemistry/chemistry-lab-manual-class-12.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [
+      "UG"
+    ],
+    "relatedCourses": [
+      "2ec46385429c0d4fba106645"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9"
+    ],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Chemistry",
+      "ebook"
+    ],
+    "author": "J&K Education Department",
+    "addedBy": null,
+    "source": "Educational Content Team",
+    "sourceUrl": "https://resources.jk.edu.in",
+    "views": 4193,
+    "downloads": 490,
+    "ratings": [
+      {
+        "userId": "65098c4370bced858c8ae18b",
+        "rating": 4.990116816561992,
+        "comment": "Very helpful resource"
+      },
+      {
+        "userId": "41afc2fe7561c91812fd7c55",
+        "rating": 4.650045417780223,
+        "comment": "Good content"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-19T03:51:14.638166",
+    "createdAt": "2025-09-19T03:51:14.638169",
+    "updatedAt": "2025-09-19T03:51:14.638171"
+  },
+  {
+    "_id": "bd3692edfa8d03ab33611dab",
+    "title": "Business Studies Case Studies",
+    "type": "ebook",
+    "subject": "Business Studies",
+    "link": "https://resources.jk.edu.in/business-studies/business-studies-case-studies.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [
+      "UG"
+    ],
+    "relatedCourses": [
+      "7008ba3afc748a080c84b2c7",
+      "6fc630e9b801c2e8cfe009c2"
+    ],
+    "relatedCareers": [
+      "3c058c9213130b37c0cd00c5"
+    ],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Business Studies",
+      "ebook"
+    ],
+    "author": "Subject Experts",
+    "addedBy": null,
+    "source": "Educational Content Team",
+    "sourceUrl": "https://resources.jk.edu.in",
+    "views": 3750,
+    "downloads": 1480,
+    "ratings": [
+      {
+        "userId": "f5cf400b5df377623b185f4e",
+        "rating": 4.859615534851517,
+        "comment": "Very helpful resource"
+      },
+      {
+        "userId": "230f76b80ee1a14df5e8c827",
+        "rating": 4.9745305449757256,
+        "comment": "Good content"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-19T03:51:14.638188",
+    "createdAt": "2025-09-19T03:51:14.638190",
+    "updatedAt": "2025-09-19T03:51:14.638192"
+  },
+  {
+    "_id": "6a2636159615f75b2ec39db7",
+    "title": "History of Jammu and Kashmir",
+    "type": "ebook",
+    "subject": "History",
+    "link": "https://resources.jk.edu.in/history/history-of-jammu-and-kashmir.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [
+      "UG"
+    ],
+    "relatedCourses": [
+      "c929ef9b6a59cf98be8defb7"
+    ],
+    "relatedCareers": [
+      "6b02240a31894997b953d0b9"
+    ],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "History",
+      "ebook"
+    ],
+    "author": "Subject Experts",
+    "addedBy": null,
+    "source": "Educational Content Team",
+    "sourceUrl": "https://resources.jk.edu.in",
+    "views": 1787,
+    "downloads": 1172,
+    "ratings": [
+      {
+        "userId": "46d3fd78e649615fb0abf339",
+        "rating": 3.8876670757248073,
+        "comment": "Very helpful resource"
+      },
+      {
+        "userId": "f2b3cc325a5b005cddec0d29",
+        "rating": 4.298572371930337,
+        "comment": "Good content"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-19T03:51:14.638208",
+    "createdAt": "2025-09-19T03:51:14.638210",
+    "updatedAt": "2025-09-19T03:51:14.638212"
+  },
+  {
+    "_id": "d3ccf5b4d19a0ca108783e11",
+    "title": "Agriculture Techniques in Himalayan Region",
+    "type": "ebook",
+    "subject": "Agriculture",
+    "link": "https://resources.jk.edu.in/agriculture/agriculture-techniques-in-himalayan-region.pdf",
+    "fileUrl": "",
+    "fileType": "pdf",
+    "coverageDegrees": [
+      "UG"
+    ],
+    "relatedCourses": [
+      "cb04fa68bca6c36d1262d307"
+    ],
+    "relatedCareers": [
+      "142fab7fdb252fa00be61d22"
+    ],
+    "relatedDegreePrograms": [],
+    "language": "en",
+    "tags": [
+      "Agriculture",
+      "ebook"
+    ],
+    "author": "Subject Experts",
+    "addedBy": null,
+    "source": "Educational Content Team",
+    "sourceUrl": "https://resources.jk.edu.in",
+    "views": 2807,
+    "downloads": 1781,
+    "ratings": [
+      {
+        "userId": "adf743c58ae07a4e2c941f73",
+        "rating": 3.5344255216806646,
+        "comment": "Very helpful resource"
+      },
+      {
+        "userId": "b72e3dd0f7f9f209dea3501a",
+        "rating": 4.927962059508038,
+        "comment": "Good content"
+      }
+    ],
+    "isActive": true,
+    "lastUpdated": "2025-09-19T03:51:14.638230",
+    "createdAt": "2025-09-19T03:51:14.638232",
+    "updatedAt": "2025-09-19T03:51:14.638234"
+  }
+]

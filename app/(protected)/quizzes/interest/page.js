@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from 'react-hot-toast';
+import { QuizProgressIndicator } from '@/components/quiz';
+import { fadeInUp } from '@/lib/animations';
 
 export default function InterestQuizPage() {
   const router = useRouter();
@@ -11,95 +13,51 @@ export default function InterestQuizPage() {
   const [answers, setAnswers] = useState({});
   const [loading, setLoading] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
-  
-  // Sample interest assessment questions
-  const questions = [
-    {
-      id: 'q1',
-      text: 'I enjoy solving complex mathematical problems.',
-      category: 'STEM',
-    },
-    {
-      id: 'q2',
-      text: 'I like to write stories or essays.',
-      category: 'Arts',
-    },
-    {
-      id: 'q3',
-      text: 'I am interested in how the human body works.',
-      category: 'Medical',
-    },
-    {
-      id: 'q4',
-      text: 'I enjoy building or fixing things.',
-      category: 'Engineering',
-    },
-    {
-      id: 'q5',
-      text: 'I like to help others with their problems.',
-      category: 'Social',
-    },
-    {
-      id: 'q6',
-      text: 'I enjoy analyzing data and finding patterns.',
-      category: 'STEM',
-    },
-    {
-      id: 'q7',
-      text: 'I am interested in different cultures and languages.',
-      category: 'Humanities',
-    },
-    {
-      id: 'q8',
-      text: 'I like to debate and discuss different viewpoints.',
-      category: 'Law',
-    },
-    {
-      id: 'q9',
-      text: 'I enjoy creating visual art or design.',
-      category: 'Arts',
-    },
-    {
-      id: 'q10',
-      text: 'I am interested in how businesses operate.',
-      category: 'Business',
-    },
-    {
-      id: 'q11',
-      text: 'I enjoy working with computers and technology.',
-      category: 'Technology',
-    },
-    {
-      id: 'q12',
-      text: 'I like to study living organisms and ecosystems.',
-      category: 'Science',
-    },
-    {
-      id: 'q13',
-      text: 'I enjoy teaching or explaining concepts to others.',
-      category: 'Education',
-    },
-    {
-      id: 'q14',
-      text: 'I am interested in psychology and human behavior.',
-      category: 'Social',
-    },
-    {
-      id: 'q15',
-      text: 'I like to plan and organize events or projects.',
-      category: 'Management',
-    },
-  ];
+  const [questions, setQuestions] = useState([]);
+  const [error, setError] = useState(null);
+  const [isLoadingQuestions, setIsLoadingQuestions] = useState(false);
+
+  const loadQuestions = async () => {
+    setIsLoadingQuestions(true);
+    setError(null);
+    try {
+      const res = await fetch('/api/quizzes/questions?category=interest');
+      if (!res.ok) throw new Error('Failed to load questions');
+      const data = await res.json();
+      if (!data || data.length === 0) {
+        throw new Error('No questions available');
+      }
+      setQuestions(data);
+    } catch (e) {
+      console.error('Error loading questions:', e);
+      setError(e.message || 'Unable to load quiz questions');
+      toast.error('Failed to load quiz questions. Please try again.');
+    } finally {
+      setIsLoadingQuestions(false);
+    }
+  };
+
+  useEffect(() => {
+    if (!quizStarted) return;
+    loadQuestions();
+  }, [quizStarted]);
+
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   const handleAnswer = (value) => {
+    setSelectedAnswer(value);
     const updatedAnswers = { ...answers, [questions[currentQuestion].id]: value };
     setAnswers(updatedAnswers);
     
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      submitQuiz(updatedAnswers);
-    }
+    // Show feedback briefly before moving to next question
+    setTimeout(() => {
+      setSelectedAnswer(null);
+      if (currentQuestion < questions.length - 1) {
+        setCurrentQuestion(currentQuestion + 1);
+      } else {
+        submitQuiz(updatedAnswers);
+      }
+    }, 600);
   };
 
   const submitQuiz = async (finalAnswers) => {
@@ -198,58 +156,106 @@ export default function InterestQuizPage() {
           <div className="bg-white shadow-xl rounded-lg overflow-hidden">
             <div className="bg-gradient-to-r from-pink-500 to-rose-600 h-2"></div>
             <div className="px-6 py-8">
-              <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold text-gray-900">Interest Assessment</h1>
-                <span className="text-sm font-medium text-gray-500">
-                  Question {currentQuestion + 1} of {questions.length}
-                </span>
+              <div className="mb-6">
+                <h1 className="text-2xl font-bold text-gray-900 mb-6">Interest Assessment</h1>
+                
+                {/* Progress indicator */}
+                {questions.length > 0 && (
+                  <QuizProgressIndicator
+                    answered={currentQuestion + 1}
+                    total={questions.length}
+                    variant="detailed"
+                    color="pink"
+                    showPercentage={true}
+                    animated={true}
+                  />
+                )}
               </div>
               
-              {/* Progress bar */}
-              <div className="w-full bg-gray-200 rounded-full h-2.5 mb-8">
-                <div 
-                  className="bg-rose-600 h-2.5 rounded-full transition-all duration-300 ease-out" 
-                  style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
-                ></div>
-              </div>
-              
-              {loading ? (
+              {error ? (
+                <div className="flex flex-col items-center justify-center py-12">
+                  <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Unable to Load Questions</h3>
+                  <p className="text-gray-600 mb-6 text-center max-w-md">{error}</p>
+                  <button
+                    onClick={loadQuestions}
+                    disabled={isLoadingQuestions}
+                    className="px-6 py-3 bg-rose-600 text-white font-medium rounded-md hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isLoadingQuestions ? 'Loading...' : 'Try Again'}
+                  </button>
+                </div>
+              ) : loading || isLoadingQuestions || questions.length === 0 ? (
                 <div className="flex flex-col items-center justify-center py-12">
                   <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-rose-600"></div>
-                  <p className="mt-4 text-gray-600">Processing your results...</p>
+                  <p className="mt-4 text-gray-600">
+                    {loading ? 'Processing your results...' : 'Loading questions...'}
+                  </p>
                 </div>
               ) : (
-                <>
-                  <div className="mb-8">
-                    <h2 className="text-xl font-medium text-gray-900 mb-4">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentQuestion}
+                    variants={fadeInUp}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    transition={{ duration: 0.3 }}
+                    className="mb-8"
+                  >
+                    <h2 className="text-lg font-medium text-gray-900 mb-4">
                       {questions[currentQuestion].text}
                     </h2>
                     
                     <div className="grid grid-cols-5 gap-3 mt-6">
-                      {[1, 2, 3, 4, 5].map((value) => (
-                        <motion.button
-                          key={value}
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          onClick={() => handleAnswer(value)}
-                          className={`py-3 rounded-md font-medium transition-colors
-                            ${value === 1 ? 'bg-gray-100 text-gray-800 hover:bg-gray-200' : ''}
-                            ${value === 2 ? 'bg-gray-200 text-gray-800 hover:bg-gray-300' : ''}
-                            ${value === 3 ? 'bg-gray-300 text-gray-800 hover:bg-gray-400' : ''}
-                            ${value === 4 ? 'bg-rose-100 text-rose-800 hover:bg-rose-200' : ''}
-                            ${value === 5 ? 'bg-rose-500 text-white hover:bg-rose-600' : ''}
-                          `}
-                        >
-                          {value === 1 && 'Strongly Disagree'}
-                          {value === 2 && 'Disagree'}
-                          {value === 3 && 'Neutral'}
-                          {value === 4 && 'Agree'}
-                          {value === 5 && 'Strongly Agree'}
-                        </motion.button>
-                      ))}
-                    </div>
-                  </div>
-                </>
+                      {[1, 2, 3, 4, 5].map((value) => {
+                        const isSelected = selectedAnswer === value;
+                        return (
+                          <motion.button
+                            key={value}
+                            whileHover={!selectedAnswer ? { scale: 1.05 } : {}}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={() => !selectedAnswer && handleAnswer(value)}
+                            disabled={selectedAnswer !== null}
+                            className={`relative py-3 rounded-md font-medium transition-all duration-300
+                              ${isSelected ? 'ring-2 ring-rose-500 ring-offset-2' : ''}
+                              ${value === 1 ? 'bg-gray-100 text-gray-800 hover:bg-gray-200' : ''}
+                              ${value === 2 ? 'bg-gray-200 text-gray-800 hover:bg-gray-300' : ''}
+                              ${value === 3 ? 'bg-gray-300 text-gray-800 hover:bg-gray-400' : ''}
+                              ${value === 4 ? 'bg-rose-100 text-rose-800 hover:bg-rose-200' : ''}
+                              ${value === 5 ? 'bg-rose-500 text-white hover:bg-rose-600' : ''}
+                              ${selectedAnswer && !isSelected ? 'opacity-50' : ''}
+                            `}
+                          >
+                            <span className="block">
+                              {value === 1 && 'Strongly Disagree'}
+                              {value === 2 && 'Disagree'}
+                              {value === 3 && 'Neutral'}
+                              {value === 4 && 'Agree'}
+                              {value === 5 && 'Strongly Agree'}
+                            </span>
+                            {/* Checkmark animation */}
+                            {isSelected && (
+                              <motion.div
+                                initial={{ scale: 0, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                transition={{ duration: 0.3, type: 'spring' }}
+                                className="absolute top-1 right-1"
+                              >
+                                <svg className="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                </svg>
+                              </motion.div>
+                            )}
+                          </motion.button>
+                        );
+                      })}
+                    </div>                  </motion.div>
+                </AnimatePresence>
               )}
             </div>
           </div>

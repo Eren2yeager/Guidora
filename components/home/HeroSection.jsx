@@ -2,15 +2,20 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer, scaleOnHover } from '@/lib/animations';
+import { Button } from '@/components/ui';
 
 export default function HeroSection() {
   const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Implement search functionality
-    console.log('Searching for:', searchQuery);
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
+    }
   };
 
   const features = [
@@ -53,119 +58,123 @@ export default function HeroSection() {
   ];
 
   return (
-    <div className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-12">
+    <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <motion.div 
+          className="lg:grid lg:grid-cols-12 lg:gap-12"
+          variants={staggerContainer}
+          initial="initial"
+          animate="animate"
+        >
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              variants={fadeInUp}
               className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
             >
               <span className="block">Make smart</span>
-              <span className="block text-blue-600">education decisions</span>
+              <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                education decisions
+              </span>
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+              variants={fadeInUp}
+              className="mt-4 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
             >
-              Compare and apply for the best courses and universities.
+              Your personalized career and education advisor. Discover courses, colleges, and career paths tailored to your interests.
             </motion.p>
             
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              variants={fadeInUp}
               className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
             >
-              <form onSubmit={handleSearch} className="mt-3 flex flex-col sm:flex-row gap-3">
+              <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3">
                 <div className="relative flex-grow">
                   <input
                     id="search"
                     type="text"
-                    className="block w-full px-4 py-3 text-base rounded-lg placeholder-gray-500 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 border border-gray-300"
-                    placeholder="Search courses, colleges, or programs"
+                    className="block w-full px-4 py-3.5 text-base text-gray-900 rounded-xl placeholder-gray-400 shadow-lg shadow-gray-200/50 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 border border-gray-200 bg-white/80 backdrop-blur-sm"
+                    placeholder="Search courses, colleges, or careers..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
-                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
                     <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                   </div>
                 </div>
-                <button
-                  type="submit"
-                  className="px-6 py-3 text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200 flex-shrink-0 shadow-md"
-                >
+                <Button type="submit" variant="primary" size="lg" gradient>
                   Search
-                </button>
+                </Button>
               </form>
-              <p className="text-sm text-gray-500 mt-3">
-                Over 500+ universities and 1000+ courses available
-              </p>
+              {/* <p className="text-sm text-gray-500 mt-4">
+                <span className="font-medium text-blue-600">500+</span> colleges • 
+                <span className="font-medium text-blue-600 ml-1">1000+</span> courses • 
+                <span className="font-medium text-blue-600 ml-1">100+</span> scholarships
+              </p> */}
             </motion.div>
           </div>
           
-          <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="relative mx-auto w-full h-full rounded-2xl shadow-2xl overflow-hidden"
-              style={{ minHeight: '500px' }}
-            >
-              <div className="relative block w-full h-full bg-white rounded-2xl">
+          <motion.div 
+            variants={fadeInUp}
+            className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
+          >
+            <div className="relative mx-auto w-full">
+              {/* Decorative gradient behind image */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur-2xl opacity-20" />
+              <motion.div 
+                className="relative rounded-2xl shadow-2xl overflow-hidden"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
                 <img
-                  className="w-full h-full object-cover"
-                  style={{ minHeight: '500px' }}
+                  className="w-full h-auto object-cover aspect-[4/3]"
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
-                  alt="Students studying"
+                  alt="Students studying together"
                 />
-              </div>
-            </motion.div>
-          </div>
-        </div>
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              </motion.div>
+            </div>
+          </motion.div>
+        </motion.div>
         
-        <div className="mt-16">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Feature cards */}
+        <motion.div 
+          className="mt-20"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                className="pt-6"
+                variants={fadeInUp}
+                className="group"
               >
-                <div className="flow-root bg-gray-50 rounded-xl px-6 pb-8 hover:shadow-lg transition-shadow duration-200">
-                  <div className="-mt-6">
-                    <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-blue-500 rounded-xl shadow-lg">
-                        <div className="h-6 w-6 text-white">{feature.icon}</div>
-                      </span>
-                    </div>
-                    <h3 className="mt-8 text-lg font-semibold text-gray-900 tracking-tight">{feature.title}</h3>
-                    <p className="mt-2 text-base text-gray-600">{feature.description}</p>
+                <motion.div 
+                  className="relative bg-white rounded-2xl p-6 shadow-lg shadow-gray-200/50 border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
+                  whileHover={{ y: -4 }}
+                >
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-300">
+                    <div className="h-6 w-6 text-white">{feature.icon}</div>
                   </div>
-                </div>
+                  <h3 className="mt-4 text-lg font-semibold text-gray-900">{feature.title}</h3>
+                  <p className="mt-2 text-sm text-gray-600">{feature.description}</p>
+                </motion.div>
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
         
-        <div className="mt-16 flex justify-center">
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-8 opacity-75">
-            <img className="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
-            <img className="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />
-            <img className="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit" />
-            <img className="h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Transistor" />
-            <img className="h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Workcation" />
-            <img className="h-12" src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg" alt="Laravel" />
-          </div>
-        </div> 
       </div>
     </div>
   );

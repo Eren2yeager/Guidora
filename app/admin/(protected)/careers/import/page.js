@@ -73,7 +73,7 @@ export default function ImportCareers() {
             type="file"
             accept=".json"
             onChange={handleFileSelect}
-            className="hidden"
+            className="hidden text-black"
             id="fileInput"
           />
           <label 

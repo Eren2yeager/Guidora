@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useSession } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -9,304 +9,461 @@ import {
   AcademicCapIcon,
   BookOpenIcon,
   BuildingLibraryIcon,
-  BriefcaseIcon,
-  DocumentTextIcon,
-  ClockIcon,
-  ChartBarIcon,
-  NewspaperIcon,
   BanknotesIcon,
-  ScaleIcon,
-  UserGroupIcon,
-  BellIcon,
-  ArrowRightIcon,
-  EllipsisHorizontalIcon
+  PencilIcon,
+  BriefcaseIcon,
+  ArrowRightOnRectangleIcon,
 } from '@heroicons/react/24/outline';
-import { StarIcon } from '@heroicons/react/24/solid';
+import { Card } from '@/components/ui';
+import { SkeletonProfile, SkeletonStats } from '@/components/ui/Skeleton';
+import { calculateProfileCompletion } from '@/lib/utils';
+
+import OnboardingChecklist from '@/components/dashboard/OnboardingChecklist';
+import RoadmapWidget from '@/components/dashboard/RoadmapWidget';
+import ProgressWidget from '@/components/dashboard/ProgressWidget';
+import Timeline from '@/components/dashboard/Timeline';
+import ChatInterface from '@/components/dashboard/ChatInterface';
 
 export default function DashboardPage() {
   const { data: session, status } = useSession();
   const router = useRouter();
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [notifications, setNotifications] = useState(3);
+  const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
+  // Fetch user data when session is available
   useEffect(() => {
     if (status === 'unauthenticated') {
       router.push('/auth/signin');
+    } else if (session?.user) {
+      fetchUserData();
     }
-  }, [status, router]);
+  }, [status, router, session]);
 
-  if (status === 'loading') {
+  // Fetch dashboard data
+  const fetchUserData = async () => {
+    try {
+      setLoading(true);
+      
+      // Fetch profile first
+      const profileRes = await fetch('/api/user/profile');
+      let profileData = {};
+      
+      if (profileRes.ok) {
+        profileData = await profileRes.json();
+      } else {
+        console.error('Failed to fetch profile', profileRes.status);
+      }
+      
+      // Fetch saved items
+      let savedItemsData = null;
+      try {
+        const savedItemsRes = await fetch('/api/user/saved-items');
+        if (savedItemsRes.ok) {
+          savedItemsData = await savedItemsRes.json();
+        }
+      } catch (err) {
+        console.warn('Saved items API not available');
+      }
+
+      // Try to fetch dashboard data, but don't fail if it's not available
+      let dashboardData = { stats: {}, profileCompletion: 0 };
+      try {
+        const dashboardRes = await fetch('/api/dashboard');
+        if (dashboardRes.ok) {
+          dashboardData = await dashboardRes.json();
+        }
+      } catch (dashErr) {
+        console.warn('Dashboard API not available, using defaults');
+      }
+      
+      // Combine the data properly
+      setUserData({
+        name: profileData.name || session?.user?.name,
+        email: profileData.email || session?.user?.email,
+        ...profileData,
+        stats: {
+          savedColleges: savedItemsData?.stats?.colleges || 0,
+          enrolledCourses: savedItemsData?.stats?.courses || 0,
+          savedScholarships: savedItemsData?.stats?.scholarships || 0,
+          completedQuizzes: dashboardData.stats?.completedQuizzes || 0,
+        },
+        profileCompletion: dashboardData.profileCompletion || 0,
+        savedColleges: dashboardData.savedColleges || [],
+        enrolledCourses: dashboardData.enrolledCourses || [],
+        savedScholarships: dashboardData.savedScholarships || [],
+        savedItems: savedItemsData ? {
+          ...savedItemsData,
+          total: savedItemsData.stats?.total || 0,
+        } : null,
+      });
+    } catch (err) {
+      console.error('Error fetching data:', err);
+      // Set basic user data from session even if API fails
+      setUserData({
+        name: session?.user?.name,
+        email: session?.user?.email,
+        stats: {},
+        profileCompletion: 0,
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (status === 'loading' || loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-pink-500 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Loading your dashboard...</p>
+      <div className="min-h-screen bg-linear-to-br from-gray-50 via-blue-50/30 to-indigo-50/50 py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-8">
+          <SkeletonProfile />
+          <SkeletonStats count={4} />
         </div>
       </div>
     );
   }
 
   if (!session) {
-    return null; // This will prevent flash of content before redirect
+    return null;
   }
 
-  const dashboardItems = [
-    {
-      title: 'My Courses',
-      description: 'View and manage your enrolled courses',
-      icon: BookOpenIcon,
-      color: 'bg-blue-500',
-      link: '/courses',
-      category: 'learning'
-    },
-    {
-      title: 'Saved Colleges',
-      description: 'Colleges you have saved for later',
-      icon: BuildingLibraryIcon,
-      color: 'bg-green-500',
-      link: '/colleges',
-      category: 'education'
-    },
-    {
-      title: 'Career Paths',
-      description: 'Explore potential career paths',
-      icon: BriefcaseIcon,
-      color: 'bg-purple-500',
-      link: '/careers',
-      category: 'career'
-    },
-    {
-      title: 'Programs',
-      description: 'View recommended programs',
-      icon: DocumentTextIcon,
-      color: 'bg-yellow-500',
-      link: '/programs',
-      category: 'education'
-    },
-    {
-      title: 'Recent Activity',
-      description: 'Your recent activity on the platform',
-      icon: ClockIcon,
-      color: 'bg-pink-500',
-      link: '#',
-      category: 'activity'
-    },
-    {
-      title: 'Articles',
-      description: 'Educational articles and resources',
-      icon: NewspaperIcon,
-      color: 'bg-indigo-500',
-      link: '/articles',
-      category: 'resources'
-    },
-    {
-      title: 'Scholarships',
-      description: 'Find scholarships matching your profile',
-      icon: BanknotesIcon,
-      color: 'bg-emerald-500',
-      link: '/scholarships',
-      category: 'financial'
-    },
-    {
-      title: 'Compare Colleges',
-      description: 'Compare different educational institutions',
-      icon: ScaleIcon,
-      color: 'bg-amber-500',
-      link: '/compare',
-      category: 'education'
-    },
-    {
-      title: 'Performance',
-      description: 'Track your academic performance',
-      icon: ChartBarIcon,
-      color: 'bg-red-500',
-      link: '/performance',
-      category: 'learning'
-    },
-    {
-      title: 'Community',
-      description: 'Connect with other students',
-      icon: UserGroupIcon,
-      color: 'bg-cyan-500',
-      link: '/community',
-      category: 'social'
-    },
-  ];
-  
-  const categories = [
-    { id: 'all', name: 'All' },
-    { id: 'education', name: 'Education' },
-    { id: 'learning', name: 'Learning' },
-    { id: 'career', name: 'Career' },
-    { id: 'resources', name: 'Resources' },
-    { id: 'financial', name: 'Financial' },
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-6 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 via-blue-50/30 to-indigo-50/50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header section with user info and notifications */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+        {/* Onboarding checklist */}
+        {/* <OnboardingChecklist /> */}
+
+        {/* Profile summary section */}
+        <Card
+          variant="elevated"
+          padding="lg"
+          className="mb-8 bg-linear-to-br from-white to-blue-50/30"
+          animated
+        >
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+            {/* Profile Avatar */}
+            <div className="shrink-0">
+              <div className="relative">
+                <div className="h-24 w-24 rounded-2xl bg-linear-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/30 overflow-hidden">
+                  {userData?.media?.iconUrl ? (
+                    <img 
+                      src={userData.media.iconUrl} 
+                      alt="Profile" 
+                      className="h-full w-full object-cover" 
+                    />
+                  ) : (
+                    <span className="text-white text-3xl font-bold">
+                      {userData?.name?.charAt(0) || session.user.name?.charAt(0) || 'U'}
+                    </span>
+                  )}
+                </div>
+                {/* Status indicator */}
+                <div className="absolute -bottom-1 -right-1 h-6 w-6 bg-emerald-500 rounded-full border-4 border-white shadow-sm" />
+              </div>
+            </div>
+
+            {/* Profile Info */}
+            <div className="flex-1 min-w-0">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                <div className="min-w-0">
+                  <h2 className="text-2xl font-bold text-gray-900 truncate">
+                    {userData?.name || session.user.name || 'User'}
+                  </h2>
+                  <p className="text-gray-600 text-sm mt-1 truncate">
+                    {userData?.email || session.user.email || ''}
+                  </p>
+                  {userData?.academicBackground?.stream && (
+                    <div className="mt-2 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-700">
+                      {userData.academicBackground.stream} • Class {userData.academicBackground.currentClass || '?'}
+                    </div>
+                  )}
+                </div>
+                <div className="flex gap-2">
+                  <Link 
+                    href="/profile" 
+                    className="shrink-0 inline-flex items-center px-4 py-2.5 border border-transparent text-sm font-medium rounded-xl shadow-sm text-white bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200"
+                  >
+                    <PencilIcon className="h-4 w-4 mr-2" />
+                    Edit Profile
+                  </Link>
+                  <button
+                    onClick={() => signOut({ callbackUrl: '/auth/signin' })}
+                    className="shrink-0 inline-flex items-center px-4 py-2.5 border border-gray-300 text-sm font-medium rounded-xl shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-200"
+                    title="Sign Out"
+                  >
+                    <ArrowRightOnRectangleIcon className="h-4 w-4 mr-2" />
+                    Sign Out
+                  </button>
+                </div>
+              </div>
+              
+              {/* Profile completion */}
+              <div className="mt-6">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-semibold text-gray-700">Profile Completion</span>
+                    {calculateProfileCompletion(userData) === 100 && (
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-100 text-emerald-700">
+                        Complete
+                      </span>
+                    )}
+                  </div>
+                  <span className="text-lg font-bold bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    {calculateProfileCompletion(userData) || userData?.profileCompletion || 0}%
+                  </span>
+                </div>
+                <div className="relative w-full bg-gray-200 rounded-full h-3 overflow-hidden shadow-inner">
+                  <motion.div 
+                    className="absolute inset-y-0 left-0 bg-linear-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-full shadow-sm"
+                    initial={{ width: 0 }}
+                    animate={{ width: `${calculateProfileCompletion(userData) || userData?.profileCompletion || 0}%` }}
+                    transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
+                  />
+                  {/* Shimmer effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent"
+                    initial={{ x: '-100%' }}
+                    animate={{ x: '200%' }}
+                    transition={{ duration: 1.5, ease: 'easeInOut', delay: 0.5 }}
+                  />
+                </div>
+                {calculateProfileCompletion(userData) < 100 && (
+                  <p className="text-xs text-gray-500 mt-2">
+                    Complete your profile to get better recommendations
+                  </p>
+                )}
+              </div>
+              
+              {/* Quick stats */}
+              <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <motion.div 
+                  className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                  whileHover={{ y: -2 }}
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <BuildingLibraryIcon className="h-4 w-4 text-blue-500" />
+                    <p className="text-xs font-medium text-gray-500">Colleges</p>
+                  </div>
+                  <p className="text-2xl font-bold text-gray-900">
+                    {userData?.stats?.savedColleges || 0}
+                  </p>
+                </motion.div>
+                <motion.div 
+                  className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                  whileHover={{ y: -2 }}
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <BookOpenIcon className="h-4 w-4 text-purple-500" />
+                    <p className="text-xs font-medium text-gray-500">Courses</p>
+                  </div>
+                  <p className="text-2xl font-bold text-gray-900">
+                    {userData?.stats?.enrolledCourses || 0}
+                  </p>
+                </motion.div>
+                <motion.div 
+                  className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                  whileHover={{ y: -2 }}
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <BanknotesIcon className="h-4 w-4 text-emerald-500" />
+                    <p className="text-xs font-medium text-gray-500">Scholarships</p>
+                  </div>
+                  <p className="text-2xl font-bold text-gray-900">
+                    {userData?.stats?.savedScholarships || 0}
+                  </p>
+                </motion.div>
+                <motion.div 
+                  className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                  whileHover={{ y: -2 }}
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <AcademicCapIcon className="h-4 w-4 text-amber-500" />
+                    <p className="text-xs font-medium text-gray-500">Quizzes</p>
+                  </div>
+                  <p className="text-2xl font-bold text-gray-900">
+                    {userData?.stats?.completedQuizzes || 0}
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* Saved Items Section */}
+        {userData?.savedItems && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-8"
           >
-            <h1 className="text-3xl font-bold text-gray-900">Welcome, {session.user.name || 'Student'}!</h1>
-            <p className="mt-2 text-lg text-gray-600">Here's your educational journey at a glance</p>
-          </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="mt-4 md:mt-0 flex items-center space-x-4"
-          >
-            <div className="relative">
-              <button className="p-2 bg-white rounded-full shadow-md hover:bg-gray-50 transition-colors">
-                <BellIcon className="h-6 w-6 text-gray-600" />
-                {notifications > 0 && (
-                  <span className="absolute top-0 right-0 h-5 w-5 bg-red-500 rounded-full flex items-center justify-center text-xs text-white">
-                    {notifications}
-                  </span>
-                )}
-              </button>
-            </div>
-            <Link href="/profile" className="flex items-center space-x-2 bg-white px-4 py-2 rounded-full shadow-md hover:bg-gray-50 transition-colors">
-              <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
-                {session.user.image ? (
-                  <img src={session.user.image} alt="Profile" className="h-8 w-8 rounded-full" />
-                ) : (
-                  <span className="text-blue-500 font-medium">{session.user.name?.charAt(0) || 'U'}</span>
-                )}
-              </div>
-              <span className="text-sm font-medium text-gray-700">My Profile</span>
-            </Link>
-          </motion.div>
-        </div>
-
-        {/* Category filters */}
-        <motion.div 
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-8 overflow-x-auto pb-2"
-        >
-          <div className="flex space-x-2">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${activeCategory === category.id ? 'bg-blue-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-100'}`}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Dashboard items grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {dashboardItems
-            .filter(item => activeCategory === 'all' || item.category === activeCategory)
-            .map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100"
-            >
-              <div className="flex items-center p-4">
-                <div className={`p-3 rounded-lg ${item.color} text-white mr-4`}>
-                  <item.icon className="h-6 w-6" />
+            <Card variant="elevated" padding="lg">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-2">
+                  <BookOpenIcon className="h-6 w-6 text-blue-600" />
+                  <h3 className="text-xl font-bold text-gray-900">Saved Items</h3>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-                  <p className="text-sm text-gray-500">{item.description}</p>
-                </div>
-              </div>
-              <div className="px-4 pb-4 pt-0 flex justify-between items-center">
                 <Link 
-                  href={item.link} 
-                  className="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center"
+                  href="/saved"
+                  className="text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors"
                 >
-                  View details
-                  <ArrowRightIcon className="h-4 w-4 ml-1" />
+                  View All →
                 </Link>
-                <button className="p-1.5 rounded-full hover:bg-gray-100 transition-colors">
-                  <StarIcon className="h-5 w-5 text-gray-400 hover:text-yellow-500" />
-                </button>
               </div>
-            </motion.div>
-          ))}
+
+              {userData.savedItems.total === 0 ? (
+                <div className="text-center py-8">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-4">
+                    <BookOpenIcon className="h-8 w-8 text-gray-400" />
+                  </div>
+                  <p className="text-gray-600 mb-4">No saved items yet</p>
+                  <Link 
+                    href="/courses"
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                  >
+                    Explore Courses
+                  </Link>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {/* Courses */}
+                  {userData.savedItems.courses?.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                        <BookOpenIcon className="h-4 w-4 text-blue-500" />
+                        Courses ({userData.savedItems.courses.length})
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {userData.savedItems.courses.slice(0, 3).map((course) => (
+                          <Link
+                            key={course._id}
+                            href={`/courses/${course.code}`}
+                            className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all group"
+                          >
+                            <h5 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">
+                              {course.name}
+                            </h5>
+                            {course.code && (
+                              <p className="text-xs text-gray-500 mt-1">{course.code}</p>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Careers */}
+                  {userData.savedItems.careers?.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                        <BriefcaseIcon className="h-4 w-4 text-purple-500" />
+                        Careers ({userData.savedItems.careers.length})
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {userData.savedItems.careers.slice(0, 3).map((career) => (
+                          <Link
+                            key={career._id}
+                            href={`/careers/${career.slug}`}
+                            className="p-4 border border-gray-200 rounded-lg hover:border-purple-300 hover:shadow-md transition-all group"
+                          >
+                            <h5 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors line-clamp-1">
+                              {career.name}
+                            </h5>
+                            {career.description && (
+                              <p className="text-xs text-gray-600 mt-1 line-clamp-2">{career.description}</p>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Programs */}
+                  {userData.savedItems.programs?.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                        <AcademicCapIcon className="h-4 w-4 text-indigo-500" />
+                        Programs ({userData.savedItems.programs.length})
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {userData.savedItems.programs.slice(0, 3).map((program) => (
+                          <Link
+                            key={program._id}
+                            href={`/programs/${program._id}`}
+                            className="p-4 border border-gray-200 rounded-lg hover:border-indigo-300 hover:shadow-md transition-all group"
+                          >
+                            <h5 className="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors line-clamp-1">
+                              {program.courseId?.name || program.name}
+                            </h5>
+                            {program.collegeId?.name && (
+                              <p className="text-xs text-gray-600 mt-1 line-clamp-1">{program.collegeId.name}</p>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Scholarships */}
+                  {userData.savedItems.scholarships?.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                        <BanknotesIcon className="h-4 w-4 text-emerald-500" />
+                        Scholarships ({userData.savedItems.scholarships.length})
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {userData.savedItems.scholarships.slice(0, 3).map((scholarship) => (
+                          <Link
+                            key={scholarship._id}
+                            href={`/scholarships/${scholarship._id}`}
+                            className="p-4 border border-gray-200 rounded-lg hover:border-emerald-300 hover:shadow-md transition-all group"
+                          >
+                            <h5 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors line-clamp-1">
+                              {scholarship.name || scholarship.title}
+                            </h5>
+                            {scholarship.amount && (
+                              <p className="text-xs text-gray-600 mt-1">₹{scholarship.amount.toLocaleString()}</p>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </Card>
+          </motion.div>
+        )}
+
+        {/* Roadmap & Progress row */}
+        <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <RoadmapWidget />
+          <ProgressWidget />
         </div>
-        
-        {/* Recent Activity Section */}
+
+        {/* Timeline Widget */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-10"
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-8"
         >
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">Recent Activity</h2>
-            <button className="text-sm font-medium text-blue-600 hover:text-blue-800 flex items-center">
-              View all <ArrowRightIcon className="h-4 w-4 ml-1" />
-            </button>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-md p-6">
-            {/* Activity items */}
-            <div className="space-y-6">
-              {/* Activity item 1 */}
-              <div className="flex items-start">
-                <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
-                  <DocumentTextIcon className="h-5 w-5 text-blue-600" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-900">You completed <span className="font-semibold">Career Assessment Test</span></p>
-                  <p className="text-sm text-gray-500">Your results suggest interests in Technology and Design</p>
-                  <p className="mt-1 text-xs text-gray-400">2 hours ago</p>
-                </div>
-                <button className="ml-4 bg-gray-50 hover:bg-gray-100 rounded-full p-1.5">
-                  <EllipsisHorizontalIcon className="h-5 w-5 text-gray-400" />
-                </button>
-              </div>
-
-              {/* Activity item 2 */}
-              <div className="flex items-start">
-                <div className="flex-shrink-0 h-10 w-10 rounded-full bg-green-100 flex items-center justify-center mr-4">
-                  <BuildingLibraryIcon className="h-5 w-5 text-green-600" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-900">You saved <span className="font-semibold">Delhi Technical University</span> to your list</p>
-                  <p className="text-sm text-gray-500">Compare with other saved colleges</p>
-                  <p className="mt-1 text-xs text-gray-400">Yesterday</p>
-                </div>
-                <button className="ml-4 bg-gray-50 hover:bg-gray-100 rounded-full p-1.5">
-                  <EllipsisHorizontalIcon className="h-5 w-5 text-gray-400" />
-                </button>
-              </div>
-
-              {/* Activity item 3 */}
-              <div className="flex items-start">
-                <div className="flex-shrink-0 h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
-                  <AcademicCapIcon className="h-5 w-5 text-purple-600" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-900">You updated your <span className="font-semibold">Educational Profile</span></p>
-                  <p className="text-sm text-gray-500">Profile completion increased to 85%</p>
-                  <p className="mt-1 text-xs text-gray-400">3 days ago</p>
-                </div>
-                <button className="ml-4 bg-gray-50 hover:bg-gray-100 rounded-full p-1.5">
-                  <EllipsisHorizontalIcon className="h-5 w-5 text-gray-400" />
-                </button>
-              </div>
-            </div>
-          </div>
+          <Timeline limit={5} showUpcomingOnly={true} />
         </motion.div>
       </div>
+
+      {/* Chat button */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3, delay: 0.5 }}
+        onClick={() => setIsChatOpen(true)}
+        className="fixed bottom-6 right-6 bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 transition-colors z-40"
+      >
+        <AcademicCapIcon className="h-6 w-6" />
+      </motion.button>
+
+      {/* Chat interface */}
+      <ChatInterface isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
     </div>
   );
 }

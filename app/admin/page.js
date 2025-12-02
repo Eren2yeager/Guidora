@@ -5,7 +5,7 @@ import { useSession, signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { AcademicCapIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
-import { isAdminSession } from '@/lib/rbac';
+import { isAdminSession } from '@/lib/auth.js';
 
 export default function AdminLoginPage() {
   const { data: session, status } = useSession();

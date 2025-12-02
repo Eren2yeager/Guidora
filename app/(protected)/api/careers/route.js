@@ -1,9 +1,12 @@
-import { connectToDatabase } from '@/lib/mongodb';
+import connectDB from '@/lib/mongodb';
 import Career from '@/models/Career';
+import Course from '@/models/Course';
+import DegreeProgram from '@/models/DegreeProgram';
+import Exam from '@/models/Exam';
 
 export async function GET(request) {
   try {
-    await connectToDatabase();
+    await connectDB();
     const { searchParams } = new URL(request.url);
     
     // Extract query parameters
@@ -11,35 +14,44 @@ export async function GET(request) {
     const sector = searchParams.get('sector');
     const tag = searchParams.get('tag');
     const page = parseInt(searchParams.get('page') || '1');
-    const limit = parseInt(searchParams.get('limit') || '10');
+    const limit = parseInt(searchParams.get('limit') || '50');
+    
+    console.log('Careers API - Filters:', { q, sector, tag, page, limit });
     
     // Build query
     const query = { isActive: true };
     
     if (q) {
       query.$or = [
-        { title: { $regex: q, $options: 'i' } },
+        { name: { $regex: q, $options: 'i' } },
         { description: { $regex: q, $options: 'i' } },
-        { tags: { $in: [new RegExp(q, 'i')] } }
+        { skillsRequired: { $in: [new RegExp(q, 'i')] } }
       ];
     }
     
+    // Sector filter - use regex for partial matching
     if (sector) {
-      query.sectors = { $in: [sector] };
+      query.sectors = { $regex: sector, $options: 'i' };
     }
     
     if (tag) {
       query.tags = { $in: [tag] };
     }
     
-    // Execute query with pagination
+    console.log('Final query:', JSON.stringify(query, null, 2));
+    
+    // Execute query with pagination and populate related courses
     const skip = (page - 1) * limit;
     const careers = await Career.find(query)
-      .sort({ title: 1 })
+      .populate('typicalCourses', 'name slug')
+      .sort({ name: 1 })
       .skip(skip)
-      .limit(limit);
+      .limit(limit)
+      .lean();
     
     const total = await Career.countDocuments(query);
+    
+    console.log(`Found ${careers.length} careers out of ${total} total`);
     
     return Response.json({
       items: careers,

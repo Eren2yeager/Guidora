@@ -88,19 +88,29 @@ function SignInPageContent() {
       setError('');
 
       // Handle sign in with email credentials
-      const result = await signIn('EmailCredentials', {
+      console.log('Attempting sign in with:', { email, callbackUrl });
+      
+      const result = await signIn('credentials', {
         email,
         password,
         callbackUrl,
         redirect: false,
       });
 
+      console.log('SignIn result:', JSON.stringify(result, null, 2));
+
       if (result?.error) {
-        setError('Invalid email or password');
-        toast({text: "Invalid email or password"});
+        console.error('SignIn error:', result.error);
+        setError(`Authentication failed: ${result.error}`);
+        toast({text: `Authentication failed: ${result.error}`});
       } else if (result?.ok) {
+        console.log('SignIn successful, redirecting to:', callbackUrl);
         toast({text: "Signed in successfully!"});
-        router.push(callbackUrl);
+        // Force a hard redirect to ensure session is loaded
+        window.location.href = callbackUrl;
+      } else {
+        console.warn('Unexpected result:', result);
+        setError('Sign in failed. Please check console for details.');
       }
     } catch (error) {
       console.error('Sign in error:', error);

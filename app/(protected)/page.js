@@ -1,5 +1,6 @@
 import HeroSection from '@/components/home/HeroSection';
 import FeaturedCards from '@/components/home/FeaturedCards';
+import Statistics from '@/components/home/Statistics';
 import HowItWorks from '@/components/home/HowItWorks';
 import Testimonials from '@/components/home/Testimonials';
 import BlogSection from '@/components/home/BlogSection';
@@ -13,10 +14,12 @@ export default function Home() {
       {/* <Navbar /> */}
       <HeroSection />
       <FeaturedCards />
+      <Statistics />
       <HowItWorks />
       <Testimonials />
       <BlogSection />
       <CallToAction />
+      <Footer/>
     </main>
   );
 }

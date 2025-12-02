@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import connectDB from '@/lib/mongodb.js';
 import DegreeProgram from '@/models/DegreeProgram.js';
-
+import Course from '@/models/Course.js';
+import College from '@/models/College';
 export async function GET(req) {
   try {
     await connectDB();
@@ -12,8 +13,11 @@ export async function GET(req) {
     const courseId = params.get('courseId') || undefined;
     const collegeId = params.get('collegeId') || undefined;
     const medium = params.get('medium') || undefined;
-    const minCutoff = params.get('minCutoff') ? parseFloat(params.get('minCutoff')) : undefined;
-    const maxFees = params.get('maxFees') ? parseFloat(params.get('maxFees')) : undefined;
+    const minCutoffParam = params.get('minCutoff');
+    const maxFeesParam = params.get('maxFees');
+    
+    const minCutoff = minCutoffParam ? parseFloat(minCutoffParam) : undefined;
+    const maxFees = maxFeesParam ? parseFloat(maxFeesParam) : undefined;
 
     const page = Math.max(parseInt(params.get('page') || '1', 10), 1);
     const limit = Math.min(Math.max(parseInt(params.get('limit') || '20', 10), 1), 100);
@@ -24,8 +28,14 @@ export async function GET(req) {
     if (courseId) filter.courseId = courseId;
     if (collegeId) filter.collegeId = collegeId;
     if (medium) filter.medium = { $in: medium.split(',').filter(Boolean) };
-    if (!Number.isNaN(minCutoff)) filter['cutoff.lastYear'] = { $gte: minCutoff };
-    if (!Number.isNaN(maxFees)) filter['fees.tuitionPerYear'] = { $lte: maxFees };
+    if (minCutoff !== undefined && !Number.isNaN(minCutoff)) {
+      filter['cutoff.lastYear'] = { $gte: minCutoff };
+    }
+    if (maxFees !== undefined && !Number.isNaN(maxFees)) {
+      filter['fees.tuitionPerYear'] = { $lte: maxFees };
+    }
+
+    console.log('Programs API filter:', JSON.stringify(filter));
 
     const query = DegreeProgram.find(filter)
       .populate('courseId', 'name code')
@@ -36,9 +46,11 @@ export async function GET(req) {
 
     const [items, total] = await Promise.all([query, DegreeProgram.countDocuments(filter)]);
 
+    console.log(`Found ${items.length} programs, total: ${total}`);
+
     return NextResponse.json({ items, page, limit, total });
   } catch (err) {
     console.error('GET /api/programs error', err);
-    return NextResponse.json({ error: 'Failed to fetch programs' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to fetch programs', details: err.message }, { status: 500 });
   }
 }

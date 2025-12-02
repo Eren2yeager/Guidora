@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import Notification from './Notification';
-import CounselingSession from './CounselingSession'; // <-- import your session model
+// import Notification from './Notification';
+// import CounselingSession from './CounselingSession'; // <-- import your session model
 
 const CounselingBookingSchema = new mongoose.Schema({
 _id: { type: mongoose.Schema.Types.ObjectId },

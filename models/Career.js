@@ -22,8 +22,8 @@ const CareerSchema = new mongoose.Schema(
 
     description: { type: String, default: "" },
 
-    sectors: [ { type: String } ], // e.g. ["Healthcare", "IT"]
-    entryRoles: [ { type: String }], // e.g. ["Junior Developer"]
+    sectors: { type: [String], default: [] }, // e.g. ["Healthcare", "IT"]
+    entryRoles: { type: [String], default: [] }, // e.g. ["Junior Developer"]
 
     medianPayBand: {
       currency: { type: String, default: "INR" },
@@ -76,8 +76,9 @@ const CareerSchema = new mongoose.Schema(
 );
 
 // Indexes for fast lookup and search
-CareerSchema.index({ slug: 1 }, { unique: true });
-CareerSchema.index({ name: "text", description: "text", sectors: 1 });
+// CareerSchema.index({ slug: 1 }, { unique: true });
+CareerSchema.index({ name: "text", description: "text" });
+CareerSchema.index({ sectors: 1 });
 CareerSchema.index({ growthTrend: 1 });
 
 const Career =

@@ -1,0 +1,654 @@
+[
+  {
+    "_id": "ccf5abdc23ad390472ce00d1",
+    "name": "Government Medical College Srinagar",
+    "media": {
+      "iconUrl": "https://college-logos.com/gmc-srinagar.png",
+      "bannerUrl": "https://college-banners.com/gmc-srinagar-banner.jpg"
+    },
+    "code": "GMC_SRINAGAR",
+    "type": "Government",
+    "university": "9ad991e8291b48b6571ba7a2",
+    "address": {
+      "line1": "Srinagar Campus",
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "pincode": "190010"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.7973,
+        34.0837
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Kashmiri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "a08fc2b3c5d5c5e624949459",
+      "e5e6538b336431b1ce9c73a0",
+      "a90b8dc0c1187ad792071521"
+    ],
+    "streams": [],
+    "examsAccepted": [
+      "b36cbfc86c28ae15c461f14e"
+    ],
+    "collegeAdvisors": [
+      "c5b4d173efb8e7cbff7dabc4"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0194-2402724",
+      "email": "principal@gmcsrinagar.ac.in",
+      "website": "https://www.gmcsrinagar.ac.in"
+    },
+    "meta": {
+      "rank": 6,
+      "establishedYear": 1958
+    },
+    "placement": {
+      "averagePackage": 800000,
+      "highestPackage": 2500000,
+      "placementRate": 95
+    },
+    "feesRange": "₹50,000 - ₹1,50,000",
+    "interestTags": [],
+    "isActive": true,
+    "source": "Government of Jammu and Kashmir - Higher Education Department",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.536178",
+    "createdAt": "2025-09-19T03:49:25.536198",
+    "updatedAt": "2025-09-19T03:49:25.536202"
+  },
+  {
+    "_id": "4b59a7406f2341fc0348c711",
+    "name": "Government Medical College Jammu",
+    "media": {
+      "iconUrl": "https://college-logos.com/gmc-jammu.png",
+      "bannerUrl": "https://college-banners.com/gmc-jammu-banner.jpg"
+    },
+    "code": "GMC_JAMMU",
+    "type": "Government",
+    "university": "0871cfc9938f3b6eba0d1c52",
+    "address": {
+      "line1": "Jammu Campus",
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "pincode": "180001"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.857,
+        32.7266
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Dogri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "a08fc2b3c5d5c5e624949459",
+      "e5e6538b336431b1ce9c73a0",
+      "a90b8dc0c1187ad792071521"
+    ],
+    "streams": [],
+    "examsAccepted": [
+      "b36cbfc86c28ae15c461f14e"
+    ],
+    "collegeAdvisors": [
+      "28536a934b61b6e26cbec5f5"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2457430",
+      "email": "principal@gmcjammu.ac.in",
+      "website": "https://www.gmcjammu.ac.in"
+    },
+    "meta": {
+      "rank": 7,
+      "establishedYear": 1988
+    },
+    "placement": {
+      "averagePackage": 800000,
+      "highestPackage": 2500000,
+      "placementRate": 95
+    },
+    "feesRange": "₹50,000 - ₹1,50,000",
+    "interestTags": [],
+    "isActive": true,
+    "source": "Government of Jammu and Kashmir - Higher Education Department",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.536255",
+    "createdAt": "2025-09-19T03:49:25.536262",
+    "updatedAt": "2025-09-19T03:49:25.536266"
+  },
+  {
+    "_id": "6f03b15f404852d057b0a505",
+    "name": "Government Medical College Baramulla",
+    "media": {
+      "iconUrl": "https://college-logos.com/gmc-baramulla.png",
+      "bannerUrl": "https://college-banners.com/gmc-baramulla-banner.jpg"
+    },
+    "code": "GMC_BARAMULLA",
+    "type": "Government",
+    "university": "9ad991e8291b48b6571ba7a2",
+    "address": {
+      "line1": "Baramulla Campus",
+      "district": "Baramulla",
+      "state": "Jammu and Kashmir",
+      "pincode": "189918"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        75.227110724954,
+        34.69328777703933
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Dogri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "a08fc2b3c5d5c5e624949459",
+      "e5e6538b336431b1ce9c73a0",
+      "a90b8dc0c1187ad792071521"
+    ],
+    "streams": [],
+    "examsAccepted": [
+      "b36cbfc86c28ae15c461f14e"
+    ],
+    "collegeAdvisors": [
+      "28536a934b61b6e26cbec5f5"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2455741",
+      "email": "principal@gmcbaramulla.ac.in",
+      "website": "https://www.gmcbaramulla.ac.in"
+    },
+    "meta": {
+      "rank": 5,
+      "establishedYear": 1962
+    },
+    "placement": {
+      "averagePackage": 800000,
+      "highestPackage": 2500000,
+      "placementRate": 95
+    },
+    "feesRange": "₹50,000 - ₹1,50,000",
+    "interestTags": [],
+    "isActive": true,
+    "source": "Government of Jammu and Kashmir - Higher Education Department",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.536317",
+    "createdAt": "2025-09-19T03:49:25.536321",
+    "updatedAt": "2025-09-19T03:49:25.536324"
+  },
+  {
+    "_id": "993b1134d46bef16ff7775c1",
+    "name": "Government Medical College Doda",
+    "media": {
+      "iconUrl": "https://college-logos.com/gmc-doda.png",
+      "bannerUrl": "https://college-banners.com/gmc-doda-banner.jpg"
+    },
+    "code": "GMC_DODA",
+    "type": "Government",
+    "university": "0871cfc9938f3b6eba0d1c52",
+    "address": {
+      "line1": "Doda Campus",
+      "district": "Doda",
+      "state": "Jammu and Kashmir",
+      "pincode": "186731"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        75.07660723584232,
+        33.50972004303418
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Dogri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "a08fc2b3c5d5c5e624949459",
+      "e5e6538b336431b1ce9c73a0",
+      "a90b8dc0c1187ad792071521"
+    ],
+    "streams": [],
+    "examsAccepted": [
+      "b36cbfc86c28ae15c461f14e"
+    ],
+    "collegeAdvisors": [
+      "9a0cf6dfec57f4fa08cbb138"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2459124",
+      "email": "principal@gmcdoda.ac.in",
+      "website": "https://www.gmcdoda.ac.in"
+    },
+    "meta": {
+      "rank": 6,
+      "establishedYear": 2002
+    },
+    "placement": {
+      "averagePackage": 800000,
+      "highestPackage": 2500000,
+      "placementRate": 95
+    },
+    "feesRange": "₹50,000 - ₹1,50,000",
+    "interestTags": [],
+    "isActive": true,
+    "source": "Government of Jammu and Kashmir - Higher Education Department",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.536362",
+    "createdAt": "2025-09-19T03:49:25.536365",
+    "updatedAt": "2025-09-19T03:49:25.536369"
+  },
+  {
+    "_id": "2835c2b6801dc8a07ba29c9f",
+    "name": "National Institute of Technology Srinagar",
+    "media": {
+      "iconUrl": "https://college-logos.com/nit-srinagar.png",
+      "bannerUrl": "https://college-banners.com/nit-srinagar-banner.jpg"
+    },
+    "code": "NIT_SRINAGAR",
+    "type": "Government",
+    "university": null,
+    "address": {
+      "line1": "Main Campus",
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "pincode": "190010"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.7973,
+        34.0837
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Kashmiri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "08e92fed29eb30c673385e48",
+      "d78ecfb22447c04fc7e236a0",
+      "24819f4aea4fb49a2147541e"
+    ],
+    "streams": [],
+    "examsAccepted": [
+      "475e6649ed77f7a019f7f384",
+      "8d872f779e31d629790cb31a"
+    ],
+    "collegeAdvisors": [
+      "28536a934b61b6e26cbec5f5"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0194-2409897",
+      "email": "principal@nitsrinagar.ac.in",
+      "website": "https://www.nitsrinagar.ac.in"
+    },
+    "meta": {
+      "rank": 11,
+      "establishedYear": 2000
+    },
+    "placement": {
+      "averagePackage": 600000,
+      "highestPackage": 1800000,
+      "placementRate": 80
+    },
+    "feesRange": "₹30,000 - ₹80,000",
+    "interestTags": [],
+    "isActive": true,
+    "source": "Government of Jammu and Kashmir - Higher Education Department",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.536456",
+    "createdAt": "2025-09-19T03:49:25.536465",
+    "updatedAt": "2025-09-19T03:49:25.536469"
+  },
+  {
+    "_id": "356ca8ae808960b499accf43",
+    "name": "Government College of Engineering & Technology Jammu",
+    "media": {
+      "iconUrl": "https://college-logos.com/gcet-jammu.png",
+      "bannerUrl": "https://college-banners.com/gcet-jammu-banner.jpg"
+    },
+    "code": "GCET_JAMMU",
+    "type": "Government",
+    "university": "0871cfc9938f3b6eba0d1c52",
+    "address": {
+      "line1": "Jammu Campus",
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "pincode": "180001"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.857,
+        32.7266
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Dogri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "08e92fed29eb30c673385e48",
+      "d78ecfb22447c04fc7e236a0",
+      "24819f4aea4fb49a2147541e"
+    ],
+    "streams": [],
+    "examsAccepted": [
+      "475e6649ed77f7a019f7f384",
+      "8d872f779e31d629790cb31a"
+    ],
+    "collegeAdvisors": [
+      "c358a8407fc468620c2539ef"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2452617",
+      "email": "principal@gcetjammu.ac.in",
+      "website": "https://www.gcetjammu.ac.in"
+    },
+    "meta": {
+      "rank": 9,
+      "establishedYear": 1975
+    },
+    "placement": {
+      "averagePackage": 600000,
+      "highestPackage": 1800000,
+      "placementRate": 80
+    },
+    "feesRange": "₹30,000 - ₹80,000",
+    "interestTags": [],
+    "isActive": true,
+    "source": "Government of Jammu and Kashmir - Higher Education Department",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.536517",
+    "createdAt": "2025-09-19T03:49:25.536521",
+    "updatedAt": "2025-09-19T03:49:25.536524"
+  },
+  {
+    "_id": "00818fcd1856701c895346b8",
+    "name": "Sri Pratap College Srinagar",
+    "media": {
+      "iconUrl": "https://college-logos.com/spc-srinagar.png",
+      "bannerUrl": "https://college-banners.com/spc-srinagar-banner.jpg"
+    },
+    "code": "SPC_SRINAGAR",
+    "type": "Government",
+    "university": "a474afe1f17c7900847c271d",
+    "address": {
+      "line1": "Srinagar Campus",
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "pincode": "190010"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.7973,
+        34.0837
+      ]
+    },
+    "facilities": {
+      "hostel": false,
+      "lab": false,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Kashmiri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "53e15b7f6bd07938855c484f",
+      "c929ef9b6a59cf98be8defb7",
+      "ef128c87c346ce12ebc5a8c4",
+      "7008ba3afc748a080c84b2c7"
+    ],
+    "streams": [],
+    "examsAccepted": [
+      "606d66bd554a9b241b60c6bf"
+    ],
+    "collegeAdvisors": [
+      "c358a8407fc468620c2539ef"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0194-2401540",
+      "email": "principal@spcsrinagar.ac.in",
+      "website": "https://www.spcsrinagar.ac.in"
+    },
+    "meta": {
+      "rank": 29,
+      "establishedYear": 1966
+    },
+    "placement": {
+      "averagePackage": 300000,
+      "highestPackage": 800000,
+      "placementRate": 65
+    },
+    "feesRange": "₹8,000 - ₹25,000",
+    "interestTags": [],
+    "isActive": true,
+    "source": "Government of Jammu and Kashmir - Higher Education Department",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.536567",
+    "createdAt": "2025-09-19T03:49:25.536570",
+    "updatedAt": "2025-09-19T03:49:25.536573"
+  },
+  {
+    "_id": "bcc109aad65f6f16e5a04137",
+    "name": "Government MAM College Jammu",
+    "media": {
+      "iconUrl": "https://college-logos.com/mam-college-jammu.png",
+      "bannerUrl": "https://college-banners.com/mam-college-jammu-banner.jpg"
+    },
+    "code": "MAM_COLLEGE_JAMMU",
+    "type": "Government",
+    "university": "50b03e6c44eb735aa728fc6e",
+    "address": {
+      "line1": "Jammu Campus",
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "pincode": "180001"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.857,
+        32.7266
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Dogri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "53e15b7f6bd07938855c484f",
+      "c929ef9b6a59cf98be8defb7",
+      "ef128c87c346ce12ebc5a8c4",
+      "7008ba3afc748a080c84b2c7"
+    ],
+    "streams": [],
+    "examsAccepted": [
+      "606d66bd554a9b241b60c6bf"
+    ],
+    "collegeAdvisors": [
+      "91155fdfb008a4f8a1090c15"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2451280",
+      "email": "principal@mamcollegejammu.ac.in",
+      "website": "https://www.mamcollegejammu.ac.in"
+    },
+    "meta": {
+      "rank": 17,
+      "establishedYear": 1999
+    },
+    "placement": {
+      "averagePackage": 300000,
+      "highestPackage": 800000,
+      "placementRate": 65
+    },
+    "feesRange": "₹8,000 - ₹25,000",
+    "interestTags": [],
+    "isActive": true,
+    "source": "Government of Jammu and Kashmir - Higher Education Department",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.536608",
+    "createdAt": "2025-09-19T03:49:25.536612",
+    "updatedAt": "2025-09-19T03:49:25.536616"
+  },
+  {
+    "_id": "2bb004ee0e5ae44e7332a0cf",
+    "name": "GGM Science College Jammu",
+    "media": {
+      "iconUrl": "https://college-logos.com/ggm-science-jammu.png",
+      "bannerUrl": "https://college-banners.com/ggm-science-jammu-banner.jpg"
+    },
+    "code": "GGM_SCIENCE_JAMMU",
+    "type": "Government",
+    "university": "50b03e6c44eb735aa728fc6e",
+    "address": {
+      "line1": "Jammu Campus",
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "pincode": "180001"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.857,
+        32.7266
+      ]
+    },
+    "facilities": {
+      "hostel": false,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Dogri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "f050e1c615deafdca2b24fbb",
+      "2ec46385429c0d4fba106645",
+      "932f0bd394f1c82b420bd216"
+    ],
+    "streams": [],
+    "examsAccepted": [
+      "606d66bd554a9b241b60c6bf"
+    ],
+    "collegeAdvisors": [
+      "6ddc505ab2dae3ad0d0c7e18"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2453390",
+      "email": "principal@ggmsciencejammu.ac.in",
+      "website": "https://www.ggmsciencejammu.ac.in"
+    },
+    "meta": {
+      "rank": 10,
+      "establishedYear": 1929
+    },
+    "placement": {
+      "averagePackage": 300000,
+      "highestPackage": 800000,
+      "placementRate": 65
+    },
+    "feesRange": "₹8,000 - ₹25,000",
+    "interestTags": [],
+    "isActive": true,
+    "source": "Government of Jammu and Kashmir - Higher Education Department",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.536650",
+    "createdAt": "2025-09-19T03:49:25.536653",
+    "updatedAt": "2025-09-19T03:49:25.536656"
+  }
+]

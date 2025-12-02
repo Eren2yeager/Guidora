@@ -34,7 +34,7 @@ async function readMaybeJSONorCSV(dir, base) {
 }
 
 async function main() {
-  const mongoUri = process.env.MONGODB_URI;
+  const mongoUri = "mongodb://127.0.0.1:27017/educationalSAdvisorDb";
   if (!mongoUri) throw new Error('MONGODB_URI not set');
   await mongoose.connect(mongoUri, { bufferCommands: false });
 

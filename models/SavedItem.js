@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const SavedItemSchema = new mongoose.Schema({
   _id: { type: mongoose.Schema.Types.ObjectId },
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true, index: true },
-  itemType: { type: String, enum: ['Course','Program','College','Scholarship','TimelineEvent'], required: true },
+  itemType: { type: String, enum: ['Course','Career','Program','College','Scholarship','TimelineEvent'], required: true },
   itemId: { type: mongoose.Schema.Types.ObjectId, required: true , refPath: 'itemType' },
 }, { timestamps: true });
 

@@ -1,0 +1,1297 @@
+[
+  {
+    "_id": "86e5dda9311341b35e29818c",
+    "collegeId": "ccf5abdc23ad390472ce00d1",
+    "courseId": "a08fc2b3c5d5c5e624949459",
+    "code": "MBBS_GMC_SRINAGAR",
+    "name": "MBBS at Government Medical College Srinagar",
+    "media": {
+      "iconUrl": "https://program-icons.com/mbbs.png",
+      "bannerUrl": "https://program-banners.com/mbbs-gmc-srinagar.jpg"
+    },
+    "durationYears": 5.5,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "intakeMonths": [
+      8
+    ],
+    "seats": 180,
+    "cutoff": {
+      "lastYear": 85.2,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 85.2
+        },
+        {
+          "category": "OBC",
+          "cutoff": 82.2
+        },
+        {
+          "category": "SC",
+          "cutoff": 77.2
+        },
+        {
+          "category": "ST",
+          "cutoff": 73.2
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 50000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 50,
+      "requiredSubjects": [
+        "Physics",
+        "Chemistry",
+        "Biology"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Gmc-Srinagar Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.545526",
+    "createdAt": "2025-09-19T03:49:25.545545",
+    "updatedAt": "2025-09-19T03:49:25.545549"
+  },
+  {
+    "_id": "9abf73b58b7c504e88d6b3a1",
+    "collegeId": "4b59a7406f2341fc0348c711",
+    "courseId": "a08fc2b3c5d5c5e624949459",
+    "code": "MBBS_GMC_JAMMU",
+    "name": "MBBS at Government Medical College Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/mbbs.png",
+      "bannerUrl": "https://program-banners.com/mbbs-gmc-jammu.jpg"
+    },
+    "durationYears": 5.5,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      8
+    ],
+    "seats": 180,
+    "cutoff": {
+      "lastYear": 83.8,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 83.8
+        },
+        {
+          "category": "OBC",
+          "cutoff": 80.8
+        },
+        {
+          "category": "SC",
+          "cutoff": 75.8
+        },
+        {
+          "category": "ST",
+          "cutoff": 71.8
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 50000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 50,
+      "requiredSubjects": [
+        "Physics",
+        "Chemistry",
+        "Biology"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Gmc-Jammu Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.545598",
+    "createdAt": "2025-09-19T03:49:25.545607",
+    "updatedAt": "2025-09-19T03:49:25.545612"
+  },
+  {
+    "_id": "c7a664535e9769623dee53fc",
+    "collegeId": "ccf5abdc23ad390472ce00d1",
+    "courseId": "e5e6538b336431b1ce9c73a0",
+    "code": "BDS_GMC_SRINAGAR",
+    "name": "BDS at Government Medical College Srinagar",
+    "media": {
+      "iconUrl": "https://program-icons.com/bds.png",
+      "bannerUrl": "https://program-banners.com/bds-gmc-srinagar.jpg"
+    },
+    "durationYears": 5,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "intakeMonths": [
+      8
+    ],
+    "seats": 100,
+    "cutoff": {
+      "lastYear": 80.5,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 80.5
+        },
+        {
+          "category": "OBC",
+          "cutoff": 77.5
+        },
+        {
+          "category": "SC",
+          "cutoff": 72.5
+        },
+        {
+          "category": "ST",
+          "cutoff": 68.5
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 45000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 50,
+      "requiredSubjects": [
+        "Physics",
+        "Chemistry",
+        "Biology"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Gmc-Srinagar Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.545650",
+    "createdAt": "2025-09-19T03:49:25.545655",
+    "updatedAt": "2025-09-19T03:49:25.545658"
+  },
+  {
+    "_id": "5031f18c3e9b5a716c4a1421",
+    "collegeId": "2835c2b6801dc8a07ba29c9f",
+    "courseId": "08e92fed29eb30c673385e48",
+    "code": "BTECH_CSE_NIT_SRINAGAR",
+    "name": "B.Tech CSE at NIT Srinagar",
+    "media": {
+      "iconUrl": "https://program-icons.com/btech-cse.png",
+      "bannerUrl": "https://program-banners.com/btech-cse-nit-srinagar.jpg"
+    },
+    "durationYears": 4,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "intakeMonths": [
+      7
+    ],
+    "seats": 120,
+    "cutoff": {
+      "lastYear": 95.2,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 95.2
+        },
+        {
+          "category": "OBC",
+          "cutoff": 92.2
+        },
+        {
+          "category": "SC",
+          "cutoff": 87.2
+        },
+        {
+          "category": "ST",
+          "cutoff": 83.2
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 85000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "Physics",
+        "Chemistry",
+        "Mathematics"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Nit-Srinagar Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.545688",
+    "createdAt": "2025-09-19T03:49:25.545692",
+    "updatedAt": "2025-09-19T03:49:25.545698"
+  },
+  {
+    "_id": "df2831f28f197ea9162333ef",
+    "collegeId": "2835c2b6801dc8a07ba29c9f",
+    "courseId": "d78ecfb22447c04fc7e236a0",
+    "code": "BTECH_ME_NIT_SRINAGAR",
+    "name": "B.Tech Mechanical at NIT Srinagar",
+    "media": {
+      "iconUrl": "https://program-icons.com/btech-me.png",
+      "bannerUrl": "https://program-banners.com/btech-me-nit-srinagar.jpg"
+    },
+    "durationYears": 4,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "intakeMonths": [
+      7
+    ],
+    "seats": 85,
+    "cutoff": {
+      "lastYear": 92.1,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 92.1
+        },
+        {
+          "category": "OBC",
+          "cutoff": 89.1
+        },
+        {
+          "category": "SC",
+          "cutoff": 84.1
+        },
+        {
+          "category": "ST",
+          "cutoff": 80.1
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 85000,
+      "hostelPerYear": 20000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "Physics",
+        "Chemistry",
+        "Mathematics"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Nit-Srinagar Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.545748",
+    "createdAt": "2025-09-19T03:49:25.545755",
+    "updatedAt": "2025-09-19T03:49:25.545758"
+  },
+  {
+    "_id": "57248c8b010f44fab0d63e98",
+    "collegeId": "356ca8ae808960b499accf43",
+    "courseId": "08e92fed29eb30c673385e48",
+    "code": "BTECH_CSE_GCET_JAMMU",
+    "name": "B.Tech CSE at GCET Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/btech-cse.png",
+      "bannerUrl": "https://program-banners.com/btech-cse-gcet-jammu.jpg"
+    },
+    "durationYears": 4,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7
+    ],
+    "seats": 60,
+    "cutoff": {
+      "lastYear": 78.5,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 78.5
+        },
+        {
+          "category": "OBC",
+          "cutoff": 75.5
+        },
+        {
+          "category": "SC",
+          "cutoff": 70.5
+        },
+        {
+          "category": "ST",
+          "cutoff": 66.5
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 30000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "Physics",
+        "Chemistry",
+        "Mathematics"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Gcet-Jammu Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.546172",
+    "createdAt": "2025-09-19T03:49:25.546187",
+    "updatedAt": "2025-09-19T03:49:25.546193"
+  },
+  {
+    "_id": "30fd0711aab39afb3a148c48",
+    "collegeId": "356ca8ae808960b499accf43",
+    "courseId": "24819f4aea4fb49a2147541e",
+    "code": "BTECH_CE_GCET_JAMMU",
+    "name": "B.Tech Civil at GCET Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/btech-ce.png",
+      "bannerUrl": "https://program-banners.com/btech-ce-gcet-jammu.jpg"
+    },
+    "durationYears": 4,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7
+    ],
+    "seats": 60,
+    "cutoff": {
+      "lastYear": 75.2,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 75.2
+        },
+        {
+          "category": "OBC",
+          "cutoff": 72.2
+        },
+        {
+          "category": "SC",
+          "cutoff": 67.2
+        },
+        {
+          "category": "ST",
+          "cutoff": 63.2
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 30000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": [
+        "Physics",
+        "Chemistry",
+        "Mathematics"
+      ]
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Gcet-Jammu Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.546248",
+    "createdAt": "2025-09-19T03:49:25.546253",
+    "updatedAt": "2025-09-19T03:49:25.546257"
+  },
+  {
+    "_id": "37aa881d1344c672b1fa4c96",
+    "collegeId": "00818fcd1856701c895346b8",
+    "courseId": "53e15b7f6bd07938855c484f",
+    "code": "BA_ENGLISH_SPC_SRINAGAR",
+    "name": "BA English at Sri Pratap College",
+    "media": {
+      "iconUrl": "https://program-icons.com/ba-english.png",
+      "bannerUrl": "https://program-banners.com/ba-english-spc-srinagar.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "intakeMonths": [
+      7
+    ],
+    "seats": 120,
+    "cutoff": {
+      "lastYear": 72.5,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 72.5
+        },
+        {
+          "category": "OBC",
+          "cutoff": 69.5
+        },
+        {
+          "category": "SC",
+          "cutoff": 64.5
+        },
+        {
+          "category": "ST",
+          "cutoff": 60.5
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 12000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Spc-Srinagar Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.546292",
+    "createdAt": "2025-09-19T03:49:25.546300",
+    "updatedAt": "2025-09-19T03:49:25.546306"
+  },
+  {
+    "_id": "01c216f759e09f2c31e21916",
+    "collegeId": "00818fcd1856701c895346b8",
+    "courseId": "c929ef9b6a59cf98be8defb7",
+    "code": "BA_HISTORY_SPC_SRINAGAR",
+    "name": "BA History at Sri Pratap College",
+    "media": {
+      "iconUrl": "https://program-icons.com/ba-history.png",
+      "bannerUrl": "https://program-banners.com/ba-history-spc-srinagar.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "intakeMonths": [
+      7
+    ],
+    "seats": 100,
+    "cutoff": {
+      "lastYear": 68.3,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 68.3
+        },
+        {
+          "category": "OBC",
+          "cutoff": 65.3
+        },
+        {
+          "category": "SC",
+          "cutoff": 60.3
+        },
+        {
+          "category": "ST",
+          "cutoff": 56.3
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 12000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Spc-Srinagar Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.546353",
+    "createdAt": "2025-09-19T03:49:25.546359",
+    "updatedAt": "2025-09-19T03:49:25.546363"
+  },
+  {
+    "_id": "d3743cfad32e08b18419dc04",
+    "collegeId": "00818fcd1856701c895346b8",
+    "courseId": "7008ba3afc748a080c84b2c7",
+    "code": "B_COM_SPC_SRINAGAR",
+    "name": "B.Com at Sri Pratap College",
+    "media": {
+      "iconUrl": "https://program-icons.com/b-com.png",
+      "bannerUrl": "https://program-banners.com/b-com-spc-srinagar.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "intakeMonths": [
+      7
+    ],
+    "seats": 100,
+    "cutoff": {
+      "lastYear": 70.1,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 70.1
+        },
+        {
+          "category": "OBC",
+          "cutoff": 67.1
+        },
+        {
+          "category": "SC",
+          "cutoff": 62.099999999999994
+        },
+        {
+          "category": "ST",
+          "cutoff": 58.099999999999994
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 14000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Spc-Srinagar Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.546625",
+    "createdAt": "2025-09-19T03:49:25.546639",
+    "updatedAt": "2025-09-19T03:49:25.546646"
+  },
+  {
+    "_id": "c5f696bb1f0ff51346d6807c",
+    "collegeId": "bcc109aad65f6f16e5a04137",
+    "courseId": "53e15b7f6bd07938855c484f",
+    "code": "BA_ENGLISH_MAM_COLLEGE_JAMMU",
+    "name": "BA English at MAM College Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/ba-english.png",
+      "bannerUrl": "https://program-banners.com/ba-english-mam-college-jammu.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7
+    ],
+    "seats": 150,
+    "cutoff": {
+      "lastYear": 69.8,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 69.8
+        },
+        {
+          "category": "OBC",
+          "cutoff": 66.8
+        },
+        {
+          "category": "SC",
+          "cutoff": 61.8
+        },
+        {
+          "category": "ST",
+          "cutoff": 57.8
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 12000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Mam-College-Jammu Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.546695",
+    "createdAt": "2025-09-19T03:49:25.546702",
+    "updatedAt": "2025-09-19T03:49:25.546707"
+  },
+  {
+    "_id": "4e3e505332b4a86d5455110f",
+    "collegeId": "bcc109aad65f6f16e5a04137",
+    "courseId": "7008ba3afc748a080c84b2c7",
+    "code": "B_COM_MAM_COLLEGE_JAMMU",
+    "name": "B.Com at MAM College Jammu",
+    "media": {
+      "iconUrl": "https://program-icons.com/b-com.png",
+      "bannerUrl": "https://program-banners.com/b-com-mam-college-jammu.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7
+    ],
+    "seats": 180,
+    "cutoff": {
+      "lastYear": 67.2,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 67.2
+        },
+        {
+          "category": "OBC",
+          "cutoff": 64.2
+        },
+        {
+          "category": "SC",
+          "cutoff": 59.2
+        },
+        {
+          "category": "ST",
+          "cutoff": 55.2
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 14000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Mam-College-Jammu Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.546739",
+    "createdAt": "2025-09-19T03:49:25.546744",
+    "updatedAt": "2025-09-19T03:49:25.546747"
+  },
+  {
+    "_id": "e21180c455f5451a6e697a92",
+    "collegeId": "2bb004ee0e5ae44e7332a0cf",
+    "courseId": "f050e1c615deafdca2b24fbb",
+    "code": "BSC_PHYSICS_GGM_SCIENCE_JAMMU",
+    "name": "B.Sc Physics at GGM Science College",
+    "media": {
+      "iconUrl": "https://program-icons.com/bsc-physics.png",
+      "bannerUrl": "https://program-banners.com/bsc-physics-ggm-science-jammu.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7
+    ],
+    "seats": 60,
+    "cutoff": {
+      "lastYear": 74.2,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 74.2
+        },
+        {
+          "category": "OBC",
+          "cutoff": 71.2
+        },
+        {
+          "category": "SC",
+          "cutoff": 66.2
+        },
+        {
+          "category": "ST",
+          "cutoff": 62.2
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 16000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Ggm-Science-Jammu Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.546788",
+    "createdAt": "2025-09-19T03:49:25.546796",
+    "updatedAt": "2025-09-19T03:49:25.546804"
+  },
+  {
+    "_id": "fc56e0a9a1b6da5e360dcab1",
+    "collegeId": "2bb004ee0e5ae44e7332a0cf",
+    "courseId": "2ec46385429c0d4fba106645",
+    "code": "BSC_CHEMISTRY_GGM_SCIENCE_JAMMU",
+    "name": "B.Sc Chemistry at GGM Science College",
+    "media": {
+      "iconUrl": "https://program-icons.com/bsc-chemistry.png",
+      "bannerUrl": "https://program-banners.com/bsc-chemistry-ggm-science-jammu.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7
+    ],
+    "seats": 60,
+    "cutoff": {
+      "lastYear": 73.8,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 73.8
+        },
+        {
+          "category": "OBC",
+          "cutoff": 70.8
+        },
+        {
+          "category": "SC",
+          "cutoff": 65.8
+        },
+        {
+          "category": "ST",
+          "cutoff": 61.8
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 16000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Ggm-Science-Jammu Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.547034",
+    "createdAt": "2025-09-19T03:49:25.547058",
+    "updatedAt": "2025-09-19T03:49:25.547064"
+  },
+  {
+    "_id": "6c9415473376fefe38794ec8",
+    "collegeId": "2bb004ee0e5ae44e7332a0cf",
+    "courseId": "932f0bd394f1c82b420bd216",
+    "code": "BSC_MATHEMATICS_GGM_SCIENCE_JAMMU",
+    "name": "B.Sc Mathematics at GGM Science College",
+    "media": {
+      "iconUrl": "https://program-icons.com/bsc-mathematics.png",
+      "bannerUrl": "https://program-banners.com/bsc-mathematics-ggm-science-jammu.jpg"
+    },
+    "durationYears": 3,
+    "subjects": [
+      {
+        "semester": 1,
+        "subjects": [
+          "Foundation Course 1",
+          "Foundation Course 2",
+          "English Communication"
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          "Core Subject 1",
+          "Core Subject 2",
+          "Environmental Studies"
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          "Advanced Core 1",
+          "Advanced Core 2",
+          "Practical Work"
+        ]
+      }
+    ],
+    "medium": [
+      "English",
+      "Hindi"
+    ],
+    "intakeMonths": [
+      7
+    ],
+    "seats": 50,
+    "cutoff": {
+      "lastYear": 71.5,
+      "categoryWise": [
+        {
+          "category": "General",
+          "cutoff": 71.5
+        },
+        {
+          "category": "OBC",
+          "cutoff": 68.5
+        },
+        {
+          "category": "SC",
+          "cutoff": 63.5
+        },
+        {
+          "category": "ST",
+          "cutoff": 59.5
+        }
+      ]
+    },
+    "fees": {
+      "tuitionPerYear": 16000,
+      "hostelPerYear": 15000,
+      "misc": 5000,
+      "currency": "INR"
+    },
+    "eligibilityOverrides": {
+      "minMarks": 45,
+      "requiredSubjects": []
+    },
+    "interestTags": [],
+    "isActive": true,
+    "source": "Ggm-Science-Jammu Academic Office",
+    "sourceUrl": "https://www.jkhighereducation.nic.in",
+    "lastUpdated": "2025-09-19T03:49:25.547099",
+    "createdAt": "2025-09-19T03:49:25.547104",
+    "updatedAt": "2025-09-19T03:49:25.547110"
+  }
+]

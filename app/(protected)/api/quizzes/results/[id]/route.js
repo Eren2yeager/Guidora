@@ -1,11 +1,13 @@
 import { NextResponse } from 'next/server';
 import connectMongo from '@/lib/mongodb';
 import QuizResult from '@/models/QuizResult';
+import Course from '@/models/Course';
+import Stream from '@/models/Stream';
 
 // GET /api/quizzes/results/[id] - Get a specific quiz result
-export async function GET(request, { params }) {
+export async function GET(request, context) {
   try {
-    const { id } = params;
+    const { id } = await context.params;
     
     if (!id) {
       return NextResponse.json(

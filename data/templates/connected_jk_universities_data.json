@@ -1,0 +1,487 @@
+[
+  {
+    "_id": "9ad991e8291b48b6571ba7a2",
+    "name": "University of Kashmir",
+    "code": "KASHMIR_UNIVERSITY",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/kashmir-university.png",
+      "bannerUrl": "https://university-banners.com/kashmir-university-banner.jpg"
+    },
+    "description": "Premier educational institution established in 1948, offering diverse academic programs across multiple faculties with focus on quality education and research excellence in Srinagar region.",
+    "address": {
+      "line1": "Main Campus",
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "pincode": "190006"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.837,
+        34.126
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Kashmiri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "a08fc2b3c5d5c5e624949459",
+      "a90b8dc0c1187ad792071521",
+      "e5e6538b336431b1ce9c73a0"
+    ],
+    "universityAdvisors": [
+      "28536a934b61b6e26cbec5f5",
+      "9a0cf6dfec57f4fa08cbb138"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0194-2414049",
+      "email": "info@kashmiruniversity.ac.in",
+      "website": "https://www.kashmiruniversity.ac.in"
+    },
+    "meta": {
+      "rank": 1,
+      "establishedYear": 1948
+    },
+    "isActive": true,
+    "source": "University of Kashmir Official",
+    "sourceUrl": "https://www.kashmiruniversity.ac.in",
+    "lastUpdated": "2025-09-19T03:47:31.595521",
+    "createdAt": "2025-09-19T03:47:31.595537",
+    "updatedAt": "2025-09-19T03:47:31.595539"
+  },
+  {
+    "_id": "0871cfc9938f3b6eba0d1c52",
+    "name": "University of Jammu",
+    "code": "JAMMU_UNIVERSITY",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/jammu-university.png",
+      "bannerUrl": "https://university-banners.com/jammu-university-banner.jpg"
+    },
+    "description": "Premier educational institution established in 1969, offering diverse academic programs across multiple faculties with focus on quality education and research excellence in Jammu region.",
+    "address": {
+      "line1": "Main Campus",
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "pincode": "180006"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.857,
+        32.7266
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Dogri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "a90b8dc0c1187ad792071521",
+      "d78ecfb22447c04fc7e236a0",
+      "a08fc2b3c5d5c5e624949459",
+      "e5e6538b336431b1ce9c73a0",
+      "24819f4aea4fb49a2147541e",
+      "08e92fed29eb30c673385e48"
+    ],
+    "universityAdvisors": [
+      "28536a934b61b6e26cbec5f5",
+      "9a0cf6dfec57f4fa08cbb138"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2456531",
+      "email": "info@jammuuniversity.ac.in",
+      "website": "https://www.jammuuniversity.ac.in"
+    },
+    "meta": {
+      "rank": 2,
+      "establishedYear": 1969
+    },
+    "isActive": true,
+    "source": "University of Jammu Official",
+    "sourceUrl": "https://www.jammuuniversity.ac.in",
+    "lastUpdated": "2025-09-19T03:47:31.595567",
+    "createdAt": "2025-09-19T03:47:31.595569",
+    "updatedAt": "2025-09-19T03:47:31.595571"
+  },
+  {
+    "_id": "b77ca873bf9a8bf39808ddd4",
+    "name": "Central University of Jammu",
+    "code": "CENTRAL_UNIVERSITY_JAMMU",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/central-university-jammu.png",
+      "bannerUrl": "https://university-banners.com/central-university-jammu-banner.jpg"
+    },
+    "description": "Premier educational institution established in 2011, offering diverse academic programs across multiple faculties with focus on quality education and research excellence in Jammu region.",
+    "address": {
+      "line1": "Bagla Campus",
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "pincode": "180006"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.857,
+        32.7266
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Dogri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [],
+    "universityAdvisors": [
+      "28536a934b61b6e26cbec5f5",
+      "9a0cf6dfec57f4fa08cbb138"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2456531",
+      "email": "info@centraluniversityjammu.ac.in",
+      "website": "https://www.centraluniversityjammu.ac.in"
+    },
+    "meta": {
+      "rank": 3,
+      "establishedYear": 2011
+    },
+    "isActive": true,
+    "source": "Central University of Jammu Official",
+    "sourceUrl": "https://www.centraluniversityjammu.ac.in",
+    "lastUpdated": "2025-09-19T03:47:31.595589",
+    "createdAt": "2025-09-19T03:47:31.595592",
+    "updatedAt": "2025-09-19T03:47:31.595593"
+  },
+  {
+    "_id": "ce28c5cd40a7aca875949443",
+    "name": "Islamic University of Science & Technology",
+    "code": "ISLAMIC_UNIVERSITY",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/islamic-university.png",
+      "bannerUrl": "https://university-banners.com/islamic-university-banner.jpg"
+    },
+    "description": "Premier educational institution established in 2005, offering diverse academic programs across multiple faculties with focus on quality education and research excellence in Pulwama region.",
+    "address": {
+      "line1": "Main Campus",
+      "district": "Pulwama",
+      "state": "Jammu and Kashmir",
+      "pincode": "180006"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.857,
+        32.7266
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Dogri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [],
+    "universityAdvisors": [
+      "28536a934b61b6e26cbec5f5",
+      "9a0cf6dfec57f4fa08cbb138"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2456531",
+      "email": "info@islamicuniversity.ac.in",
+      "website": "https://www.islamicuniversity.ac.in"
+    },
+    "meta": {
+      "rank": 4,
+      "establishedYear": 2005
+    },
+    "isActive": true,
+    "source": "Islamic University of Science & Technology Official",
+    "sourceUrl": "https://www.islamicuniversity.ac.in",
+    "lastUpdated": "2025-09-19T03:47:31.595610",
+    "createdAt": "2025-09-19T03:47:31.595612",
+    "updatedAt": "2025-09-19T03:47:31.595614"
+  },
+  {
+    "_id": "21674588b7e4aedc2ac14960",
+    "name": "SKUAST Kashmir",
+    "code": "SKUAST_KASHMIR",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/skuast-kashmir.png",
+      "bannerUrl": "https://university-banners.com/skuast-kashmir-banner.jpg"
+    },
+    "description": "Premier educational institution established in 1982, offering diverse academic programs across multiple faculties with focus on quality education and research excellence in Srinagar region.",
+    "address": {
+      "line1": "Main Campus",
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "pincode": "190006"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.837,
+        34.126
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Kashmiri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [],
+    "universityAdvisors": [
+      "28536a934b61b6e26cbec5f5",
+      "9a0cf6dfec57f4fa08cbb138"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0194-2414049",
+      "email": "info@skuastkashmir.ac.in",
+      "website": "https://www.skuastkashmir.ac.in"
+    },
+    "meta": {
+      "rank": 5,
+      "establishedYear": 1982
+    },
+    "isActive": true,
+    "source": "SKUAST Kashmir Official",
+    "sourceUrl": "https://www.skuastkashmir.ac.in",
+    "lastUpdated": "2025-09-19T03:47:31.595629",
+    "createdAt": "2025-09-19T03:47:31.595631",
+    "updatedAt": "2025-09-19T03:47:31.595633"
+  },
+  {
+    "_id": "02bee10530c357b79892db44",
+    "name": "SKUAST Jammu",
+    "code": "SKUAST_JAMMU",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/skuast-jammu.png",
+      "bannerUrl": "https://university-banners.com/skuast-jammu-banner.jpg"
+    },
+    "description": "Premier educational institution established in 1999, offering diverse academic programs across multiple faculties with focus on quality education and research excellence in Jammu region.",
+    "address": {
+      "line1": "Main Campus",
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "pincode": "180006"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.857,
+        32.7266
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Dogri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [],
+    "universityAdvisors": [
+      "28536a934b61b6e26cbec5f5",
+      "9a0cf6dfec57f4fa08cbb138"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2456531",
+      "email": "info@skuastjammu.ac.in",
+      "website": "https://www.skuastjammu.ac.in"
+    },
+    "meta": {
+      "rank": 6,
+      "establishedYear": 1999
+    },
+    "isActive": true,
+    "source": "SKUAST Jammu Official",
+    "sourceUrl": "https://www.skuastjammu.ac.in",
+    "lastUpdated": "2025-09-19T03:47:31.595646",
+    "createdAt": "2025-09-19T03:47:31.595648",
+    "updatedAt": "2025-09-19T03:47:31.595651"
+  },
+  {
+    "_id": "a474afe1f17c7900847c271d",
+    "name": "Cluster University Srinagar",
+    "code": "CLUSTER_UNIVERSITY_SRINAGAR",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/cluster-university-srinagar.png",
+      "bannerUrl": "https://university-banners.com/cluster-university-srinagar-banner.jpg"
+    },
+    "description": "Premier educational institution established in 2017, offering diverse academic programs across multiple faculties with focus on quality education and research excellence in Srinagar region.",
+    "address": {
+      "line1": "Main Campus",
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "pincode": "190006"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.837,
+        34.126
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Kashmiri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "53e15b7f6bd07938855c484f",
+      "c929ef9b6a59cf98be8defb7",
+      "7008ba3afc748a080c84b2c7"
+    ],
+    "universityAdvisors": [
+      "28536a934b61b6e26cbec5f5",
+      "9a0cf6dfec57f4fa08cbb138"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0194-2414049",
+      "email": "info@clusteruniversitysrinagar.ac.in",
+      "website": "https://www.clusteruniversitysrinagar.ac.in"
+    },
+    "meta": {
+      "rank": 7,
+      "establishedYear": 2017
+    },
+    "isActive": true,
+    "source": "Cluster University Srinagar Official",
+    "sourceUrl": "https://www.clusteruniversitysrinagar.ac.in",
+    "lastUpdated": "2025-09-19T03:47:31.595677",
+    "createdAt": "2025-09-19T03:47:31.595680",
+    "updatedAt": "2025-09-19T03:47:31.595685"
+  },
+  {
+    "_id": "50b03e6c44eb735aa728fc6e",
+    "name": "Cluster University Jammu",
+    "code": "CLUSTER_UNIVERSITY_JAMMU",
+    "type": "Government",
+    "media": {
+      "iconUrl": "https://university-logos.com/cluster-university-jammu.png",
+      "bannerUrl": "https://university-banners.com/cluster-university-jammu-banner.jpg"
+    },
+    "description": "Premier educational institution established in 2017, offering diverse academic programs across multiple faculties with focus on quality education and research excellence in Jammu region.",
+    "address": {
+      "line1": "Main Campus",
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "pincode": "180006"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        74.857,
+        32.7266
+      ]
+    },
+    "facilities": {
+      "hostel": true,
+      "lab": true,
+      "library": true,
+      "internet": true,
+      "medium": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Dogri"
+      ]
+    },
+    "degreePrograms": [],
+    "courses": [
+      "f050e1c615deafdca2b24fbb",
+      "53e15b7f6bd07938855c484f",
+      "c929ef9b6a59cf98be8defb7",
+      "2ec46385429c0d4fba106645",
+      "7008ba3afc748a080c84b2c7"
+    ],
+    "universityAdvisors": [
+      "28536a934b61b6e26cbec5f5",
+      "9a0cf6dfec57f4fa08cbb138"
+    ],
+    "studentAdvisors": [],
+    "contacts": {
+      "phone": "0191-2456531",
+      "email": "info@clusteruniversityjammu.ac.in",
+      "website": "https://www.clusteruniversityjammu.ac.in"
+    },
+    "meta": {
+      "rank": 8,
+      "establishedYear": 2017
+    },
+    "isActive": true,
+    "source": "Cluster University Jammu Official",
+    "sourceUrl": "https://www.clusteruniversityjammu.ac.in",
+    "lastUpdated": "2025-09-19T03:47:31.595727",
+    "createdAt": "2025-09-19T03:47:31.595731",
+    "updatedAt": "2025-09-19T03:47:31.595734"
+  }
+]

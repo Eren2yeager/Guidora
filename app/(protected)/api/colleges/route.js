@@ -2,6 +2,20 @@ import { NextResponse } from 'next/server';
 import connectDB from '@/lib/mongodb.js';
 import College from '@/models/College.js';
 
+// Calculate distance between two coordinates using Haversine formula
+function calculateDistance(lat1, lon1, lat2, lon2) {
+  const R = 6371; // Radius of the Earth in kilometers
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = 
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const distance = R * c; // Distance in kilometers
+  return distance;
+}
+
 export async function GET(req) {
   try {
     await connectDB();
@@ -11,19 +25,23 @@ export async function GET(req) {
 
     const state = params.get('state') || undefined;
     const district = params.get('district') || undefined;
+    const type = params.get('type') || undefined;
     const q = params.get('q') || undefined;
     const facilities = params.get('facilities') ? params.get('facilities').split(',').filter(Boolean) : [];
     const near = params.get('near'); // lat,lng
     const radiusKm = parseFloat(params.get('radiusKm') || '50');
 
     const page = Math.max(parseInt(params.get('page') || '1', 10), 1);
-    const limit = Math.min(Math.max(parseInt(params.get('limit') || '20', 10), 1), 100);
+    const limit = Math.min(Math.max(parseInt(params.get('limit') || '50', 10), 1), 100);
     const skip = (page - 1) * limit;
+
+    console.log('Colleges API - Filters:', { state, district, type, q, facilities, near, radiusKm });
 
     const filter = { isActive: true };
 
     if (state) filter['address.state'] = state;
     if (district) filter['address.district'] = district;
+    if (type) filter.type = type;
 
     if (q) {
       filter['$or'] = [
@@ -41,36 +59,91 @@ export async function GET(req) {
       });
     }
 
+    let items = [];
+    let total = 0;
     let useNear = false;
+
     if (near) {
       const [latStr, lngStr] = near.split(',');
       const lat = parseFloat(latStr);
       const lng = parseFloat(lngStr);
+      
       if (!Number.isNaN(lat) && !Number.isNaN(lng)) {
-        // NOTE: Using $near implies geospatial distance ordering.
-        // MongoDB does not allow an additional sort stage with $near.
-        // We therefore avoid applying a custom sort when $near is active.
-        filter.location = {
-          $near: {
-            $geometry: { type: 'Point', coordinates: [lng, lat] },
-            $maxDistance: Math.round(radiusKm * 1000),
-          },
-        };
-        useNear = true;
+        console.log('Using location-based search:', { lat, lng, radiusKm });
+        
+        try {
+          // Try using MongoDB's geospatial query first
+          const geoFilter = { ...filter };
+          geoFilter.location = {
+            $near: {
+              $geometry: { type: 'Point', coordinates: [lng, lat] },
+              $maxDistance: Math.round(radiusKm * 1000),
+            },
+          };
+
+          console.log('Attempting geospatial query...');
+          
+          // For $near queries, we can't use skip() reliably, so we fetch and slice
+          const allNearbyItems = await College.find(geoFilter).limit(100).lean();
+          
+          // Calculate distance for each item
+          const itemsWithDistance = allNearbyItems.map(item => {
+            if (item.location && item.location.coordinates) {
+              const [itemLng, itemLat] = item.location.coordinates;
+              const distance = calculateDistance(lat, lng, itemLat, itemLng);
+              return { ...item, distance };
+            }
+            return item;
+          });
+
+          // Apply pagination
+          items = itemsWithDistance.slice(skip, skip + limit);
+          total = itemsWithDistance.length;
+          useNear = true;
+          
+          console.log(`Geospatial query successful: found ${total} colleges`);
+        } catch (geoError) {
+          console.error('Geospatial query failed, falling back to manual distance calculation:', geoError.message);
+          
+          // Fallback: Fetch all colleges and calculate distance manually
+          const allColleges = await College.find(filter).lean();
+          
+          // Calculate distance for each college
+          const collegesWithDistance = allColleges
+            .map(college => {
+              if (college.location && college.location.coordinates) {
+                const [itemLng, itemLat] = college.location.coordinates;
+                const distance = calculateDistance(lat, lng, itemLat, itemLng);
+                return { ...college, distance };
+              }
+              return null;
+            })
+            .filter(c => c !== null && c.distance <= radiusKm)
+            .sort((a, b) => a.distance - b.distance);
+
+          // Apply pagination
+          items = collegesWithDistance.slice(skip, skip + limit);
+          total = collegesWithDistance.length;
+          useNear = true;
+          
+          console.log(`Manual distance calculation: found ${total} colleges within ${radiusKm}km`);
+        }
       }
     }
 
-    // Build the cursor with conditional sort based on whether $near is used.
-    let cursor = College.find(filter).skip(skip).limit(limit).lean();
     if (!useNear) {
-      // Only apply alphabetical sort when not using geospatial ordering
-      cursor = cursor.sort({ name: 1 });
+      console.log('Using standard query with filter:', JSON.stringify(filter, null, 2));
+
+      // Build the cursor with standard sort
+      const cursor = College.find(filter).skip(skip).limit(limit).sort({ name: 1 }).lean();
+
+      [items, total] = await Promise.all([
+        cursor,
+        College.countDocuments(filter),
+      ]);
     }
 
-    const [items, total] = await Promise.all([
-      cursor,
-      College.countDocuments(filter),
-    ]);
+    console.log(`Found ${items.length} colleges out of ${total} total`);
 
     return NextResponse.json({ items, page, limit, total });
   } catch (err) {

@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { QuizProgressIndicator } from '@/components/quiz';
+import { fadeInUp } from '@/lib/animations';
 
 export default function PersonalityQuizPage() {
   const router = useRouter();
@@ -13,41 +15,51 @@ export default function PersonalityQuizPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [progress, setProgress] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   // Fetch questions when starting the quiz
   const startQuiz = async () => {
     setStep('loading');
+    setError('');
     try {
       const response = await fetch('/api/quizzes/questions?category=personality');
       if (!response.ok) throw new Error('Failed to fetch questions');
       
       const data = await response.json();
-      if (!data || data.length === 0) throw new Error('No questions available');
-      
+      if (!data || data.length === 0) {
+        throw new Error('No questions available');
+      }
       setQuestions(data);
       setStep('quiz');
     } catch (err) {
       console.error('Error fetching questions:', err);
       setError(err.message || 'Failed to load questions');
-      setStep('intro'); // Go back to intro on error
+      setStep('error'); // Go to error state
     }
+  };
+
+  // Retry loading questions
+  const retryLoadQuestions = () => {
+    startQuiz();
   };
 
   // Handle answer selection
   const handleAnswer = (questionId, value) => {
+    setSelectedAnswer(value);
     setAnswers(prev => ({
       ...prev,
       [questionId]: value
     }));
     
-    // Move to next question after a short delay
+    // Show feedback briefly before moving to next question
     setTimeout(() => {
+      setSelectedAnswer(null);
       if (currentQuestion < questions.length - 1) {
         setCurrentQuestion(prev => prev + 1);
       } else {
         submitQuiz();
       }
-    }, 500);
+    }, 600);
   };
 
   // Calculate progress whenever current question changes
@@ -61,19 +73,40 @@ export default function PersonalityQuizPage() {
   const submitQuiz = async () => {
     setStep('loading');
     try {
-      // Calculate category scores
-      const categoryScores = {};
+      // Calculate category scores based on tags
+      const tagScores = {};
+      const tagCounts = {};
       
-      // Process answers and calculate scores
+      // Process answers and calculate scores based on option tags
       Object.entries(answers).forEach(([questionId, answer]) => {
         const question = questions.find(q => q.id === questionId);
-        if (question) {
-          if (!categoryScores[question.category]) {
-            categoryScores[question.category] = 0;
+        if (question && question.options) {
+          // Find the selected option (answer is the weight value 1-5)
+          const selectedOption = question.options.find(opt => opt.weight === answer);
+          if (selectedOption && selectedOption.tags) {
+            selectedOption.tags.forEach(tag => {
+              if (!tagScores[tag]) {
+                tagScores[tag] = 0;
+                tagCounts[tag] = 0;
+              }
+              tagScores[tag] += answer;
+              tagCounts[tag] += 1;
+            });
           }
-          categoryScores[question.category] += answer;
         }
       });
+      
+      // Calculate averages and format results
+      const categoryScoresArray = Object.entries(tagScores).map(([category, total]) => ({
+        category: category.charAt(0).toUpperCase() + category.slice(1),
+        average: total / tagCounts[category],
+        total,
+        count: tagCounts[category]
+      }));
+      
+      // Sort by average score and get top 3 categories
+      const sortedCategories = [...categoryScoresArray].sort((a, b) => b.average - a.average);
+      const topCategories = sortedCategories.slice(0, 3).map(item => item.category);
       
       // Submit results to API
       const response = await fetch('/api/quizzes/results', {
@@ -84,7 +117,10 @@ export default function PersonalityQuizPage() {
         body: JSON.stringify({
           quizType: 'personality',
           answers,
-          results: categoryScores,
+          results: {
+            categoryScores: categoryScoresArray,
+            topCategories
+          },
         }),
       });
       
@@ -151,6 +187,44 @@ export default function PersonalityQuizPage() {
     );
   }
 
+  // Render error state
+  if (step === 'error') {
+    return (
+      <div className="container mx-auto px-4 py-12 max-w-4xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="bg-white rounded-lg shadow-lg p-8"
+        >
+          <div className="text-center">
+            <div className="w-20 h-20 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
+              <svg className="w-10 h-10 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">Unable to Load Quiz</h1>
+            <p className="text-gray-600 mb-6">{error}</p>
+            <div className="flex gap-4 justify-center">
+              <button
+                onClick={retryLoadQuestions}
+                className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-8 rounded-md transition-colors"
+              >
+                Try Again
+              </button>
+              <button
+                onClick={() => router.push('/quizzes')}
+                className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-3 px-8 rounded-md transition-colors"
+              >
+                Back to Quizzes
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
+
   // Render loading state
   if (step === 'loading' || loading) {
     return (
@@ -169,55 +243,77 @@ export default function PersonalityQuizPage() {
     
     return (
       <div className="container mx-auto px-4 py-8 max-w-4xl">
-        {/* Progress bar */}
+        {/* Progress indicator */}
         <div className="mb-8">
-          <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-            <motion.div 
-              className="h-full bg-purple-600" 
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-          <div className="flex justify-between mt-2 text-sm text-gray-600">
-            <span>Question {currentQuestion + 1} of {questions.length}</span>
-            <span>{Math.round(progress)}% Complete</span>
-          </div>
+          <QuizProgressIndicator
+            answered={currentQuestion + 1}
+            total={questions.length}
+            variant="detailed"
+            color="purple"
+            showPercentage={true}
+            animated={true}
+          />
         </div>
         
-        {/* Question */}
-        <motion.div
-          key={currentQuestion}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
-          transition={{ duration: 0.3 }}
-          className="bg-white rounded-lg shadow-lg p-6 mb-8"
-        >
-          <h2 className="text-xl font-semibold mb-6">{currentQ.text}</h2>
-          
-          {/* Answer options */}
-          <div className="space-y-3">
-            {[1, 2, 3, 4, 5].map((value) => (
-              <button
-                key={value}
-                onClick={() => handleAnswer(currentQ.id, value)}
-                className={`w-full p-4 rounded-md border transition-colors ${answers[currentQ.id] === value ? 'bg-purple-100 border-purple-500' : 'border-gray-300 hover:bg-gray-50'}`}
-              >
-                <div className="flex justify-between items-center">
-                  <span>
-                    {value === 1 && 'Strongly Disagree'}
-                    {value === 2 && 'Disagree'}
-                    {value === 3 && 'Neutral'}
-                    {value === 4 && 'Agree'}
-                    {value === 5 && 'Strongly Agree'}
-                  </span>
-                  <span className="text-lg font-semibold">{value}</span>
-                </div>
-              </button>
-            ))}
-          </div>
-        </motion.div>
+        {/* Question with AnimatePresence */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentQuestion}
+            variants={fadeInUp}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.3 }}
+            className="bg-white rounded-lg shadow-lg p-6 mb-8"
+          >
+            <h2 className="text-xl font-semibold mb-6">{currentQ.text}</h2>
+            
+            {/* Answer options */}
+            <div className="space-y-3">
+              {[1, 2, 3, 4, 5].map((value) => {
+                const isSelected = selectedAnswer === value;
+                return (
+                  <motion.button
+                    key={value}
+                    whileHover={!selectedAnswer ? { scale: 1.01 } : {}}
+                    whileTap={{ scale: 0.99 }}
+                    onClick={() => !selectedAnswer && handleAnswer(currentQ.id, value)}
+                    disabled={selectedAnswer !== null}
+                    className={`relative w-full p-4 rounded-md border transition-all duration-300
+                      ${isSelected ? 'bg-purple-100 border-purple-500 ring-2 ring-purple-500 ring-offset-2' : 'border-gray-300 hover:bg-gray-50'}
+                      ${selectedAnswer && !isSelected ? 'opacity-50' : ''}
+                    `}
+                  >
+                    <div className="flex justify-between items-center">
+                      <span>
+                        {value === 1 && 'Strongly Disagree'}
+                        {value === 2 && 'Disagree'}
+                        {value === 3 && 'Neutral'}
+                        {value === 4 && 'Agree'}
+                        {value === 5 && 'Strongly Agree'}
+                      </span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg font-semibold">{value}</span>
+                        {/* Checkmark animation */}
+                        {isSelected && (
+                          <motion.div
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 0.3, type: 'spring' }}
+                          >
+                            <svg className="w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                          </motion.div>
+                        )}
+                      </div>
+                    </div>
+                  </motion.button>
+                );
+              })}
+            </div>
+          </motion.div>
+        </AnimatePresence>
         
         {error && (
           <div className="p-4 bg-red-50 text-red-700 rounded-md mb-4">

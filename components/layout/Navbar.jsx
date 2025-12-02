@@ -1,76 +1,183 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useSession } from "next-auth/react";
-import { AcademicCapIcon } from "@heroicons/react/24/outline";
-export default function Navbar() {
+import { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useSession } from 'next-auth/react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  AcademicCapIcon,
+  Bars3Icon,
+  XMarkIcon,
+  BellIcon,
+} from '@heroicons/react/24/outline';
+import { cn } from '@/lib/utils';
+import { fadeIn, slideInLeftFull } from '@/lib/animations';
+
+/**
+ * Navbar Component
+ * Main navigation bar with gradient option and mobile menu
+ */
+export default function Navbar({ 
+  variant = 'default', // 'default' | 'gradient' | 'transparent'
+  onMenuClick,
+  showMenuButton = false,
+}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const { data: session, status } = useSession();
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Courses", href: "/courses" },
-    { name: "Colleges", href: "/colleges" },
-    { name: "Programs", href: "/programs" },
-    { name: "Careers", href: "/careers" },
-    { name: "Scholarships", href: "/scholarships" },
-    { name: "Quizzes", href: "/quizzes" },
+    { name: 'Home', href: '/' },
+    { name: 'Courses', href: '/courses' },
+    { name: 'Programs', href: '/programs' },
+    { name: 'Colleges', href: '/colleges' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Scholarships', href: '/scholarships' },
+    { name: 'Counselors', href: '/counselors' },
+    { name: 'Quizzes', href: '/quizzes' },
+    // { name: 'Saved', href: '/saved' },
   ];
 
+  // Variant styles
+  const variants = {
+    default: 'bg-white shadow-sm border-b border-gray-100',
+    gradient: 'bg-gradient-to-r from-blue-600 to-indigo-700 shadow-lg',
+    transparent: 'bg-transparent',
+  };
+
+  const textColors = {
+    default: {
+      logo: 'text-blue-600',
+      link: 'text-gray-700 hover:text-blue-600',
+      activeLink: 'text-blue-600 font-semibold',
+      button: 'text-gray-700 hover:text-blue-600',
+    },
+    gradient: {
+      logo: 'text-white',
+      link: 'text-white/80 hover:text-white',
+      activeLink: 'text-white font-semibold',
+      button: 'text-white/80 hover:text-white',
+    },
+    transparent: {
+      logo: 'text-gray-900',
+      link: 'text-gray-700 hover:text-blue-600',
+      activeLink: 'text-blue-600 font-semibold',
+      button: 'text-gray-700 hover:text-blue-600',
+    },
+  };
+
+  const colors = textColors[variant];
+
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className={cn('sticky top-0 z-50', variants[variant])}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0 flex items-center gap-2">
-              <span className="h-10 w-10 bg-gradient-to-br from-blue-700 to-indigo-800 rounded-full flex items-center justify-center shadow-md">
-                <AcademicCapIcon className="h-5 w-5 text-white" />
+          {/* Left section */}
+          <div className="flex items-center gap-4">
+            {/* Mobile menu button (for dashboard) */}
+            {showMenuButton && (
+              <button
+                onClick={onMenuClick}
+                className={cn(
+                  'lg:hidden p-2 rounded-lg transition-colors',
+                  variant === 'gradient' 
+                    ? 'hover:bg-white/10' 
+                    : 'hover:bg-gray-100'
+                )}
+              >
+                <Bars3Icon className={cn('h-6 w-6', colors.button)} />
+              </button>
+            )}
+
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2">
+              <div className={cn(
+                'w-9 h-9 rounded-lg flex items-center justify-center shadow-md',
+                variant === 'gradient'
+                  ? 'bg-white/20 backdrop-blur-sm'
+                  : 'bg-gradient-to-br from-blue-600 to-indigo-700'
+              )}>
+                <AcademicCapIcon className={cn(
+                  'h-5 w-5',
+                  variant === 'gradient' ? 'text-white' : 'text-white'
+                )} />
+              </div>
+              <span className={cn('text-xl font-bold', colors.logo)}>
+                Guidora
               </span>
-              <span className="text-xl font-bold text-blue-600">Guidora</span>
             </Link>
           </div>
 
           {/* Desktop navigation */}
-          <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  pathname === link.href
-                    ? "text-blue-600 font-semibold"
-                    : "text-gray-700 hover:text-blue-500"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+          <div className="hidden lg:flex lg:items-center lg:space-x-1">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || 
+                (link.href !== '/' && pathname.startsWith(link.href));
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={cn(
+                    'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200',
+                    isActive ? colors.activeLink : colors.link,
+                    isActive && variant === 'default' && 'bg-blue-50',
+                    isActive && variant === 'gradient' && 'bg-white/10'
+                  )}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
 
-          <div className="hidden md:flex md:items-center md:ml-6">
-            {status === "authenticated" ? (
+          {/* Right section */}
+          <div className="hidden lg:flex lg:items-center lg:gap-3">
+            {status === 'authenticated' ? (
               <>
-                <Link
+                {/* Notifications */}
+                <button className={cn(
+                  'p-2 rounded-lg transition-colors relative',
+                  variant === 'gradient' ? 'hover:bg-white/10' : 'hover:bg-gray-100'
+                )}>
+                  <BellIcon className={cn('h-5 w-5', colors.button)} />
+                  <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" />
+                </button>
+
+                {/* Profile */}
+                {/* <Link
                   href="/profile"
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-500"
+                  className={cn(
+                    'flex items-center gap-2 p-1.5 rounded-lg transition-colors',
+                    variant === 'gradient' ? 'hover:bg-white/10' : 'hover:bg-gray-100'
+                  )}
                 >
-                  <img
-                    src={session?.user?.image || "/default-avatar.png"}
-                    alt="Profile"
-                    className="h-8 w-8 rounded-full object-cover"
-                  />
-                  <span className="sr-only">Profile</span>
-                </Link>
+                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center overflow-hidden">
+                    {session?.user?.image ? (
+                      <img
+                        src={session.user.image}
+                        alt="Profile"
+                        className="h-8 w-8 rounded-full object-cover"
+                      />
+                    ) : (
+                      <span className="text-white text-sm font-medium">
+                        {session?.user?.name?.charAt(0)?.toUpperCase() || 'U'}
+                      </span>
+                    )}
+                  </div>
+                </Link> */}
+
+                {/* Dashboard button */}
                 <Link
                   href="/dashboard"
-                  className="ml-3 px-4 py-2 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700"
+                  className={cn(
+                    'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
+                    variant === 'gradient'
+                      ? 'bg-white text-blue-600 hover:bg-blue-50 shadow-md'
+                      : 'bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:shadow-lg'
+                  )}
                 >
                   Dashboard
                 </Link>
@@ -79,13 +186,21 @@ export default function Navbar() {
               <>
                 <Link
                   href="/auth/signin"
-                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-500"
+                  className={cn(
+                    'px-4 py-2 text-sm font-medium transition-colors',
+                    colors.link
+                  )}
                 >
                   Sign In
                 </Link>
                 <Link
                   href="/auth/signup"
-                  className="ml-3 px-4 py-2 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700"
+                  className={cn(
+                    'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
+                    variant === 'gradient'
+                      ? 'bg-white text-blue-600 hover:bg-blue-50 shadow-md'
+                      : 'bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:shadow-lg'
+                  )}
                 >
                   Sign Up
                 </Link>
@@ -94,44 +209,19 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="-mr-2 flex items-center md:hidden">
+          <div className="flex items-center lg:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className={cn(
+                'p-2 rounded-lg transition-colors',
+                variant === 'gradient' ? 'hover:bg-white/10' : 'hover:bg-gray-100'
+              )}
             >
-              <span className="sr-only">Open main menu</span>
-              {!isMenuOpen ? (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
+              <span className="sr-only">Open menu</span>
+              {isMenuOpen ? (
+                <XMarkIcon className={cn('h-6 w-6', colors.button)} />
               ) : (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+                <Bars3Icon className={cn('h-6 w-6', colors.button)} />
               )}
             </button>
           </div>
@@ -139,65 +229,81 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  pathname === link.href
-                    ? "text-blue-600 font-semibold"
-                    : "text-gray-700 hover:text-blue-500"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-          <div className="pt-4 pb-3 border-t border-gray-200">
-            <div className="px-2 space-y-1">
-              {status === "authenticated" ? (
-                <>
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            className="lg:hidden bg-white border-t border-gray-100 shadow-lg"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="px-4 py-3 space-y-1">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
                   <Link
-                    href="/profile"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500"
+                    key={link.name}
+                    href={link.href}
+                    className={cn(
+                      'block px-3 py-2.5 rounded-lg text-base font-medium transition-colors',
+                      isActive
+                        ? 'bg-blue-50 text-blue-600'
+                        : 'text-gray-700 hover:bg-gray-50'
+                    )}
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Profile
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </div>
+
+            <div className="px-4 py-3 border-t border-gray-100">
+              {status === 'authenticated' ? (
+                <div className="space-y-2">
+                  <Link
+                    href="/profile"
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="h-8 w-8 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                      <span className="text-white text-sm font-medium">
+                        {session?.user?.name?.charAt(0)?.toUpperCase() || 'U'}
+                      </span>
+                    </div>
+                    <span>Profile</span>
                   </Link>
                   <Link
                     href="/dashboard"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-blue-600 hover:text-blue-700"
+                    className="block px-3 py-2.5 rounded-lg text-center font-medium bg-gradient-to-r from-blue-600 to-indigo-700 text-white"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Dashboard
                   </Link>
-                </>
+                </div>
               ) : (
-                <>
+                <div className="space-y-2">
                   <Link
                     href="/auth/signin"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500"
+                    className="block px-3 py-2.5 rounded-lg text-center font-medium text-gray-700 hover:bg-gray-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Sign In
                   </Link>
                   <Link
                     href="/auth/signup"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-blue-600 hover:text-blue-700"
+                    className="block px-3 py-2.5 rounded-lg text-center font-medium bg-gradient-to-r from-blue-600 to-indigo-700 text-white"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Sign Up
                   </Link>
-                </>
+                </div>
               )}
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

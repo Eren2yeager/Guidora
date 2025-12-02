@@ -3,7 +3,7 @@ import connectDB from '@/lib/mongodb';
 import Stream from '@/models/Stream';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
-import { isAdminSession } from '@/lib/rbac';
+import { isAdminSession } from '@/lib/auth';
 import { ObjectId } from 'mongodb';
 
 // Helper function to convert string IDs to ObjectId

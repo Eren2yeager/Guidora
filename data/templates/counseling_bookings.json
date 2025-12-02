@@ -1,13 +1,14 @@
 [
-    {
-      "_id": "83a9f4c16adb202ffa216d7d",
-      "userId": "d9a7524a8a06dfa3624066e3",
-      "counselorId": "4afa644b0035f0e9d87be812",
-      "scheduledAt": "2025-09-21T08:33:36.363641",
-      "mode": "video",
-      "status": "pending",
-      "notes": "NEET preparation guidance needed",
-      "createdAt": "2025-09-18T08:33:36.363651",
-      "updatedAt": "2025-09-18T08:33:36.363653"
-    }
-  ]
+  {
+    "_id": "b331e0ff88fcb84dcfdbe024",
+    "userId": "840cbc3c5eb1f2b5d914a0a8",
+    "counselorId": "28536a934b61b6e26cbec5f5",
+    "scheduledAt": "2025-09-22T03:52:21.109429",
+    "mode": "video",
+    "status": "pending",
+    "meetingLink": "",
+    "notes": "Student needs guidance on NEET preparation and medical college selection in J&K",
+    "createdAt": "2025-09-19T03:52:21.109448",
+    "updatedAt": "2025-09-19T03:52:21.109451"
+  }
+]

@@ -3,30 +3,257 @@ import connectMongo from '@/lib/mongodb';
 import Course from '@/models/Course';
 import Career from '@/models/Career';
 import Program from '@/models/DegreeProgram';
+import QuizQuestion from '@/models/QuizQuestion';
+import Recommendation from '@/models/Recemondation';
+import QuizResult from '@/models/QuizResult';
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from '@/lib/auth.js';
+import Exam from '@/models/Exam';
+import Interest from '@/models/Interest';
+import College from '@/models/College';
+import mongoose from 'mongoose';
 
 // POST /api/recommendations - Get recommendations based on quiz results
 export async function POST(request) {
   try {
     const data = await request.json();
     
-    // Validate required fields
-    if (!data.quizType || !data.topCategories || !Array.isArray(data.topCategories)) {
-      return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
-      );
+    // Validate fields (accept topCategories OR categoryScores)
+    if (!data.quizType) {
+      return NextResponse.json({ error: 'quizType is required' }, { status: 400 });
     }
     
     await connectMongo();
     
-    // Get recommendations based on top categories
-    const { quizType, topCategories } = data;
-    
-    // For now, we'll use mock data for recommendations
-    // In a real implementation, you would query your database for matching items
-    const recommendations = await getMockRecommendations(quizType, topCategories);
-    
-    return NextResponse.json(recommendations);
+    // Resolve quizResult from resultId if provided
+    let resolvedQuizResult = null;
+    if (!data.quizResultId && data.resultId) {
+      resolvedQuizResult = await QuizResult.findOne({ resultId: data.resultId })
+        .select('_id userId quizType results')
+        .lean();
+      if (resolvedQuizResult) {
+        data.quizResultId = resolvedQuizResult._id?.toString?.() || resolvedQuizResult._id;
+        if (!data.categoryScores && !data.results) {
+          data.results = resolvedQuizResult.results;
+        }
+      }
+    }
+
+    // Compute topCategories if not provided using categoryScores (object or array)
+    let topCategories = Array.isArray(data.topCategories) ? data.topCategories : null;
+    if (!topCategories || topCategories.length === 0) {
+      const scores = data.categoryScores || data.results || (resolvedQuizResult?.results || {});
+      let entries = [];
+      if (Array.isArray(scores)) {
+        entries = scores.map((s) => ({ category: s.category, score: s.average ?? s.score ?? s.value ?? 0 }));
+      } else if (scores && typeof scores === 'object') {
+        entries = Object.entries(scores).map(([category, score]) => ({ category, score: Number(score) || 0 }));
+      }
+      entries.sort((a, b) => (b.score || 0) - (a.score || 0));
+      topCategories = entries.slice(0, 3).map((e) => e.category);
+    }
+
+    // Guard: if still empty
+    if (!topCategories || topCategories.length === 0) {
+      return NextResponse.json({ courses: [], careers: [], programs: [] });
+    }
+
+    // Map high-level categories to question option tags
+    const categoryToTags = {
+      STEM: ['technology', 'mathematics', 'science', 'engineering'],
+      Arts: ['arts', 'design', 'fine arts', 'literature'],
+      Medical: ['healthcare', 'medical', 'biology', 'medicine'],
+      Engineering: ['engineering'],
+      Social: ['social', 'psychology', 'sociology'],
+      Humanities: ['humanities', 'history', 'philosophy', 'literature'],
+      Law: ['law', 'legal'],
+      Business: ['business', 'finance', 'commerce', 'entrepreneurship'],
+      Technology: ['technology', 'computer', 'software', 'it', 'information technology'],
+      Science: ['science', 'biology', 'physics', 'chemistry'],
+      Education: ['education', 'teaching'],
+      Management: ['management', 'operations', 'project management']
+    };
+
+    const tags = new Set();
+    for (const cat of topCategories) {
+      (categoryToTags[cat] || []).forEach((t) => tags.add(t));
+    }
+    const tagList = Array.from(tags);
+
+    // Pull related IDs from QuizQuestion via option tags (primary for interest), fallback by category type
+    const questionFilter = tagList.length > 0
+      ? { isActive: true, category: 'interest', 'options.tags': { $in: tagList } }
+      : { isActive: true, category: 'interest' };
+
+    const linkingQuestions = await QuizQuestion.find(questionFilter)
+      .select('relatedCourses relatedCareers relatedStreams interestTags')
+      .lean();
+
+    const courseIds = new Set();
+    const careerIds = new Set();
+    const programCourseIds = new Set();
+    const streamIds = new Set();
+    const interestIds = new Set();
+
+    for (const q of linkingQuestions) {
+      (q.relatedCourses || []).forEach((id) => { courseIds.add(id?.toString?.() || id); programCourseIds.add(id?.toString?.() || id); });
+      (q.relatedCareers || []).forEach((id) => careerIds.add(id?.toString?.() || id));
+      (q.relatedStreams || []).forEach((id) => streamIds.add(id?.toString?.() || id));
+      (q.interestTags || []).forEach((id) => interestIds.add(id?.toString?.() || id));
+    }
+
+    // Fetch entities from DB
+    const courses = await Course.find({ _id: { $in: Array.from(courseIds) }, isActive: true })
+      .select('name description streamId media iconUrl')
+      .limit(20)
+      .lean();
+
+    const careers = await Career.find({ _id: { $in: Array.from(careerIds) }, isActive: true })
+      .select('name description sectors media')
+      .limit(20)
+      .lean();
+
+    const programs = await Program.find({ courseId: { $in: Array.from(programCourseIds) }, isActive: true })
+      .select('name code courseId collegeId durationYears')
+      .limit(20)
+      .lean();
+
+    // Exams via courses, careers, and interests
+    const exams = await Exam.find({
+      isActive: true,
+      $or: [
+        { courses: { $in: Array.from(courseIds) } },
+        { careers: { $in: Array.from(careerIds) } },
+        { interestTags: { $in: Array.from(interestIds) } },
+      ],
+    })
+      .select('name examType level region applicationStart applicationEnd examDate link')
+      .limit(20)
+      .lean();
+
+    // Interests
+    const interests = await Interest.find({ _id: { $in: Array.from(interestIds) }, isActive: true })
+      .select('name slug description media')
+      .limit(20)
+      .lean();
+
+    // Colleges via programs, courses, and streams
+    const collegeFilter = {
+      isActive: true,
+      $or: [
+        { degreePrograms: { $in: programs.map((p) => p._id).filter(Boolean) } },
+        { courses: { $in: Array.from(courseIds) } },
+        { streams: { $in: Array.from(streamIds) } },
+      ],
+    };
+    const colleges = await College.find(collegeFilter)
+      .select('name code address media streams')
+      .limit(20)
+      .lean();
+
+    // Generate explanations for recommendations
+    const generateExplanation = (type, item, matchedTags) => {
+      const reasons = [];
+      if (matchedTags && matchedTags.length > 0) {
+        reasons.push(`Matches your interests in ${matchedTags.slice(0, 2).join(' and ')}`);
+      }
+      if (topCategories && topCategories.length > 0) {
+        reasons.push(`Aligns with your ${topCategories[0]} quiz results`);
+      }
+      return reasons.length > 0 ? reasons.join('. ') : `Recommended based on your profile`;
+    };
+
+    // Normalize payload for UI with explanations
+    const normalized = {
+      courses: courses.map((c) => ({
+        id: c._id?.toString?.() || c._id,
+        title: c.name,
+        description: c.description || '',
+        streamId: c.streamId,
+        media: c.media || {},
+        explanation: generateExplanation('course', c, tagList.slice(0, 2))
+      })),
+      careers: careers.map((c) => ({
+        id: c._id?.toString?.() || c._id,
+        title: c.name,
+        description: c.description || '',
+        sectors: c.sectors || [],
+        explanation: generateExplanation('career', c, tagList.slice(0, 2))
+      })),
+      programs: programs.map((p) => ({
+        id: p._id?.toString?.() || p._id,
+        title: p.name || p.code,
+        description: '',
+        courseId: p.courseId,
+        collegeId: p.collegeId,
+        durationYears: p.durationYears,
+      })),
+      exams: exams.map((e) => ({
+        id: e._id?.toString?.() || e._id,
+        name: e.name,
+        examType: e.examType,
+        level: e.level,
+        region: e.region,
+        applicationStart: e.applicationStart,
+        applicationEnd: e.applicationEnd,
+        examDate: e.examDate,
+        link: e.link,
+      })),
+      interests: interests.map((i) => ({
+        id: i._id?.toString?.() || i._id,
+        name: i.name,
+        slug: i.slug,
+        description: i.description || '',
+        media: i.media || {},
+      })),
+      colleges: colleges.map((c) => ({
+        id: c._id?.toString?.() || c._id,
+        name: c.name,
+        code: c.code,
+        address: c.address,
+        media: c.media || {},
+        streams: c.streams || [],
+      })),
+    };
+
+    // Optionally persist Recommendation
+    const session = await getServerSession(authOptions);
+    const userId = session?.user?.id || resolvedQuizResult?.userId || null;
+    const quizResultId = data.quizResultId || (resolvedQuizResult?._id?.toString?.() || resolvedQuizResult?._id) || null;
+
+    try {
+      if (!userId) {
+        throw new Error('skip-persist: missing userId');
+      }
+      const recDoc = await Recommendation.create({
+        _id: new mongoose.Types.ObjectId(),
+        userId,
+        streams: [],
+        courses: (normalized.courses || []).map((c) => ({ courseId: c.id, score: 1 })),
+        programs: (normalized.programs || []).map((p) => ({ programId: p.id, score: 1 })),
+        scholarships: [],
+        ngos: [],
+        rationale: `Generated from ${data.quizType} quiz for categories: ${topCategories.join(', ')}`,
+        quizResultId: quizResultId || undefined,
+      });
+
+      // Back-link QuizResult -> Recommendation if provided
+      if (quizResultId) {
+        await QuizResult.updateOne(
+          { _id: quizResultId },
+          { $set: { recommendationId: recDoc._id } }
+        );
+      }
+
+      return NextResponse.json({ ...normalized, recommendationId: recDoc._id?.toString?.() || recDoc._id });
+    } catch (persistErr) {
+      // If persistence fails, still return recommendations without ID
+      if (String(persistErr?.message || '').startsWith('skip-persist')) {
+        return NextResponse.json(normalized);
+      }
+      console.warn('Recommendation persistence failed:', persistErr);
+      return NextResponse.json(normalized);
+    }
   } catch (error) {
     console.error('Error generating recommendations:', error);
     return NextResponse.json(
@@ -34,253 +261,4 @@ export async function POST(request) {
       { status: 500 }
     );
   }
-}
-
-// Helper function to get mock recommendations
-// In a real implementation, this would query your database
-async function getMockRecommendations(quizType, topCategories) {
-  // Mock data for recommendations
-  const mockCourses = [
-    {
-      id: 'course-1',
-      title: 'Introduction to Computer Science',
-      description: 'Learn the fundamentals of computer science and programming.',
-      category: 'STEM',
-    },
-    {
-      id: 'course-2',
-      title: 'Creative Writing Workshop',
-      description: 'Develop your creative writing skills across various genres.',
-      category: 'Arts',
-    },
-    {
-      id: 'course-3',
-      title: 'Human Anatomy and Physiology',
-      description: 'Explore the structure and function of the human body.',
-      category: 'Medical',
-    },
-    {
-      id: 'course-4',
-      title: 'Introduction to Engineering',
-      description: 'Learn the basics of engineering principles and problem-solving.',
-      category: 'Engineering',
-    },
-    {
-      id: 'course-5',
-      title: 'Psychology 101',
-      description: 'Understand the basics of human behavior and mental processes.',
-      category: 'Social',
-    },
-    {
-      id: 'course-6',
-      title: 'World Literature',
-      description: 'Explore literary masterpieces from around the world.',
-      category: 'Humanities',
-    },
-    {
-      id: 'course-7',
-      title: 'Introduction to Legal Studies',
-      description: 'Learn the fundamentals of law and legal systems.',
-      category: 'Law',
-    },
-    {
-      id: 'course-8',
-      title: 'Business Management Fundamentals',
-      description: 'Understand the core principles of business management.',
-      category: 'Business',
-    },
-    {
-      id: 'course-9',
-      title: 'Web Development Bootcamp',
-      description: 'Learn to build modern web applications from scratch.',
-      category: 'Technology',
-    },
-    {
-      id: 'course-10',
-      title: 'Environmental Science',
-      description: 'Study the environment and how it works.',
-      category: 'Science',
-    },
-    {
-      id: 'course-11',
-      title: 'Educational Psychology',
-      description: 'Learn how people learn and develop teaching strategies.',
-      category: 'Education',
-    },
-    {
-      id: 'course-12',
-      title: 'Project Management',
-      description: 'Learn to plan, execute, and complete projects efficiently.',
-      category: 'Management',
-    },
-  ];
-  
-  const mockCareers = [
-    {
-      id: 'career-1',
-      title: 'Software Developer',
-      description: 'Design, develop, and maintain software applications.',
-      category: 'STEM',
-    },
-    {
-      id: 'career-2',
-      title: 'Graphic Designer',
-      description: 'Create visual concepts to communicate ideas.',
-      category: 'Arts',
-    },
-    {
-      id: 'career-3',
-      title: 'Physician',
-      description: 'Diagnose and treat illnesses and injuries.',
-      category: 'Medical',
-    },
-    {
-      id: 'career-4',
-      title: 'Civil Engineer',
-      description: 'Design and oversee construction of infrastructure projects.',
-      category: 'Engineering',
-    },
-    {
-      id: 'career-5',
-      title: 'Social Worker',
-      description: 'Help people solve and cope with problems in their everyday lives.',
-      category: 'Social',
-    },
-    {
-      id: 'career-6',
-      title: 'Historian',
-      description: 'Study and interpret the past through research.',
-      category: 'Humanities',
-    },
-    {
-      id: 'career-7',
-      title: 'Attorney',
-      description: 'Represent and advise clients on legal matters.',
-      category: 'Law',
-    },
-    {
-      id: 'career-8',
-      title: 'Marketing Manager',
-      description: 'Develop marketing strategies to promote products or services.',
-      category: 'Business',
-    },
-    {
-      id: 'career-9',
-      title: 'Data Scientist',
-      description: 'Analyze and interpret complex data to inform business decisions.',
-      category: 'Technology',
-    },
-    {
-      id: 'career-10',
-      title: 'Biologist',
-      description: 'Study living organisms and their relationship to the environment.',
-      category: 'Science',
-    },
-    {
-      id: 'career-11',
-      title: 'Teacher',
-      description: 'Educate students in various subjects and grade levels.',
-      category: 'Education',
-    },
-    {
-      id: 'career-12',
-      title: 'Operations Manager',
-      description: 'Oversee the production of goods or services.',
-      category: 'Management',
-    },
-  ];
-  
-  const mockPrograms = [
-    {
-      id: 'program-1',
-      title: 'Computer Science Degree',
-      description: 'Bachelor of Science in Computer Science.',
-      category: 'STEM',
-    },
-    {
-      id: 'program-2',
-      title: 'Fine Arts Degree',
-      description: 'Bachelor of Fine Arts with specializations in various media.',
-      category: 'Arts',
-    },
-    {
-      id: 'program-3',
-      title: 'Pre-Medicine Program',
-      description: 'Preparatory program for medical school.',
-      category: 'Medical',
-    },
-    {
-      id: 'program-4',
-      title: 'Engineering Degree',
-      description: 'Bachelor of Engineering with various specializations.',
-      category: 'Engineering',
-    },
-    {
-      id: 'program-5',
-      title: 'Social Sciences Degree',
-      description: 'Bachelor of Arts in Social Sciences.',
-      category: 'Social',
-    },
-    {
-      id: 'program-6',
-      title: 'Liberal Arts Degree',
-      description: 'Bachelor of Arts in Liberal Arts and Humanities.',
-      category: 'Humanities',
-    },
-    {
-      id: 'program-7',
-      title: 'Law School',
-      description: 'Juris Doctor (JD) program.',
-      category: 'Law',
-    },
-    {
-      id: 'program-8',
-      title: 'Business Administration Degree',
-      description: 'Bachelor of Business Administration.',
-      category: 'Business',
-    },
-    {
-      id: 'program-9',
-      title: 'Information Technology Degree',
-      description: 'Bachelor of Science in Information Technology.',
-      category: 'Technology',
-    },
-    {
-      id: 'program-10',
-      title: 'Biology Degree',
-      description: 'Bachelor of Science in Biology.',
-      category: 'Science',
-    },
-    {
-      id: 'program-11',
-      title: 'Education Degree',
-      description: 'Bachelor of Education.',
-      category: 'Education',
-    },
-    {
-      id: 'program-12',
-      title: 'Business Management Degree',
-      description: 'Bachelor of Science in Business Management.',
-      category: 'Management',
-    },
-  ];
-  
-  // Filter recommendations based on top categories
-  const filteredCourses = mockCourses.filter(course => 
-    topCategories.includes(course.category)
-  );
-  
-  const filteredCareers = mockCareers.filter(career => 
-    topCategories.includes(career.category)
-  );
-  
-  const filteredPrograms = mockPrograms.filter(program => 
-    topCategories.includes(program.category)
-  );
-  
-  return {
-    courses: filteredCourses,
-    careers: filteredCareers,
-    programs: filteredPrograms,
-  };
 }

@@ -19,6 +19,14 @@ export default function QuizRedirect({ children }) {
   useEffect(() => {
     // Only proceed if the user is authenticated
     if (status === 'authenticated' && session?.user) {
+      // Check if user has already dismissed the prompt
+      const hasSkipped = localStorage.getItem('quiz-prompt-skipped');
+      
+      if (hasSkipped) {
+        setHasChecked(true);
+        return;
+      }
+      
       // Check if the user has completed a quiz before
       const checkUserQuizStatus = async () => {
         try {
@@ -57,9 +65,13 @@ export default function QuizRedirect({ children }) {
 
   const handleStartQuiz = () => {
     router.push('/quizzes/interest');
+    localStorage.setItem('quiz-prompt-skipped', 'true');
+    setShowPrompt(false);
   };
 
   const handleSkip = () => {
+    // Save to localStorage so it doesn't show again
+    localStorage.setItem('quiz-prompt-skipped', 'true');
     setShowPrompt(false);
   };
 
@@ -74,7 +86,7 @@ export default function QuizRedirect({ children }) {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-transparent backdrop-blur-2xl bg-opacity-50"
       >
         <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 shadow-xl">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Welcome to Educational Advisor!</h2>

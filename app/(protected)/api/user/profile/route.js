@@ -79,7 +79,7 @@ export async function PUT(request) {
       'academics',
       'interests',
       'goals',
-      'image'
+      'media'
     ];
 
     // Create update object with only allowed fields

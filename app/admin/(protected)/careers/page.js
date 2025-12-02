@@ -44,7 +44,7 @@ export default function CareersManagement() {
         <input
           type="text"
           placeholder="Search careers..."
-          className="w-full p-2 border rounded"
+          className="w-full text-black p-2 border rounded"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
