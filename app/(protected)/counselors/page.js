@@ -12,6 +12,7 @@ import {
   AdjustmentsHorizontalIcon
 } from "@heroicons/react/24/outline";
 
+
 // Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -89,10 +90,14 @@ export default function CounselorsPage() {
   };
 
   // Filter counselors based on search term
-  const filteredCounselors = counselors.filter(counselor => 
-    counselor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    counselor.expertise.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredCounselors = counselors.filter(counselor => {
+    const expertiseStr = Array.isArray(counselor.expertise) 
+      ? counselor.expertise.join(' ').toLowerCase()
+      : (counselor.expertise || '').toLowerCase();
+    
+    return counselor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+           expertiseStr.includes(searchTerm.toLowerCase());
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -137,7 +142,7 @@ export default function CounselorsPage() {
               <AdjustmentsHorizontalIcon className="h-5 w-5 text-gray-400" />
             </div>
             <select
-              className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              className="block w-full pl-10 pr-3 py-2 border text-black border-gray-300 rounded-md leading-5 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               value={selectedExpertise}
               onChange={(e) => setSelectedExpertise(e.target.value)}
             >
@@ -187,13 +192,14 @@ export default function CounselorsPage() {
                 <div className="p-6">
                   <div className="flex items-center mb-4">
                     <div className="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center overflow-hidden">
-                      {counselor.profilePicture ? (
+                      {counselor.image || counselor.media?.iconUrl ? (
                         <img 
-                          src={counselor.profilePicture} 
+                          src={counselor.image || counselor.media?.iconUrl} 
                           alt={counselor.name}
                           className="h-12 w-12 rounded-full object-cover"
                           onError={(e) => {
                             e.target.style.display = 'none';
+                            e.target.parentElement.innerHTML = `<span class="text-white text-lg font-semibold">${counselor.name?.charAt(0)?.toUpperCase() || 'C'}</span>`;
                           }}
                         />
                       ) : (
@@ -204,7 +210,11 @@ export default function CounselorsPage() {
                     </div>
                     <div className="ml-4">
                       <h3 className="text-lg font-semibold text-gray-900">{counselor.name}</h3>
-                      <p className="text-sm text-blue-600">{counselor.expertise}</p>
+                      <p className="text-sm text-blue-600">
+                        {Array.isArray(counselor.expertise) 
+                          ? counselor.expertise[0] || "Educational Counselor"
+                          : counselor.expertise || "Educational Counselor"}
+                      </p>
                     </div>
                   </div>
                   
@@ -227,9 +237,13 @@ export default function CounselorsPage() {
                         <span>{counselor.sessionCount || 0} sessions</span>
                       </div>
                       
-                      <div className="flex items-center text-gray-500">
+                      <div className="flex items-center text-green-600">
                         <CalendarIcon className="h-4 w-4 mr-1" />
-                        <span>{counselor.availability || "Available"}</span>
+                        <span>
+                          {counselor.availableSlots?.filter(s => !s.isBooked).length > 0 
+                            ? `${counselor.availableSlots.filter(s => !s.isBooked).length} slots`
+                            : "Available"}
+                        </span>
                       </div>
                     </div>
                   </div>

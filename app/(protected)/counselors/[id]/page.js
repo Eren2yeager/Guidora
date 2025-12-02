@@ -93,19 +93,26 @@ export default function CounselorDetailPage() {
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl overflow-hidden shadow-lg mb-8">
           <div className="md:flex">
-            <div className="md:flex-shrink-0 p-6 md:p-8 flex items-center justify-center">
+            <div className="md:shrink-0 p-6 md:p-8 flex items-center justify-center">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="relative h-48 w-48 rounded-full overflow-hidden border-4 border-white shadow-md"
+                className="relative h-48 w-48 rounded-full overflow-hidden border-4 border-white shadow-md bg-gradient-to-br from-blue-500 to-indigo-600"
               >
-                <img
-                  src={
-                    counselor.profileimg ||
-                    "https://via.placeholder.com/200?text=Counselor"
-                  }
-                  alt={counselor.name}
-                  className="object-cover"
-                />
+                {counselor.image || counselor.media?.iconUrl ? (
+                  <img
+                    src={counselor.image || counselor.media?.iconUrl}
+                    alt={counselor.name}
+                    className="h-full w-full object-cover"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.parentElement.innerHTML = `<span class="text-white text-6xl font-bold flex items-center justify-center h-full">${counselor.name?.charAt(0)?.toUpperCase() || 'C'}</span>`;
+                    }}
+                  />
+                ) : (
+                  <span className="text-white text-6xl font-bold flex items-center justify-center h-full">
+                    {counselor.name?.charAt(0)?.toUpperCase() || 'C'}
+                  </span>
+                )}
               </motion.div>
             </div>
             <div className="p-6 md:p-8 flex flex-col justify-center">
@@ -117,7 +124,9 @@ export default function CounselorDetailPage() {
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">
                   {counselor.name}
                 </h1>
-                <p className="text-lg text-gray-600 mb-4">{counselor.title}</p>
+                <p className="text-lg text-gray-600 mb-4">
+                  {counselor.expertise?.[0] || "Educational Counselor"}
+                </p>
 
                 <div className="flex items-center mb-4">
                   <div className="flex items-center">
@@ -134,7 +143,7 @@ export default function CounselorDetailPage() {
                   </div>
                   <span className="ml-2 text-gray-600">
                     {counselor.averageRating?.toFixed(1) || "New"} (
-                    {counselor.totalReviews || 0} reviews)
+                    {counselor.totalRatings || 0} ratings)
                   </span>
                 </div>
 
@@ -175,43 +184,45 @@ export default function CounselorDetailPage() {
               <div className="p-6">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">About</h2>
                 <p className="text-gray-700 whitespace-pre-line">
-                  {counselor.bio}
+                  {counselor.bio || `${counselor.name} is an experienced educational counselor dedicated to helping students achieve their academic and career goals. With expertise in ${counselor.expertise?.slice(0, 2).join(' and ') || 'various areas'}, they provide personalized guidance tailored to each student's unique needs and aspirations.`}
                 </p>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md overflow-hidden mb-8">
-              <div className="p-6">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Expertise
-                </h2>
-                <div className="space-y-4">
-                  {counselor.expertise?.map((item, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="flex-shrink-0">
-                        <AcademicCapIcon className="h-6 w-6 text-blue-500" />
+            {counselor.expertise && counselor.expertise.length > 0 && (
+              <div className="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    Expertise
+                  </h2>
+                  <div className="space-y-4">
+                    {counselor.expertise.map((item, index) => (
+                      <div key={index} className="flex items-start">
+                        <div className="shrink-0">
+                          <AcademicCapIcon className="h-6 w-6 text-blue-500" />
+                        </div>
+                        <div className="ml-3">
+                          <h3 className="text-lg font-medium text-gray-900">
+                            {item}
+                          </h3>
+                        </div>
                       </div>
-                      <div className="ml-3">
-                        <h3 className="text-lg font-medium text-gray-900">
-                          {item}
-                        </h3>
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
-            {counselor.reviews && counselor.reviews.length > 0 && (
+            {counselor.ratings && counselor.ratings.length > 0 && (
               <div className="bg-white rounded-xl shadow-md overflow-hidden">
                 <div className="p-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                    Reviews
+                    Ratings & Reviews
                   </h2>
                   <div className="space-y-6">
-                    {counselor.reviews.map((review) => (
+                    {counselor.ratings.map((rating, index) => (
                       <div
-                        key={review._id}
+                        key={rating._id || index}
                         className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0"
                       >
                         <div className="flex items-center mb-2">
@@ -220,7 +231,7 @@ export default function CounselorDetailPage() {
                               <StarIcon
                                 key={i}
                                 className={`h-4 w-4 ${
-                                  i < review.rating
+                                  i < rating.rating
                                     ? "text-yellow-400"
                                     : "text-gray-300"
                                 }`}
@@ -228,10 +239,12 @@ export default function CounselorDetailPage() {
                             ))}
                           </div>
                           <span className="ml-2 text-sm text-gray-600">
-                            {new Date(review.createdAt).toLocaleDateString()}
+                            {rating.rating}/5
                           </span>
                         </div>
-                        <p className="text-gray-700">{review.comment}</p>
+                        {rating.comment && (
+                          <p className="text-gray-700">{rating.comment}</p>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -246,87 +259,114 @@ export default function CounselorDetailPage() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="md:col-span-1"
           >
-            <div className="bg-white rounded-xl shadow-md overflow-hidden mb-8">
-              <div className="p-6">
-                <h2 className="text-xl font-bold text-gray-900 mb-4">
-                  Experience
-                </h2>
-                <div className="space-y-4">
-                  {counselor.experience?.map((exp, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="flex-shrink-0">
-                        <BriefcaseIcon className="h-5 w-5 text-blue-500" />
+            {counselor.experience && counselor.experience.length > 0 && (
+              <div className="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                <div className="p-6">
+                  <h2 className="text-xl font-bold text-gray-900 mb-4">
+                    Experience
+                  </h2>
+                  <div className="space-y-4">
+                    {counselor.experience.map((exp, index) => (
+                      <div key={index} className="flex items-start">
+                        <div className="shrink-0">
+                          <BriefcaseIcon className="h-5 w-5 text-blue-500" />
+                        </div>
+                        <div className="ml-3">
+                          <h3 className="text-base font-medium text-gray-900">
+                            {exp.position}
+                          </h3>
+                          <p className="text-sm text-gray-600">{exp.company}</p>
+                          <p className="text-sm text-gray-500">{exp.duration}</p>
+                        </div>
                       </div>
-                      <div className="ml-3">
-                        <h3 className="text-base font-medium text-gray-900">
-                          {exp.position}
-                        </h3>
-                        <p className="text-sm text-gray-600">{exp.company}</p>
-                        <p className="text-sm text-gray-500">{exp.duration}</p>
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
-            <div className="bg-white rounded-xl shadow-md overflow-hidden mb-8">
-              <div className="p-6">
-                <h2 className="text-xl font-bold text-gray-900 mb-4">
-                  Education
-                </h2>
-                <div className="space-y-4">
-                  {counselor.education?.map((edu, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="flex-shrink-0">
-                        <AcademicCapIcon className="h-5 w-5 text-blue-500" />
+            {counselor.education && counselor.education.length > 0 && (
+              <div className="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                <div className="p-6">
+                  <h2 className="text-xl font-bold text-gray-900 mb-4">
+                    Education
+                  </h2>
+                  <div className="space-y-4">
+                    {counselor.education.map((edu, index) => (
+                      <div key={index} className="flex items-start">
+                        <div className="shrink-0">
+                          <AcademicCapIcon className="h-5 w-5 text-blue-500" />
+                        </div>
+                        <div className="ml-3">
+                          <h3 className="text-base font-medium text-gray-900">
+                            {edu.degree}
+                          </h3>
+                          <p className="text-sm text-gray-600">
+                            {edu.institution}
+                          </p>
+                          <p className="text-sm text-gray-500">{edu.year}</p>
+                        </div>
                       </div>
-                      <div className="ml-3">
-                        <h3 className="text-base font-medium text-gray-900">
-                          {edu.degree}
-                        </h3>
-                        <p className="text-sm text-gray-600">
-                          {edu.institution}
-                        </p>
-                        <p className="text-sm text-gray-500">{edu.year}</p>
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
               <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-4">
                   Availability
                 </h2>
-                <div className="space-y-2">
-                  <div className="flex items-center">
-                    <CalendarIcon className="h-5 w-5 text-blue-500 mr-2" />
-                    <span className="text-gray-700">
-                      {counselor.availability?.days?.join(", ") || "Weekdays"}
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 text-blue-500 mr-2"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    <span className="text-gray-700">
-                      {counselor.availability?.hours || "9:00 AM - 5:00 PM"}
-                    </span>
-                  </div>
+                <div className="space-y-3">
+                  {counselor.availableSlots && counselor.availableSlots.length > 0 ? (
+                    <>
+                      <p className="text-sm text-gray-600 mb-3">
+                        {counselor.availableSlots.filter(slot => !slot.isBooked).length} slots available
+                      </p>
+                      <div className="max-h-48 overflow-y-auto space-y-2">
+                        {counselor.availableSlots
+                          .filter(slot => !slot.isBooked)
+                          .slice(0, 5)
+                          .map((slot, index) => (
+                            <div key={index} className="flex items-center text-sm bg-blue-50 p-2 rounded">
+                              <CalendarIcon className="h-4 w-4 text-blue-500 mr-2" />
+                              <span className="text-gray-700">
+                                {new Date(slot.date).toLocaleDateString()} - {slot.startTime} to {slot.endTime}
+                              </span>
+                            </div>
+                          ))}
+                      </div>
+                    </>
+                  ) : (
+                    <div className="space-y-2">
+                      <div className="flex items-center">
+                        <CalendarIcon className="h-5 w-5 text-blue-500 mr-2" />
+                        <span className="text-gray-700">
+                          {counselor.availability?.days?.join(", ") || "Monday - Friday"}
+                        </span>
+                      </div>
+                      <div className="flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5 text-blue-500 mr-2"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span className="text-gray-700">
+                          {counselor.availability?.hours || "9:00 AM - 5:00 PM"}
+                        </span>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

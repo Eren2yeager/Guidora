@@ -36,6 +36,9 @@ export default function BookingForm({ counselor, isOpen, onClose }) {
     error: null
   });
 
+  // Force light mode styles for form inputs
+  const inputStyles = "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 !bg-white !text-gray-900 [color-scheme:light]";
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setBookingData(prev => ({
@@ -124,7 +127,7 @@ export default function BookingForm({ counselor, isOpen, onClose }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+        className="fixed inset-0 bg-transparent backdrop-blur-md bg-opacity-50 flex items-center justify-center p-4 z-50"
       >
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
@@ -173,7 +176,8 @@ export default function BookingForm({ counselor, isOpen, onClose }) {
                     type="date"
                     id="date"
                     name="date"
-                    className="w-full px-3 py-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className={inputStyles}
+                    style={{ colorScheme: 'light' }}
                     value={bookingData.date}
                     onChange={handleInputChange}
                     min={new Date().toISOString().split('T')[0]}
@@ -188,7 +192,8 @@ export default function BookingForm({ counselor, isOpen, onClose }) {
                   <select
                     id="time"
                     name="time"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className={inputStyles}
+                    style={{ colorScheme: 'light' }}
                     value={bookingData.time}
                     onChange={handleInputChange}
                     required
@@ -209,7 +214,8 @@ export default function BookingForm({ counselor, isOpen, onClose }) {
                   <select
                     id="topic"
                     name="topic"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className={inputStyles}
+                    style={{ colorScheme: 'light' }}
                     value={bookingData.topic}
                     onChange={handleInputChange}
                     required
@@ -231,7 +237,8 @@ export default function BookingForm({ counselor, isOpen, onClose }) {
                     id="message"
                     name="message"
                     rows="4"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className={inputStyles}
+                    style={{ colorScheme: 'light' }}
                     placeholder="Share any specific questions or concerns you'd like to discuss..."
                     value={bookingData.message}
                     onChange={handleInputChange}
