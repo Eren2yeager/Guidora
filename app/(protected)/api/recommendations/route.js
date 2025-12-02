@@ -104,12 +104,12 @@ export async function POST(request) {
 
     // Fetch entities from DB
     const courses = await Course.find({ _id: { $in: Array.from(courseIds) }, isActive: true })
-      .select('name description streamId media iconUrl')
+      .select('name code description streamId media iconUrl')
       .limit(20)
       .lean();
 
     const careers = await Career.find({ _id: { $in: Array.from(careerIds) }, isActive: true })
-      .select('name description sectors media')
+      .select('name slug description sectors media')
       .limit(20)
       .lean();
 
@@ -167,6 +167,7 @@ export async function POST(request) {
     const normalized = {
       courses: courses.map((c) => ({
         id: c._id?.toString?.() || c._id,
+        code: c.code,
         title: c.name,
         description: c.description || '',
         streamId: c.streamId,
@@ -175,6 +176,7 @@ export async function POST(request) {
       })),
       careers: careers.map((c) => ({
         id: c._id?.toString?.() || c._id,
+        slug: c.slug,
         title: c.name,
         description: c.description || '',
         sectors: c.sectors || [],

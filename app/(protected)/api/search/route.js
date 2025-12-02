@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
-import connectMongo from '@/lib/mongodb';
-import Course from '@/models/Course';
-import Career from '@/models/Career';
-import DegreeProgram from '@/models/DegreeProgram';
-import College from '@/models/College';
-import Scholarship from '@/models/Scholarship';
+import connectMongo from '@/lib/mongodb.js';
+import Course from '@/models/Course.js';
+import Career from '@/models/Career.js';
+import DegreeProgram from '@/models/DegreeProgram.js';
+import College from '@/models/College.js';
+import Scholarship from '@/models/Scholarship.js';
+import Stream from '@/models/Stream.js';
 
 export async function GET(request) {
   try {

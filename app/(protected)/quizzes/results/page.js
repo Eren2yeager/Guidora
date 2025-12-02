@@ -338,7 +338,7 @@ export default function QuizResultsPage() {
                           <h4 className="font-semibold text-gray-900 mb-2">{course.title}</h4>
                           <p className="text-sm text-gray-600 mb-4">{course.description}</p>
                           <Link 
-                            href={`/courses/${course.id}`}
+                            href={`/courses/${course.code}`}
                             className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800"
                           >
                             Learn more
@@ -374,7 +374,7 @@ export default function QuizResultsPage() {
                           <h4 className="font-semibold text-gray-900 mb-2">{career.title}</h4>
                           <p className="text-sm text-gray-600 mb-4">{career.description}</p>
                           <Link 
-                            href={`/careers/${career.id}`}
+                            href={`/careers/${career.slug}`}
                             className="inline-flex items-center text-sm font-medium text-purple-600 hover:text-purple-800"
                           >
                             Learn more
