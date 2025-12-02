@@ -47,6 +47,9 @@ next-env.d.ts
 /.kiro/
 
 /.vscode/
+
 /.trae/
+
+/.to_note/
 
 # /.only_for_ai/

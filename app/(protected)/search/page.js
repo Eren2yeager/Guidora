@@ -75,6 +75,7 @@ export default function SearchPage() {
     if (initialQuery) {
       performSearch(initialQuery, activeFilter);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialQuery]);
 
   // Handle search form submission
@@ -161,7 +162,7 @@ export default function SearchPage() {
           >
             <div className="text-sm text-gray-600">
               Found <span className="font-semibold text-gray-900">{searchResults.stats.total}</span> results for 
-              <span className="font-semibold text-blue-600"> "{searchResults.query}"</span>
+              <span className="font-semibold text-blue-600"> &quot;{searchResults.query}&quot;</span>
             </div>
           </motion.div>
         )}
@@ -250,7 +251,7 @@ export default function SearchPage() {
               <MagnifyingGlassIcon className="h-16 w-16 mx-auto text-gray-400 mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">No Results Found</h3>
               <p className="text-gray-600 mb-4">
-                No {activeFilter === 'all' ? 'results' : activeFilter} found for "{searchResults.query}"
+                No {activeFilter === 'all' ? 'results' : activeFilter} found for &quot;{searchResults.query}&quot;
               </p>
               <div className="flex flex-col sm:flex-row gap-2 justify-center">
                 <Button
