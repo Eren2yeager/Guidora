@@ -44,31 +44,31 @@ https://guidora-three.vercel.app
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](/public/screenshots/home.png)
+![Home Page](/screenshots/home.png)
 
 ### Dashboard
-![User Dashboard](/public/screenshots/dashboard.png)
+![User Dashboard](/screenshots/dashboard.png)
 
 ### Career Exploration
-![Career Exploration](/public/screenshots/careers.png)
+![Career Exploration](/screenshots/careers.png)
 
 ### College Discovery
-![College Discovery](/public/screenshots/colleges.png)
+![College Discovery](/screenshots/colleges.png)
 
 ### Course Browsing
-![Course Browsing](/public/screenshots/courses.png)
+![Course Browsing](/screenshots/courses.png)
 
 ### Degree Programs
-![Degree Programs](/public/screenshots/degrees.png)
+![Degree Programs](/screenshots/degrees.png)
 
 ### Interactive Quizzes
-![Interactive Quizzes](/public/screenshots/quizes.png)
+![Interactive Quizzes](/screenshots/quizes.png)
 
 ### Scholarship Finder
-![Scholarship Finder](/public/screenshots/scholarships.png)
+![Scholarship Finder](/screenshots/scholarships.png)
 
 ### Counselor Support
-![Counselor Support](/public/screenshots/counselors.png)
+![Counselor Support](/screenshots/counselors.png)
 
 ## 🚀 Features & Tech Stack
 
